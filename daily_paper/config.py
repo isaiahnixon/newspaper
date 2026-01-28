@@ -1,0 +1,77 @@
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Iterable
+
+
+@dataclass(frozen=True)
+class FeedSource:
+    name: str
+    url: str
+
+
+@dataclass(frozen=True)
+class TopicConfig:
+    name: str
+    feeds: tuple[FeedSource, ...]
+
+
+@dataclass(frozen=True)
+class DailyPaperConfig:
+    output_dir: Path = Path("public")
+    output_file: str = "index.html"
+    archive_dir: Path = Path("public/archive")
+    no_visuals: bool = True
+    show_titles: bool = True
+    fetch_full_text: bool = False
+    max_full_text_chars: int = 2000
+    items_per_topic: int = 8
+    model: str = "gpt-5-mini"
+    topics: tuple[TopicConfig, ...] = field(default_factory=tuple)
+
+    @property
+    def output_path(self) -> Path:
+        return self.output_dir / self.output_file
+
+    def iter_feeds(self) -> Iterable[FeedSource]:
+        for topic in self.topics:
+            yield from topic.feeds
+
+
+DEFAULT_CONFIG = DailyPaperConfig(
+    topics=(
+        TopicConfig(
+            name="Artificial Intelligence",
+            feeds=(
+                FeedSource("OpenAI Blog", "https://openai.com/blog/rss"),
+                FeedSource("Google AI Blog", "https://ai.googleblog.com/feeds/posts/default"),
+                FeedSource("Hugging Face", "https://huggingface.co/blog/feed.xml"),
+            ),
+        ),
+        TopicConfig(
+            name="Web Tech News",
+            feeds=(
+                FeedSource("Mozilla Hacks", "https://hacks.mozilla.org/feed/"),
+                FeedSource("Web.dev", "https://web.dev/feed.xml"),
+                FeedSource("Chromium Blog", "https://blog.chromium.org/feeds/posts/default"),
+            ),
+        ),
+        TopicConfig(
+            name="Economic News",
+            feeds=(
+                FeedSource("IMF Blog", "https://www.imf.org/external/rss/feeds.aspx?category=blog"),
+                FeedSource("World Bank Blogs", "https://blogs.worldbank.org/rss"),
+                FeedSource("OECD Newsroom", "https://www.oecd.org/newsroom/oecdnews.xml"),
+            ),
+        ),
+        TopicConfig(
+            name="Political News",
+            feeds=(
+                FeedSource("Brookings", "https://www.brookings.edu/feed/"),
+                FeedSource("Council on Foreign Relations", "https://www.cfr.org/rss/rss.xml"),
+                FeedSource("U.S. State Department", "https://www.state.gov/rss-feed/"),
+            ),
+        ),
+    )
+)
