@@ -28,6 +28,7 @@ class DailyPaperConfig:
     max_full_text_chars: int = 2000
     items_per_topic: int = 8
     model: str = "gpt-5-mini"
+    temperature: float | None = None
     topics: tuple[TopicConfig, ...] = field(default_factory=tuple)
 
     @property

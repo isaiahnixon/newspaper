@@ -16,6 +16,7 @@ class OpenAIClient:
     api_key: str
     model: str
     timeout: int = 30
+    temperature: float | None = None
 
     def chat_completion(self, system_prompt: str, user_prompt: str) -> str:
         url = "https://api.openai.com/v1/chat/completions"
@@ -29,8 +30,9 @@ class OpenAIClient:
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
-            "temperature": 0.2,
         }
+        if self.temperature is not None:
+            payload["temperature"] = self.temperature
         response = requests.post(
             url,
             headers=headers,
@@ -48,8 +50,8 @@ class OpenAIClient:
             raise OpenAIError("Unexpected OpenAI response format") from exc
 
 
-def get_client(model: str) -> OpenAIClient:
+def get_client(model: str, temperature: float | None) -> OpenAIClient:
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise OpenAIError("OPENAI_API_KEY is not set")
-    return OpenAIClient(api_key=api_key, model=model)
+    return OpenAIClient(api_key=api_key, model=model, temperature=temperature)

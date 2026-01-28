@@ -37,7 +37,7 @@ class TopicSummary:
 def summarize_items(
     config: DailyPaperConfig, entries: list[FeedEntry]
 ) -> list[SummarizedItem]:
-    client = get_client(config.model)
+    client = get_client(config.model, config.temperature)
     summarized: list[SummarizedItem] = []
     for entry in entries:
         summary = summarize_item(client, entry, config)
@@ -60,7 +60,7 @@ def summarize_item(client: OpenAIClient, entry: FeedEntry, config: DailyPaperCon
 def summarize_topic(
     config: DailyPaperConfig, topic: str, items: list[SummarizedItem]
 ) -> TopicSummary:
-    client = get_client(config.model)
+    client = get_client(config.model, config.temperature)
     bullet_points = "\n".join(
         f"- {item.entry.title}: {compact_text([item.entry.summary], 280)}"
         for item in items
