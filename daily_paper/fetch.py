@@ -57,7 +57,7 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
         for feed in topic.feeds:
             stats.sources_checked += 1
             log_verbose(config.verbose, f"Parsing feed: {feed.name} ({feed.url})")
-            parsed = feedparser.parse(feed.url)
+            parsed = parse_feed(feed, config)
             if parsed.bozo and not parsed.entries:
                 log_verbose(config.verbose, f"Feed parse failed or empty: {feed.name}")
                 continue
@@ -109,6 +109,32 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
         f"Paywalled excluded: {stats.paywalled}.",
     )
     return entries_by_topic, stats
+
+
+def parse_feed(feed: FeedSource, config: DailyPaperConfig) -> feedparser.FeedParserDict:
+    try:
+        response = requests.get(
+            feed.url,
+            timeout=15,
+            headers={"User-Agent": "DailyPaperBot/1.0"},
+        )
+    except requests.RequestException as exc:
+        log_verbose(config.verbose, f"Feed request failed for {feed.name}: {exc}")
+        return feedparser.parse(feed.url)
+
+    if not response.ok or not response.content:
+        log_verbose(
+            config.verbose,
+            f"Feed request returned status {response.status_code} for {feed.name}",
+        )
+        return feedparser.parse(feed.url)
+
+    parsed = feedparser.parse(response.content)
+    if parsed.entries or not parsed.bozo:
+        return parsed
+
+    log_verbose(config.verbose, f"Feed parse fallback for {feed.name}")
+    return feedparser.parse(feed.url)
 
 
 def fetch_full_text(entry: FeedEntry, config: DailyPaperConfig) -> tuple[str | None, bool]:
