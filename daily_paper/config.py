@@ -29,6 +29,7 @@ class DailyPaperConfig:
     items_per_topic: int = 8
     model: str = "gpt-5-mini"
     temperature: float | None = None
+    verbose: bool = False
     topics: tuple[TopicConfig, ...] = field(default_factory=tuple)
 
     @property
