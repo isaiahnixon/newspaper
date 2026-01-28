@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from .config import DailyPaperConfig
 from .fetch import FeedEntry
 from .openai_client import OpenAIClient, get_client
-from .utils import compact_text
+from .utils import compact_text, log_verbose
 
 ITEM_SYSTEM_PROMPT = (
     "You are a careful news summarizer. Be neutral and factual. "
@@ -35,11 +35,16 @@ class TopicSummary:
 
 
 def summarize_items(
-    config: DailyPaperConfig, entries: list[FeedEntry]
+    config: DailyPaperConfig,
+    entries: list[FeedEntry],
+    topic: str | None = None,
 ) -> list[SummarizedItem]:
     client = get_client(config.model, config.temperature)
     summarized: list[SummarizedItem] = []
+    label = f"'{topic}'" if topic else "topic"
+    log_verbose(config.verbose, f"Summarizing {len(entries)} items for {label}.")
     for entry in entries:
+        log_verbose(config.verbose, f"Summarizing item: {entry.title}")
         summary = summarize_item(client, entry, config)
         summarized.append(SummarizedItem(entry=entry, summary=summary))
     return summarized
@@ -61,6 +66,7 @@ def summarize_topic(
     config: DailyPaperConfig, topic: str, items: list[SummarizedItem]
 ) -> TopicSummary:
     client = get_client(config.model, config.temperature)
+    log_verbose(config.verbose, f"Generating topic summary for '{topic}'.")
     bullet_points = "\n".join(
         f"- {item.entry.title}: {compact_text([item.entry.summary], 280)}"
         for item in items

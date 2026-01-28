@@ -8,9 +8,11 @@ from .config import DEFAULT_CONFIG, DailyPaperConfig
 from .fetch import fetch_feeds
 from .render import RenderContext, render_html
 from .summarize import summarize_items, summarize_topic
+from .utils import log_verbose
 
 
 def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
+    log_verbose(config.verbose, "Starting Daily Paper run.")
     entries_by_topic, stats = fetch_feeds(config)
 
     summarized_by_topic = {}
@@ -18,10 +20,16 @@ def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
 
     for topic, entries in entries_by_topic.items():
         entries = entries[: config.items_per_topic]
-        summarized_items = summarize_items(config, entries)
+        if not entries:
+            log_verbose(config.verbose, f"No entries for '{topic}', skipping summarization.")
+            summarized_by_topic[topic] = []
+            continue
+        summarized_items = summarize_items(config, entries, topic=topic)
         summarized_by_topic[topic] = summarized_items
         if summarized_items:
             topic_summaries[topic] = summarize_topic(config, topic, summarized_items)
+        else:
+            log_verbose(config.verbose, f"No summarized items for '{topic}'.")
 
     context = RenderContext(
         config=config,
@@ -32,14 +40,15 @@ def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
         items_by_topic=summarized_by_topic,
     )
 
-    if config.no_visuals:
-        html = render_html(context)
-    else:
-        html = render_html(context)
+    log_verbose(config.verbose, "Rendering HTML output.")
+    html = render_html(context)
 
     config.output_dir.mkdir(parents=True, exist_ok=True)
+    log_verbose(config.verbose, f"Archiving existing output to {config.archive_dir}.")
     archive_existing(config.output_path, config.archive_dir)
+    log_verbose(config.verbose, f"Writing output to {config.output_path}.")
     config.output_path.write_text(html, encoding="utf-8")
+    log_verbose(config.verbose, "Daily Paper run complete.")
     return config.output_path
 
 

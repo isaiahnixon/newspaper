@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from .config import DailyPaperConfig, FeedSource, TopicConfig
-from .utils import compact_text, normalize_url, parse_published
+from .utils import compact_text, log_verbose, normalize_url, parse_published
 
 PAYWALL_MARKERS = (
     "subscribe",
@@ -48,19 +48,31 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
     seen_urls: set[str] = set()
     stats = FetchStats()
 
+    log_verbose(config.verbose, "Starting feed fetch.")
     for topic in config.topics:
+        log_verbose(
+            config.verbose,
+            f"Fetching feeds for '{topic.name}' ({len(topic.feeds)} sources).",
+        )
         for feed in topic.feeds:
             stats.sources_checked += 1
+            log_verbose(config.verbose, f"Parsing feed: {feed.name} ({feed.url})")
             parsed = feedparser.parse(feed.url)
             if parsed.bozo and not parsed.entries:
+                log_verbose(config.verbose, f"Feed parse failed or empty: {feed.name}")
                 continue
+            added = 0
+            skipped = 0
+            duplicates = 0
             for entry in parsed.entries:
                 link = entry.get("link")
                 title = entry.get("title", "").strip()
                 if not link or not title:
+                    skipped += 1
                     continue
                 normalized = normalize_url(link)
                 if normalized in seen_urls:
+                    duplicates += 1
                     continue
                 seen_urls.add(normalized)
                 published = entry.get("published") or entry.get("updated")
@@ -78,8 +90,24 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                     item.full_text, paywalled = fetch_full_text(item, config)
                     if paywalled:
                         stats.paywalled += 1
+                        log_verbose(config.verbose, f"Paywalled item skipped: {item.link}")
                         continue
                 entries_by_topic[topic.name].append(item)
+                added += 1
+            log_verbose(
+                config.verbose,
+                f"Feed summary for {feed.name}: total={len(parsed.entries)}, "
+                f"added={added}, duplicates={duplicates}, skipped={skipped}.",
+            )
+        log_verbose(
+            config.verbose,
+            f"Topic '{topic.name}' now has {len(entries_by_topic[topic.name])} items.",
+        )
+    log_verbose(
+        config.verbose,
+        f"Finished fetch. Sources checked: {stats.sources_checked}. "
+        f"Paywalled excluded: {stats.paywalled}.",
+    )
     return entries_by_topic, stats
 
 

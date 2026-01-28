@@ -42,3 +42,8 @@ def compact_text(parts: Iterable[str], max_chars: int) -> str:
     if len(combined) <= max_chars:
         return combined
     return combined[: max_chars - 1].rstrip() + "…"
+
+
+def log_verbose(enabled: bool, message: str) -> None:
+    if enabled:
+        print(f"[daily_paper] {message}", flush=True)
