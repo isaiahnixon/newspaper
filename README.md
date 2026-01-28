@@ -21,6 +21,7 @@ Key options:
 - `fetch_full_text=False`: When enabled, fetches the article body to provide more context and checks for paywalls.
 - `items_per_topic=8`: Number of items per topic section.
 - `model="gpt-5-mini"`: Change to another OpenAI model as needed.
+- `temperature=None`: Leave unset by default so models that restrict temperature use their default.
 
 Environment:
 
