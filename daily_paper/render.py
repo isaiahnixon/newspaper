@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime
+import html
 from typing import Iterable
 
 from .config import DailyPaperConfig
@@ -22,7 +23,7 @@ class RenderContext:
 def render_html(context: RenderContext) -> str:
     config = context.config
     toc_items = "\n".join(
-        f'<li><a href="#{slugify(topic)}">{topic}</a></li>'
+        f'<li><a href="#{slugify(topic)}">{escape_html(topic)}</a></li>'
         for topic in context.items_by_topic
     )
 
@@ -86,7 +87,9 @@ def render_topic_section(
     items: Iterable[SummarizedItem],
     config: DailyPaperConfig,
 ) -> str:
-    summary_html = f"<p>{summary.summary}</p>" if summary else "<p>No summary available.</p>"
+    summary_html = (
+        f"<p>{escape_html(summary.summary)}</p>" if summary else "<p>No summary available.</p>"
+    )
 
     items_html = "\n".join(
         render_item(item, config.show_titles) for item in items
@@ -94,7 +97,7 @@ def render_topic_section(
 
     return f"""
 <section id=\"{slugify(topic)}\">
-  <h2>{topic}</h2>
+  <h2>{escape_html(topic)}</h2>
   {summary_html}
   <div>
     {items_html}
@@ -106,17 +109,19 @@ def render_topic_section(
 def render_item(item: SummarizedItem, show_title: bool) -> str:
     entry = item.entry
     published = format_published(parse_iso(entry.published))
-    meta_parts = [entry.source]
+    meta_parts = [escape_html(entry.source)]
     if published:
         meta_parts.append(published)
     meta = " · ".join(meta_parts)
 
-    title_html = f"<div class=\"title\">{entry.title}</div>" if show_title else ""
+    title_html = (
+        f"<div class=\"title\">{escape_html(entry.title)}</div>" if show_title else ""
+    )
 
     return f"""
 <div class=\"item\">
-  <div>{item.summary}</div>
-  <div class=\"meta\">{meta} · <a href=\"{entry.link}\">Source</a></div>
+  <div>{escape_html(item.summary)}</div>
+  <div class=\"meta\">{meta} · <a href=\"{escape_html(entry.link)}\">Source</a></div>
   {title_html}
 </div>
 """
@@ -133,3 +138,7 @@ def parse_iso(value: str) -> datetime | None:
 
 def slugify(text: str) -> str:
     return "".join(ch.lower() if ch.isalnum() else "-" for ch in text).strip("-")
+
+
+def escape_html(text: str) -> str:
+    return html.escape(text, quote=True)
