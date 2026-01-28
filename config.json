@@ -1,0 +1,31 @@
+{
+  "topics": [
+    {
+      "name": "Technology",
+      "feeds": [
+        "https://feeds.arstechnica.com/arstechnica/index",
+        "https://www.theverge.com/rss/index.xml"
+      ],
+      "max_items": 5
+    },
+    {
+      "name": "Business",
+      "feeds": [
+        "https://www.ft.com/?format=rss",
+        "https://www.economist.com/the-world-this-week/rss.xml"
+      ],
+      "max_items": 5
+    }
+  ],
+  "settings": {
+    "site_dir": "./site",
+    "archive_dir": "./site/archive",
+    "timezone": "America/Denver",
+    "blocked_domains": [
+      "nytimes.com",
+      "wsj.com",
+      "bloomberg.com",
+      "ft.com"
+    ]
+  }
+}
