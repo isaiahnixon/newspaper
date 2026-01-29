@@ -28,6 +28,10 @@ class DailyPaperConfig:
     max_full_text_chars: int = 2000
     items_per_topic: int = 8
     model: str = "gpt-5-mini"
+    # Item summaries are short headline-style rewrites; use a cheaper model by default.
+    item_model: str | None = None
+    # Topic summaries are longer and higher-level; keep a stronger model by default.
+    topic_model: str | None = None
     temperature: float | None = None
     verbose: bool = False
     topics: tuple[TopicConfig, ...] = field(default_factory=tuple)
@@ -36,12 +40,32 @@ class DailyPaperConfig:
     def output_path(self) -> Path:
         return self.output_dir / self.output_file
 
+    def resolve_item_model(self) -> str:
+        """Resolve the model for item summaries while honoring config overrides."""
+        if (
+            self.model != DEFAULT_CONFIG.model
+            and self.item_model == DEFAULT_CONFIG.item_model
+        ):
+            return self.model
+        return self.item_model or self.model
+
+    def resolve_topic_model(self) -> str:
+        """Resolve the model for topic summaries while honoring config overrides."""
+        if (
+            self.model != DEFAULT_CONFIG.model
+            and self.topic_model == DEFAULT_CONFIG.topic_model
+        ):
+            return self.model
+        return self.topic_model or self.model
+
     def iter_feeds(self) -> Iterable[FeedSource]:
         for topic in self.topics:
             yield from topic.feeds
 
 
 DEFAULT_CONFIG = DailyPaperConfig(
+    item_model="gpt-5-nano",
+    topic_model="gpt-5-mini",
     topics=(
         TopicConfig(
             name="Artificial Intelligence",

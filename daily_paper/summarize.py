@@ -39,7 +39,8 @@ def summarize_items(
     entries: list[FeedEntry],
     topic: str | None = None,
 ) -> list[SummarizedItem]:
-    client = get_client(config.model, config.temperature)
+    # Use the lower-cost item model by default while still allowing overrides.
+    client = get_client(config.resolve_item_model(), config.temperature)
     summarized: list[SummarizedItem] = []
     label = f"'{topic}'" if topic else "topic"
     log_verbose(config.verbose, f"Summarizing {len(entries)} items for {label}.")
@@ -65,7 +66,8 @@ def summarize_item(client: OpenAIClient, entry: FeedEntry, config: DailyPaperCon
 def summarize_topic(
     config: DailyPaperConfig, topic: str, items: list[SummarizedItem]
 ) -> TopicSummary:
-    client = get_client(config.model, config.temperature)
+    # Use the stronger topic model for multi-item synthesis unless overridden.
+    client = get_client(config.resolve_topic_model(), config.temperature)
     log_verbose(config.verbose, f"Generating topic summary for '{topic}'.")
     bullet_points = "\n".join(
         f"- {item.entry.title}: {compact_text([item.entry.summary], 280)}"
