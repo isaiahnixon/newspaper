@@ -11,13 +11,16 @@ ITEM_SYSTEM_PROMPT = (
     "You are a careful news summarizer. Be neutral and factual. "
     "Avoid sensational adjectives, loaded framing, or speculation. "
     "If evidence is unclear, say so briefly. "
-    "Write exactly one sentence in plain language, 20-35 words."
+    "Write exactly one short sentence in plain language, 20 words max, ideally less."
 )
 
 TOPIC_SYSTEM_PROMPT = (
     "You write neutral multi-source topic summaries. "
-    "Use 3-6 sentences. Avoid speculation or sensational framing. "
-    "Highlight what happened and why it matters, using plain language. "
+    "Use 3-6 sentences. 100 words or less. Avoid speculation or sensational framing. "
+    "Highlight why what has happened matters, using plain language. "
+    "Do not just reiterate the headlines, users have already read those. "
+    "Put the headlines in the context of the macro-events happening in this topic. "
+    "If you need more context, you can reach out to other internet sources to contextualize the items. "
     "If evidence is unclear, say so briefly."
 )
 
@@ -39,7 +42,6 @@ def summarize_items(
     entries: list[FeedEntry],
     topic: str | None = None,
 ) -> list[SummarizedItem]:
-    # Use the lower-cost item model by default while still allowing overrides.
     client = get_client(config.resolve_item_model(), config.temperature)
     summarized: list[SummarizedItem] = []
     label = f"'{topic}'" if topic else "topic"
