@@ -82,9 +82,10 @@ DEFAULT_CONFIG = DailyPaperConfig(
         TopicConfig(
             name="Economic News",
             feeds=(
-                FeedSource("IMF News", "https://www.imf.org/en/News/RSS"),
-                FeedSource("World Bank News", "https://www.worldbank.org/en/rss?display=110"),
-                FeedSource("OECD Newsroom", "https://www.oecd.org/newsroom/oecdnews.xml"),
+                # Prioritize official, non-paywalled economic releases for neutral coverage.
+                FeedSource("U.S. Bureau of Labor Statistics Releases", "https://www.bls.gov/feed/bls_latest.rss"),
+                FeedSource("Federal Reserve Press Releases", "https://www.federalreserve.gov/feeds/press_all.xml"),
+                FeedSource("European Central Bank Press Releases", "https://www.ecb.europa.eu/rss/press.html"),
             ),
         ),
         TopicConfig(
