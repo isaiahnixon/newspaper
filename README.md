@@ -28,6 +28,11 @@ Key options:
 Environment:
 
 - `OPENAI_API_KEY` must be set to call the OpenAI API for item and topic summaries.
+- `DAILY_PAPER_DRY_RUN=1` (or `OPENAI_DRY_RUN=1`) skips API calls and returns a placeholder summary.
+- `OPENAI_TIMEOUT_SECS=30` sets the per-request timeout.
+- `OPENAI_MAX_RETRIES=0` controls retry attempts for retryable HTTP errors (defaults to 0 to limit cost).
+- `OPENAI_RETRY_BACKOFF_SECS=1.0` sets the exponential backoff base in seconds.
+- `OPENAI_RETRY_ON_TIMEOUT=1` enables retry on read timeouts if you accept potential extra cost.
 
 ## Paywall filtering
 
