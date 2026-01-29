@@ -82,17 +82,17 @@ DEFAULT_CONFIG = DailyPaperConfig(
         TopicConfig(
             name="Economic News",
             feeds=(
-                FeedSource("IMF Blog", "https://www.imf.org/external/rss/feeds.aspx?category=blog"),
-                FeedSource("World Bank Blogs", "https://blogs.worldbank.org/rss"),
+                FeedSource("IMF News", "https://www.imf.org/en/News/RSS"),
+                FeedSource("World Bank News", "https://www.worldbank.org/en/rss?display=110"),
                 FeedSource("OECD Newsroom", "https://www.oecd.org/newsroom/oecdnews.xml"),
             ),
         ),
         TopicConfig(
             name="Political News",
             feeds=(
-                FeedSource("Brookings", "https://www.brookings.edu/feed/"),
-                FeedSource("Council on Foreign Relations", "https://www.cfr.org/rss/rss.xml"),
-                FeedSource("U.S. State Department", "https://www.state.gov/rss-feed/"),
+                FeedSource("United Nations News", "https://news.un.org/feed/subscribe/en/news/all/rss.xml"),
+                FeedSource("U.S. State Dept. Press Releases", "https://www.state.gov/feeds/press-releases/"),
+                FeedSource("European Parliament News", "https://www.europarl.europa.eu/rss/doc/news/en.xml"),
             ),
         ),
     )

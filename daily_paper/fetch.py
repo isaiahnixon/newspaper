@@ -21,6 +21,17 @@ PAYWALL_MARKERS = (
     "register to continue",
 )
 
+# Some publishers block non-browser user agents and return 403/empty feeds.
+# Use a mainstream UA and accept header to reduce false negatives.
+DEFAULT_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/rss+xml, application/xml;q=0.9, */*;q=0.8",
+}
+
 
 @dataclass
 class FeedEntry:
@@ -113,11 +124,7 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
 
 def parse_feed(feed: FeedSource, config: DailyPaperConfig) -> feedparser.FeedParserDict:
     try:
-        response = requests.get(
-            feed.url,
-            timeout=15,
-            headers={"User-Agent": "DailyPaperBot/1.0"},
-        )
+        response = requests.get(feed.url, timeout=15, headers=DEFAULT_HEADERS)
     except requests.RequestException as exc:
         log_verbose(config.verbose, f"Feed request failed for {feed.name}: {exc}")
         return feedparser.parse(feed.url)
@@ -139,11 +146,7 @@ def parse_feed(feed: FeedSource, config: DailyPaperConfig) -> feedparser.FeedPar
 
 def fetch_full_text(entry: FeedEntry, config: DailyPaperConfig) -> tuple[str | None, bool]:
     try:
-        response = requests.get(
-            entry.link,
-            timeout=15,
-            headers={"User-Agent": "DailyPaperBot/1.0"},
-        )
+        response = requests.get(entry.link, timeout=15, headers=DEFAULT_HEADERS)
     except requests.RequestException:
         return None, False
 
