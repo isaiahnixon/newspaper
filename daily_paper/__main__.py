@@ -12,6 +12,21 @@ if __name__ == "__main__":
         action="store_true",
         help="Enable verbose logging for each step of the pipeline.",
     )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Skip OpenAI API calls and use placeholder summaries.",
+    )
+    parser.add_argument(
+        "--test-mode",
+        action="store_true",
+        help="Enable deterministic test summaries instead of API calls.",
+    )
     args = parser.parse_args()
-    config = replace(DEFAULT_CONFIG, verbose=args.verbose)
+    config = replace(
+        DEFAULT_CONFIG,
+        verbose=args.verbose,
+        dry_run=args.dry_run,
+        test_mode=args.test_mode,
+    )
     run(config)

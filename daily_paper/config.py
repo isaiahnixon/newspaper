@@ -33,6 +33,11 @@ class DailyPaperConfig:
     # Topic summaries are longer and higher-level; keep a stronger model by default.
     topic_model: str = "gpt-5-mini"
     temperature: float | None = None
+    request_timeout: int = 30
+    max_retries: int = 2
+    retry_backoff: float = 1.0
+    dry_run: bool = False
+    test_mode: bool = False
     verbose: bool = False
     topics: tuple[TopicConfig, ...] = field(default_factory=tuple)
 

@@ -24,6 +24,11 @@ Key options:
 - `item_model="gpt-5-nano"`: Model for headline-style item summaries (lower cost by default).
 - `topic_model="gpt-5-mini"`: Model for section summaries (higher-quality synthesis).
 - `temperature=None`: Leave unset by default so models that restrict temperature use their default.
+- `request_timeout=30`: Read timeout for OpenAI requests, in seconds.
+- `max_retries=2`: Retries for transient OpenAI failures (timeouts/429/5xx).
+- `retry_backoff=1.0`: Base backoff (seconds) between retries.
+- `dry_run=False`: Skip OpenAI API calls and use placeholder summaries.
+- `test_mode=False`: Use deterministic summaries for automated tests.
 
 Environment:
 
