@@ -20,7 +20,9 @@ Key options:
 - `show_titles=True`: Include the original article title below the AI summary for traceability.
 - `fetch_full_text=False`: When enabled, fetches the article body to provide more context and checks for paywalls.
 - `items_per_topic=8`: Number of items per topic section.
-- `model="gpt-5-mini"`: Change to another OpenAI model as needed.
+- `model="gpt-5-mini"`: Default shared model for prompts when item/topic models are unset.
+- `item_model="gpt-5-nano"`: Model for headline-style item summaries (lower cost by default).
+- `topic_model="gpt-5-mini"`: Model for section summaries (higher-quality synthesis).
 - `temperature=None`: Leave unset by default so models that restrict temperature use their default.
 
 Environment:
