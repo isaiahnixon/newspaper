@@ -169,9 +169,9 @@ def render_topic_section(
     return f"""
 <section id=\"{slugify(topic)}\">
   <h2>{escape_html(topic)}</h2>
-  {summary_html}
+  {items_html}
   <div>
-    {items_html}
+    {summary_html}
   </div>
 </section>
 """

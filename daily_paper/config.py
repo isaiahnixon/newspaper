@@ -27,13 +27,11 @@ class DailyPaperConfig:
     fetch_full_text: bool = False
     max_full_text_chars: int = 2000
     items_per_topic: int = 8
-    model: str = "gpt-5-mini"
+    model: str = "gpt-5-nano"
     # Item summaries are short headline-style rewrites; use a cheaper model by default.
-    # Use None to indicate "unset" so explicit defaults stay respected.
     item_model: str | None = None
     # Topic summaries are longer and higher-level; keep a stronger model by default.
-    # Use None to indicate "unset" so explicit defaults stay respected.
-    topic_model: str | None = None
+    topic_model: str = "gpt-5-mini"
     temperature: float | None = None
     verbose: bool = False
     topics: tuple[TopicConfig, ...] = field(default_factory=tuple)
