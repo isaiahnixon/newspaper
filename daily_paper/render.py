@@ -92,6 +92,11 @@ def render_html(context: RenderContext) -> str:
       column-count: 2;
       column-gap: 2.5rem;
     }}
+    @media (max-width: 900px) {{
+      main {{
+        column-count: 1;
+      }}
+    }}
     /* Keep topics intact inside the two-column layout for easier scanning. */
     section {{
       break-inside: avoid;
