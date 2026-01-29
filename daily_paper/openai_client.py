@@ -114,9 +114,6 @@ def _env_int(value: str | None) -> int | None:
 
 
 def get_client(model: str, temperature: float | None) -> OpenAIClient:
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise OpenAIError("OPENAI_API_KEY is not set")
     timeout = _env_float(os.getenv("OPENAI_TIMEOUT_SECS"))
     # Keep retries disabled by default to avoid unexpected cost spikes.
     max_retries = _env_int(os.getenv("OPENAI_MAX_RETRIES"))
@@ -127,8 +124,11 @@ def get_client(model: str, temperature: float | None) -> OpenAIClient:
     dry_run = _env_truthy(os.getenv("DAILY_PAPER_DRY_RUN")) or _env_truthy(
         os.getenv("OPENAI_DRY_RUN")
     )
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key and not dry_run:
+        raise OpenAIError("OPENAI_API_KEY is not set")
     return OpenAIClient(
-        api_key=api_key,
+        api_key=api_key or "",
         model=model,
         timeout=timeout if timeout is not None else 30,
         max_retries=max_retries if max_retries is not None else 0,
