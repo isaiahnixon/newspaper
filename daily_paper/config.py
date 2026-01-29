@@ -29,8 +29,10 @@ class DailyPaperConfig:
     items_per_topic: int = 8
     model: str = "gpt-5-mini"
     # Item summaries are short headline-style rewrites; use a cheaper model by default.
+    # Use None to indicate "unset" so explicit defaults stay respected.
     item_model: str | None = None
     # Topic summaries are longer and higher-level; keep a stronger model by default.
+    # Use None to indicate "unset" so explicit defaults stay respected.
     topic_model: str | None = None
     temperature: float | None = None
     verbose: bool = False
@@ -42,21 +44,15 @@ class DailyPaperConfig:
 
     def resolve_item_model(self) -> str:
         """Resolve the model for item summaries while honoring config overrides."""
-        if (
-            self.model != DEFAULT_CONFIG.model
-            and self.item_model == DEFAULT_CONFIG.item_model
-        ):
+        if self.item_model is None:
             return self.model
-        return self.item_model or self.model
+        return self.item_model
 
     def resolve_topic_model(self) -> str:
         """Resolve the model for topic summaries while honoring config overrides."""
-        if (
-            self.model != DEFAULT_CONFIG.model
-            and self.topic_model == DEFAULT_CONFIG.topic_model
-        ):
+        if self.topic_model is None:
             return self.model
-        return self.topic_model or self.model
+        return self.topic_model
 
     def iter_feeds(self) -> Iterable[FeedSource]:
         for topic in self.topics:
