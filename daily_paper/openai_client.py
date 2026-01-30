@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 import json
-import os
 import time
 from dataclasses import dataclass
 
 import requests
 
+from .config import DailyPaperConfig
+from .utils import env_truthy, get_env
 
 class OpenAIError(RuntimeError):
     pass
@@ -16,12 +17,13 @@ class OpenAIError(RuntimeError):
 class OpenAIClient:
     api_key: str
     model: str
-    timeout: int = 90
+    timeout: float = 90.0
     max_retries: int = 1
     retry_backoff: float = 1.0
     retry_on_timeout: bool = False
     dry_run: bool = False
     temperature: float | None = None
+    verbose: bool = False
 
     def chat_completion(self, system_prompt: str, user_prompt: str) -> str:
         if self.dry_run:
@@ -29,6 +31,11 @@ class OpenAIClient:
                 "[dry run] Summary skipped to avoid API usage. "
                 "Set DAILY_PAPER_DRY_RUN=0 to enable live calls."
             )
+        self._log(
+            "OpenAI request: model="
+            f"{self.model}, timeout={self.timeout}s, "
+            f"max_retries={self.max_retries}, retry_on_timeout={self.retry_on_timeout}."
+        )
         url = "https://api.openai.com/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {self.api_key}",
@@ -61,6 +68,7 @@ class OpenAIClient:
         retryable_statuses = {429, 500, 502, 503, 504}
         for attempt in range(1, max_attempts + 1):
             try:
+                self._log(f"OpenAI request attempt {attempt} of {max_attempts}.")
                 response = requests.post(
                     url,
                     headers=headers,
@@ -68,17 +76,29 @@ class OpenAIClient:
                     timeout=self.timeout,
                 )
             except requests.exceptions.Timeout:
+                self._log(
+                    "OpenAI request timed out "
+                    f"(attempt {attempt} of {max_attempts})."
+                )
                 if not self.retry_on_timeout or attempt == max_attempts:
                     raise
                 self._backoff(attempt)
                 continue
             except requests.exceptions.ConnectionError:
+                self._log(
+                    "OpenAI request connection error "
+                    f"(attempt {attempt} of {max_attempts})."
+                )
                 if attempt == max_attempts:
                     raise
                 self._backoff(attempt)
                 continue
 
             if response.status_code in retryable_statuses and attempt != max_attempts:
+                self._log(
+                    "OpenAI request retrying due to status "
+                    f"{response.status_code} (attempt {attempt} of {max_attempts})."
+                )
                 self._backoff(attempt)
                 continue
             return response
@@ -86,54 +106,34 @@ class OpenAIClient:
 
     def _backoff(self, attempt: int) -> None:
         delay = self.retry_backoff * (2 ** (attempt - 1))
+        self._log(f"OpenAI request backing off for {delay:.1f}s.")
         time.sleep(delay)
 
-
-def _env_truthy(value: str | None) -> bool:
-    if value is None:
-        return False
-    return value.strip().lower() in {"1", "true", "yes", "y", "on"}
+    def _log(self, message: str) -> None:
+        if self.verbose:
+            print(f"[daily_paper] {message}", flush=True)
 
 
-def _env_float(value: str | None) -> float | None:
-    if value is None:
-        return None
-    try:
-        return float(value)
-    except ValueError:
-        return None
-
-
-def _env_int(value: str | None) -> int | None:
-    if value is None:
-        return None
-    try:
-        return int(value)
-    except ValueError:
-        return None
-
-
-def get_client(model: str, temperature: float | None) -> OpenAIClient:
-    timeout = _env_float(os.getenv("OPENAI_TIMEOUT_SECS"))
-    # Keep retries disabled by default to avoid unexpected cost spikes.
-    max_retries = _env_int(os.getenv("OPENAI_MAX_RETRIES"))
-    # Backoff only matters when retries are enabled.
-    retry_backoff = _env_float(os.getenv("OPENAI_RETRY_BACKOFF_SECS"))
-    # Retrying on timeouts can multiply spend; keep opt-in.
-    retry_on_timeout = _env_truthy(os.getenv("OPENAI_RETRY_ON_TIMEOUT"))
-    dry_run = _env_truthy(os.getenv("DAILY_PAPER_DRY_RUN")) or _env_truthy(
-        os.getenv("OPENAI_DRY_RUN")
+def get_client(
+    config: DailyPaperConfig,
+    model: str,
+    temperature: float | None,
+) -> OpenAIClient:
+    """Build an OpenAI client using config-driven retry and timeout settings."""
+    dry_run = env_truthy(get_env("DAILY_PAPER_DRY_RUN")) or env_truthy(
+        get_env("OPENAI_DRY_RUN")
     )
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = get_env("OPENAI_API_KEY")
     if not api_key and not dry_run:
         raise OpenAIError("OPENAI_API_KEY is not set")
     return OpenAIClient(
         api_key=api_key or "",
         model=model,
-        timeout=timeout if timeout is not None else 30,
-        max_retries=max_retries if max_retries is not None else 0,
-        retry_backoff=retry_backoff if retry_backoff is not None else 1.0,
-        retry_on_timeout=retry_on_timeout,
+        timeout=config.openai_timeout_secs,
+        max_retries=config.openai_max_retries,
+        retry_backoff=config.openai_retry_backoff_secs,
+        retry_on_timeout=config.openai_retry_on_timeout,
         dry_run=dry_run,
         temperature=temperature,
+        verbose=config.verbose,
     )
