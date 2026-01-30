@@ -67,6 +67,9 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("OpenAI Blog", "https://openai.com/blog/rss"),
                 FeedSource("Google AI Blog", "https://ai.googleblog.com/feeds/posts/default"),
                 FeedSource("Hugging Face", "https://huggingface.co/blog/feed.xml"),
+                FeedSource("DeepMind Blog", "https://deepmind.google/blog/rss.xml"),
+                FeedSource("Meta AI Blog", "https://ai.facebook.com/blog/rss/"),
+                FeedSource("Microsoft Research Blog", "https://www.microsoft.com/en-us/research/feed/"),
             ),
         ),
         TopicConfig(
@@ -75,6 +78,9 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("Mozilla Hacks", "https://hacks.mozilla.org/feed/"),
                 FeedSource("Web.dev", "https://web.dev/feed.xml"),
                 FeedSource("Chromium Blog", "https://blog.chromium.org/feeds/posts/default"),
+                FeedSource("W3C News", "https://www.w3.org/blog/news/feed/"),
+                FeedSource("CSS-Tricks", "https://css-tricks.com/feed/"),
+                FeedSource("Smashing Magazine", "https://www.smashingmagazine.com/feed/"),
             ),
         ),
         TopicConfig(
@@ -84,6 +90,9 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("U.S. Bureau of Labor Statistics Releases", "https://www.bls.gov/feed/bls_latest.rss"),
                 FeedSource("Federal Reserve Press Releases", "https://www.federalreserve.gov/feeds/press_all.xml"),
                 FeedSource("European Central Bank Press Releases", "https://www.ecb.europa.eu/rss/press.html"),
+                FeedSource("International Monetary Fund News", "https://www.imf.org/en/News/RSS"),
+                FeedSource("OECD Newsroom", "https://www.oecd.org/newsroom/rss.xml"),
+                FeedSource("U.S. Treasury Press Releases", "https://home.treasury.gov/rss/press-releases.xml"),
             ),
         ),
         TopicConfig(
@@ -92,6 +101,9 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("United Nations News", "https://news.un.org/feed/subscribe/en/news/all/rss.xml"),
                 FeedSource("U.S. State Dept. Press Releases", "https://www.state.gov/feeds/press-releases/"),
                 FeedSource("European Parliament News", "https://www.europarl.europa.eu/rss/doc/news/en.xml"),
+                FeedSource("White House Briefing Room", "https://www.whitehouse.gov/briefing-room/feed/"),
+                FeedSource("NATO News", "https://www.nato.int/cps/en/natohq/news_rss.htm"),
+                FeedSource("UK Parliament News", "https://www.parliament.uk/rss/news-feed/"),
             ),
         ),
     )

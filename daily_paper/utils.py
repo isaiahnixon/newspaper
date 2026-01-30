@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from typing import Iterable
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
@@ -34,6 +34,17 @@ def parse_published(value: str | None) -> datetime | None:
         return parsedate_to_datetime(value)
     except (TypeError, ValueError):
         return None
+
+
+def is_within_hours(published: datetime | None, now: datetime, max_age_hours: int) -> bool:
+    """Return True when the published datetime is within the max age window."""
+    if not published:
+        return False
+    if published.tzinfo is None:
+        published = published.replace(tzinfo=timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    return published >= now - timedelta(hours=max_age_hours)
 
 
 def compact_text(parts: Iterable[str], max_chars: int) -> str:

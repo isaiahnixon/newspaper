@@ -14,6 +14,9 @@ from .utils import log_verbose
 def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
     log_verbose(config.verbose, "Starting Daily Paper run.")
     entries_by_topic, stats = fetch_feeds(config)
+    if stats.no_result_sources:
+        missing_sources = ", ".join(sorted(set(stats.no_result_sources)))
+        print(f"[daily_paper] Sources with no results: {missing_sources}", flush=True)
 
     summarized_by_topic = {}
     topic_summaries = {}
