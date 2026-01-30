@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from typing import Iterable
 
 import feedparser
@@ -9,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from .config import DailyPaperConfig, FeedSource, TopicConfig
-from .utils import compact_text, log_verbose, normalize_url, parse_published
+from .utils import compact_text, is_within_hours, log_verbose, normalize_url, parse_published
 
 PAYWALL_MARKERS = (
     "subscribe",
@@ -48,6 +49,7 @@ class FeedEntry:
 class FetchStats:
     sources_checked: int = 0
     paywalled: int = 0
+    no_result_sources: list[str] = field(default_factory=list)
 
 
 class FetchError(RuntimeError):
@@ -58,6 +60,8 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
     entries_by_topic: dict[str, list[FeedEntry]] = {topic.name: [] for topic in config.topics}
     seen_urls: set[str] = set()
     stats = FetchStats()
+    now = datetime.now(timezone.utc)
+    max_age_hours = 24
 
     log_verbose(config.verbose, "Starting feed fetch.")
     for topic in config.topics:
@@ -71,10 +75,12 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
             parsed = parse_feed(feed, config)
             if parsed.bozo and not parsed.entries:
                 log_verbose(config.verbose, f"Feed parse failed or empty: {feed.name}")
+                stats.no_result_sources.append(feed.name)
                 continue
             added = 0
             skipped = 0
             duplicates = 0
+            out_of_window = 0
             for entry in parsed.entries:
                 link = entry.get("link")
                 title = entry.get("title", "").strip()
@@ -88,6 +94,10 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                 seen_urls.add(normalized)
                 published = entry.get("published") or entry.get("updated")
                 published_dt = parse_published(published)
+                # Only keep entries from the last 24 hours to keep the paper timely.
+                if not is_within_hours(published_dt, now, max_age_hours):
+                    out_of_window += 1
+                    continue
                 summary = entry.get("summary", "")
                 item = FeedEntry(
                     topic=topic.name,
@@ -105,10 +115,13 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                         continue
                 entries_by_topic[topic.name].append(item)
                 added += 1
+            if added == 0:
+                stats.no_result_sources.append(feed.name)
             log_verbose(
                 config.verbose,
                 f"Feed summary for {feed.name}: total={len(parsed.entries)}, "
-                f"added={added}, duplicates={duplicates}, skipped={skipped}.",
+                f"added={added}, duplicates={duplicates}, skipped={skipped}, "
+                f"out_of_window={out_of_window}.",
             )
         log_verbose(
             config.verbose,
