@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 from .config import DailyPaperConfig
@@ -14,6 +15,13 @@ ITEM_SYSTEM_PROMPT = (
     "Grounding: use ONLY facts present in the provided title/summary/text. Do not add new details.\n"
     "Prefer: what happened + the immediate significance (if supported).\n"
     "If evidence is unclear, say 'Details are unclear.' (and keep within the word limit).\n"
+)
+
+SELECTION_SYSTEM_PROMPT = (
+    "You are a neutral news editor selecting the five most important items for a topic.\n"
+    "Choose items with broad public significance, reliable sourcing, and minimal duplication.\n"
+    "Return ONLY a comma-separated list of item numbers (e.g., '2, 5, 1, 7, 3').\n"
+    "If fewer than five items exist, return all available numbers.\n"
 )
 
 TOPIC_SYSTEM_PROMPT = (
@@ -37,6 +45,53 @@ class SummarizedItem:
 class TopicSummary:
     topic: str
     summary: str
+
+
+def select_top_items(
+    config: DailyPaperConfig,
+    entries: list[FeedEntry],
+    topic: str,
+    limit: int = 5,
+) -> list[FeedEntry]:
+    """Select the most important items for a topic using a simple AI ranking prompt."""
+    if len(entries) <= limit:
+        return entries
+
+    client = get_client(config.resolve_item_model(), config.temperature)
+    log_verbose(config.verbose, f"Selecting top {limit} items for '{topic}'.")
+
+    items_text = "\n".join(
+        f"{idx}. {entry.title} ({entry.source}) — {compact_text([entry.summary], 220)}"
+        for idx, entry in enumerate(entries, start=1)
+    )
+    user_prompt = (
+        f"Topic: {topic}\n"
+        "Pick the five most important items from the list.\n\n"
+        f"Items:\n{items_text}"
+    )
+    selection = client.chat_completion(SELECTION_SYSTEM_PROMPT, user_prompt)
+    indices = _parse_selection(selection, len(entries), limit)
+    return [entries[idx - 1] for idx in indices]
+
+
+def _parse_selection(response: str, total: int, limit: int) -> list[int]:
+    """Parse item numbers from the model response with safe fallbacks."""
+    numbers = [int(match) for match in re.findall(r"\d+", response)]
+    unique: list[int] = []
+    for number in numbers:
+        if 1 <= number <= total and number not in unique:
+            unique.append(number)
+        if len(unique) == limit:
+            break
+
+    if len(unique) < limit:
+        # Fill remaining slots with the earliest items to ensure deterministic output.
+        for number in range(1, total + 1):
+            if number not in unique:
+                unique.append(number)
+            if len(unique) == limit:
+                break
+    return unique
 
 
 def summarize_items(
