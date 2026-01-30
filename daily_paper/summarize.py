@@ -8,22 +8,24 @@ from .openai_client import OpenAIClient, get_client
 from .utils import compact_text, log_verbose
 
 ITEM_SYSTEM_PROMPT = (
-    "You are a careful news summarizer. Be neutral and factual. "
-    "Avoid sensational adjectives, loaded framing, or speculation. "
-    "If evidence is unclear, say so briefly. "
-    "Write exactly one short sentence in plain language, 20 words max, ideally less."
+    "You are a careful news summarizer.\n"
+    "Write EXACTLY ONE sentence, plain language, <= 20 words.\n"
+    "Neutral and factual: no sensational adjectives, no loaded framing, no speculation, no motive attribution.\n"
+    "Grounding: use ONLY facts present in the provided title/summary/text. Do not add new details.\n"
+    "Prefer: what happened + the immediate significance (if supported).\n"
+    "If evidence is unclear, say 'Details are unclear.' (and keep within the word limit).\n"
 )
 
 TOPIC_SYSTEM_PROMPT = (
-    "You write neutral multi-source topic summaries. "
-    "Use 3-6 sentences. 100 words or less. Avoid speculation or sensational framing. "
-    "Highlight why what has happened matters, using plain language. "
-    "Do not just reiterate the headlines, users have already read those. "
-    "Put the headlines in the context of the macro-events happening in this topic. "
-    "If you need more context, you can reach out to other internet sources to contextualize the items. "
-    "If evidence is unclear, say so briefly."
+    "You write neutral, multi-source topic summaries.\n"
+    "Length: 3–6 sentences, <= 100 words.\n"
+    "Do NOT paraphrase headlines; synthesize themes and implications.\n"
+    "Grounding: Prefer the provided items. If you must use external context, "
+    "limit it to 1–2 short clauses and clearly mark it as 'Background:' and keep it high-level and factual. "
+    "Never introduce new breaking facts beyond the provided items.\n"
+    "If evidence is unclear, say so briefly.\n"
+    "Tone: calm, unsensational, no speculation; avoid attributing motives.\n"
 )
-
 
 @dataclass
 class SummarizedItem:
