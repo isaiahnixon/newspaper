@@ -25,14 +25,23 @@ SELECTION_SYSTEM_PROMPT = (
 )
 
 TOPIC_SYSTEM_PROMPT = (
-    "You write neutral, multi-source topic summaries.\n"
-    "Length: 3–6 sentences, <= 100 words.\n"
-    "Do NOT paraphrase headlines; synthesize themes and implications.\n"
-    "Grounding: Prefer the provided items. If you must use external context, "
-    "limit it to 1–2 short clauses and clearly mark it as 'Background:' and keep it high-level and factual. "
-    "Never introduce new breaking facts beyond the provided items.\n"
-    "If evidence is unclear, say so briefly.\n"
-    "Tone: calm, unsensational, no speculation; avoid attributing motives.\n"
+    "You write neutral, multi-source TOPIC DIGESTS.\n"
+    "Length: 80 words maximum. Plain language.\n"
+    "\n"
+    "CRITICAL: Do NOT restate or paraphrase the individual items. "
+    "Do NOT repeat specific names, appointments, survey titles, or exact figures already visible above. "
+    "Assume the reader already saw the bullets.\n"
+    "\n"
+    "Instead, synthesize: explain (a) the broader trend or regime, (b) why it matters, "
+    "(c) what it implies or changes for stakeholders, and (d) what to watch next. "
+    "If the provided items do not support a clear implication, say so briefly.\n"
+    "\n"
+    "Grounding: use ONLY the provided items as evidence. Do not add external facts or forecasts. "
+    "No sensational framing, no motive attribution.\n"
+    "\n"
+    "Output structure (must follow): "
+    "1) Theme sentence. 2) Significance sentence. 3) 'Watch:' sentence (what indicator/event would clarify next). "
+    "Optional 4th sentence for uncertainty if needed."
 )
 
 @dataclass

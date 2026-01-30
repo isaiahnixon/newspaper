@@ -31,12 +31,12 @@ class DailyPaperConfig:
     # Item summaries are short headline-style rewrites; use a cheaper model by default.
     item_model: str | None = None
     # Topic summaries are longer and higher-level; keep a stronger model by default.
-    topic_model: str = "gpt-5-mini"
+    topic_model: str | None = None
     temperature: float | None = None
     verbose: bool = False
     # OpenAI request behavior: keep in config so it's easy to audit and tune.
-    openai_timeout_secs: float = 30.0
-    openai_max_retries: int = 0
+    openai_timeout_secs: float = 180.00
+    openai_max_retries: int = 1
     openai_retry_backoff_secs: float = 1.0
     openai_retry_on_timeout: bool = False
     topics: tuple[TopicConfig, ...] = field(default_factory=tuple)
@@ -75,6 +75,10 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("DeepMind Blog", "https://deepmind.google/blog/rss.xml"),
                 FeedSource("Meta AI Blog", "https://ai.facebook.com/blog/rss/"),
                 FeedSource("Microsoft Research Blog", "https://www.microsoft.com/en-us/research/feed/"),
+                FeedSource("Ars Technica (AI)", "https://arstechnica.com/ai/feed/"),
+                FeedSource("arXiv cs.AI", "https://rss.arxiv.org/rss/cs.AI"),
+                FeedSource("arXiv cs.LG", "https://rss.arxiv.org/rss/cs.LG"),
+                FeedSource("NVIDIA Developer Blog", "https://developer.nvidia.com/blog/feed"),
             ),
         ),
         TopicConfig(
@@ -86,6 +90,10 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("W3C News", "https://www.w3.org/blog/news/feed/"),
                 FeedSource("CSS-Tricks", "https://css-tricks.com/feed/"),
                 FeedSource("Smashing Magazine", "https://www.smashingmagazine.com/feed/"),
+                FeedSource("Cloudflare Changelog (All)", "https://developers.cloudflare.com/changelog/rss/index.xml"),
+                FeedSource("Cloudflare Changelog (App Security)", "https://developers.cloudflare.com/changelog/rss/application-security.xml"),
+                FeedSource("V8 Blog (Atom)", "https://v8.dev/blog.atom"),
+                FeedSource("Google Security Blog", "https://security.googleblog.com/feeds/posts/default"),
             ),
         ),
         TopicConfig(
@@ -98,6 +106,11 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("International Monetary Fund News", "https://www.imf.org/en/News/RSS"),
                 FeedSource("OECD Newsroom", "https://www.oecd.org/newsroom/rss.xml"),
                 FeedSource("U.S. Treasury Press Releases", "https://home.treasury.gov/rss/press-releases.xml"),
+                FeedSource("BEA News Releases", "https://apps.bea.gov/rss/rss.xml"),
+                FeedSource("US Census Newsroom", "https://www.census.gov/newsroom/rss.xml"),
+                FeedSource("US Census Economic Indicators", "https://www.census.gov/economic-indicators/rss.xml"),
+                FeedSource("BIS Press Releases", "https://www.bis.org/doclist/all_pressrels.rss"),
+                FeedSource("BIS Statistical Releases", "https://www.bis.org/doclist/all_statistics.rss"),
             ),
         ),
         TopicConfig(
@@ -109,6 +122,9 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("White House Briefing Room", "https://www.whitehouse.gov/briefing-room/feed/"),
                 FeedSource("NATO News", "https://www.nato.int/cps/en/natohq/news_rss.htm"),
                 FeedSource("UK Parliament News", "https://www.parliament.uk/rss/news-feed/"),
+                FeedSource("PBS NewsHour - Politics", "https://www.pbs.org/newshour/feeds/rss/politics"),
+                FeedSource("BBC - UK Politics", "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml"),
+                FeedSource("NPR - Politics", "https://feeds.npr.org/1014/rss.xml"),
             ),
         ),
     )
