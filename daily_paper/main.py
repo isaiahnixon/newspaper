@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 
-from .archive import archive_existing
+from .archive import archive_existing, build_archive_index
 from .config import DEFAULT_CONFIG, DailyPaperConfig
 from .fetch import fetch_feeds
 from .render import RenderContext, render_html
@@ -52,6 +52,8 @@ def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
     archive_existing(config.output_path, config.archive_dir)
     log_verbose(config.verbose, f"Writing output to {config.output_path}.")
     config.output_path.write_text(html, encoding="utf-8")
+    log_verbose(config.verbose, f"Updating archive index at {config.archive_dir}.")
+    build_archive_index(config.archive_dir)
     log_verbose(config.verbose, "Daily Paper run complete.")
     return config.output_path
 
