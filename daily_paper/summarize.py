@@ -76,9 +76,19 @@ def select_top_items(
 
 def _parse_selection(response: str, total: int, limit: int) -> list[int]:
     """Parse item numbers from the model response with safe fallbacks."""
-    numbers = [int(match) for match in re.findall(r"\d+", response)]
+    # Prefer a comma-separated list to avoid picking up stray numbers (e.g., "Top 5").
+    candidates: list[int] = []
+    tokens = [token.strip() for token in response.replace("\n", " ").split(",")]
+    for token in tokens:
+        if re.fullmatch(r"\d+", token):
+            candidates.append(int(token))
+
+    if not candidates:
+        # If the model adds a prefix like "Top 5:", ignore everything before the last colon.
+        trimmed = response.rsplit(":", maxsplit=1)[-1]
+        candidates = [int(match) for match in re.findall(r"\b\d+\b", trimmed)]
     unique: list[int] = []
-    for number in numbers:
+    for number in candidates:
         if 1 <= number <= total and number not in unique:
             unique.append(number)
         if len(unique) == limit:
