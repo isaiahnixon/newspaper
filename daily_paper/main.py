@@ -7,7 +7,7 @@ from .archive import archive_existing
 from .config import DEFAULT_CONFIG, DailyPaperConfig
 from .fetch import fetch_feeds
 from .render import RenderContext, render_html
-from .summarize import summarize_items, summarize_topic
+from .summarize import select_top_items, summarize_items, summarize_topic
 from .utils import log_verbose
 
 
@@ -24,7 +24,8 @@ def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
             log_verbose(config.verbose, f"No entries for '{topic}', skipping summarization.")
             summarized_by_topic[topic] = []
             continue
-        summarized_items = summarize_items(config, entries, topic=topic)
+        selected_entries = select_top_items(config, entries, topic=topic)
+        summarized_items = summarize_items(config, selected_entries, topic=topic)
         summarized_by_topic[topic] = summarized_items
         if summarized_items:
             topic_summaries[topic] = summarize_topic(config, topic, summarized_items)
