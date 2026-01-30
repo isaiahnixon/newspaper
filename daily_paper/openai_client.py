@@ -16,7 +16,7 @@ class OpenAIError(RuntimeError):
 class OpenAIClient:
     api_key: str
     model: str
-    timeout: int = 45
+    timeout: int = 90
     max_retries: int = 1
     retry_backoff: float = 1.0
     retry_on_timeout: bool = False
