@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import re
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -58,3 +59,14 @@ def compact_text(parts: Iterable[str], max_chars: int) -> str:
 def log_verbose(enabled: bool, message: str) -> None:
     if enabled:
         print(f"[daily_paper] {message}", flush=True)
+
+
+def get_env(key: str) -> str | None:
+    """Small wrapper to keep environment access in one place."""
+    return os.getenv(key)
+
+
+def env_truthy(value: str | None) -> bool:
+    if value is None:
+        return False
+    return value.strip().lower() in {"1", "true", "yes", "y", "on"}

@@ -34,6 +34,11 @@ class DailyPaperConfig:
     topic_model: str = "gpt-5-mini"
     temperature: float | None = None
     verbose: bool = False
+    # OpenAI request behavior: keep in config so it's easy to audit and tune.
+    openai_timeout_secs: float = 30.0
+    openai_max_retries: int = 0
+    openai_retry_backoff_secs: float = 1.0
+    openai_retry_on_timeout: bool = False
     topics: tuple[TopicConfig, ...] = field(default_factory=tuple)
 
     @property
