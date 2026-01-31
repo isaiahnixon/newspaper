@@ -8,7 +8,7 @@ A small, readable Python 3 project that generates a daily text-first “AI newsp
 python -m daily_paper
 ```
 
-The output is written to `./public/index.html`. If a previous index exists, it is archived to `./public/archive/YYYY-MM-DD_HHMMSS/index.html` before being overwritten.
+The output is written to `./public/index.html`. If a previous index exists, it is archived to `./public/archive/YYYY-MM-DD_HHMMSS.html` before being overwritten, and the archive index is refreshed at `./public/archive/index.html`.
 
 ## Configuration
 

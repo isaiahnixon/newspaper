@@ -36,7 +36,7 @@ def render_html(context: RenderContext) -> str:
         f"Generated {context.generated_at.strftime('%Y-%m-%d %H:%M:%S')} "
         f"local time. Sources checked: {context.sources_checked}. "
         f"Paywalled items excluded: {context.paywalled_excluded}. "
-        f"<a href=\"archive/\">Archive</a>."
+        f"<a href=\"archive/index.html\">Archive</a>."
     )
 
     return f"""<!doctype html>
