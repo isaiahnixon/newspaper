@@ -19,9 +19,11 @@ class TopicConfig:
 
 @dataclass(frozen=True)
 class DailyPaperConfig:
-    output_dir: Path = Path("public")
+    # Publish the latest edition directly to the repository root.
+    output_dir: Path = Path(".")
     output_file: str = "index.html"
-    archive_dir: Path = Path("public/archive")
+    # Keep historical editions in a dedicated root-level archive folder.
+    archive_dir: Path = Path("archive")
     no_visuals: bool = True
     show_titles: bool = True
     fetch_full_text: bool = False
