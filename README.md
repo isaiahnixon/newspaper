@@ -2,6 +2,10 @@
 
 A small, readable Python 3 project that generates a daily text-first “AI newspaper” HTML page and archives prior editions.
 
+## License
+
+[MIT](LICENSE)
+
 ## Quick start
 
 ```bash
