@@ -9,6 +9,7 @@ from typing import Iterable
 class FeedSource:
     name: str
     url: str
+    category: str | None = None
 
 
 @dataclass(frozen=True)
@@ -69,33 +70,60 @@ DEFAULT_CONFIG = DailyPaperConfig(
     topic_model="gpt-5-mini",
     topics=(
         TopicConfig(
-            name="Artificial Intelligence",
+            name="Tech News",
             feeds=(
-                FeedSource("OpenAI Blog", "https://openai.com/blog/rss"),
-                FeedSource("Google AI Blog", "https://ai.googleblog.com/feeds/posts/default"),
-                FeedSource("Hugging Face", "https://huggingface.co/blog/feed.xml"),
-                FeedSource("DeepMind Blog", "https://deepmind.google/blog/rss.xml"),
-                FeedSource("Meta AI Blog", "https://ai.facebook.com/blog/rss/"),
-                FeedSource("Microsoft Research Blog", "https://www.microsoft.com/en-us/research/feed/"),
-                FeedSource("Ars Technica (AI)", "https://arstechnica.com/ai/feed/"),
-                FeedSource("arXiv cs.AI", "https://rss.arxiv.org/rss/cs.AI"),
-                FeedSource("arXiv cs.LG", "https://rss.arxiv.org/rss/cs.LG"),
-                FeedSource("NVIDIA Developer Blog", "https://developer.nvidia.com/blog/feed"),
-            ),
-        ),
-        TopicConfig(
-            name="Web Tech News",
-            feeds=(
-                FeedSource("Mozilla Hacks", "https://hacks.mozilla.org/feed/"),
-                FeedSource("Web.dev", "https://web.dev/feed.xml"),
-                FeedSource("Chromium Blog", "https://blog.chromium.org/feeds/posts/default"),
-                FeedSource("W3C News", "https://www.w3.org/blog/news/feed/"),
-                FeedSource("CSS-Tricks", "https://css-tricks.com/feed/"),
-                FeedSource("Smashing Magazine", "https://www.smashingmagazine.com/feed/"),
-                FeedSource("Cloudflare Changelog (All)", "https://developers.cloudflare.com/changelog/rss/index.xml"),
-                FeedSource("Cloudflare Changelog (App Security)", "https://developers.cloudflare.com/changelog/rss/application-security.xml"),
-                FeedSource("V8 Blog (Atom)", "https://v8.dev/blog.atom"),
-                FeedSource("Google Security Blog", "https://security.googleblog.com/feeds/posts/default"),
+                FeedSource("OpenAI Blog", "https://openai.com/blog/rss", category="AI"),
+                FeedSource(
+                    "Google AI Blog",
+                    "https://ai.googleblog.com/feeds/posts/default",
+                    category="AI",
+                ),
+                FeedSource("Hugging Face", "https://huggingface.co/blog/feed.xml", category="AI"),
+                FeedSource("DeepMind Blog", "https://deepmind.google/blog/rss.xml", category="AI"),
+                FeedSource("Meta AI Blog", "https://ai.facebook.com/blog/rss/", category="AI"),
+                FeedSource(
+                    "Microsoft Research Blog",
+                    "https://www.microsoft.com/en-us/research/feed/",
+                    category="AI",
+                ),
+                FeedSource("Ars Technica (AI)", "https://arstechnica.com/ai/feed/", category="AI"),
+                FeedSource("arXiv cs.AI", "https://rss.arxiv.org/rss/cs.AI", category="AI"),
+                FeedSource("arXiv cs.LG", "https://rss.arxiv.org/rss/cs.LG", category="AI"),
+                FeedSource(
+                    "NVIDIA Developer Blog",
+                    "https://developer.nvidia.com/blog/feed",
+                    category="AI",
+                ),
+                FeedSource("Mozilla Hacks", "https://hacks.mozilla.org/feed/", category="Web"),
+                FeedSource("Web.dev", "https://web.dev/feed.xml", category="Web"),
+                FeedSource(
+                    "Chromium Blog",
+                    "https://blog.chromium.org/feeds/posts/default",
+                    category="Web",
+                ),
+                FeedSource("W3C News", "https://www.w3.org/blog/news/feed/", category="Web"),
+                FeedSource("CSS-Tricks", "https://css-tricks.com/feed/", category="Web"),
+                FeedSource(
+                    "Smashing Magazine",
+                    "https://www.smashingmagazine.com/feed/",
+                    category="Web",
+                ),
+                FeedSource(
+                    "Cloudflare Changelog (All)",
+                    "https://developers.cloudflare.com/changelog/rss/index.xml",
+                    category="Web",
+                ),
+                FeedSource(
+                    "Cloudflare Changelog (App Security)",
+                    "https://developers.cloudflare.com/changelog/rss/application-security.xml",
+                    category="Web",
+                ),
+                FeedSource("V8 Blog (Atom)", "https://v8.dev/blog.atom", category="Web"),
+                FeedSource(
+                    "Google Security Blog",
+                    "https://security.googleblog.com/feeds/posts/default",
+                    category="Web",
+                ),
             ),
         ),
         TopicConfig(
@@ -116,17 +144,25 @@ DEFAULT_CONFIG = DailyPaperConfig(
             ),
         ),
         TopicConfig(
-            name="Political News",
+            name="U.S. Governance",
+            feeds=(
+                FeedSource("U.S. State Dept. Press Releases", "https://www.state.gov/feeds/press-releases/"),
+                FeedSource("White House Briefing Room", "https://www.whitehouse.gov/briefing-room/feed/"),
+                FeedSource("PBS NewsHour - Politics", "https://www.pbs.org/newshour/feeds/rss/politics"),
+                FeedSource("NPR - Politics", "https://feeds.npr.org/1014/rss.xml"),
+            ),
+        ),
+        TopicConfig(
+            name="Global Affairs",
             feeds=(
                 FeedSource("United Nations News", "https://news.un.org/feed/subscribe/en/news/all/rss.xml"),
-                FeedSource("U.S. State Dept. Press Releases", "https://www.state.gov/feeds/press-releases/"),
                 FeedSource("European Parliament News", "https://www.europarl.europa.eu/rss/doc/news/en.xml"),
-                FeedSource("White House Briefing Room", "https://www.whitehouse.gov/briefing-room/feed/"),
                 FeedSource("NATO News", "https://www.nato.int/cps/en/natohq/news_rss.htm"),
                 FeedSource("UK Parliament News", "https://www.parliament.uk/rss/news-feed/"),
-                FeedSource("PBS NewsHour - Politics", "https://www.pbs.org/newshour/feeds/rss/politics"),
-                FeedSource("BBC - UK Politics", "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml"),
-                FeedSource("NPR - Politics", "https://feeds.npr.org/1014/rss.xml"),
+                FeedSource(
+                    "BBC - UK Politics",
+                    "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml",
+                ),
             ),
         ),
     )

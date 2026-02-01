@@ -10,10 +10,11 @@ from .utils import compact_text, log_verbose
 
 ITEM_SYSTEM_PROMPT = (
     "You are a careful news summarizer.\n"
-    "Write EXACTLY ONE sentence, plain language, <= 20 words.\n"
+    "Write EXACTLY ONE sentence, plain language, <= 24 words.\n"
+    "Structure: 'What happened; why it matters.' Use a single semicolon to separate clauses.\n"
+    "If the 'why it matters' clause is not supported by the provided text, omit it (and omit the semicolon).\n"
     "Neutral and factual: no sensational adjectives, no loaded framing, no speculation, no motive attribution.\n"
     "Grounding: use ONLY facts present in the provided title/summary/text. Do not add new details.\n"
-    "Prefer: what happened + the immediate significance (if supported).\n"
     "If evidence is unclear, say 'Details are unclear.' (and keep within the word limit).\n"
 )
 
@@ -25,23 +26,16 @@ SELECTION_SYSTEM_PROMPT = (
 )
 
 TOPIC_SYSTEM_PROMPT = (
-    "You write neutral, multi-source TOPIC DIGESTS.\n"
-    "Length: 80 words maximum. Plain language.\n"
+    "You write neutral, multi-source topic summaries for a daily paper.\n"
+    "Output EXACTLY two lines in this format:\n"
+    "Macro: <ONE sentence, <= 24 words>\n"
+    "Watch: <ONE sentence or short phrase list, <= 18 words>\n"
     "\n"
-    "CRITICAL: Do NOT restate or paraphrase the individual items. "
-    "Do NOT repeat specific names, appointments, survey titles, or exact figures already visible above. "
-    "Assume the reader already saw the bullets.\n"
-    "\n"
-    "Instead, synthesize: explain (a) the broader trend or regime, (b) why it matters, "
-    "(c) what it implies or changes for stakeholders, and (d) what to watch next. "
-    "If the provided items do not support a clear implication, say so briefly.\n"
-    "\n"
-    "Grounding: use ONLY the provided items as evidence. Do not add external facts or forecasts. "
-    "No sensational framing, no motive attribution.\n"
-    "\n"
-    "Output structure (must follow): "
-    "1) Theme sentence. 2) Significance sentence. 3) 'Watch:' sentence (what indicator/event would clarify next). "
-    "Optional 4th sentence for uncertainty if needed."
+    "Neutral and factual: no sensational framing, no speculation, no motive attribution.\n"
+    "Grounding: use ONLY the provided items as evidence. Do not add external facts or forecasts.\n"
+    "If the items lack enough detail to synthesize, output:\n"
+    "Macro: Not enough accessible detail to synthesize.\n"
+    "Watch: Next release / official update."
 )
 
 @dataclass
@@ -133,7 +127,7 @@ def summarize_item(client: OpenAIClient, entry: FeedEntry, config: DailyPaperCon
     description = compact_text([entry.summary, entry.full_text or ""], 1200)
     user_prompt = (
         "Summarize the following item in one neutral sentence. "
-        "Do not invent facts.\n\n"
+        "Follow the required structure. Do not invent facts.\n\n"
         f"Title: {entry.title}\n"
         f"Description: {description}\n"
         f"Source: {entry.source}\n"
@@ -152,8 +146,7 @@ def summarize_topic(
         for item in items
     )
     user_prompt = (
-        f"Write a 3-6 sentence topic summary for {topic}. "
-        "Use the items below.\n\n"
+        f"Write the Macro/Watch summary for {topic}. Use only the items below.\n\n"
         f"Items:\n{bullet_points}"
     )
     summary = client.chat_completion(TOPIC_SYSTEM_PROMPT, user_prompt)

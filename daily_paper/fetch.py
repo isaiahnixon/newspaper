@@ -41,6 +41,8 @@ class FeedEntry:
     link: str
     published: str
     source: str
+    feed_name: str
+    feed_category: str | None
     summary: str
     full_text: str | None = None
 
@@ -105,6 +107,8 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                     link=normalized,
                     published=published_dt.isoformat() if published_dt else "",
                     source=entry.get("source", {}).get("title") or feed.name,
+                    feed_name=feed.name,
+                    feed_category=feed.category,
                     summary=summary,
                 )
                 if config.fetch_full_text:

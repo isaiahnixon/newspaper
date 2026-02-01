@@ -6,6 +6,7 @@ import html
 from typing import Iterable
 
 from .config import DailyPaperConfig
+from .fetch import FeedEntry
 from .summarize import SummarizedItem, TopicSummary
 from .utils import format_published
 
@@ -44,6 +45,10 @@ def render_html(context: RenderContext) -> str:
 <head>
   <meta charset=\"utf-8\" />
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <meta
+    http-equiv=\"Content-Security-Policy\"
+    content=\"default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'\"
+  />
   <title>The Daily Signal — An AI-generated, impartial digest</title>
   <style>
     :root {{
@@ -66,25 +71,25 @@ def render_html(context: RenderContext) -> str:
     header {{
       text-align: center;
       border-bottom: 2px solid var(--rule);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
     }}
     h1 {{
-      font-size: 2.6rem;
+      font-size: 2.1rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin: 0;
     }}
     .tagline {{
-      margin: 0.5rem auto 0;
+      margin: 0.35rem auto 0;
       max-width: 52rem;
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: 0.98rem;
     }}
     .paper-meta {{
-      margin-top: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--muted);
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }}
@@ -118,10 +123,14 @@ def render_html(context: RenderContext) -> str:
       color: var(--muted);
       font-size: 0.9rem;
     }}
-    .title {{
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-style: italic;
+    .macro-watch {{
+      border: 1px solid var(--rule);
+      padding: 0.6rem 0.8rem;
+      background: #fbf7ee;
+      font-size: 0.95rem;
+    }}
+    .macro-watch div + div {{
+      margin-top: 0.35rem;
     }}
     footer {{
       margin-top: 3rem;
@@ -158,26 +167,22 @@ def render_topic_section(
     items: Iterable[SummarizedItem],
     config: DailyPaperConfig,
 ) -> str:
-    summary_html = (
-        f"<p>{escape_html(summary.summary)}</p>" if summary else "<p>No summary available.</p>"
-    )
+    summary_html = render_macro_watch(summary)
 
     items_html = "\n".join(
-        render_item(item, config.show_titles) for item in items
+        render_item(item, topic) for item in items
     )
 
     return f"""
 <section id=\"{slugify(topic)}\">
   <h2>{escape_html(topic)}</h2>
   {items_html}
-  <div>
-    {summary_html}
-  </div>
+  {summary_html}
 </section>
 """
 
 
-def render_item(item: SummarizedItem, show_title: bool) -> str:
+def render_item(item: SummarizedItem, topic: str) -> str:
     entry = item.entry
     published = format_published(parse_iso(entry.published))
     meta_parts = [escape_html(entry.source)]
@@ -185,15 +190,15 @@ def render_item(item: SummarizedItem, show_title: bool) -> str:
         meta_parts.append(published)
     meta = " · ".join(meta_parts)
 
-    title_html = (
-        f"<div class=\"title\">{escape_html(entry.title)}</div>" if show_title else ""
-    )
+    summary_text = escape_html(item.summary)
+    if topic == "Tech News":
+        label = label_for_entry(entry)
+        summary_text = f"{label} {summary_text}"
 
     return f"""
 <div class=\"item\">
-  <div>{escape_html(item.summary)}</div>
+  <div>{summary_text}</div>
   <div class=\"meta\">{meta} · <a href=\"{escape_html(entry.link)}\">Source</a></div>
-  {title_html}
 </div>
 """
 
@@ -213,3 +218,51 @@ def slugify(text: str) -> str:
 
 def escape_html(text: str) -> str:
     return html.escape(text, quote=True)
+
+
+def render_macro_watch(summary: TopicSummary | None) -> str:
+    if not summary:
+        macro_line = "Macro: Not enough accessible detail to synthesize."
+        watch_line = "Watch: Next release / official update."
+        return (
+            "<div class=\"macro-watch\">"
+            f"<div>{escape_html(macro_line)}</div>"
+            f"<div>{escape_html(watch_line)}</div>"
+            "</div>"
+        )
+    normalized = summary.summary.replace("\r", "\n")
+    lines = [line.strip() for line in normalized.splitlines() if line.strip()]
+    if len(lines) >= 2:
+        macro_line = lines[0]
+        watch_line = lines[1]
+    else:
+        text = normalized.strip()
+        watch_index = text.lower().find("watch:")
+        if watch_index != -1:
+            macro_line = text[:watch_index].strip() or "Macro: Not enough accessible detail to synthesize."
+            watch_line = text[watch_index:].strip() or "Watch: Next release / official update."
+        else:
+            macro_line = text if text else "Macro: Not enough accessible detail to synthesize."
+            watch_line = "Watch: Next release / official update."
+    return (
+        "<div class=\"macro-watch\">"
+        f"<div>{escape_html(macro_line)}</div>"
+        f"<div>{escape_html(watch_line)}</div>"
+        "</div>"
+    )
+
+
+def label_for_entry(entry: FeedEntry) -> str:
+    feed_name = (entry.feed_name or entry.source or "").strip()
+    lower_name = feed_name.lower()
+    if "cloudflare changelog" in lower_name:
+        return "[DevOps]"
+    if "security" in lower_name:
+        return "[Security]"
+    if entry.feed_category == "AI":
+        return "[AI]"
+    if entry.feed_category == "Web":
+        return "[Web]"
+    if "devops" in lower_name or "infrastructure" in lower_name or "performance" in lower_name:
+        return "[DevOps]"
+    return "[General]"
