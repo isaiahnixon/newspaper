@@ -78,6 +78,7 @@ DEFAULT_CONFIG = DailyPaperConfig(
                     "https://ai.googleblog.com/feeds/posts/default",
                     category="AI",
                 ),
+                FeedSource("OpenAI News", "https://openai.com/news/rss.xml", category="AI"),
                 FeedSource("Hugging Face", "https://huggingface.co/blog/feed.xml", category="AI"),
                 FeedSource("DeepMind Blog", "https://deepmind.google/blog/rss.xml", category="AI"),
                 FeedSource("Meta AI Blog", "https://ai.facebook.com/blog/rss/", category="AI"),
@@ -124,6 +125,11 @@ DEFAULT_CONFIG = DailyPaperConfig(
                     "https://security.googleblog.com/feeds/posts/default",
                     category="Web",
                 ),
+                FeedSource("GitHub Blog", "https://github.blog/feed/", category="Web"),
+                FeedSource("Kubernetes Blog", "https://kubernetes.io/feed.xml", category="Web"),
+                FeedSource("Node.js Blog", "https://nodejs.org/en/feed/blog.xml", category="Web"),
+                FeedSource("The Register (Headlines)", "https://www.theregister.com/headlines.atom", category="Web"),
+
             ),
         ),
         TopicConfig(
@@ -137,9 +143,8 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("OECD Newsroom", "https://www.oecd.org/newsroom/rss.xml"),
                 FeedSource("U.S. Treasury Press Releases", "https://home.treasury.gov/rss/press-releases.xml"),
                 FeedSource("BEA News Releases", "https://apps.bea.gov/rss/rss.xml"),
-                FeedSource("US Census Newsroom", "https://www.census.gov/newsroom/rss.xml"),
-                FeedSource("US Census Economic Indicators", "https://www.census.gov/economic-indicators/rss.xml"),
-                FeedSource("BIS Press Releases", "https://www.bis.org/doclist/all_pressrels.rss"),
+                FeedSource("US Census Press Releases", "https://www.census.gov/newsroom/press-releases.xml"),
+                FeedSource("US Census Economic Indicators", "https://www.census.gov/economic-indicators/indicator.xml"),                FeedSource("BIS Press Releases", "https://www.bis.org/doclist/all_pressrels.rss"),
                 FeedSource("BIS Statistical Releases", "https://www.bis.org/doclist/all_statistics.rss"),
             ),
         ),
@@ -150,19 +155,44 @@ DEFAULT_CONFIG = DailyPaperConfig(
                 FeedSource("White House Briefing Room", "https://www.whitehouse.gov/briefing-room/feed/"),
                 FeedSource("PBS NewsHour - Politics", "https://www.pbs.org/newshour/feeds/rss/politics"),
                 FeedSource("NPR - Politics", "https://feeds.npr.org/1014/rss.xml"),
+
+                # Additions (primary sources / official docs / courts / enforcement)
+                FeedSource("Congress.gov - On the House Floor Today", "https://www.congress.gov/rss/house-floor-today.xml"),  # :contentReference[oaicite:0]{index=0}
+                FeedSource("Congress.gov - On the Senate Floor Today", "https://www.congress.gov/rss/senate-floor-today.xml"),  # :contentReference[oaicite:1]{index=1}
+                FeedSource("Congress.gov - Bills Presented to the President", "https://www.congress.gov/rss/presented-to-president.xml"),  # :contentReference[oaicite:2]{index=2}
+                FeedSource("Congress.gov - Most-Viewed Bills", "https://www.congress.gov/rss/most-viewed-bills.xml"),  # :contentReference[oaicite:3]{index=3}
+
+                FeedSource("GovInfo - Federal Register", "https://www.govinfo.gov/rss/fr.xml"),  # :contentReference[oaicite:4]{index=4}
+                FeedSource("GovInfo - Congressional Record", "https://www.govinfo.gov/rss/crec.xml"),  # :contentReference[oaicite:5]{index=5}
+                FeedSource("GovInfo - GAO Reports", "https://www.govinfo.gov/rss/gaoreports.xml"),  # :contentReference[oaicite:6]{index=6}
+                FeedSource("GovInfo - U.S. Reports (Supreme Court opinions)", "https://www.govinfo.gov/rss/usreports.xml"),  # :contentReference[oaicite:7]{index=7}
+
+                FeedSource("U.S. Courts - News", "http://news.uscourts.gov/feed"),  # :contentReference[oaicite:8]{index=8}
+                FeedSource("U.S. Dept. of Justice - All News", "https://www.justice.gov/news/rss?m=1"),  # :contentReference[oaicite:9]{index=9}
+                FeedSource("U.S. House Clerk - Legislative Activity", "https://clerk.house.gov/Home/Feed"),  # :contentReference[oaicite:10]{index=10}
+
+                # Optional (high-quality investigative journalism; not “neutral gov docs” but no paywall)
+                FeedSource("ProPublica - Main Feed", "https://www.propublica.org/feeds/propublica/main"),  # :contentReference[oaicite:11]{index=11}
             ),
         ),
         TopicConfig(
             name="Global Affairs",
             feeds=(
                 FeedSource("United Nations News", "https://news.un.org/feed/subscribe/en/news/all/rss.xml"),
-                FeedSource("European Parliament News", "https://www.europarl.europa.eu/rss/doc/news/en.xml"),
+                FeedSource("European Parliament Press Releases", "https://www.europarl.europa.eu/rss/doc/press-releases/en.xml"),
+                FeedSource("European Parliament External Relations", "https://www.europarl.europa.eu/rss/topic/903/en.xml"),
                 FeedSource("NATO News", "https://www.nato.int/cps/en/natohq/news_rss.htm"),
                 FeedSource("UK Parliament News", "https://www.parliament.uk/rss/news-feed/"),
                 FeedSource(
                     "BBC - UK Politics",
                     "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml",
                 ),
+
+                # Additions (public broadcasters + EU Council “source” feeds)
+                FeedSource("BBC - World", "https://feeds.bbci.co.uk/news/world/rss.xml"),  # :contentReference[oaicite:12]{index=12}
+                FeedSource("Deutsche Welle - Top Stories", "https://rss.dw.com/rdf/rss-en-top"),  # :contentReference[oaicite:13]{index=13}
+                FeedSource("Council of the EU - Press Releases", "https://www.consilium.europa.eu/en/press/press-releases/rss/"),  # :contentReference[oaicite:14]{index=14}
+                FeedSource("Council of the EU - Foreign Affairs Meetings", "https://www.consilium.europa.eu/en/meetings/rss/?topic=Foreign%20Affairs"),
             ),
         ),
     )
