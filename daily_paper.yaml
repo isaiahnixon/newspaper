@@ -7,8 +7,6 @@ archive_dir: "archive"
 fetch_full_text: true
 max_full_text_chars: 2000
 items_per_topic: 5
-# Limit articles to the most recent window so the paper stays timely.
-lookback_hours: 24
 
 # Model choices (explicitly set; no implicit defaults)
 item_model: "gpt-5"
@@ -29,96 +27,71 @@ openai_retry_on_timeout: false
 
 topics:
   - name: "Tech News"
+    # Limit entries to a recent window so the tech digest stays timely.
+    lookback_hours: 24
     feeds:
       - name: "OpenAI Blog"
         url: "https://openai.com/blog/rss"
-        category: "AI"
       - name: "Google AI Blog"
         url: "https://ai.googleblog.com/feeds/posts/default"
-        category: "AI"
       - name: "OpenAI News"
         url: "https://openai.com/news/rss.xml"
-        category: "AI"
       - name: "Hugging Face"
         url: "https://huggingface.co/blog/feed.xml"
-        category: "AI"
       - name: "DeepMind Blog"
         url: "https://deepmind.google/blog/rss.xml"
-        category: "AI"
       - name: "Meta AI Blog"
         url: "https://ai.facebook.com/blog/rss/"
-        category: "AI"
       - name: "Microsoft Research Blog"
         url: "https://www.microsoft.com/en-us/research/feed/"
-        category: "AI"
       - name: "Ars Technica (AI)"
         url: "https://arstechnica.com/ai/feed/"
-        category: "AI"
       - name: "arXiv cs.AI"
         url: "https://rss.arxiv.org/rss/cs.AI"
-        category: "AI"
       - name: "arXiv cs.LG"
         url: "https://rss.arxiv.org/rss/cs.LG"
-        category: "AI"
       - name: "NVIDIA Developer Blog"
         url: "https://developer.nvidia.com/blog/feed"
-        category: "AI"
       - name: "Mozilla Hacks"
         url: "https://hacks.mozilla.org/feed/"
-        category: "Web"
       - name: "Web.dev"
         url: "https://web.dev/feed.xml"
-        category: "Web"
       - name: "Chromium Blog"
         url: "https://blog.chromium.org/feeds/posts/default"
-        category: "Web"
       - name: "W3C News"
         url: "https://www.w3.org/blog/news/feed/"
-        category: "Web"
       - name: "CSS-Tricks"
         url: "https://css-tricks.com/feed/"
-        category: "Web"
       - name: "Smashing Magazine"
         url: "https://www.smashingmagazine.com/feed/"
-        category: "Web"
       - name: "Cloudflare Changelog (All)"
         url: "https://developers.cloudflare.com/changelog/rss/index.xml"
-        category: "Web"
       - name: "Cloudflare Changelog (App Security)"
         url: "https://developers.cloudflare.com/changelog/rss/application-security.xml"
-        category: "Web"
       - name: "V8 Blog (Atom)"
         url: "https://v8.dev/blog.atom"
-        category: "Web"
       - name: "Google Security Blog"
         url: "https://security.googleblog.com/feeds/posts/default"
-        category: "Web"
       - name: "GitHub Blog"
         url: "https://github.blog/feed/"
-        category: "Web"
       - name: "Kubernetes Blog"
         url: "https://kubernetes.io/feed.xml"
-        category: "Web"
       - name: "Node.js Blog"
         url: "https://nodejs.org/en/feed/blog.xml"
-        category: "Web"
       - name: "The Register (Headlines)"
         url: "https://www.theregister.com/headlines.atom"
-        category: "Web"
       - name: "Ars Technica (Security)"
         url: "https://arstechnica.com/security/feed/"
       - name: "Ars Technica (Tech Policy)"
         url: "https://arstechnica.com/tech-policy/feed/"
-        category: "Web"
       - name: "Ars Technica (Gadgets)"
         url: "https://arstechnica.com/gadgets/feed/"
-        category: "Web"
       - name: "Ars Technica (Science)"
         url: "https://arstechnica.com/science/feed/"
-        category: "Web"
 
-
-    - name: "Economic News"
+  - name: "Economic News"
+    # Economic releases can be less frequent; tune this window as needed.
+    lookback_hours: 24
     feeds:
       - name: "U.S. Bureau of Labor Statistics Releases"
         url: "https://www.bls.gov/feed/bls_latest.rss"
@@ -141,9 +114,8 @@ topics:
       - name: "BIS Statistical Releases"
         url: "https://www.bis.org/doclist/all_statistics.rss"
 
-
-
   - name: "U.S. Governance"
+    lookback_hours: 24
     feeds:
       - name: "U.S. State Dept. Press Releases"
         url: "https://www.state.gov/feeds/press-releases/"
@@ -185,6 +157,7 @@ topics:
         url: "https://www.propublica.org/feeds/propublica/main"
 
   - name: "Montana News"
+    lookback_hours: 24
     feeds:
       # Non-paywalled, locally relevant sources for Montana coverage.
       - name: "Montana Free Press"
@@ -201,6 +174,7 @@ topics:
         url: "https://www.umt.edu/news/rss.xml"
 
   - name: "Global Affairs"
+    lookback_hours: 24
     feeds:
       - name: "United Nations News"
         url: "https://news.un.org/feed/subscribe/en/news/all/rss.xml"
@@ -218,4 +192,3 @@ topics:
         url: "https://www.france24.com/en/rss"
       - name: "AJ+"
         url: "https://www.ajplus.net/rss"
-
