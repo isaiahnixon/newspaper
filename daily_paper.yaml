@@ -1,0 +1,196 @@
+# Daily Paper configuration.
+output_dir: "."
+output_file: "index.html"
+archive_dir: "archive"
+
+# Rendering & content handling
+no_visuals: true
+fetch_full_text: false
+max_full_text_chars: 2000
+items_per_topic: 8
+
+# Model choices (explicitly set; no implicit defaults)
+item_model: "gpt-5-nano"
+topic_model: "gpt-5-mini"
+# Use null to omit a temperature override and keep provider defaults.
+temperature: null
+
+# Logging
+verbose: false
+
+# OpenAI request behavior
+openai_timeout_secs: 180.0
+openai_max_retries: 1
+openai_retry_backoff_secs: 1.0
+openai_retry_on_timeout: false
+
+topics:
+  - name: "Tech News"
+    feeds:
+      - name: "OpenAI Blog"
+        url: "https://openai.com/blog/rss"
+        category: "AI"
+      - name: "Google AI Blog"
+        url: "https://ai.googleblog.com/feeds/posts/default"
+        category: "AI"
+      - name: "OpenAI News"
+        url: "https://openai.com/news/rss.xml"
+        category: "AI"
+      - name: "Hugging Face"
+        url: "https://huggingface.co/blog/feed.xml"
+        category: "AI"
+      - name: "DeepMind Blog"
+        url: "https://deepmind.google/blog/rss.xml"
+        category: "AI"
+      - name: "Meta AI Blog"
+        url: "https://ai.facebook.com/blog/rss/"
+        category: "AI"
+      - name: "Microsoft Research Blog"
+        url: "https://www.microsoft.com/en-us/research/feed/"
+        category: "AI"
+      - name: "Ars Technica (AI)"
+        url: "https://arstechnica.com/ai/feed/"
+        category: "AI"
+      - name: "arXiv cs.AI"
+        url: "https://rss.arxiv.org/rss/cs.AI"
+        category: "AI"
+      - name: "arXiv cs.LG"
+        url: "https://rss.arxiv.org/rss/cs.LG"
+        category: "AI"
+      - name: "NVIDIA Developer Blog"
+        url: "https://developer.nvidia.com/blog/feed"
+        category: "AI"
+      - name: "Mozilla Hacks"
+        url: "https://hacks.mozilla.org/feed/"
+        category: "Web"
+      - name: "Web.dev"
+        url: "https://web.dev/feed.xml"
+        category: "Web"
+      - name: "Chromium Blog"
+        url: "https://blog.chromium.org/feeds/posts/default"
+        category: "Web"
+      - name: "W3C News"
+        url: "https://www.w3.org/blog/news/feed/"
+        category: "Web"
+      - name: "CSS-Tricks"
+        url: "https://css-tricks.com/feed/"
+        category: "Web"
+      - name: "Smashing Magazine"
+        url: "https://www.smashingmagazine.com/feed/"
+        category: "Web"
+      - name: "Cloudflare Changelog (All)"
+        url: "https://developers.cloudflare.com/changelog/rss/index.xml"
+        category: "Web"
+      - name: "Cloudflare Changelog (App Security)"
+        url: "https://developers.cloudflare.com/changelog/rss/application-security.xml"
+        category: "Web"
+      - name: "V8 Blog (Atom)"
+        url: "https://v8.dev/blog.atom"
+        category: "Web"
+      - name: "Google Security Blog"
+        url: "https://security.googleblog.com/feeds/posts/default"
+        category: "Web"
+      - name: "GitHub Blog"
+        url: "https://github.blog/feed/"
+        category: "Web"
+      - name: "Kubernetes Blog"
+        url: "https://kubernetes.io/feed.xml"
+        category: "Web"
+      - name: "Node.js Blog"
+        url: "https://nodejs.org/en/feed/blog.xml"
+        category: "Web"
+      - name: "The Register (Headlines)"
+        url: "https://www.theregister.com/headlines.atom"
+        category: "Web"
+
+  - name: "Economic News"
+    feeds:
+      # Prioritize official, non-paywalled economic releases for neutral coverage.
+      - name: "U.S. Bureau of Labor Statistics Releases"
+        url: "https://www.bls.gov/feed/bls_latest.rss"
+      - name: "Federal Reserve Press Releases"
+        url: "https://www.federalreserve.gov/feeds/press_all.xml"
+      - name: "European Central Bank Press Releases"
+        url: "https://www.ecb.europa.eu/rss/press.html"
+      - name: "International Monetary Fund News"
+        url: "https://www.imf.org/en/News/RSS"
+      - name: "OECD Newsroom"
+        url: "https://www.oecd.org/newsroom/rss.xml"
+      - name: "U.S. Treasury Press Releases"
+        url: "https://home.treasury.gov/rss/press-releases.xml"
+      - name: "BEA News Releases"
+        url: "https://apps.bea.gov/rss/rss.xml"
+      - name: "US Census Press Releases"
+        url: "https://www.census.gov/newsroom/press-releases.xml"
+      - name: "US Census Economic Indicators"
+        url: "https://www.census.gov/economic-indicators/indicator.xml"
+      - name: "BIS Press Releases"
+        url: "https://www.bis.org/doclist/all_pressrels.rss"
+      - name: "BIS Statistical Releases"
+        url: "https://www.bis.org/doclist/all_statistics.rss"
+
+  - name: "U.S. Governance"
+    feeds:
+      - name: "U.S. State Dept. Press Releases"
+        url: "https://www.state.gov/feeds/press-releases/"
+      - name: "White House Briefing Room"
+        url: "https://www.whitehouse.gov/briefing-room/feed/"
+      - name: "PBS NewsHour - Politics"
+        url: "https://www.pbs.org/newshour/feeds/rss/politics"
+      - name: "NPR - Politics"
+        url: "https://feeds.npr.org/1014/rss.xml"
+
+      # Additions (primary sources / official docs / courts / enforcement)
+      - name: "Congress.gov - On the House Floor Today"
+        url: "https://www.congress.gov/rss/house-floor-today.xml"
+      - name: "Congress.gov - On the Senate Floor Today"
+        url: "https://www.congress.gov/rss/senate-floor-today.xml"
+      - name: "Congress.gov - Bills Presented to the President"
+        url: "https://www.congress.gov/rss/presented-to-president.xml"
+      - name: "Congress.gov - Most-Viewed Bills"
+        url: "https://www.congress.gov/rss/most-viewed-bills.xml"
+
+      - name: "GovInfo - Federal Register"
+        url: "https://www.govinfo.gov/rss/fr.xml"
+      - name: "GovInfo - Congressional Record"
+        url: "https://www.govinfo.gov/rss/crec.xml"
+      - name: "GovInfo - GAO Reports"
+        url: "https://www.govinfo.gov/rss/gaoreports.xml"
+      - name: "GovInfo - U.S. Reports (Supreme Court opinions)"
+        url: "https://www.govinfo.gov/rss/usreports.xml"
+
+      - name: "U.S. Courts - News"
+        url: "http://news.uscourts.gov/feed"
+      - name: "U.S. Dept. of Justice - All News"
+        url: "https://www.justice.gov/news/rss?m=1"
+      - name: "U.S. House Clerk - Legislative Activity"
+        url: "https://clerk.house.gov/Home/Feed"
+
+      # Optional (high-quality investigative journalism; not “neutral gov docs” but no paywall)
+      - name: "ProPublica - Main Feed"
+        url: "https://www.propublica.org/feeds/propublica/main"
+
+  - name: "Global Affairs"
+    feeds:
+      - name: "United Nations News"
+        url: "https://news.un.org/feed/subscribe/en/news/all/rss.xml"
+      - name: "European Parliament Press Releases"
+        url: "https://www.europarl.europa.eu/rss/doc/press-releases/en.xml"
+      - name: "European Parliament External Relations"
+        url: "https://www.europarl.europa.eu/rss/topic/903/en.xml"
+      - name: "NATO News"
+        url: "https://www.nato.int/cps/en/natohq/news_rss.htm"
+      - name: "UK Parliament News"
+        url: "https://www.parliament.uk/rss/news-feed/"
+      - name: "BBC - UK Politics"
+        url: "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml"
+
+      # Additions (public broadcasters + EU Council “source” feeds)
+      - name: "BBC - World"
+        url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+      - name: "Deutsche Welle - Top Stories"
+        url: "https://rss.dw.com/rdf/rss-en-top"
+      - name: "Council of the EU - Press Releases"
+        url: "https://www.consilium.europa.eu/en/press/press-releases/rss/"
+      - name: "Council of the EU - Foreign Affairs Meetings"
+        url: "https://www.consilium.europa.eu/en/meetings/rss/?topic=Foreign%20Affairs"
