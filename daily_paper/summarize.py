@@ -9,12 +9,14 @@ from .utils import compact_text, get_hostname, log_verbose, title_similarity
 
 ITEM_SYSTEM_PROMPT = (
     "You are a careful news summarizer.\n"
-    "Write EXACTLY ONE sentence, plain language, <= 24 words.\n"
-    "Structure: 'What happened; why it matters.' Use a single semicolon to separate clauses.\n"
-    "If the 'why it matters' clause is not supported by the provided text, omit it (and omit the semicolon).\n"
+    "Write a short micro-paragraph: 1–2 complete sentences, plain language, <= 32 words total.\n"
+    "Sentence 1: state what happened.\n"
+    "Sentence 2 (optional): briefly state why it matters (only if supported by the provided text).\n"
+    "If the 'why it matters' point is not supported, omit sentence 2.\n"
+    "Avoid generic importance claims (e.g., 'a major shift') unless explicitly supported.\n"
     "Neutral and factual: no sensational adjectives, no loaded framing, no speculation, no motive attribution.\n"
     "Grounding: use ONLY facts present in the provided title/summary/text. Do not add new details.\n"
-    "If evidence is unclear, say 'Details are unclear.' (and keep within the word limit).\n"
+    "If evidence is unclear, output exactly: Details are unclear.\n"
 )
 
 SELECTION_SYSTEM_PROMPT = (
