@@ -27,6 +27,13 @@ class OpenAIClient:
 
     def chat_completion(self, system_prompt: str, user_prompt: str) -> str:
         if self.dry_run:
+            if "Macro:" in system_prompt and "Watch:" in system_prompt:
+                return (
+                    "Macro: Not enough accessible detail to synthesize.\n"
+                    "Watch: Next release / official update."
+                )
+            if "What:" in system_prompt:
+                return "What: Details are unclear."
             return (
                 "[dry run] Summary skipped to avoid API usage. "
                 "Set DAILY_PAPER_DRY_RUN=0 to enable live calls."
