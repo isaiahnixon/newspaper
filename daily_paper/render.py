@@ -119,6 +119,11 @@ def render_html(context: RenderContext) -> str:
     .item {{
       margin-bottom: 1.2rem;
     }}
+    .item-why {{
+      margin-top: 0.2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }}
     .meta {{
       color: var(--muted);
       font-size: 0.9rem;
@@ -190,14 +195,17 @@ def render_item(item: SummarizedItem, topic: str) -> str:
         meta_parts.append(published)
     meta = " · ".join(meta_parts)
 
-    summary_text = escape_html(item.summary)
+    what_line, why_line = split_item_summary(item.summary)
+    if not what_line:
+        what_line = "What: Details are unclear."
     if topic == "Tech News":
         label = label_for_entry(entry)
-        summary_text = f"{label} {summary_text}"
+        what_line = f"{label} {what_line}"
 
     return f"""
 <div class=\"item\">
-  <div>{summary_text}</div>
+  <div>{escape_html(what_line)}</div>
+  {f'<div class="item-why">{escape_html(why_line)}</div>' if why_line else ''}
   <div class=\"meta\">{meta} · <a href=\"{escape_html(entry.link)}\">Source</a></div>
 </div>
 """
@@ -218,6 +226,21 @@ def slugify(text: str) -> str:
 
 def escape_html(text: str) -> str:
     return html.escape(text, quote=True)
+
+
+def split_item_summary(summary: str) -> tuple[str, str]:
+    normalized = summary.replace("\r", "\n")
+    lines = [line.strip() for line in normalized.splitlines() if line.strip()]
+    if not lines:
+        return "", ""
+    first = lines[0]
+    second = lines[1] if len(lines) > 1 else ""
+    if first.lower().startswith("what:"):
+        what_line = first
+        if second.lower().startswith("why:"):
+            return what_line, second
+        return what_line, ""
+    return first, ""
 
 
 def render_macro_watch(summary: TopicSummary | None) -> str:

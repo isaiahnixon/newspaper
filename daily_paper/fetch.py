@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import time
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Iterable
 
 import feedparser
@@ -10,7 +10,15 @@ import requests
 from bs4 import BeautifulSoup
 
 from .config import DailyPaperConfig, FeedSource, TopicConfig
-from .utils import compact_text, is_within_hours, log_verbose, normalize_url, parse_published
+from .utils import (
+    compact_text,
+    get_hostname,
+    is_within_hours,
+    log_verbose,
+    normalize_url,
+    parse_published,
+    title_similarity,
+)
 
 PAYWALL_MARKERS = (
     "subscribe",
@@ -58,9 +66,18 @@ class FetchError(RuntimeError):
     pass
 
 
+@dataclass
+class SeenEntry:
+    entry: FeedEntry
+    canonical_url: str
+    hostname: str
+    published: datetime | None
+
+
 def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], FetchStats]:
     entries_by_topic: dict[str, list[FeedEntry]] = {topic.name: [] for topic in config.topics}
     seen_urls: set[str] = set()
+    seen_entries: list[SeenEntry] = []
     stats = FetchStats()
     now = datetime.now(timezone.utc)
     # Respect configured lookback window to keep the paper focused and testable.
@@ -91,10 +108,6 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                     skipped += 1
                     continue
                 normalized = normalize_url(link)
-                if normalized in seen_urls:
-                    duplicates += 1
-                    continue
-                seen_urls.add(normalized)
                 published = entry.get("published") or entry.get("updated")
                 published_dt = parse_published(published)
                 # Only keep entries from the configured window to keep the paper timely.
@@ -118,8 +131,23 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                         stats.paywalled += 1
                         log_verbose(config.verbose, f"Paywalled item skipped: {item.link}")
                         continue
-                entries_by_topic[topic.name].append(item)
-                added += 1
+                action = _register_entry(
+                    entries_by_topic=entries_by_topic,
+                    seen_urls=seen_urls,
+                    seen_entries=seen_entries,
+                    item=item,
+                    published_dt=published_dt,
+                    now=now,
+                    max_age_hours=max_age_hours,
+                )
+                if action == "skipped":
+                    duplicates += 1
+                    continue
+                if action == "added":
+                    added += 1
+                elif action == "replaced":
+                    added += 1
+                    duplicates += 1
             if added == 0:
                 stats.no_result_sources.append(feed.name)
             log_verbose(
@@ -138,6 +166,116 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
         f"Paywalled excluded: {stats.paywalled}.",
     )
     return entries_by_topic, stats
+
+
+def _register_entry(
+    entries_by_topic: dict[str, list[FeedEntry]],
+    seen_urls: set[str],
+    seen_entries: list[SeenEntry],
+    item: FeedEntry,
+    published_dt: datetime | None,
+    now: datetime,
+    max_age_hours: int,
+) -> str:
+    _prune_seen_entries(seen_entries, now, max_age_hours)
+    hostname = get_hostname(item.link)
+    if item.link in seen_urls:
+        existing = _find_seen_by_url(seen_entries, item.link)
+        if existing and _is_better_entry(item, existing.entry):
+            _replace_entry(entries_by_topic, seen_urls, seen_entries, existing, item, published_dt)
+            return "replaced"
+        return "skipped"
+    near_match = _find_near_duplicate(seen_entries, item, hostname, published_dt, max_age_hours)
+    if near_match:
+        if _is_better_entry(item, near_match.entry):
+            _replace_entry(entries_by_topic, seen_urls, seen_entries, near_match, item, published_dt)
+            return "replaced"
+        return "skipped"
+    seen_urls.add(item.link)
+    seen_entries.append(
+        SeenEntry(
+            entry=item,
+            canonical_url=item.link,
+            hostname=hostname,
+            published=published_dt,
+        )
+    )
+    entries_by_topic[item.topic].append(item)
+    return "added"
+
+
+def _replace_entry(
+    entries_by_topic: dict[str, list[FeedEntry]],
+    seen_urls: set[str],
+    seen_entries: list[SeenEntry],
+    existing: SeenEntry,
+    replacement: FeedEntry,
+    published_dt: datetime | None,
+) -> None:
+    if existing.entry in entries_by_topic.get(existing.entry.topic, []):
+        entries_by_topic[existing.entry.topic].remove(existing.entry)
+    seen_urls.discard(existing.canonical_url)
+    existing.entry = replacement
+    existing.canonical_url = replacement.link
+    existing.hostname = get_hostname(replacement.link)
+    existing.published = published_dt
+    seen_urls.add(replacement.link)
+    entries_by_topic[replacement.topic].append(replacement)
+
+
+def _find_seen_by_url(seen_entries: list[SeenEntry], url: str) -> SeenEntry | None:
+    for seen in seen_entries:
+        if seen.canonical_url == url:
+            return seen
+    return None
+
+
+def _find_near_duplicate(
+    seen_entries: list[SeenEntry],
+    item: FeedEntry,
+    hostname: str,
+    published_dt: datetime | None,
+    max_age_hours: int,
+    threshold: float = 0.86,
+) -> SeenEntry | None:
+    for seen in seen_entries:
+        if seen.hostname != hostname:
+            continue
+        if not _within_recent_window(published_dt, seen.published, max_age_hours):
+            continue
+        if title_similarity(item.title, seen.entry.title) >= threshold:
+            return seen
+    return None
+
+
+def _within_recent_window(
+    left: datetime | None, right: datetime | None, max_age_hours: int
+) -> bool:
+    if not left or not right:
+        return True
+    return abs(left - right) <= timedelta(hours=max_age_hours)
+
+
+def _prune_seen_entries(
+    seen_entries: list[SeenEntry], now: datetime, max_age_hours: int
+) -> None:
+    cutoff = now - timedelta(hours=max_age_hours)
+    seen_entries[:] = [
+        seen for seen in seen_entries if not seen.published or seen.published >= cutoff
+    ]
+
+
+def _is_better_entry(candidate: FeedEntry, existing: FeedEntry) -> bool:
+    return _entry_quality_score(candidate) > _entry_quality_score(existing)
+
+
+def _entry_quality_score(entry: FeedEntry) -> float:
+    score = 0.0
+    if entry.published:
+        score += 2.0
+    summary = compact_text([entry.summary], 240)
+    score += min(len(summary), 240) / 240
+    return score
 
 
 def parse_feed(feed: FeedSource, config: DailyPaperConfig) -> feedparser.FeedParserDict:
