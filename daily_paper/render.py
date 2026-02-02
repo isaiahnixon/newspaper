@@ -108,6 +108,7 @@ def render_html(context: RenderContext) -> str:
       margin-bottom: 0.5rem;
       border-bottom: 1px solid var(--rule);
       padding-bottom: 0.3rem;
+      margin-top: 0rem;
     }}
     p {{
       margin: 0.6rem 0;
