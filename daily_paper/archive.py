@@ -82,7 +82,8 @@ def _rewrite_archive_link(archive_path: Path) -> None:
 def _render_archive_index(entries: list[ArchiveEntry]) -> str:
     if entries:
         items = "\n".join(
-            f'      <li><a href="{entry.path.name}">{entry.label}</a></li>'
+            f'      <li><a href="{entry.path.name}" target="_blank" '
+            f'rel="noopener noreferrer">{entry.label}</a></li>'
             for entry in entries
         )
         content = f"    <ul>\n{items}\n    </ul>"
@@ -158,7 +159,9 @@ def _render_archive_index(entries: list[ArchiveEntry]) -> str:
   </header>
 {content}
   <footer>
-    <a href="../index.html">Return to the latest edition</a>
+    <a href="../index.html" target="_blank" rel="noopener noreferrer">
+      Return to the latest edition
+    </a>
   </footer>
 </body>
 </html>"""

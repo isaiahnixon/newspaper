@@ -20,7 +20,7 @@ Configuration lives in the root-level `daily_paper.yaml`. Every required key mus
 
 Key options:
 
-- `fetch_full_text`: When enabled, fetches the article body to provide more context and checks for paywalls.
+- `fetch_full_text`: When enabled, fetches the article body to provide more context.
 - `items_per_topic`: Number of items per topic section.
 - `lookback_hours`: Limit feed entries to the most recent window (default 24 hours).
 - `item_model`: Model for headline-style item summaries.
@@ -32,6 +32,9 @@ Key options:
 
 Item summaries always appear in the output; original titles are not rendered separately. Each topic ends
 with a two-line Macro/Watch summary that synthesizes themes without repeating item-level details.
+
+The default configuration includes a Montana News section built from non-paywalled local sources to
+expand regional coverage alongside national and global topics.
 
 Duplicate stories are deduplicated across topics using canonicalized URLs and a near-duplicate title check.
 Selection favors higher-information items and source diversity while remaining deterministic.
@@ -46,12 +49,9 @@ Environment:
 
 - `OPENAI_API_KEY` must be set to call the OpenAI API for item and topic summaries.
 
-## Paywall filtering
+## Output behavior
 
-Two layers are used:
-
-1. **Allowlist only**: feeds are curated per topic in config.
-2. **Soft detection**: when `fetch_full_text=True`, the fetcher excludes items if the status code is 401/402/403/451 or the HTML contains common paywall markers.
+- Links in the generated HTML open in a new tab for safer navigation.
 
 ## Dependencies
 

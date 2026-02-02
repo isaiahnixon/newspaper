@@ -20,16 +20,6 @@ from .utils import (
     title_similarity,
 )
 
-PAYWALL_MARKERS = (
-    "subscribe",
-    "subscription",
-    "sign in to continue",
-    "already a subscriber",
-    "metered",
-    "paywall",
-    "register to continue",
-)
-
 # Some publishers block non-browser user agents and return 403/empty feeds.
 # Use a mainstream UA and accept header to reduce false negatives.
 DEFAULT_HEADERS = {
@@ -58,7 +48,6 @@ class FeedEntry:
 @dataclass
 class FetchStats:
     sources_checked: int = 0
-    paywalled: int = 0
     no_result_sources: list[str] = field(default_factory=list)
 
 
@@ -126,11 +115,7 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                     summary=summary,
                 )
                 if config.fetch_full_text:
-                    item.full_text, paywalled = fetch_full_text(item, config)
-                    if paywalled:
-                        stats.paywalled += 1
-                        log_verbose(config.verbose, f"Paywalled item skipped: {item.link}")
-                        continue
+                    item.full_text = fetch_full_text(item, config)
                 action = _register_entry(
                     entries_by_topic=entries_by_topic,
                     seen_urls=seen_urls,
@@ -162,8 +147,7 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
         )
     log_verbose(
         config.verbose,
-        f"Finished fetch. Sources checked: {stats.sources_checked}. "
-        f"Paywalled excluded: {stats.paywalled}.",
+        f"Finished fetch. Sources checked: {stats.sources_checked}.",
     )
     return entries_by_topic, stats
 
@@ -300,19 +284,15 @@ def parse_feed(feed: FeedSource, config: DailyPaperConfig) -> feedparser.FeedPar
     return feedparser.parse(feed.url)
 
 
-def fetch_full_text(entry: FeedEntry, config: DailyPaperConfig) -> tuple[str | None, bool]:
+def fetch_full_text(entry: FeedEntry, config: DailyPaperConfig) -> str | None:
     try:
         response = requests.get(entry.link, timeout=15, headers=DEFAULT_HEADERS)
     except requests.RequestException:
-        return None, False
+        return None
 
-    if response.status_code in {401, 402, 403, 451}:
-        return None, True
+    # Best-effort extraction: keep failures quiet so feeds remain resilient.
 
     html = response.text
-    lowered = html.lower()
-    if any(marker in lowered for marker in PAYWALL_MARKERS):
-        return None, True
 
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript"]):
@@ -320,9 +300,9 @@ def fetch_full_text(entry: FeedEntry, config: DailyPaperConfig) -> tuple[str | N
 
     article = soup.find("article") or soup.find("main") or soup.body
     if not article:
-        return None, False
+        return None
 
     paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")]
     text = compact_text(paragraphs, config.max_full_text_chars)
     time.sleep(0.2)
-    return text or None, False
+    return text or None
