@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
   <title>The Daily Signal — An AI-generated, impartial digest</title>
   <style>
     :root {
@@ -25,25 +29,25 @@
     header {
       text-align: center;
       border-bottom: 2px solid var(--rule);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
     }
     h1 {
-      font-size: 2.6rem;
+      font-size: 2.1rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin: 0;
     }
     .tagline {
-      margin: 0.5rem auto 0;
+      margin: 0.35rem auto 0;
       max-width: 52rem;
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: 0.98rem;
     }
     .paper-meta {
-      margin-top: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--muted);
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -66,6 +70,7 @@
       margin-bottom: 0.5rem;
       border-bottom: 1px solid var(--rule);
       padding-bottom: 0.3rem;
+      margin-top: 0rem;
     }
     p {
       margin: 0.6rem 0;
@@ -77,10 +82,14 @@
       color: var(--muted);
       font-size: 0.9rem;
     }
-    .title {
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-style: italic;
+    .macro-watch {
+      border: 1px solid var(--rule);
+      padding: 0.6rem 0.8rem;
+      background: #fbf7ee;
+      font-size: 0.95rem;
+    }
+    .macro-watch div + div {
+      margin-top: 0.35rem;
     }
     footer {
       margin-top: 3rem;
@@ -103,138 +112,188 @@
   </header>
   <main>
     
-<section id="artificial-intelligence">
-  <h2>Artificial Intelligence</h2>
+<section id="tech-news">
+  <h2>Tech News</h2>
   
 <div class="item">
-  <div>Moltbook, a Reddit-style social network, hosts 32,000 AI bots trading jokes, tips, and complaints about humans.</div>
-  <div class="meta">Ars Technica (AI) · 2026-01-30 · <a href="https://arstechnica.com/information-technology/2026/01/ai-agents-now-have-their-own-reddit-style-social-network-and-its-getting-weird-fast/">Source</a></div>
-  <div class="title">AI agents now have their own Reddit-style social network, and it&#x27;s getting weird fast</div>
+  <div>OpenAI and Snowflake entered a $200M partnership to bring frontier intelligence into enterprise data, enabling AI agents and insights to run directly within Snowflake.</div>
+  <div class="meta">OpenAI News · 2026-02-02 · <a href="https://openai.com/index/snowflake-partnership" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>Developers say AI coding tools work, but this enthusiasm is tempered by unease.</div>
-  <div class="meta">Ars Technica (AI) · 2026-01-30 · <a href="https://arstechnica.com/ai/2026/01/developers-say-ai-coding-tools-work-and-thats-precisely-what-worries-them/">Source</a></div>
-  <div class="title">Developers say AI coding tools work—and that&#x27;s precisely what worries them</div>
+  <div>OpenAI introduced the Codex app for macOS, a command center for AI coding and software development that supports multiple agents, parallel workflows, and long-running tasks.</div>
+  <div class="meta">OpenAI News · 2026-02-02 · <a href="https://openai.com/index/introducing-the-codex-app" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>A web portal left kids&#x27; chats with a Bondu AI toy open to anyone with a Gmail account.</div>
-  <div class="meta">Ars Technica (AI) · 2026-01-30 · <a href="https://arstechnica.com/security/2026/01/web-portal-leaves-kids-chats-with-ai-toy-open-to-anyone-with-gmail-account/">Source</a></div>
-  <div class="title">Web portal leaves kids&#x27; chats with AI toy open to anyone with Gmail account</div>
+  <div>Suspected China-state hackers compromised Notepad++&#x27;s update infrastructure from June to December, redirecting select users to malicious servers that delivered backdoored app updates and a new payload dubbed Chrysalis.</div>
+  <div class="meta">Ars Technica (Security) · 2026-02-02 · <a href="https://arstechnica.com/security/2026/02/notepad-updater-was-compromised-for-6-months-in-supply-chain-attack" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
-  <div>
-    <p>AI is rapidly moving into social spaces, developer workflows, and everyday consumer devices, creating new interaction patterns and responsibilities. This matters because widespread, uneven deployment raises privacy, safety, and trust tensions while forcing trade-offs between utility and oversight for platforms, creators, and families. Watch: policy or platform safety changes, publicized security or data-exposure incidents, and shifts in developer or public acceptance to see whether governance and safeguards keep pace. Unclear which institutions will set effective norms.</p>
-  </div>
+
+<div class="item">
+  <div>Ukraine and SpaceX said they collaborated to stop strikes by Russian drones using Starlink and will require registration, allowing only whitelisted Starlink terminals to operate in Ukraine and disconnecting others.</div>
+  <div class="meta">Ars Technica (Tech Policy) · 2026-02-02 · <a href="https://arstechnica.com/tech-policy/2026/02/russian-drones-use-starlink-but-ukraine-has-plan-to-block-their-internet-access" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+
+<div class="item">
+  <div>An arXiv paper shows existing batch speculative decoding corrupts outputs due to ragged tensor desynchronization, and introduces EQSPEC to guarantee output equivalence and EXSPEC to reduce alignment overhead via cross-batch scheduling.</div>
+  <div class="meta">arXiv cs.AI · 2026-02-02 · <a href="https://arxiv.org/abs/2510.22876" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+  <div class="macro-watch"><div>Agentic AI is moving deeper into developer workflows and enterprise data, but the stakes are rising around correctness, security, and control. Work on faster generation now centers on provable equivalence, while a high-profile update channel compromise and battlefield use of commercial connectivity spotlight supply-chain and access risks. For product leaders and CISOs, the tradeoff is speed and integration versus verifiability and governance.</div><div>Watch: Next release / official update.</div></div>
 </section>
 
 
-<section id="web-tech-news">
-  <h2>Web Tech News</h2>
+<section id="economic-news--weekly">
+  <h2>Economic News (Weekly)</h2>
   
 <div class="item">
-  <div>What’s !important #4 covers videos and view transitions, named media queries, how browsers work, and more.</div>
-  <div class="meta">CSS-Tricks · 2026-01-30 · <a href="https://css-tricks.com/whats-important-4/">Source</a></div>
-  <div class="title">What’s !important #4: Videos &amp; View Transitions, Named Media Queries, How Browsers Work, and More</div>
+  <div>The CPI rose 0.3% in December 2025, the unemployment rate was 4.4%, and payroll employment increased by 50,000, according to the U.S. Bureau of Labor Statistics.</div>
+  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-01-30 · <a href="https://www.bls.gov/bls" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>AI coding tools can help developers with routine tasks, legacy codebases, and low-risk feature implementation in unfamiliar languages, improving workflow.</div>
-  <div class="meta">Smashing Magazine · 2026-01-30 · <a href="https://smashingmagazine.com/2026/01/practical-use-ai-coding-tools-responsible-developer/">Source</a></div>
-  <div class="title">Practical Use Of AI Coding Tools For The Responsible Developer</div>
+  <div>The U.S. trade deficit widened to $56.8 billion in November 2025 from a revised $29.2 billion in October as exports fell and imports rose.</div>
+  <div class="meta">BEA News Releases · 2026-01-29 · <a href="https://www.bea.gov/news/2026/us-international-trade-goods-and-services-november-2025" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>The minimum cacheTtl for Workers KV has been reduced from 60 seconds to 30 seconds, applying to get() and getWithMetadata().</div>
-  <div class="meta">Cloudflare Changelog (All) · 2026-01-30 · <a href="https://developers.cloudflare.com/changelog/2026-01-30-kv-reduced-minimum-cachettl/">Source</a></div>
-  <div class="title">KV - Reduced minimum cache TTL for Workers KV to 30 seconds</div>
+  <div>New orders for manufactured goods increased $16.2 billion (2.7%) to $621.6 billion in November 2025, and the Census Bureau rescheduled December 2025 M3 releases to Feb. 18 and Feb. 23, 2026.</div>
+  <div class="meta">US Census Economic Indicators · 2026-01-29 · <a href="https://www.census.gov/manufacturing/m3" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
-  <div>
-    <p>Web development is seeing incremental productivity gains through richer educational resources, practical AI-assisted coding workflows, and finer-grained runtime configuration options. These shifts lower day-to-day friction, help teams work through legacy code, and make it easier to keep served data more current. Watch: whether browser platforms resume shipping new features, if AI tools are adopted into standard workflows, and whether runtimes continue offering finer caching controls. Impact depends on real-world adoption and follow-up platform changes.</p>
-  </div>
+
+<div class="item">
+  <div>Average wholesale day-ahead electricity prices at most major Lower 48 hubs were higher in 2025 than 2024, driven largely by higher natural gas prices, with ISO-NE up $29/MWh and Mid-Columbia down $14/MWh.</div>
+  <div class="meta">EIA - Today in Energy · 2026-02-02 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67106" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+
+<div class="item">
+  <div>The U.S. trade deficit in goods and services widened to $56.8 billion in November from a revised $29.2 billion in October, as exports fell and imports rose.</div>
+  <div class="meta">US Census Economic Indicators · 2026-01-29 · <a href="https://www.census.gov/foreign-trade/index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+  <div class="macro-watch"><div>Macro signals point to firming price pressures and energy costs, a wider external gap, and a rebound in factory demand. Higher power prices from fuel costs elevate upstream inflation risk, while imports outpacing exports suggest domestic demand is stronger than abroad. For operators and budget planners, this mix supports cautious pricing and inventory plans and attention to supply contracts and trade exposure.</div><div>Watch: Next release / official update.</div></div>
 </section>
 
 
-<section id="economic-news">
-  <h2>Economic News</h2>
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
   
 <div class="item">
-  <div>CPI rose 0.3% in December 2025; unemployment was 4.4%; payroll employment increased by 50,000 in December 2025.</div>
-  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-01-30 · <a href="https://www.bls.gov/bls/">Source</a></div>
-  <div class="title">Major Economic Indicators Latest Numbers</div>
+  <div>A partial U.S. government shutdown continues after Congress missed Friday’s funding deadline amid disputes over Department of Homeland Security reforms, though the House Speaker predicts it will end by Tuesday.</div>
+  <div class="meta">NPR - Politics · 2026-02-02 · <a href="https://www.npr.org/2026/02/02/nx-s1-5695757/amid-partial-government-shutdown-debate-over-dhs-funding-continues" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>The Federal Reserve Board announces approval of the application by Cornerstone Capital Bancorp, Inc.</div>
-  <div class="meta">Federal Reserve Press Releases · 2026-01-30 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/orders20260130a.htm">Source</a></div>
-  <div class="title">Federal Reserve Board announces approval of application by Cornerstone Capital Bancorp, Inc.</div>
+  <div>A judge blocked additional citizenship provisions of Trump&#x27;s election executive order, ruling that agencies cannot assess citizenship before providing federal voter registration forms to people enrolling in public assistance programs.</div>
+  <div class="meta">PBS NewsHour - Politics · 2026-02-02 · <a href="https://www.pbs.org/newshour/politics/judge-blocks-additional-citizenship-provisions-in-latest-setback-to-trumps-wide-ranging-election-executive-order" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>ECB Consumer Expectations Survey results for December 2025 are from European Central Bank press releases.</div>
-  <div class="meta">European Central Bank Press Releases · 2026-01-30 · <a href="https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260130~892c4c4e8f.en.html">Source</a></div>
-  <div class="title">ECB Consumer Expectations Survey results – December 2025</div>
+  <div>The Trump administration reduced this year&#x27;s field test of the 2030 census to two sites and plans to test using U.S. Postal Service staff instead of temporary census workers.</div>
+  <div class="meta">NPR - Politics · 2026-02-02 · <a href="https://www.npr.org/2026/02/02/nx-s1-5696576/us-census-bureau-usps-2026-operational-test" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
-  <div>
-    <p>Recent developments — price readings, a banking regulatory approval, and a European consumer-expectations poll — suggest policymakers are balancing price dynamics with financial oversight. This matters because it keeps central banks attentive to inflation trends while testing banking-sector resilience and shaping household spending prospects. Watch: upcoming price releases, further banking supervisory actions, and follow-up consumer-sentiment updates to see whether inflation momentum or stability risks change. Uncertainty remains about whether these signals will prompt policy shifts.</p>
-  </div>
+
+<div class="item">
+  <div>Secretary Kristi Noem said every Homeland Security officer in Minneapolis will get a body-worn camera, and DHS will rapidly acquire and deploy body cameras across the country.</div>
+  <div class="meta">PBS NewsHour - Politics · 2026-02-02 · <a href="https://www.pbs.org/newshour/politics/every-homeland-security-officer-in-minneapolis-is-getting-a-body-worn-camera-noem-says" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+
+<div class="item">
+  <div>The FAA issued a Jan. 8 safety alert warning rocket launches could significantly reduce airplane safety, urging pilots to use extreme caution and prepare for dangerous debris fields from potential catastrophic failures.</div>
+  <div class="meta">ProPublica - Main Feed · 2026-02-02 · <a href="https://www.propublica.org/article/faa-safety-warning-spacex-starship-explosions-airlines" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+  <div class="macro-watch"><div>U.S. governance this week reflects agencies adjusting policy under tight constraints and legal guardrails. Budget uncertainty and courtroom limits on voter screening collide with scaled-back planning for the next national headcount, rapid rollout of officer cameras, and heightened airspace cautions tied to private launches. The tradeoff is between security, integrity, and safety versus access, coverage, and operational capacity—affecting travelers, benefits applicants, communities, and federal staff.</div><div>Watch: Next release / official update.</div></div>
 </section>
 
 
-<section id="political-news">
-  <h2>Political News</h2>
+<section id="montana-news">
+  <h2>Montana News</h2>
   
 <div class="item">
-  <div>UN nuclear watchdog says Ukraine war remains biggest threat to nuclear safety, with fifth year looming and sites&#x27; power risks.</div>
-  <div class="meta">UN News - Global perspective Human stories · 2026-01-30 · <a href="https://news.un.org/feed/view/en/story/2026/01/1166863">Source</a></div>
-  <div class="title">UN watchdog warns Ukraine war remains world’s biggest threat to nuclear safety</div>
+  <div>The Senate approved budget bills and agreed to temporarily freeze Department of Homeland Security funding, sidestepping a partial shutdown; with a House vote days away, some programs may briefly go unfunded.</div>
+  <div class="meta">Missoula Current · 2026-02-02 · <a href="https://missoulacurrent.com/senate-deal-ice" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>UN Commission of Inquiry on Syria welcomed a ceasefire between the Syrian Government and the mainly-Kurdish SDF, urging civilian protection.</div>
-  <div class="meta">UN News - Global perspective Human stories · 2026-01-30 · <a href="https://news.un.org/feed/view/en/story/2026/01/1166864">Source</a></div>
-  <div class="title">World News in Brief: Syria ceasefire welcomed, ‘Olympic truce’, Ukraine’s freezing children</div>
+  <div>Two U.S. Air Force MH-139A Grey Wolf helicopters at Malmstrom Air Force Base completed their first operational mission, escorting an ICBM convoy more than 100 miles without refueling.</div>
+  <div class="meta">Missoula Current · 2026-02-02 · <a href="https://missoulacurrent.com/malmstrom-new-helicopters" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>FBI raid at Fulton County voting offices triggers debate over election security and federal authority, with Tulsi Gabbard present.</div>
-  <div class="meta">PBS NewsHour - Politics · 2026-01-30 · <a href="https://www.pbs.org/newshour/show/fbi-raid-of-election-offices-ignites-debate-over-voting-security-and-federal-authority">Source</a></div>
-  <div class="title">FBI raid of election offices ignites debate over voting security and federal authority</div>
+  <div>Rent increases at Helena’s Golden Estates mobile home park, tenants and advocates warn, undermine an affordable housing option and could push tenants into less stable living scenarios.</div>
+  <div class="meta">Montana Free Press · 2026-02-02 · <a href="https://montanafreepress.org/2026/02/02/rent-hikes-hammer-residents-of-helena-trailer-court" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>Capehart and Abernathy discuss the week in politics: backlash against Trump&#x27;s Minnesota immigration operation and journalists&#x27; arrest.</div>
-  <div class="meta">PBS NewsHour - Politics · 2026-01-30 · <a href="https://www.pbs.org/newshour/show/capehart-and-abernathy-on-the-backlash-against-trumps-immigration-operation">Source</a></div>
-  <div class="title">Capehart and Abernathy on the backlash against Trump&#x27;s immigration operation</div>
+  <div>Toby’s House broke ground on a new facility.</div>
+  <div class="meta">Montana Free Press · 2026-02-02 · <a href="https://montanafreepress.org/2026/02/02/tobys-house-breaks-ground-on-new-facility" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
 
 <div class="item">
-  <div>Texas&#x27; 18th Congressional District special runoff, with two Democrats on the ballot, guarantees temporary narrowing of the Republican House majority.</div>
-  <div class="meta">PBS NewsHour - Politics · 2026-01-30 · <a href="https://www.pbs.org/newshour/politics/what-to-expect-in-texas-18th-congressional-district-special-runoff-election">Source</a></div>
-  <div class="title">What to expect in Texas&#x27; 18th Congressional District special runoff election</div>
+  <div>Democratic lawmakers from 13 states visited Minnesota to show solidarity amid the presence of 3,000 immigration agents and after two U.S. citizens died in incidents involving immigration officials.</div>
+  <div class="meta">Missoula Current · 2026-02-02 · <a href="https://missoulacurrent.com/lawmakers-visit-minnesota" target="_blank" rel="noopener noreferrer">Source</a></div>
 </div>
 
-  <div>
-    <p>Political coverage highlights mounting strains on security and institutional authority at both international and domestic levels. This matters because risks to physical safety, contested enforcement actions, and narrow electoral shifts can erode public trust and alter governing majorities. Watch: armed activity near critical infrastructure, outcomes of enforcement-related legal processes, adherence to local ceasefires, and the results of special elections. The items do not yet show a clear long-term trajectory.</p>
-  </div>
+  <div class="macro-watch"><div>National budget deals and immigration enforcement dynamics are shaping state politics and daily life. At the same time, defense modernization is advancing at a key installation. Low-income renters face sharper cost pressure while nonprofits expand to support families, highlighting a tradeoff between enforcement and security priorities and community stability that will inform local housing, service, and budget choices.</div><div>Watch: Next release / official update.</div></div>
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  
+<div class="item">
+  <div>Xi Jinping sidelined top general Zhang Yiouxia amid accusations ranging from corruption to leaking nuclear secrets to the US.</div>
+  <div class="meta">France 24 (EN) · 2026-02-02 · <a href="https://www.france24.com/en/tv-shows/the-debate/20260202-why-the-purge-china-s-xi-sidelines-top-military-brass" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+
+<div class="item">
+  <div>Iran is considering resuming nuclear talks with the United States, possibly in Turkey.</div>
+  <div class="meta">France 24 (EN) · 2026-02-02 · <a href="https://www.france24.com/en/iran-s-president-orders-resumption-of-nuclear-talks-with-us" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+
+<div class="item">
+  <div>The WHO warned that cuts to international aid and persistent funding gaps are undermining the global health system, putting global health systems at risk.</div>
+  <div class="meta">UN News - Global perspective Human stories · 2026-02-02 · <a href="https://news.un.org/feed/view/en/story/2026/02/1166869" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+
+<div class="item">
+  <div>A Ukrainian official said Elon Musk&#x27;s curbs on Russian Starlink use worked after Starlink-enabled drones were linked to attacks, including a train attack that killed six, and Musk said the steps worked.</div>
+  <div class="meta">BBC - World · 2026-02-02 · <a href="https://www.bbc.com/news/articles/cly94qe3yr0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+
+<div class="item">
+  <div>Israel reopened the Rafah crossing with Egypt for limited movement, allowing dozens of people and no goods to cross daily after closure since May 2024; sick and wounded Palestinians have entered Egypt.</div>
+  <div class="meta">BBC - World · 2026-02-02 · <a href="https://www.bbc.com/news/articles/c99kdjdj9l8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+</div>
+
+  <div class="macro-watch"><div>Today’s signals point to tighter state control and constrained access across flashpoints: leadership shake-ups and wartime platform limits coincide with narrow openings for talks, while aid systems face shrinking funds and border flows remain restricted. The core tension is security hardening versus humanitarian capacity. For diplomats and aid planners, expect slower relief pipelines and policy volatility when assessing corridors, negotiations, and civilian risk.</div><div>Watch: Next release / official update.</div></div>
 </section>
 
   </main>
   <footer>
-    Generated 2026-01-31 05:12:31 local time. Sources checked: 40. Paywalled items excluded: 0. <a href="archive/index.html">Archive</a>.
+    Generated 2026-02-02 23:32:09 local time. Sources checked: 69. <a href="archive/index.html" target="_blank" rel="noopener noreferrer">Archive</a>.
   </footer>
 </body>
 </html>
