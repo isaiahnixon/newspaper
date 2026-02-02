@@ -50,8 +50,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage the generated site output (index + archive)
-          git add public/
+          # Stage the generated output
+          git add .
 
           # If nothing changed, do nothing
           if git diff --cached --quiet; then

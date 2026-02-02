@@ -30,19 +30,24 @@ SELECTION_SYSTEM_PROMPT = (
 
 TOPIC_SYSTEM_PROMPT = (
     "You write neutral, multi-source topic summaries for a daily paper.\n"
-    "Output EXACTLY two lines in this format:\n"
-    "Macro: <ONE sentence, <= 24 words>\n"
-    "Watch: <ONE sentence or short phrase list, <= 18 words>\n"
+    "Write ONE short paragraph: 2–4 complete sentences, plain language, <= 64 words.\n"
+    "\n"
+    "Purpose: tie today's items into the broader story of this topic—what trend they reflect, "
+    "why it matters, and how a reader should interpret it.\n"
+    "\n"
+    "Do NOT restate or paraphrase the individual items. "
+    "Do NOT repeat item-level proper nouns, committee names, report titles, or exact figures already shown.\n"
+    "\n"
+    "Instead, synthesize: describe the theme, highlight the key tension/tradeoff or uncertainty, "
+    "and give one practical lens (who is affected or what decisions it informs).\n"
+    "\n"
+    "Avoid generic statements like 'ongoing monitoring'; be specific about the kind of change "
+    "(pace, direction, risk, adoption, constraints).\n"
     "\n"
     "Neutral and factual: no sensational framing, no speculation, no motive attribution.\n"
     "Grounding: use ONLY the provided items as evidence. Do not add external facts or forecasts.\n"
-    "Do NOT repeat item-level proper nouns, committee names, report titles, or exact figures already shown.\n"
-    "Synthesize themes and implications; the Watch line should point to the next indicator or update.\n"
-    "If the items lack enough detail to synthesize, output:\n"
-    "Macro: Not enough accessible detail to synthesize.\n"
-    "Watch: Next release / official update."
+    "If the items lack enough detail to synthesize, write: 'Not enough accessible detail to synthesize today.'\n"
 )
-
 
 @dataclass
 class SummarizedItem:

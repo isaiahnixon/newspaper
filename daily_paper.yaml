@@ -89,9 +89,9 @@ topics:
       - name: "Ars Technica (Science)"
         url: "https://arstechnica.com/science/feed/"
 
-  - name: "Economic News"
+  - name: "Economic News (Weekly)"
     # Economic releases can be less frequent; tune this window as needed.
-    lookback_hours: 24
+    lookback_hours: 168
     feeds:
       - name: "U.S. Bureau of Labor Statistics Releases"
         url: "https://www.bls.gov/feed/bls_latest.rss"
