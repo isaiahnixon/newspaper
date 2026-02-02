@@ -30,9 +30,8 @@ Key options:
 - `dry_run`: Set to `true` to skip API calls and return placeholder summaries.
 - `openai_timeout_secs`, `openai_max_retries`, `openai_retry_backoff_secs`, `openai_retry_on_timeout`: Request controls for the OpenAI client.
 
-Item summaries always appear in the output; original titles are not rendered separately. Items render in a
-two-line What/Why format (Why omitted when unsupported), and each topic ends with a two-line Macro/Watch
-summary that synthesizes themes without repeating item-level details.
+Item summaries always appear in the output; original titles are not rendered separately. Each topic ends
+with a two-line Macro/Watch summary that synthesizes themes without repeating item-level details.
 
 Duplicate stories are deduplicated across topics using canonicalized URLs and a near-duplicate title check.
 Selection favors higher-information items and source diversity while remaining deterministic.

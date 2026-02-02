@@ -9,17 +9,12 @@ from .utils import compact_text, get_hostname, log_verbose, title_similarity
 
 ITEM_SYSTEM_PROMPT = (
     "You are a careful news summarizer.\n"
-    "Output must be EXACTLY one of:\n"
-    "(a) Two lines:\n"
-    "What: <ONE short sentence, <= 18 words>\n"
-    "Why: <ONE short sentence or phrase, <= 12 words>\n"
-    "(b) One line (if why is not supported by provided text):\n"
-    "What: <ONE short sentence, <= 18 words>\n"
-    "If evidence is unclear, output exactly:\n"
-    "What: Details are unclear.\n"
+    "Write EXACTLY ONE sentence, plain language, <= 24 words.\n"
+    "Structure: 'What happened; why it matters.' Use a single semicolon to separate clauses.\n"
+    "If the 'why it matters' clause is not supported by the provided text, omit it (and omit the semicolon).\n"
     "Neutral and factual: no sensational adjectives, no loaded framing, no speculation, no motive attribution.\n"
     "Grounding: use ONLY facts present in the provided title/summary/text. Do not add new details.\n"
-    "\"Why\" must be practical/immediate and MUST be supported by the provided text; otherwise omit it.\n"
+    "If evidence is unclear, say 'Details are unclear.' (and keep within the word limit).\n"
 )
 
 SELECTION_SYSTEM_PROMPT = (
@@ -195,8 +190,8 @@ def summarize_items(
 def summarize_item(client: OpenAIClient, entry: FeedEntry, config: DailyPaperConfig) -> str:
     description = compact_text([entry.summary, entry.full_text or ""], 1200)
     user_prompt = (
-        "Summarize the following item. "
-        "Follow the required labeled format. Do not invent facts.\n\n"
+        "Summarize the following item in one neutral sentence. "
+        "Follow the required structure. Do not invent facts.\n\n"
         f"Title: {entry.title}\n"
         f"Description: {description}\n"
         f"Source: {entry.source}\n"
