@@ -3,14 +3,16 @@ output_dir: "."
 output_file: "index.html"
 archive_dir: "archive"
 
-# Rendering & content handling
-no_visuals: true
+# Content handling
 fetch_full_text: false
 max_full_text_chars: 2000
 items_per_topic: 8
+# Limit articles to the most recent window so the paper stays timely.
+lookback_hours: 24
 
 # Model choices (explicitly set; no implicit defaults)
 item_model: "gpt-5-nano"
+selection_model: "gpt-5-nano"
 topic_model: "gpt-5-mini"
 # Use null to omit a temperature override and keep provider defaults.
 temperature: null

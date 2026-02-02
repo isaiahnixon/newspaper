@@ -30,12 +30,14 @@ class DailyPaperConfig:
     output_file: str
     # Keep historical editions in a dedicated root-level archive folder.
     archive_dir: Path
-    no_visuals: bool
     fetch_full_text: bool
     max_full_text_chars: int
     items_per_topic: int
+    # Limit feed entries to a recent window so the paper stays timely.
+    lookback_hours: int
     # Explicitly set models so the config is the single source of truth.
     item_model: str
+    selection_model: str
     topic_model: str
     temperature: float | None
     verbose: bool
@@ -68,11 +70,12 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         "output_dir",
         "output_file",
         "archive_dir",
-        "no_visuals",
         "fetch_full_text",
         "max_full_text_chars",
         "items_per_topic",
+        "lookback_hours",
         "item_model",
+        "selection_model",
         "topic_model",
         "temperature",
         "verbose",
@@ -89,11 +92,12 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
     output_dir = _require_path(data, "output_dir")
     output_file = _require_str(data, "output_file")
     archive_dir = _require_path(data, "archive_dir")
-    no_visuals = _require_bool(data, "no_visuals")
     fetch_full_text = _require_bool(data, "fetch_full_text")
     max_full_text_chars = _require_int(data, "max_full_text_chars")
     items_per_topic = _require_int(data, "items_per_topic")
+    lookback_hours = _require_int(data, "lookback_hours")
     item_model = _require_str(data, "item_model")
+    selection_model = _require_str(data, "selection_model")
     topic_model = _require_str(data, "topic_model")
     temperature = _require_optional_float(data, "temperature")
     verbose = _require_bool(data, "verbose")
@@ -107,11 +111,12 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         output_dir=output_dir,
         output_file=output_file,
         archive_dir=archive_dir,
-        no_visuals=no_visuals,
         fetch_full_text=fetch_full_text,
         max_full_text_chars=max_full_text_chars,
         items_per_topic=items_per_topic,
+        lookback_hours=lookback_hours,
         item_model=item_model,
+        selection_model=selection_model,
         topic_model=topic_model,
         temperature=temperature,
         verbose=verbose,

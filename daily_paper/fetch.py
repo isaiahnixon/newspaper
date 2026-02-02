@@ -63,7 +63,8 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
     seen_urls: set[str] = set()
     stats = FetchStats()
     now = datetime.now(timezone.utc)
-    max_age_hours = 24
+    # Respect configured lookback window to keep the paper focused and testable.
+    max_age_hours = config.lookback_hours
 
     log_verbose(config.verbose, "Starting feed fetch.")
     for topic in config.topics:
@@ -96,7 +97,7 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                 seen_urls.add(normalized)
                 published = entry.get("published") or entry.get("updated")
                 published_dt = parse_published(published)
-                # Only keep entries from the last 24 hours to keep the paper timely.
+                # Only keep entries from the configured window to keep the paper timely.
                 if not is_within_hours(published_dt, now, max_age_hours):
                     out_of_window += 1
                     continue
