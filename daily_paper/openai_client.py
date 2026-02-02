@@ -7,7 +7,7 @@ from dataclasses import dataclass
 import requests
 
 from .config import DailyPaperConfig
-from .utils import env_truthy, get_env
+from .utils import get_env
 
 class OpenAIError(RuntimeError):
     pass
@@ -120,11 +120,8 @@ def get_client(
     temperature: float | None,
 ) -> OpenAIClient:
     """Build an OpenAI client using config-driven retry and timeout settings."""
-    dry_run = env_truthy(get_env("DAILY_PAPER_DRY_RUN")) or env_truthy(
-        get_env("OPENAI_DRY_RUN")
-    )
     api_key = get_env("OPENAI_API_KEY")
-    if not api_key and not dry_run:
+    if not api_key and not config.dry_run:
         raise OpenAIError("OPENAI_API_KEY is not set")
     return OpenAIClient(
         api_key=api_key or "",
@@ -133,7 +130,7 @@ def get_client(
         max_retries=config.openai_max_retries,
         retry_backoff=config.openai_retry_backoff_secs,
         retry_on_timeout=config.openai_retry_on_timeout,
-        dry_run=dry_run,
+        dry_run=config.dry_run,
         temperature=temperature,
         verbose=config.verbose,
     )

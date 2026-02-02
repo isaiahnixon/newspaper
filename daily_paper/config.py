@@ -40,6 +40,8 @@ class DailyPaperConfig:
     selection_model: str
     topic_model: str
     temperature: float | None
+    # Use dry_run to avoid network calls while testing prompts safely.
+    dry_run: bool
     verbose: bool
     # OpenAI request behavior: keep in config so it's easy to audit and tune.
     openai_timeout_secs: float
@@ -78,6 +80,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         "selection_model",
         "topic_model",
         "temperature",
+        "dry_run",
         "verbose",
         "openai_timeout_secs",
         "openai_max_retries",
@@ -100,6 +103,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
     selection_model = _require_str(data, "selection_model")
     topic_model = _require_str(data, "topic_model")
     temperature = _require_optional_float(data, "temperature")
+    dry_run = _require_bool(data, "dry_run")
     verbose = _require_bool(data, "verbose")
     openai_timeout_secs = _require_float(data, "openai_timeout_secs")
     openai_max_retries = _require_int(data, "openai_max_retries")
@@ -119,6 +123,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         selection_model=selection_model,
         topic_model=topic_model,
         temperature=temperature,
+        dry_run=dry_run,
         verbose=verbose,
         openai_timeout_secs=openai_timeout_secs,
         openai_max_retries=openai_max_retries,
