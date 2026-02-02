@@ -173,6 +173,22 @@ topics:
       - name: "ProPublica - Main Feed"
         url: "https://www.propublica.org/feeds/propublica/main"
 
+  - name: "Montana News"
+    feeds:
+      # Non-paywalled, locally relevant sources for Montana coverage.
+      - name: "Montana Free Press"
+        url: "https://montanafreepress.org/feed/"
+      - name: "Missoula Current"
+        url: "https://missoulacurrent.com/feed/"
+      - name: "Montana Public Radio"
+        url: "https://www.mtpr.org/?format=RSS"
+      - name: "Yellowstone Public Radio"
+        url: "https://www.ypradio.org/?format=RSS"
+      - name: "Montana State University News"
+        url: "https://www.montana.edu/news/rss.xml"
+      - name: "University of Montana News"
+        url: "https://www.umt.edu/news/rss.xml"
+
   - name: "Global Affairs"
     feeds:
       - name: "United Nations News"

@@ -16,7 +16,6 @@ class RenderContext:
     config: DailyPaperConfig
     generated_at: datetime
     sources_checked: int
-    paywalled_excluded: int
     topic_summaries: dict[str, TopicSummary]
     items_by_topic: dict[str, list[SummarizedItem]]
 
@@ -36,8 +35,7 @@ def render_html(context: RenderContext) -> str:
     footer = (
         f"Generated {context.generated_at.strftime('%Y-%m-%d %H:%M:%S')} "
         f"local time. Sources checked: {context.sources_checked}. "
-        f"Paywalled items excluded: {context.paywalled_excluded}. "
-        f"<a href=\"archive/index.html\">Archive</a>."
+        f"{render_link('archive/index.html', 'Archive')}."
     )
 
     return f"""<!doctype html>
@@ -198,7 +196,7 @@ def render_item(item: SummarizedItem, topic: str) -> str:
     return f"""
 <div class=\"item\">
   <div>{summary_text}</div>
-  <div class=\"meta\">{meta} · <a href=\"{escape_html(entry.link)}\">Source</a></div>
+  <div class=\"meta\">{meta} · {render_link(entry.link, 'Source')}</div>
 </div>
 """
 
@@ -218,6 +216,14 @@ def slugify(text: str) -> str:
 
 def escape_html(text: str) -> str:
     return html.escape(text, quote=True)
+
+
+def render_link(href: str, label: str) -> str:
+    """Render a safe external link that always opens in a new tab."""
+    return (
+        f"<a href=\"{escape_html(href)}\" target=\"_blank\" "
+        f"rel=\"noopener noreferrer\">{escape_html(label)}</a>"
+    )
 
 
 def render_macro_watch(summary: TopicSummary | None) -> str:

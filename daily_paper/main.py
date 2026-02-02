@@ -44,7 +44,6 @@ def run(config: DailyPaperConfig) -> Path:
         config=config,
         generated_at=datetime.now(),
         sources_checked=stats.sources_checked,
-        paywalled_excluded=stats.paywalled,
         topic_summaries=topic_summaries,
         items_by_topic=summarized_by_topic,
     )
