@@ -14,12 +14,12 @@ CONFIG_PATH = Path("daily_paper.yaml")
 class FeedSource:
     name: str
     url: str
-    category: str | None = None
 
 
 @dataclass(frozen=True)
 class TopicConfig:
     name: str
+    lookback_hours: int
     feeds: tuple[FeedSource, ...]
 
 
@@ -33,8 +33,6 @@ class DailyPaperConfig:
     fetch_full_text: bool
     max_full_text_chars: int
     items_per_topic: int
-    # Limit feed entries to a recent window so the paper stays timely.
-    lookback_hours: int
     # Explicitly set models so the config is the single source of truth.
     item_model: str
     selection_model: str
@@ -75,7 +73,6 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         "fetch_full_text",
         "max_full_text_chars",
         "items_per_topic",
-        "lookback_hours",
         "item_model",
         "selection_model",
         "topic_model",
@@ -98,7 +95,6 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
     fetch_full_text = _require_bool(data, "fetch_full_text")
     max_full_text_chars = _require_int(data, "max_full_text_chars")
     items_per_topic = _require_int(data, "items_per_topic")
-    lookback_hours = _require_int(data, "lookback_hours")
     item_model = _require_str(data, "item_model")
     selection_model = _require_str(data, "selection_model")
     topic_model = _require_str(data, "topic_model")
@@ -118,7 +114,6 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         fetch_full_text=fetch_full_text,
         max_full_text_chars=max_full_text_chars,
         items_per_topic=items_per_topic,
-        lookback_hours=lookback_hours,
         item_model=item_model,
         selection_model=selection_model,
         topic_model=topic_model,
@@ -186,8 +181,9 @@ def _require_topics(value: object) -> tuple[TopicConfig, ...]:
         name = raw_topic.get("name")
         if not isinstance(name, str) or not name.strip():
             raise ValueError("Each topic must include a non-empty 'name'.")
+        lookback_hours = _require_int(raw_topic, "lookback_hours")
         feeds = _require_feeds(raw_topic.get("feeds"), name)
-        topics.append(TopicConfig(name=name, feeds=feeds))
+        topics.append(TopicConfig(name=name, lookback_hours=lookback_hours, feeds=feeds))
     return tuple(topics)
 
 
@@ -211,10 +207,5 @@ def _require_feeds(value: object, topic_name: str) -> tuple[FeedSource, ...]:
             raise ValueError(
                 f"Feed entry {idx} in topic '{topic_name}' needs a non-empty 'url'."
             )
-        category = raw_feed.get("category")
-        if category is not None and (not isinstance(category, str) or not category.strip()):
-            raise ValueError(
-                f"Feed entry {idx} in topic '{topic_name}' has an invalid 'category'."
-            )
-        feeds.append(FeedSource(name=name, url=url, category=category))
+        feeds.append(FeedSource(name=name, url=url))
     return tuple(feeds)

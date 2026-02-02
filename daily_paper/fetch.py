@@ -9,7 +9,7 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
-from .config import DailyPaperConfig, FeedSource, TopicConfig
+from .config import DailyPaperConfig, FeedSource
 from .utils import (
     compact_text,
     get_hostname,
@@ -40,7 +40,6 @@ class FeedEntry:
     published: str
     source: str
     feed_name: str
-    feed_category: str | None
     summary: str
     full_text: str | None = None
 
@@ -69,11 +68,12 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
     seen_entries: list[SeenEntry] = []
     stats = FetchStats()
     now = datetime.now(timezone.utc)
-    # Respect configured lookback window to keep the paper focused and testable.
-    max_age_hours = config.lookback_hours
+    # Keep enough seen entries to honor the largest per-topic lookback window.
+    max_lookback_hours = max(topic.lookback_hours for topic in config.topics)
 
     log_verbose(config.verbose, "Starting feed fetch.")
     for topic in config.topics:
+        topic_lookback_hours = topic.lookback_hours
         log_verbose(
             config.verbose,
             f"Fetching feeds for '{topic.name}' ({len(topic.feeds)} sources).",
@@ -99,8 +99,8 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                 normalized = normalize_url(link)
                 published = entry.get("published") or entry.get("updated")
                 published_dt = parse_published(published)
-                # Only keep entries from the configured window to keep the paper timely.
-                if not is_within_hours(published_dt, now, max_age_hours):
+                # Only keep entries from the topic's window to keep the paper timely.
+                if not is_within_hours(published_dt, now, topic_lookback_hours):
                     out_of_window += 1
                     continue
                 summary = entry.get("summary", "")
@@ -111,7 +111,6 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                     published=published_dt.isoformat() if published_dt else "",
                     source=entry.get("source", {}).get("title") or feed.name,
                     feed_name=feed.name,
-                    feed_category=feed.category,
                     summary=summary,
                 )
                 if config.fetch_full_text:
@@ -123,7 +122,8 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                     item=item,
                     published_dt=published_dt,
                     now=now,
-                    max_age_hours=max_age_hours,
+                    compare_window_hours=topic_lookback_hours,
+                    prune_window_hours=max_lookback_hours,
                 )
                 if action == "skipped":
                     duplicates += 1
@@ -159,9 +159,10 @@ def _register_entry(
     item: FeedEntry,
     published_dt: datetime | None,
     now: datetime,
-    max_age_hours: int,
+    compare_window_hours: int,
+    prune_window_hours: int,
 ) -> str:
-    _prune_seen_entries(seen_entries, now, max_age_hours)
+    _prune_seen_entries(seen_entries, now, prune_window_hours)
     hostname = get_hostname(item.link)
     if item.link in seen_urls:
         existing = _find_seen_by_url(seen_entries, item.link)
@@ -169,7 +170,13 @@ def _register_entry(
             _replace_entry(entries_by_topic, seen_urls, seen_entries, existing, item, published_dt)
             return "replaced"
         return "skipped"
-    near_match = _find_near_duplicate(seen_entries, item, hostname, published_dt, max_age_hours)
+    near_match = _find_near_duplicate(
+        seen_entries,
+        item,
+        hostname,
+        published_dt,
+        compare_window_hours,
+    )
     if near_match:
         if _is_better_entry(item, near_match.entry):
             _replace_entry(entries_by_topic, seen_urls, seen_entries, near_match, item, published_dt)

@@ -6,7 +6,6 @@ import html
 from typing import Iterable
 
 from .config import DailyPaperConfig
-from .fetch import FeedEntry
 from .summarize import SummarizedItem, TopicSummary
 from .utils import format_published
 
@@ -27,7 +26,6 @@ def render_html(context: RenderContext) -> str:
             topic,
             context.topic_summaries.get(topic),
             context.items_by_topic.get(topic, []),
-            config,
         )
         for topic in context.items_by_topic
     )
@@ -163,12 +161,11 @@ def render_topic_section(
     topic: str,
     summary: TopicSummary | None,
     items: Iterable[SummarizedItem],
-    config: DailyPaperConfig,
 ) -> str:
     summary_html = render_macro_watch(summary)
 
     items_html = "\n".join(
-        render_item(item, topic) for item in items
+        render_item(item) for item in items
     )
 
     return f"""
@@ -180,7 +177,7 @@ def render_topic_section(
 """
 
 
-def render_item(item: SummarizedItem, topic: str) -> str:
+def render_item(item: SummarizedItem) -> str:
     entry = item.entry
     published = format_published(parse_iso(entry.published))
     meta_parts = [escape_html(entry.source)]
@@ -189,9 +186,6 @@ def render_item(item: SummarizedItem, topic: str) -> str:
     meta = " · ".join(meta_parts)
 
     summary_text = escape_html(item.summary)
-    if topic == "Tech News":
-        label = label_for_entry(entry)
-        summary_text = f"{label} {summary_text}"
 
     return f"""
 <div class=\"item\">
@@ -256,19 +250,3 @@ def render_macro_watch(summary: TopicSummary | None) -> str:
         f"<div>{escape_html(watch_line)}</div>"
         "</div>"
     )
-
-
-def label_for_entry(entry: FeedEntry) -> str:
-    feed_name = (entry.feed_name or entry.source or "").strip()
-    lower_name = feed_name.lower()
-    if "cloudflare changelog" in lower_name:
-        return "[DevOps]"
-    if "security" in lower_name:
-        return "[Security]"
-    if entry.feed_category == "AI":
-        return "[AI]"
-    if entry.feed_category == "Web":
-        return "[Web]"
-    if "devops" in lower_name or "infrastructure" in lower_name or "performance" in lower_name:
-        return "[DevOps]"
-    return "[General]"

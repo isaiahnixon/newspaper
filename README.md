@@ -22,7 +22,7 @@ Key options:
 
 - `fetch_full_text`: When enabled, fetches the article body to provide more context.
 - `items_per_topic`: Number of items per topic section.
-- `lookback_hours`: Limit feed entries to the most recent window (default 24 hours).
+- `topics[].lookback_hours`: Per-topic window (in hours) for eligible feed entries.
 - `item_model`: Model for headline-style item summaries.
 - `selection_model`: Model used to rank items before summarization.
 - `topic_model`: Model for section summaries.
@@ -52,6 +52,7 @@ Environment:
 ## Output behavior
 
 - Links in the generated HTML open in a new tab for safer navigation.
+- Tech News item summaries render without category tags or label prefixes.
 
 ## Dependencies
 
