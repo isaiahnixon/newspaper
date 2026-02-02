@@ -27,6 +27,7 @@ Key options:
 - `selection_model`: Model used to rank items before summarization.
 - `topic_model`: Model for section summaries.
 - `temperature`: Set to a number or `null` to omit the override and use provider defaults.
+- `dry_run`: Set to `true` to skip API calls and return placeholder summaries.
 - `openai_timeout_secs`, `openai_max_retries`, `openai_retry_backoff_secs`, `openai_retry_on_timeout`: Request controls for the OpenAI client.
 
 Item summaries always appear in the output; original titles are not rendered separately.
@@ -40,7 +41,6 @@ python -m daily_paper --config /path/to/daily_paper.yaml
 Environment:
 
 - `OPENAI_API_KEY` must be set to call the OpenAI API for item and topic summaries.
-- `DAILY_PAPER_DRY_RUN=1` (or `OPENAI_DRY_RUN=1`) skips API calls and returns a placeholder summary.
 
 ## Paywall filtering
 
