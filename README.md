@@ -16,27 +16,30 @@ The output is written to `./index.html`. If a previous index exists, it is archi
 
 ## Configuration
 
-Defaults live in `daily_paper/config.py` as `DEFAULT_CONFIG`.
+Configuration lives in the root-level `daily_paper.yaml`. Every required key must be present so missing values fail fast instead of being silently defaulted.
 
 Key options:
 
-- `no_visuals=True`: Enforces a text-first HTML output (no images, video, iframes, or remote scripts).
-- `show_titles=True`: Include the original article title below the AI summary for traceability.
-- `fetch_full_text=False`: When enabled, fetches the article body to provide more context and checks for paywalls.
-- `items_per_topic=8`: Number of items per topic section.
-- `model="gpt-5-mini"`: Default shared model for prompts when item/topic models are unset.
-- `item_model="gpt-5-nano"`: Model for headline-style item summaries (lower cost by default).
-- `topic_model="gpt-5-mini"`: Model for section summaries (higher-quality synthesis).
-- `temperature=None`: Leave unset by default so models that restrict temperature use their default.
+- `no_visuals`: Enforces a text-first HTML output (no images, video, iframes, or remote scripts).
+- `fetch_full_text`: When enabled, fetches the article body to provide more context and checks for paywalls.
+- `items_per_topic`: Number of items per topic section.
+- `item_model`: Model for headline-style item summaries.
+- `topic_model`: Model for section summaries.
+- `temperature`: Set to a number or `null` to omit the override and use provider defaults.
+- `openai_timeout_secs`, `openai_max_retries`, `openai_retry_backoff_secs`, `openai_retry_on_timeout`: Request controls for the OpenAI client.
+
+Item summaries always appear in the output; original titles are not rendered separately.
+
+To use a different config file:
+
+```bash
+python -m daily_paper --config /path/to/daily_paper.yaml
+```
 
 Environment:
 
 - `OPENAI_API_KEY` must be set to call the OpenAI API for item and topic summaries.
 - `DAILY_PAPER_DRY_RUN=1` (or `OPENAI_DRY_RUN=1`) skips API calls and returns a placeholder summary.
-- `OPENAI_TIMEOUT_SECS=30` sets the per-request timeout.
-- `OPENAI_MAX_RETRIES=0` controls retry attempts for retryable HTTP errors (defaults to 0 to limit cost).
-- `OPENAI_RETRY_BACKOFF_SECS=1.0` sets the exponential backoff base in seconds.
-- `OPENAI_RETRY_ON_TIMEOUT=1` enables retry on read timeouts if you accept potential extra cost.
 
 ## Paywall filtering
 

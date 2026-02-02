@@ -4,14 +4,14 @@ from datetime import datetime
 from pathlib import Path
 
 from .archive import archive_existing, write_archive_index
-from .config import DEFAULT_CONFIG, DailyPaperConfig
+from .config import DailyPaperConfig, load_config
 from .fetch import fetch_feeds
 from .render import RenderContext, render_html
 from .summarize import select_top_items, summarize_items, summarize_topic
 from .utils import log_verbose
 
 
-def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
+def run(config: DailyPaperConfig) -> Path:
     log_verbose(config.verbose, "Starting Daily Paper run.")
     entries_by_topic, stats = fetch_feeds(config)
     if stats.no_result_sources:
@@ -22,12 +22,17 @@ def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
     topic_summaries = {}
 
     for topic, entries in entries_by_topic.items():
-        entries = entries[: config.items_per_topic]
         if not entries:
             log_verbose(config.verbose, f"No entries for '{topic}', skipping summarization.")
             summarized_by_topic[topic] = []
             continue
-        selected_entries = select_top_items(config, entries, topic=topic)
+        # Respect the configured per-topic limit when selecting items for summarization.
+        selected_entries = select_top_items(
+            config,
+            entries,
+            topic=topic,
+            limit=config.items_per_topic,
+        )
         summarized_items = summarize_items(config, selected_entries, topic=topic)
         summarized_by_topic[topic] = summarized_items
         if summarized_items:
@@ -58,4 +63,4 @@ def run(config: DailyPaperConfig = DEFAULT_CONFIG) -> Path:
 
 
 if __name__ == "__main__":
-    run()
+    run(load_config())

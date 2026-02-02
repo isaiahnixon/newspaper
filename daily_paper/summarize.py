@@ -19,10 +19,10 @@ ITEM_SYSTEM_PROMPT = (
 )
 
 SELECTION_SYSTEM_PROMPT = (
-    "You are a neutral news editor selecting the five most important items for a topic.\n"
+    "You are a neutral news editor selecting the most important items for a topic.\n"
     "Choose items with broad public significance, reliable sourcing, and minimal duplication.\n"
     "Return ONLY a comma-separated list of item numbers (e.g., '2, 5, 1, 7, 3').\n"
-    "If fewer than five items exist, return all available numbers.\n"
+    "If fewer items exist than requested, return all available numbers.\n"
 )
 
 TOPIC_SYSTEM_PROMPT = (
@@ -37,6 +37,7 @@ TOPIC_SYSTEM_PROMPT = (
     "Macro: Not enough accessible detail to synthesize.\n"
     "Watch: Next release / official update."
 )
+
 
 @dataclass
 class SummarizedItem:
@@ -54,13 +55,13 @@ def select_top_items(
     config: DailyPaperConfig,
     entries: list[FeedEntry],
     topic: str,
-    limit: int = 5,
+    limit: int,
 ) -> list[FeedEntry]:
     """Select the most important items for a topic using a simple AI ranking prompt."""
     if len(entries) <= limit:
         return entries
 
-    client = get_client(config, config.resolve_item_model(), config.temperature)
+    client = get_client(config, config.item_model, config.temperature)
     log_verbose(config.verbose, f"Selecting top {limit} items for '{topic}'.")
 
     items_text = "\n".join(
@@ -69,7 +70,7 @@ def select_top_items(
     )
     user_prompt = (
         f"Topic: {topic}\n"
-        "Pick the five most important items from the list.\n\n"
+        f"Pick the {limit} most important items from the list.\n\n"
         f"Items:\n{items_text}"
     )
     selection = client.chat_completion(SELECTION_SYSTEM_PROMPT, user_prompt)
@@ -112,7 +113,7 @@ def summarize_items(
     entries: list[FeedEntry],
     topic: str | None = None,
 ) -> list[SummarizedItem]:
-    client = get_client(config, config.resolve_item_model(), config.temperature)
+    client = get_client(config, config.item_model, config.temperature)
     summarized: list[SummarizedItem] = []
     label = f"'{topic}'" if topic else "topic"
     log_verbose(config.verbose, f"Summarizing {len(entries)} items for {label}.")
@@ -138,8 +139,8 @@ def summarize_item(client: OpenAIClient, entry: FeedEntry, config: DailyPaperCon
 def summarize_topic(
     config: DailyPaperConfig, topic: str, items: list[SummarizedItem]
 ) -> TopicSummary:
-    # Use the stronger topic model for multi-item synthesis unless overridden.
-    client = get_client(config, config.resolve_topic_model(), config.temperature)
+    # Use the configured topic model for multi-item synthesis.
+    client = get_client(config, config.topic_model, config.temperature)
     log_verbose(config.verbose, f"Generating topic summary for '{topic}'.")
     bullet_points = "\n".join(
         f"- {item.entry.title}: {compact_text([item.entry.summary], 280)}"
