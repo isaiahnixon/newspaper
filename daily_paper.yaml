@@ -4,22 +4,22 @@ output_file: "index.html"
 archive_dir: "archive"
 
 # Content handling
-fetch_full_text: false
+fetch_full_text: true
 max_full_text_chars: 2000
-items_per_topic: 8
+items_per_topic: 5
 # Limit articles to the most recent window so the paper stays timely.
 lookback_hours: 24
 
 # Model choices (explicitly set; no implicit defaults)
-item_model: "gpt-5-nano"
-selection_model: "gpt-5-nano"
-topic_model: "gpt-5-mini"
+item_model: "gpt-5"
+selection_model: "gpt-5"
+topic_model: "gpt-5"
 # Use null to omit a temperature override and keep provider defaults.
 temperature: null
 
 # Logging
 dry_run: false
-verbose: false
+verbose: true
 
 # OpenAI request behavior
 openai_timeout_secs: 180.0
@@ -105,32 +105,43 @@ topics:
       - name: "The Register (Headlines)"
         url: "https://www.theregister.com/headlines.atom"
         category: "Web"
+      - name: "Ars Technica (Security)"
+        url: "https://arstechnica.com/security/feed/"
+      - name: "Ars Technica (Tech Policy)"
+        url: "https://arstechnica.com/tech-policy/feed/"
+        category: "Web"
+      - name: "Ars Technica (Gadgets)"
+        url: "https://arstechnica.com/gadgets/feed/"
+        category: "Web"
+      - name: "Ars Technica (Science)"
+        url: "https://arstechnica.com/science/feed/"
+        category: "Web"
 
-  - name: "Economic News"
+
+    - name: "Economic News"
     feeds:
-      # Prioritize official, non-paywalled economic releases for neutral coverage.
       - name: "U.S. Bureau of Labor Statistics Releases"
         url: "https://www.bls.gov/feed/bls_latest.rss"
       - name: "Federal Reserve Press Releases"
         url: "https://www.federalreserve.gov/feeds/press_all.xml"
       - name: "European Central Bank Press Releases"
         url: "https://www.ecb.europa.eu/rss/press.html"
-      - name: "International Monetary Fund News"
-        url: "https://www.imf.org/en/News/RSS"
-      - name: "OECD Newsroom"
-        url: "https://www.oecd.org/newsroom/rss.xml"
-      - name: "U.S. Treasury Press Releases"
-        url: "https://home.treasury.gov/rss/press-releases.xml"
       - name: "BEA News Releases"
         url: "https://apps.bea.gov/rss/rss.xml"
       - name: "US Census Press Releases"
-        url: "https://www.census.gov/newsroom/press-releases.xml"
+        url: "https://www.census.gov/content/census/en/newsroom/press-releases.xml"
       - name: "US Census Economic Indicators"
         url: "https://www.census.gov/economic-indicators/indicator.xml"
+      - name: "EIA - Today in Energy"
+        url: "https://www.eia.gov/rss/todayinenergy.xml"
+      - name: "EIA - Press Releases"
+        url: "https://www.eia.gov/rss/pressroom.xml"
       - name: "BIS Press Releases"
         url: "https://www.bis.org/doclist/all_pressrels.rss"
       - name: "BIS Statistical Releases"
         url: "https://www.bis.org/doclist/all_statistics.rss"
+
+
 
   - name: "U.S. Governance"
     feeds:
@@ -197,19 +208,14 @@ topics:
         url: "https://www.europarl.europa.eu/rss/doc/press-releases/en.xml"
       - name: "European Parliament External Relations"
         url: "https://www.europarl.europa.eu/rss/topic/903/en.xml"
-      - name: "NATO News"
-        url: "https://www.nato.int/cps/en/natohq/news_rss.htm"
-      - name: "UK Parliament News"
-        url: "https://www.parliament.uk/rss/news-feed/"
-      - name: "BBC - UK Politics"
-        url: "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml"
-
-      # Additions (public broadcasters + EU Council “source” feeds)
       - name: "BBC - World"
         url: "https://feeds.bbci.co.uk/news/world/rss.xml"
-      - name: "Deutsche Welle - Top Stories"
-        url: "https://rss.dw.com/rdf/rss-en-top"
-      - name: "Council of the EU - Press Releases"
-        url: "https://www.consilium.europa.eu/en/press/press-releases/rss/"
-      - name: "Council of the EU - Foreign Affairs Meetings"
-        url: "https://www.consilium.europa.eu/en/meetings/rss/?topic=Foreign%20Affairs"
+      - name: "BBC - UK Politics"
+        url: "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/uk_politics/rss.xml"
+      - name: "ReliefWeb - Updates"
+        url: "https://reliefweb.int/updates/rss.xml"
+      - name: "France 24 (EN)"
+        url: "https://www.france24.com/en/rss"
+      - name: "AJ+"
+        url: "https://www.ajplus.net/rss"
+
