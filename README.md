@@ -20,10 +20,11 @@ Configuration lives in the root-level `daily_paper.yaml`. Every required key mus
 
 Key options:
 
-- `no_visuals`: Enforces a text-first HTML output (no images, video, iframes, or remote scripts).
 - `fetch_full_text`: When enabled, fetches the article body to provide more context and checks for paywalls.
 - `items_per_topic`: Number of items per topic section.
+- `lookback_hours`: Limit feed entries to the most recent window (default 24 hours).
 - `item_model`: Model for headline-style item summaries.
+- `selection_model`: Model used to rank items before summarization.
 - `topic_model`: Model for section summaries.
 - `temperature`: Set to a number or `null` to omit the override and use provider defaults.
 - `openai_timeout_secs`, `openai_max_retries`, `openai_retry_backoff_secs`, `openai_retry_on_timeout`: Request controls for the OpenAI client.

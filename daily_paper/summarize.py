@@ -61,7 +61,8 @@ def select_top_items(
     if len(entries) <= limit:
         return entries
 
-    client = get_client(config, config.item_model, config.temperature)
+    # Use a dedicated model for selection so ranking can be tuned independently.
+    client = get_client(config, config.selection_model, config.temperature)
     log_verbose(config.verbose, f"Selecting top {limit} items for '{topic}'.")
 
     items_text = "\n".join(
