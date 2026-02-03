@@ -28,7 +28,7 @@ openai_retry_on_timeout: false
 
 topics:
   - name: "Tech News"
-    items_per_topic: 6
+    items_per_topic: 7
     # Limit entries to a recent window so the tech digest stays timely.
     lookback_hours: 24
     feeds:
@@ -91,6 +91,24 @@ topics:
       - name: "Ars Technica (Science)"
         url: "https://arstechnica.com/science/feed/"
 
+  - name: "Montana News"
+    items_per_topic: 5
+    lookback_hours: 24
+    feeds:
+      # Non-paywalled, locally relevant sources for Montana coverage.
+      - name: "Montana Free Press"
+        url: "https://montanafreepress.org/feed/"
+      - name: "Missoula Current"
+        url: "https://missoulacurrent.com/feed/"
+      - name: "Montana Public Radio"
+        url: "https://www.mtpr.org/?format=RSS"
+      - name: "Yellowstone Public Radio"
+        url: "https://www.ypradio.org/?format=RSS"
+      - name: "Montana State University News"
+        url: "https://www.montana.edu/news/rss.xml"
+      - name: "University of Montana News"
+        url: "https://www.umt.edu/news/rss.xml"
+
   - name: "Economic News (Weekly)"
     items_per_topic: 6
     # Economic releases can be less frequent; tune this window as needed.
@@ -118,7 +136,7 @@ topics:
         url: "https://www.bis.org/doclist/all_statistics.rss"
 
   - name: "U.S. Governance"
-    items_per_topic: 5
+    items_per_topic: 6
     lookback_hours: 24
     feeds:
       - name: "U.S. State Dept. Press Releases"
@@ -160,26 +178,8 @@ topics:
       - name: "ProPublica - Main Feed"
         url: "https://www.propublica.org/feeds/propublica/main"
 
-  - name: "Montana News"
-    items_per_topic: 5
-    lookback_hours: 24
-    feeds:
-      # Non-paywalled, locally relevant sources for Montana coverage.
-      - name: "Montana Free Press"
-        url: "https://montanafreepress.org/feed/"
-      - name: "Missoula Current"
-        url: "https://missoulacurrent.com/feed/"
-      - name: "Montana Public Radio"
-        url: "https://www.mtpr.org/?format=RSS"
-      - name: "Yellowstone Public Radio"
-        url: "https://www.ypradio.org/?format=RSS"
-      - name: "Montana State University News"
-        url: "https://www.montana.edu/news/rss.xml"
-      - name: "University of Montana News"
-        url: "https://www.umt.edu/news/rss.xml"
-
   - name: "Global Affairs"
-    items_per_topic: 5
+    items_per_topic: 6
     lookback_hours: 24
     feeds:
       - name: "United Nations News"
