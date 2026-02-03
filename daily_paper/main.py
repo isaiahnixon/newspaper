@@ -22,6 +22,8 @@ def run(config: DailyPaperConfig) -> Path:
     topic_summaries = {}
 
     for topic, entries in entries_by_topic.items():
+        # Look up per-topic limits so each section can tune its own item count.
+        topic_config = config.get_topic_config(topic)
         if not entries:
             log_verbose(config.verbose, f"No entries for '{topic}', skipping summarization.")
             summarized_by_topic[topic] = []
@@ -31,7 +33,7 @@ def run(config: DailyPaperConfig) -> Path:
             config,
             entries,
             topic=topic,
-            limit=config.items_per_topic,
+            limit=topic_config.items_per_topic,
         )
         summarized_items = summarize_items(config, selected_entries, topic=topic)
         summarized_by_topic[topic] = summarized_items

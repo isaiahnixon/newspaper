@@ -217,7 +217,7 @@ def summarize_topic(
         for item in items
     )
     user_prompt = (
-        f"Write the Macro/Watch summary for {topic}. Use only the items below.\n\n"
+        f"Write the macro summary for {topic}. Use only the items below.\n\n"
         f"Items:\n{bullet_points}"
     )
     summary = client.chat_completion(TOPIC_SYSTEM_PROMPT, user_prompt)
