@@ -120,14 +120,11 @@ def render_html(context: RenderContext) -> str:
       color: var(--muted);
       font-size: 0.9rem;
     }}
-    .macro-watch {{
+    .macro-summary {{
       border: 1px solid var(--rule);
       padding: 0.6rem 0.8rem;
       background: #fbf7ee;
       font-size: 0.95rem;
-    }}
-    .macro-watch div + div {{
-      margin-top: 0.35rem;
     }}
     footer {{
       margin-top: 3rem;
@@ -163,7 +160,7 @@ def render_topic_section(
     summary: TopicSummary | None,
     items: Iterable[SummarizedItem],
 ) -> str:
-    summary_html = render_macro_watch(summary)
+    summary_html = render_macro_summary(summary)
 
     items_html = "\n".join(
         render_item(item) for item in items
@@ -221,33 +218,9 @@ def render_link(href: str, label: str) -> str:
     )
 
 
-def render_macro_watch(summary: TopicSummary | None) -> str:
+def render_macro_summary(summary: TopicSummary | None) -> str:
     if not summary:
-        macro_line = "Macro: Not enough accessible detail to synthesize."
-        watch_line = "Watch: Next release / official update."
-        return (
-            "<div class=\"macro-watch\">"
-            f"<div>{escape_html(macro_line)}</div>"
-            f"<div>{escape_html(watch_line)}</div>"
-            "</div>"
-        )
-    normalized = summary.summary.replace("\r", "\n")
-    lines = [line.strip() for line in normalized.splitlines() if line.strip()]
-    if len(lines) >= 2:
-        macro_line = lines[0]
-        watch_line = lines[1]
+        macro_line = "Not enough accessible detail to synthesize today."
     else:
-        text = normalized.strip()
-        watch_index = text.lower().find("watch:")
-        if watch_index != -1:
-            macro_line = text[:watch_index].strip() or "Macro: Not enough accessible detail to synthesize."
-            watch_line = text[watch_index:].strip() or "Watch: Next release / official update."
-        else:
-            macro_line = text if text else "Macro: Not enough accessible detail to synthesize."
-            watch_line = "Watch: Next release / official update."
-    return (
-        "<div class=\"macro-watch\">"
-        f"<div>{escape_html(macro_line)}</div>"
-        f"<div>{escape_html(watch_line)}</div>"
-        "</div>"
-    )
+        macro_line = summary.summary.strip() or "Not enough accessible detail to synthesize today."
+    return f"<div class=\"macro-summary\">{escape_html(macro_line)}</div>"

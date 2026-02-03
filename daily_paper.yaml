@@ -6,6 +6,7 @@ archive_dir: "archive"
 # Content handling
 fetch_full_text: true
 max_full_text_chars: 2000
+# Default item count per topic (can be overridden per topic below).
 items_per_topic: 5
 
 # Model choices (explicitly set; no implicit defaults)
@@ -27,6 +28,7 @@ openai_retry_on_timeout: false
 
 topics:
   - name: "Tech News"
+    items_per_topic: 5
     # Limit entries to a recent window so the tech digest stays timely.
     lookback_hours: 24
     feeds:
@@ -90,6 +92,7 @@ topics:
         url: "https://arstechnica.com/science/feed/"
 
   - name: "Economic News (Weekly)"
+    items_per_topic: 5
     # Economic releases can be less frequent; tune this window as needed.
     lookback_hours: 168
     feeds:
@@ -115,6 +118,7 @@ topics:
         url: "https://www.bis.org/doclist/all_statistics.rss"
 
   - name: "U.S. Governance"
+    items_per_topic: 5
     lookback_hours: 24
     feeds:
       - name: "U.S. State Dept. Press Releases"
@@ -157,6 +161,7 @@ topics:
         url: "https://www.propublica.org/feeds/propublica/main"
 
   - name: "Montana News"
+    items_per_topic: 5
     lookback_hours: 24
     feeds:
       # Non-paywalled, locally relevant sources for Montana coverage.
@@ -174,6 +179,7 @@ topics:
         url: "https://www.umt.edu/news/rss.xml"
 
   - name: "Global Affairs"
+    items_per_topic: 5
     lookback_hours: 24
     feeds:
       - name: "United Nations News"

@@ -21,6 +21,7 @@ class TopicConfig:
     name: str
     lookback_hours: int
     feeds: tuple[FeedSource, ...]
+    items_per_topic: int
 
 
 @dataclass(frozen=True)
@@ -55,6 +56,12 @@ class DailyPaperConfig:
     def iter_feeds(self) -> Iterable[FeedSource]:
         for topic in self.topics:
             yield from topic.feeds
+
+    def get_topic_config(self, name: str) -> TopicConfig:
+        for topic in self.topics:
+            if topic.name == name:
+                return topic
+        raise KeyError(f"Unknown topic: {name}")
 
 
 def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
@@ -105,7 +112,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
     openai_max_retries = _require_int(data, "openai_max_retries")
     openai_retry_backoff_secs = _require_float(data, "openai_retry_backoff_secs")
     openai_retry_on_timeout = _require_bool(data, "openai_retry_on_timeout")
-    topics = _require_topics(data.get("topics"))
+    topics = _require_topics(data.get("topics"), items_per_topic)
 
     return DailyPaperConfig(
         output_dir=output_dir,
@@ -170,7 +177,10 @@ def _require_optional_float(data: Mapping[str, object], key: str) -> float | Non
     return float(value)
 
 
-def _require_topics(value: object) -> tuple[TopicConfig, ...]:
+def _require_topics(
+    value: object,
+    default_items_per_topic: int,
+) -> tuple[TopicConfig, ...]:
     if not isinstance(value, Sequence) or isinstance(value, (str, bytes)):
         raise ValueError("Config key 'topics' must be a list of topics.")
 
@@ -182,9 +192,32 @@ def _require_topics(value: object) -> tuple[TopicConfig, ...]:
         if not isinstance(name, str) or not name.strip():
             raise ValueError("Each topic must include a non-empty 'name'.")
         lookback_hours = _require_int(raw_topic, "lookback_hours")
+        items_per_topic = _require_optional_int(
+            raw_topic,
+            "items_per_topic",
+            default_items_per_topic,
+        )
         feeds = _require_feeds(raw_topic.get("feeds"), name)
-        topics.append(TopicConfig(name=name, lookback_hours=lookback_hours, feeds=feeds))
+        topics.append(
+            TopicConfig(
+                name=name,
+                lookback_hours=lookback_hours,
+                feeds=feeds,
+                items_per_topic=items_per_topic,
+            )
+        )
     return tuple(topics)
+
+
+def _require_optional_int(
+    data: Mapping[str, object],
+    key: str,
+    default: int,
+) -> int:
+    value = data.get(key, default)
+    if not isinstance(value, int) or isinstance(value, bool):
+        raise ValueError(f"Config key '{key}' must be an integer.")
+    return value
 
 
 def _require_feeds(value: object, topic_name: str) -> tuple[FeedSource, ...]:

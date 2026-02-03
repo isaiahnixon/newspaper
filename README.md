@@ -21,7 +21,8 @@ Configuration lives in the root-level `daily_paper.yaml`. Every required key mus
 Key options:
 
 - `fetch_full_text`: When enabled, fetches the article body to provide more context.
-- `items_per_topic`: Number of items per topic section.
+- `items_per_topic`: Default number of items per topic section.
+- `topics[].items_per_topic`: Optional override for a specific topic’s item count.
 - `topics[].lookback_hours`: Per-topic window (in hours) for eligible feed entries.
 - `item_model`: Model for headline-style item summaries.
 - `selection_model`: Model used to rank items before summarization.
@@ -31,7 +32,7 @@ Key options:
 - `openai_timeout_secs`, `openai_max_retries`, `openai_retry_backoff_secs`, `openai_retry_on_timeout`: Request controls for the OpenAI client.
 
 Item summaries always appear in the output; original titles are not rendered separately. Each topic ends
-with a two-line Macro/Watch summary that synthesizes themes without repeating item-level details.
+with a single macro summary that synthesizes themes without repeating item-level details.
 
 The default configuration includes a Montana News section built from non-paywalled local sources to
 expand regional coverage alongside national and global topics.
