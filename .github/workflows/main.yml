@@ -2,8 +2,8 @@ name: Daily Paper
 
 on:
   schedule:
-    # Runs daily at 06:10 America/Denver ≈ 13:10 UTC (adjust as desired)
-    - cron: "10 13 * * *"
+    # Runs weekdays at 07:00 MT
+    - cron: "0 14 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
