@@ -10,9 +10,9 @@ max_full_text_chars: 2000
 items_per_topic: 5
 
 # Model choices (explicitly set; no implicit defaults)
-item_model: "gpt-5"
-selection_model: "gpt-5"
-topic_model: "gpt-5"
+item_model: "gpt-5-mini"
+selection_model: "gpt-5-mini"
+topic_model: "gpt-5.2"
 # Use null to omit a temperature override and keep provider defaults.
 temperature: null
 
@@ -28,7 +28,7 @@ openai_retry_on_timeout: false
 
 topics:
   - name: "Tech News"
-    items_per_topic: 5
+    items_per_topic: 6
     # Limit entries to a recent window so the tech digest stays timely.
     lookback_hours: 24
     feeds:
@@ -92,7 +92,7 @@ topics:
         url: "https://arstechnica.com/science/feed/"
 
   - name: "Economic News (Weekly)"
-    items_per_topic: 5
+    items_per_topic: 6
     # Economic releases can be less frequent; tune this window as needed.
     lookback_hours: 168
     feeds:
@@ -197,4 +197,4 @@ topics:
       - name: "France 24 (EN)"
         url: "https://www.france24.com/en/rss"
       - name: "AJ+"
-        url: "https://www.ajplus.net/rss"
+        url: "https://www.ajplus.net/stories?format=rss"
