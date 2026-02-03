@@ -31,7 +31,7 @@ Key options:
 - `dry_run`: Set to `true` to skip API calls and return placeholder summaries.
 - `openai_timeout_secs`, `openai_max_retries`, `openai_retry_backoff_secs`, `openai_retry_on_timeout`: Request controls for the OpenAI client.
 
-Item summaries always appear in the output; original titles are not rendered separately. Each topic ends
+Item summaries always appear in the output; original titles are not rendered separately. Each topic starts
 with a single macro summary that synthesizes themes without repeating item-level details.
 
 The default configuration includes a Montana News section built from non-paywalled local sources to
@@ -54,6 +54,7 @@ Environment:
 
 - Links in the generated HTML open in a new tab for safer navigation.
 - Tech News item summaries render without category tags or label prefixes.
+- The masthead notes that the digest is updated weekdays.
 
 ## Dependencies
 
