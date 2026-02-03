@@ -62,7 +62,6 @@ def render_html(context: RenderContext) -> str:
       line-height: 1.75;
       color: var(--ink);
       background: var(--paper);
-      text-align: justify;
     }}
     header {{
       text-align: center;
@@ -122,10 +121,11 @@ def render_html(context: RenderContext) -> str:
       font-size: 0.9rem;
     }}
     .macro-summary {{
-      border: 1px solid var(--rule);
-      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
       background: #fbf7ee;
       font-size: 0.95rem;
+      margin: 0 0.6rem;
     }}
     footer {{
       margin-top: 3rem;
@@ -187,8 +187,8 @@ def render_item(item: SummarizedItem) -> str:
 
     return f"""
 <div class=\"item\">
-  <div>{summary_text}</div>
   <div class=\"meta\">{meta} · {render_link(entry.link, 'Source')}</div>
+  <div>{summary_text}</div>
 </div>
 """
 
