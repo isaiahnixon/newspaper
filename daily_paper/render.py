@@ -115,6 +115,7 @@ def render_html(context: RenderContext) -> str:
     }}
     .item {{
       margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
     }}
     .meta {{
       color: var(--muted);
