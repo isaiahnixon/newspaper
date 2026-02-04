@@ -8,6 +8,8 @@ from pathlib import Path
 ARCHIVE_TIMESTAMP_FORMAT = "%Y-%m-%d_%H%M%S"
 ARCHIVE_LINK_MAIN = "archive/index.html"
 ARCHIVE_LINK_ARCHIVE = "index.html"
+# Keep the archive masthead aligned with the main newspaper branding.
+PAPER_NAME = "Tacitus' Log"
 
 
 @dataclass(frozen=True)
@@ -95,7 +97,7 @@ def _render_archive_index(entries: list[ArchiveEntry]) -> str:
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Archive — The Daily Signal</title>
+  <title>Archive — {PAPER_NAME}</title>
   <style>
     :root {{
       color-scheme: light;
@@ -155,7 +157,7 @@ def _render_archive_index(entries: list[ArchiveEntry]) -> str:
 <body>
   <header>
     <h1>Archive</h1>
-    <p>Past editions of the Daily Signal, listed chronologically.</p>
+    <p>Past editions of {PAPER_NAME}, listed chronologically.</p>
   </header>
 {content}
   <footer>

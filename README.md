@@ -1,6 +1,6 @@
-# Daily Paper
+# Tacitus' Log
 
-A small, readable Python 3 project that generates a daily text-first “AI newspaper” HTML page and archives prior editions.
+A small, readable Python 3 project that generates Tacitus' Log: a daily text-first “AI newspaper” HTML page and archives prior editions.
 
 ## License
 
@@ -54,7 +54,7 @@ Environment:
 
 - Links in the generated HTML open in a new tab for safer navigation.
 - Tech News item summaries render without category tags or label prefixes.
-- The masthead notes that the digest is updated weekdays.
+- The masthead displays the Tacitus' Log name and tagline, and notes that the digest is updated weekdays.
 
 ## Dependencies
 
