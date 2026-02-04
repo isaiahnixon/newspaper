@@ -55,6 +55,8 @@ Environment:
 - Links in the generated HTML open in a new tab for safer navigation.
 - Tech News item summaries render without category tags or label prefixes.
 - The masthead displays the Tacitus' Log name and tagline, and notes that the digest is updated weekdays.
+- The footer includes build attribution, a copyright notice, and a link to the current configuration
+  for transparent source review.
 
 ## Dependencies
 

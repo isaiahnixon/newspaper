@@ -17,6 +17,8 @@ PAPER_TAGLINE = (
     "reasonably sourced, and unsensational."
 )
 PAPER_TITLE = f"{PAPER_NAME} — {PAPER_TAGLINE}"
+REPO_URL = "https://github.com/isaiahnixon/newspaper"
+CONFIG_URL = f"{REPO_URL}/blob/main/daily_paper.yaml"
 
 
 @dataclass
@@ -39,11 +41,19 @@ def render_html(context: RenderContext) -> str:
         for topic in context.items_by_topic
     )
 
-    footer = (
-        f"Generated {context.generated_at.strftime('%Y-%m-%d %H:%M:%S')} "
-        f"local time. Sources checked: {context.sources_checked}. "
-        f"{render_link('archive/index.html', 'Archive')}."
-    )
+    current_year = context.generated_at.year
+    # Footer links provide transparency about the build and configured sources.
+    sources_link = render_link(CONFIG_URL, str(context.sources_checked))
+    footer_lines = [
+        (
+            f"Generated {context.generated_at.strftime('%Y-%m-%d %H:%M:%S')} "
+            f"local time. Sources checked: {sources_link}. "
+            f"{render_link('archive/index.html', 'Archive')}."
+        ),
+        f"Built by {render_link(REPO_URL, 'Isaiah Nixon')}.",
+        f"© {current_year} {PAPER_NAME}.",
+    ]
+    footer = "\n    ".join(f"<div>{line}</div>" for line in footer_lines)
 
     return f"""<!doctype html>
 <html lang=\"en\">
