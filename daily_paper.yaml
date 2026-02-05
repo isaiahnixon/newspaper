@@ -109,32 +109,6 @@ topics:
       - name: "University of Montana News"
         url: "https://www.umt.edu/news/rss.xml"
 
-  - name: "Economic News (Weekly)"
-    items_per_topic: 6
-    # Economic releases can be less frequent; tune this window as needed.
-    lookback_hours: 168
-    feeds:
-      - name: "U.S. Bureau of Labor Statistics Releases"
-        url: "https://www.bls.gov/feed/bls_latest.rss"
-      - name: "Federal Reserve Press Releases"
-        url: "https://www.federalreserve.gov/feeds/press_all.xml"
-      - name: "European Central Bank Press Releases"
-        url: "https://www.ecb.europa.eu/rss/press.html"
-      - name: "BEA News Releases"
-        url: "https://apps.bea.gov/rss/rss.xml"
-      - name: "US Census Press Releases"
-        url: "https://www.census.gov/content/census/en/newsroom/press-releases.xml"
-      - name: "US Census Economic Indicators"
-        url: "https://www.census.gov/economic-indicators/indicator.xml"
-      - name: "EIA - Today in Energy"
-        url: "https://www.eia.gov/rss/todayinenergy.xml"
-      - name: "EIA - Press Releases"
-        url: "https://www.eia.gov/rss/pressroom.xml"
-      - name: "BIS Press Releases"
-        url: "https://www.bis.org/doclist/all_pressrels.rss"
-      - name: "BIS Statistical Releases"
-        url: "https://www.bis.org/doclist/all_statistics.rss"
-
   - name: "U.S. Governance"
     items_per_topic: 6
     lookback_hours: 24
@@ -194,3 +168,52 @@ topics:
         url: "https://www.france24.com/en/rss"
       - name: "AJ+"
         url: "https://www.ajplus.net/stories?format=rss"
+
+  - name: "Catholic News (Past Week)"
+    items_per_topic: 5
+    lookback_hours: 168
+    feeds:
+    - name: "Vatican News (EN)"
+      url: "https://www.vaticannews.va/en.rss.xml"
+    - name: "Catholic News Agency (CNA) - News"
+      url: "https://www.catholicnewsagency.com/rss/news.xml"
+    - name: "Crux (Catholic Church tag)"
+      url: "http://www.cruxnow.com/tag/catholic-church/feed"
+    - name: "CatholicCulture - Catholic World News"
+      url: "https://feeds.feedburner.com/CatholicWorldNewsFeatureStories"
+    - name: "USCCB - News Releases (EN)"
+      url: "https://www.usccb.org/news/rss/index.cfm"
+    - name: "National Catholic Register - RSS (All)"
+      url: "https://www.ncregister.com/info/rss-feeds"
+    - name: "National Catholic Reporter (NCR) - Master Feed"
+      url: "http://ncronline.org/rss.xml"
+    - name: "Catholic Online - Main RSS"
+      url: "https://www.catholic.org/xml/"
+    - name: "Aleteia - News Feed"
+      url: "https://aleteia.org/feed/"
+
+  - name: "Economic News (Past Week)"
+    items_per_topic: 6
+    # Economic releases can be less frequent; tune this window as needed.
+    lookback_hours: 168
+    feeds:
+      - name: "U.S. Bureau of Labor Statistics Releases"
+        url: "https://www.bls.gov/feed/bls_latest.rss"
+      - name: "Federal Reserve Press Releases"
+        url: "https://www.federalreserve.gov/feeds/press_all.xml"
+      - name: "European Central Bank Press Releases"
+        url: "https://www.ecb.europa.eu/rss/press.html"
+      - name: "BEA News Releases"
+        url: "https://apps.bea.gov/rss/rss.xml"
+      - name: "US Census Press Releases"
+        url: "https://www.census.gov/content/census/en/newsroom/press-releases.xml"
+      - name: "US Census Economic Indicators"
+        url: "https://www.census.gov/economic-indicators/indicator.xml"
+      - name: "EIA - Today in Energy"
+        url: "https://www.eia.gov/rss/todayinenergy.xml"
+      - name: "EIA - Press Releases"
+        url: "https://www.eia.gov/rss/pressroom.xml"
+      - name: "BIS Press Releases"
+        url: "https://www.bis.org/doclist/all_pressrels.rss"
+      - name: "BIS Statistical Releases"
+        url: "https://www.bis.org/doclist/all_statistics.rss"

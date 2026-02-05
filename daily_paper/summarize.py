@@ -21,9 +21,17 @@ ITEM_SYSTEM_PROMPT = (
 
 SELECTION_SYSTEM_PROMPT = (
     "You are a neutral news editor selecting the most important items for a topic.\n"
-    "Choose items with broad public significance, reliable sourcing, and minimal duplication.\n"
-    "Avoid near-duplicate headlines and thin or administrative items unless they signal clear public impact.\n"
-    "If alternatives exist, avoid picking more than two items from the same source/domain in the top five.\n"
+    "Primary goals, in order: (1) relevance/public significance, (2) source diversity, (3) deduplication.\n"
+    "\n"
+    "Duplicate policy (strict):\n"
+    "- Treat translated, reworded, or URL-variant versions of the same event from the same source as duplicates.\n"
+    "- If two items share the same source/domain and substantially the same event, select only one.\n"
+    "- If dup_group_id is provided, select at most one item per dup_group_id.\n"
+    "\n"
+    "Selection constraints:\n"
+    "- Avoid thin or administrative items unless they imply clear public impact.\n"
+    "- If alternatives exist, avoid choosing more than two items from the same source/domain in the top five.\n"
+    "\n"
     "Return ONLY a comma-separated list of item numbers (e.g., '2, 5, 1, 7, 3').\n"
     "If fewer items exist than requested, return all available numbers.\n"
 )
