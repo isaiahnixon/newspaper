@@ -18,11 +18,14 @@ TRACKING_PARAMS = {
     "source",
     "spm",
 }
+CONTENT_SIMILARITY_CHARS = 600
 
 
 def normalize_url(url: str) -> str:
     parsed = urlparse(url)
-    scheme = parsed.scheme or "https"
+    # Most publishers serve the same article over http/https.
+    # Force a single scheme so those URLs collapse during dedupe.
+    scheme = "https" if parsed.scheme in {"", "http", "https"} else parsed.scheme
     hostname = (parsed.hostname or "").lower()
     netloc = hostname
     if parsed.port and parsed.port not in {80, 443}:
@@ -47,17 +50,58 @@ def get_hostname(url: str) -> str:
 
 
 def title_similarity(left: str, right: str) -> float:
-    left_norm = _normalize_title(left)
-    right_norm = _normalize_title(right)
+    left_norm = _normalize_text(left)
+    right_norm = _normalize_text(right)
     if not left_norm or not right_norm:
         return 0.0
-    left_tokens = set(left_norm.split())
-    right_tokens = set(right_norm.split())
-    overlap = len(left_tokens & right_tokens) / max(
-        1, min(len(left_tokens), len(right_tokens))
-    )
-    ratio = difflib.SequenceMatcher(None, left_norm, right_norm).ratio()
-    return max(overlap, ratio)
+    return _token_sequence_similarity(left_norm, right_norm)
+
+
+def text_similarity(left: str, right: str) -> float:
+    """Similarity for longer fields like summaries or extracted content."""
+    left_norm = _normalize_text(left)
+    right_norm = _normalize_text(right)
+    if not left_norm or not right_norm:
+        return 0.0
+    return _token_sequence_similarity(left_norm, right_norm)
+
+
+def weighted_story_similarity(
+    title_left: str,
+    title_right: str,
+    summary_left: str,
+    summary_right: str,
+    content_left: str | None,
+    content_right: str | None,
+) -> float:
+    """Combine multiple fields so one noisy title does not prevent dedupe."""
+    title_score = title_similarity(title_left, title_right)
+    summary_score = text_similarity(summary_left, summary_right)
+    if content_left and content_right:
+        content_score = text_similarity(
+            content_left[:CONTENT_SIMILARITY_CHARS],
+            content_right[:CONTENT_SIMILARITY_CHARS],
+        )
+        return (title_score * 0.45) + (summary_score * 0.45) + (content_score * 0.10)
+    return (title_score * 0.50) + (summary_score * 0.50)
+
+
+def extract_comparison_metadata(text: str) -> set[str]:
+    """Capture language-agnostic anchors helpful for translation-aware matching."""
+    if not text:
+        return set()
+    metadata: set[str] = set()
+    metadata.update(re.findall(r"\b\d+(?:[.,]\d+)?\b", text))
+    metadata.update(re.findall(r"\b\d{4}-\d{1,2}-\d{1,2}\b", text))
+    metadata.update(re.findall(r"\b\d{1,2}/\d{1,2}/\d{2,4}\b", text))
+    metadata.update(re.findall(r"\b[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,})*\b", text))
+    return {item.strip().lower() for item in metadata if item.strip()}
+
+
+def metadata_overlap_ratio(left: set[str], right: set[str]) -> float:
+    if not left or not right:
+        return 0.0
+    return len(left & right) / min(len(left), len(right))
 
 
 def _is_tracking_param(key: str) -> bool:
@@ -65,10 +109,20 @@ def _is_tracking_param(key: str) -> bool:
     return lowered.startswith(TRACKING_PREFIXES) or lowered in TRACKING_PARAMS
 
 
-def _normalize_title(text: str) -> str:
+def _normalize_text(text: str) -> str:
     normalized = re.sub(r"[^a-z0-9\s]", " ", text.lower())
     normalized = re.sub(r"\s+", " ", normalized).strip()
     return normalized
+
+
+def _token_sequence_similarity(left_norm: str, right_norm: str) -> float:
+    left_tokens = set(left_norm.split())
+    right_tokens = set(right_norm.split())
+    overlap = len(left_tokens & right_tokens) / max(
+        1, min(len(left_tokens), len(right_tokens))
+    )
+    ratio = difflib.SequenceMatcher(None, left_norm, right_norm).ratio()
+    return max(overlap, ratio)
 
 
 def format_published(dt: datetime | None) -> str:

@@ -12,12 +12,14 @@ from bs4 import BeautifulSoup
 from .config import DailyPaperConfig, FeedSource
 from .utils import (
     compact_text,
+    extract_comparison_metadata,
     get_hostname,
     is_within_hours,
     log_verbose,
+    metadata_overlap_ratio,
     normalize_url,
     parse_published,
-    title_similarity,
+    weighted_story_similarity,
 )
 
 # Some publishers block non-browser user agents and return 403/empty feeds.
@@ -60,6 +62,7 @@ class SeenEntry:
     canonical_url: str
     hostname: str
     published: datetime | None
+    metadata: set[str]
 
 
 def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], FetchStats]:
@@ -164,11 +167,23 @@ def _register_entry(
 ) -> str:
     _prune_seen_entries(seen_entries, now, prune_window_hours)
     hostname = get_hostname(item.link)
-    if item.link in seen_urls:
-        existing = _find_seen_by_url(seen_entries, item.link)
-        if existing and _is_better_entry(item, existing.entry):
-            _replace_entry(entries_by_topic, seen_urls, seen_entries, existing, item, published_dt)
+    metadata = _build_story_metadata(item)
+    existing_by_url = _find_seen_by_url(seen_entries, item.link)
+    # Canonical URL dedupe has highest confidence and happens before fuzzy matching.
+    if existing_by_url:
+        if _is_better_entry(item, existing_by_url.entry):
+            _replace_entry(
+                entries_by_topic,
+                seen_urls,
+                seen_entries,
+                existing_by_url,
+                item,
+                published_dt,
+                metadata,
+            )
             return "replaced"
+        return "skipped"
+    if item.link in seen_urls:
         return "skipped"
     near_match = _find_near_duplicate(
         seen_entries,
@@ -176,10 +191,19 @@ def _register_entry(
         hostname,
         published_dt,
         compare_window_hours,
+        metadata,
     )
     if near_match:
         if _is_better_entry(item, near_match.entry):
-            _replace_entry(entries_by_topic, seen_urls, seen_entries, near_match, item, published_dt)
+            _replace_entry(
+                entries_by_topic,
+                seen_urls,
+                seen_entries,
+                near_match,
+                item,
+                published_dt,
+                metadata,
+            )
             return "replaced"
         return "skipped"
     seen_urls.add(item.link)
@@ -189,6 +213,7 @@ def _register_entry(
             canonical_url=item.link,
             hostname=hostname,
             published=published_dt,
+            metadata=metadata,
         )
     )
     entries_by_topic[item.topic].append(item)
@@ -202,6 +227,7 @@ def _replace_entry(
     existing: SeenEntry,
     replacement: FeedEntry,
     published_dt: datetime | None,
+    metadata: set[str],
 ) -> None:
     if existing.entry in entries_by_topic.get(existing.entry.topic, []):
         entries_by_topic[existing.entry.topic].remove(existing.entry)
@@ -210,6 +236,7 @@ def _replace_entry(
     existing.canonical_url = replacement.link
     existing.hostname = get_hostname(replacement.link)
     existing.published = published_dt
+    existing.metadata = metadata
     seen_urls.add(replacement.link)
     entries_by_topic[replacement.topic].append(replacement)
 
@@ -227,16 +254,70 @@ def _find_near_duplicate(
     hostname: str,
     published_dt: datetime | None,
     max_age_hours: int,
-    threshold: float = 0.86,
+    metadata: set[str],
+    weighted_threshold: float = 0.82,
+    translation_metadata_threshold: float = 0.65,
+    translation_time_window_minutes: int = 180,
 ) -> SeenEntry | None:
     for seen in seen_entries:
         if seen.hostname != hostname:
             continue
         if not _within_recent_window(published_dt, seen.published, max_age_hours):
             continue
-        if title_similarity(item.title, seen.entry.title) >= threshold:
+        weighted_similarity = weighted_story_similarity(
+            item.title,
+            seen.entry.title,
+            item.summary,
+            seen.entry.summary,
+            item.full_text,
+            seen.entry.full_text,
+        )
+        if weighted_similarity >= weighted_threshold:
+            return seen
+        if _is_translation_duplicate(
+            current_published=published_dt,
+            seen_published=seen.published,
+            current_metadata=metadata,
+            seen_metadata=seen.metadata,
+            metadata_threshold=translation_metadata_threshold,
+            max_minutes=translation_time_window_minutes,
+        ):
             return seen
     return None
+
+
+def _is_translation_duplicate(
+    current_published: datetime | None,
+    seen_published: datetime | None,
+    current_metadata: set[str],
+    seen_metadata: set[str],
+    metadata_threshold: float,
+    max_minutes: int,
+) -> bool:
+    """Detect likely translated reposts from the same source.
+
+    Translation copies can have different wording, so this fallback relies on
+    close publish time plus shared language-agnostic metadata such as
+    entities, numbers, and date expressions.
+    """
+    if not _within_recent_minutes(current_published, seen_published, max_minutes):
+        return False
+    return metadata_overlap_ratio(current_metadata, seen_metadata) >= metadata_threshold
+
+
+def _build_story_metadata(item: FeedEntry) -> set[str]:
+    metadata_parts = [item.title, item.summary]
+    if item.full_text:
+        metadata_parts.append(item.full_text[:600])
+    return extract_comparison_metadata("\n".join(part for part in metadata_parts if part))
+
+
+def _within_recent_minutes(
+    left: datetime | None, right: datetime | None, max_minutes: int
+) -> bool:
+    if not left or not right:
+        return True
+    return abs(left - right) <= timedelta(minutes=max_minutes)
 
 
 def _within_recent_window(

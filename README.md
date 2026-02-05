@@ -37,7 +37,10 @@ with a single macro summary that synthesizes themes without repeating item-level
 The default configuration includes a Montana News section built from non-paywalled local sources to
 expand regional coverage alongside national and global topics.
 
-Duplicate stories are deduplicated across topics using canonicalized URLs and a near-duplicate title check.
+Duplicate stories are deduplicated across topics in three stages: canonical URL dedupe first,
+weighted title+summary (and optional body excerpt) similarity second, and translation-aware
+matching for same-source items that share publish-time proximity and metadata anchors (entities,
+numbers, and dates).
 Selection favors higher-information items and source diversity while remaining deterministic.
 
 To use a different config file:
