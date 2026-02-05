@@ -2,8 +2,8 @@ name: Daily Paper
 
 on:
   schedule:
-    # Runs weekdays at 07:00 MT
-    - cron: "0 13 * * 1-5"
+    # Runs weekdays at 06:00 MT
+    - cron: "0 12 * * 1-5"
   workflow_dispatch: {}
 
 permissions:

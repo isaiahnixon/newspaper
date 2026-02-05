@@ -46,10 +46,10 @@ def render_html(context: RenderContext) -> str:
     sources_link = render_link(CONFIG_URL, str(context.sources_checked))
     footer_lines = [
         (
-            f"Generated {context.generated_at.strftime('%Y-%m-%d %H:%M:%S')} "
-            f"local time. Sources checked: {sources_link}. "
-            f"{render_link('archive/index.html', 'Archive')}."
+            f"Generated {context.generated_at.strftime('%Y-%m-%d %H:%M')} "
+            f"UTC. Sources checked: {sources_link}. "
         ),
+        f"{render_link('archive/index.html', 'Archive')}",
         f"Built by {render_link(REPO_URL, 'Isaiah Nixon')}.",
         f"© {current_year} {PAPER_NAME}.",
     ]
@@ -142,7 +142,6 @@ def render_html(context: RenderContext) -> str:
     .macro-summary {{
       border-bottom: 1px solid var(--rule);
       padding: 0.6rem 0;
-      background: #fbf7ee;
       font-size: 0.95rem;
       margin: 0 0.6rem;
     }}
