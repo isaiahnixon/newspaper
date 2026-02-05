@@ -74,16 +74,28 @@ def weighted_story_similarity(
     content_left: str | None,
     content_right: str | None,
 ) -> float:
-    """Combine multiple fields so one noisy title does not prevent dedupe."""
+    """Combine available fields so missing text does not suppress strong title matches."""
+    weighted_scores: list[tuple[float, float]] = []
+
     title_score = title_similarity(title_left, title_right)
-    summary_score = text_similarity(summary_left, summary_right)
+    weighted_scores.append((title_score, 0.50))
+
+    if summary_left.strip() and summary_right.strip():
+        summary_score = text_similarity(summary_left, summary_right)
+        weighted_scores.append((summary_score, 0.50))
+
     if content_left and content_right:
         content_score = text_similarity(
             content_left[:CONTENT_SIMILARITY_CHARS],
             content_right[:CONTENT_SIMILARITY_CHARS],
         )
-        return (title_score * 0.45) + (summary_score * 0.45) + (content_score * 0.10)
-    return (title_score * 0.50) + (summary_score * 0.50)
+        weighted_scores.append((content_score, 0.10))
+
+    total_weight = sum(weight for _, weight in weighted_scores)
+    if total_weight == 0:
+        return 0.0
+    weighted_total = sum(score * weight for score, weight in weighted_scores)
+    return weighted_total / total_weight
 
 
 def extract_comparison_metadata(text: str) -> set[str]:
