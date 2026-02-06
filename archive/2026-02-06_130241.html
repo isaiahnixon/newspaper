@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Across AI and device security, the trend is toward wider deployment alongside clearer evidence that safety and integrity can change or be subverted through subtle inputs, training dynamics, or adversarial prompting. At the same time, tools are expanding access—both to agent-style coding workflows and to speech systems for underserved languages—raising the stakes for trustworthy behavior and evaluation. Readers should view this as a tradeoff between faster adoption and the need for stronger, verifiable protections and accountability for who can inspect, control, or unlock systems.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-02-05 · <a href="https://arxiv.org/abs/2602.04653" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers showed that maliciously modified chat templates can implant inference-time backdoors in language models. The attack works without modifying model weights, poisoning training data, or controlling runtime infrastructure.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-05 · <a href="https://arxiv.org/abs/2602.04739" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers performed a two-phase evaluation of eight multimodal LLM releases using 726 adversarial prompts and 82,256 human harm ratings.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-02-05 · <a href="https://www.microsoft.com/en-us/research/blog/paza-introducing-automatic-speech-recognition-benchmarks-and-models-for-low-resource-languages" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft Research unveiled Paza, a human-centered speech pipeline, and PazaBench, a benchmark covering 39 African languages and 52 models. PazaBench is the first leaderboard for low-resource languages.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-02-04 · <a href="https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Claude by Anthropic and OpenAI Codex are now available in public preview on GitHub and VS Code for users with a Copilot Pro+ or Copilot Enterprise subscription.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-02-04 · <a href="https://arstechnica.com/tech-policy/2026/02/fbi-stymied-by-apples-lockdown-mode-after-seizing-journalists-iphone" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The FBI could not access Washington Post reporter Hannah Natanson’s seized iPhone because Apple’s Lockdown Mode protected it; agents accessed her work MacBook after she placed a finger on its fingerprint reader.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-02-05 · <a href="https://arxiv.org/abs/2602.04196" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A study introduced a taxonomy of implicit training-time AI safety risks and found risky behaviors in 74.4% of Llama-3.1-8B-Instruct training runs. This indicates such risks are prevalent during training.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-02-05 · <a href="https://arxiv.org/abs/2602.04113" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>ZKBoost provides a zero-knowledge proof-of-training for XGBoost, proving correct training on a committed dataset without revealing data or parameters. Its fixed-point implementation matches XGBoost accuracy within 1%.</div>
+</div>
+
+</section>
+
+
+<section id="montana-news">
+  <h2>Montana News</h2>
+  <div class="macro-summary">Recent Montana-linked developments point to government institutions being pulled into higher-stakes legal and administrative disputes, from elections and citizenship rules to water allocation and public land management. The tension is between state control and federal authority, with courts and compliance processes increasingly setting outcomes. Voters, students, and water users should read this as policy choices being shaped less by local debate and more by litigation timelines and intergovernmental demands.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-04 · <a href="https://montanafreepress.org/2026/02/04/secretary-of-state-christi-jacobsen-complies-with-federal-demand-for-montana-voter-data" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Secretary of State Christi Jacobsen handed over confidential voter data to the U.S. Department of Justice. The DOJ asked the state to remove voters it deems ineligible.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-04 · <a href="https://montanafreepress.org/2026/02/04/sheehy-signs-onto-brief-arguing-for-end-to-birthright-citizenship" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sen. Tim Sheehy joined 11 other Republican senators and 16 Republican representatives in signing a brief arguing the 14th Amendment’s &quot;jurisdiction&quot; should be interpreted more narrowly to end birthright citizenship.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-02-04 · <a href="https://missoulacurrent.com/colorado-river-water-7" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Lawmakers are preparing for a Colorado River water fight.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-02-04 · <a href="https://missoulacurrent.com/university-montana-president-2" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The University of Montana has launched an expedited search to name a new president within one to three months after Seth Bodnar announced he is stepping down.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-02-04 · <a href="https://missoulacurrent.com/grand-canyon-monument-2" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Arizona officials asked the Ninth Circuit to let them sue over the new Grand Canyon national monument. They say it bans uranium mining on 900,000+ acres, costing jobs and revenue.</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--weekly">
+  <h2>Economic News (Weekly)</h2>
+  <div class="macro-summary">This week’s data point to an economy where price pressures and higher energy input costs remain relevant even as manufacturing demand shows some resilience. At the same time, a widening external gap underscores how shifts in domestic spending and cross-border flows can quickly change the growth mix. Regulators are keeping bank buffers steady while they test downside risks, a reminder that financial stability remains a constraint alongside inflation and activity.</div>
+  
+<div class="item">
+  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-01-30 · <a href="https://www.bls.gov/bls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The BLS reported that in December 2025 the CPI rose 0.3%, the unemployment rate was 4.4%, and payroll employment rose by 50,000 (preliminary).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BEA News Releases · 2026-01-29 · <a href="https://www.bea.gov/news/2026/us-international-trade-goods-and-services-november-2025" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. goods and services trade deficit increased to $56.8 billion in November 2025 from $29.2 billion in October. The increase reflected lower exports and higher imports.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-02-04 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve finalized scenarios for its annual stress test and voted to maintain current stress-test capital requirements pending public feedback. This preserves current capital requirements during the feedback review.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-01-29 · <a href="https://www.census.gov/manufacturing/m3" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>New orders for manufactured goods in November increased $16.2 billion (2.7 percent) to $621.6 billion, the third gain in the last four months.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-02 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67106" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Average wholesale day-ahead electricity prices at most major Lower 48 trading hubs rose in 2025 versus 2024, driven largely by higher natural gas prices to generators; ISO-NE rose $29/MWh, Mid‑Columbia fell $14/MWh.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-01-30 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67105" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On January 16, 2026, 1,200 MW New England Clean Energy Connect transmission line began commercial operation. The high-voltage DC line is intended to increase hydroelectric power exports from Canada to New England.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s governance story is defined by a push-and-pull between keeping core federal functions running and intensifying fights over who controls elections, district lines, and immigration enforcement. Courts and lawmakers are becoming key arenas for settling partisan and federal–local disputes, while accountability gaps for federal officers and contractors raise questions about oversight. Voters, migrants, and workers are directly affected, and public opinion is increasingly polarized.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-04 · <a href="https://www.pbs.org/newshour/politics/watch-trump-signs-bill-to-end-partial-government-shutdown" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Donald Trump signed a roughly $1.2 trillion bill Tuesday ending a partial government shutdown. It sets the stage for a debate in Congress over Homeland Security funding.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-04 · <a href="https://www.pbs.org/newshour/politics/fulton-county-asks-court-to-return-2020-election-documents-seized-by-the-fbi" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Fulton County asked a federal court to order the FBI to return ballots and other 2020 election documents seized last week.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-04 · <a href="https://www.npr.org/2026/02/04/nx-s1-5691890/supreme-court-california-redistricting-map" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court allowed California to use its new congressional map for this year&#x27;s midterm election. Voters approved it to help Democrats win five additional U.S. House seats.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-05 · <a href="https://www.propublica.org/article/why-local-state-police-rarely-investigate-ice-cbp-fbi" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A federal agent shot and killed a Mexican immigrant in a Chicago suburb last September. Franklin Park officers did not investigate after their chief said they would not investigate a federal officer.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-05 · <a href="https://www.propublica.org/article/h-2a-visa-farmworker-exploitation-regulators" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The rise of farm labor contractors has led to rampant abuses, including a worker&#x27;s heatstroke death after being sent to an unauthorized field, kidnapping and assault, and confinement behind an electric fence.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-05 · <a href="https://www.npr.org/2026/02/05/nx-s1-5699413/poll-trump-ice-immigration-economy-approval" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new NPR/PBS News/Marist poll finds 65% of Americans say ICE has &quot;gone too far&quot; in immigration enforcement. That&#x27;s an 11-point rise since last summer, driven by independents and Democrats.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs signal a widening gap between diplomatic engagement and deteriorating security and humanitarian conditions. Multiple negotiation tracks are still moving, but they sit alongside rising strategic instability as key arms-control limits lapse. At the same time, worsening hunger underscores how conflict and governance breakdowns quickly translate into life‑threatening needs. Readers should view this as a test of whether diplomacy and aid reform can keep pace with escalating risks for civilians and broader regional stability.</div>
+  
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-02-05 · <a href="https://reliefweb.int/report/sudan/sudan-famine-threshold-acute-malnutrition-surpassed-two-more-north-darfur-localities-crisis-worsening-greater-kordofan" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Acute malnutrition surpassed famine thresholds in Um Baru and Kernoi localities of North Darfur, with GAM 52.9% (Um Baru) and 34% (Kernoi) among children 6–59 months.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-02-05 · <a href="https://www.france24.com/en/second-day-of-ukraine-russia-peace-talks-in-abu-dhabi" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ukrainian and Russian officials met for a second day in Abu Dhabi to continue US-brokered peace talks. The discussions aim to achieve practical steps toward peace and a possible prisoner exchange.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-02-05 · <a href="https://www.france24.com/en/iran-us-talks-will-go-ahead-in-oman" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>US and Iran said talks will take place Friday in Oman. Tensions remain because the US wants to address Iran&#x27;s ballistic missile program, which Tehran refuses to concede, citing its defense capabilities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-05 · <a href="https://www.bbc.com/news/articles/c4g31n4ey9go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>New START between the US and Russia has expired. Its expiry removes caps and transparency that limited deployed warheads to 1,550 each, raising fears of a new arms race.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-02-05 · <a href="https://reliefweb.int/report/world/synthese-des-universites-dautomne-de-lhumanitaire-2025-transformer-le-secteur-de-laide-pour-le-sauvegarder-quels-chemins-vers-une-resilience-collective" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>From 24–26 Sept, 57 aid specialists met at Groupe URD to discuss transforming the aid sector. They met amid US cuts and falling ODA that affected programmes and organisations.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-02-05 12:51 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">67</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
