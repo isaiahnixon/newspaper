@@ -42,6 +42,7 @@ weighted title+summary (and optional body excerpt) similarity second, and transl
 matching for same-source items that share publish-time proximity and metadata anchors (entities,
 numbers, and dates).
 Selection favors higher-information items and source diversity while remaining deterministic.
+For the Local News topic, entries are scored for local relevance, items below a minimum threshold are filtered out, and candidates are pre-sorted by that score before model selection.
 
 To use a different config file:
 

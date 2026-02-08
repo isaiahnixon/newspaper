@@ -92,6 +92,51 @@ ADMIN_KEYWORDS = (
     "transcript",
 )
 
+LOCAL_NEWS_TOPIC = "Local News"
+LOCAL_NEWS_MIN_SCORE = 1.0
+LOCAL_STRONG_POSITIVE_TERMS = (
+    "polson",
+    "lake county",
+    "kalispell",
+    "flathead",
+    "ronan",
+    "pablo",
+    "bigfork",
+    "columbia falls",
+    "whitefish",
+    "mission valley",
+)
+LOCAL_MEDIUM_POSITIVE_TERMS = (
+    "montana",
+    " mt ",
+    " mt.",
+)
+LOCAL_OVERRIDE_TERMS = (
+    "legislation",
+    "legislature",
+    "bill",
+    "wildfire",
+    "fire season",
+    "weather",
+    "school funding",
+    "education funding",
+    "health care policy",
+    "healthcare policy",
+    "medicaid",
+)
+OTHER_STATE_DATELINE_PATTERN = re.compile(
+    r"\b([a-z][a-z\s\.-]+),\s*(?:"
+    r"alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|"
+    r"georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|"
+    r"massachusetts|michigan|minnesota|mississippi|missouri|nebraska|nevada|new hampshire|"
+    r"new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|"
+    r"pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|"
+    r"virginia|washington|west virginia|wisconsin|wyoming"
+    r")\b",
+    re.IGNORECASE,
+)
+MONTANA_ZIP_PATTERN = re.compile(r"\b59\d{3}\b")
+
 
 def _entry_meta(entry: FeedEntry) -> EntryMeta:
     summary = compact_text([entry.summary], 280)
@@ -127,19 +172,35 @@ def select_top_items(
     limit: int,
 ) -> list[FeedEntry]:
     """Select the most important items for a topic using a simple AI ranking prompt."""
-    if len(entries) <= limit:
-        return entries
+    filtered_entries = entries
+    if topic == LOCAL_NEWS_TOPIC:
+        filtered_entries = _filter_local_news_entries(config, entries)
+
+    if len(filtered_entries) <= limit:
+        return filtered_entries
 
     # Use a dedicated model for selection so ranking can be tuned independently.
     client = get_client(config, config.selection_model, config.temperature)
     log_verbose(config.verbose, f"Selecting top {limit} items for '{topic}'.")
 
-    meta_by_link = {entry.link: _entry_meta(entry) for entry in entries}
-    ranked_entries = sorted(
-        entries,
-        key=lambda entry: (_entry_score(meta_by_link[entry.link]), entry.title.lower()),
-        reverse=True,
-    )
+    meta_by_link = {entry.link: _entry_meta(entry) for entry in filtered_entries}
+    if topic == LOCAL_NEWS_TOPIC:
+        local_scores = {entry.link: _local_news_relevance_score(entry) for entry in filtered_entries}
+        ranked_entries = sorted(
+            filtered_entries,
+            key=lambda entry: (
+                local_scores[entry.link],
+                _entry_score(meta_by_link[entry.link]),
+                entry.title.lower(),
+            ),
+            reverse=True,
+        )
+    else:
+        ranked_entries = sorted(
+            filtered_entries,
+            key=lambda entry: (_entry_score(meta_by_link[entry.link]), entry.title.lower()),
+            reverse=True,
+        )
     items_text = "\n".join(
         f"{idx}. {entry.title} ({entry.source}, {meta_by_link[entry.link].domain}) — "
         f"{compact_text([entry.summary], 220)}"
@@ -154,6 +215,49 @@ def select_top_items(
     indices = _parse_selection(selection, len(ranked_entries), limit)
     chosen = [ranked_entries[idx - 1] for idx in indices]
     return _apply_selection_constraints(chosen, ranked_entries, meta_by_link, limit)
+
+
+def _filter_local_news_entries(config: DailyPaperConfig, entries: list[FeedEntry]) -> list[FeedEntry]:
+    scored_entries: list[tuple[float, FeedEntry]] = [
+        (_local_news_relevance_score(entry), entry) for entry in entries
+    ]
+    kept = [
+        (score, entry)
+        for score, entry in scored_entries
+        if score >= LOCAL_NEWS_MIN_SCORE
+    ]
+    log_verbose(
+        config.verbose,
+        f"Local News relevance filter kept {len(kept)}/{len(entries)} items "
+        f"(threshold={LOCAL_NEWS_MIN_SCORE}).",
+    )
+    kept.sort(key=lambda item: (item[0], item[1].title.lower()), reverse=True)
+    return [entry for _, entry in kept]
+
+
+def _local_news_relevance_score(entry: FeedEntry) -> float:
+    combined = f"{entry.title} {entry.summary} {entry.source} {entry.feed_name}".lower()
+    score = 0.0
+
+    for term in LOCAL_STRONG_POSITIVE_TERMS:
+        if term in combined:
+            score += 3.0
+    if any(term in combined for term in LOCAL_MEDIUM_POSITIVE_TERMS):
+        score += 1.0
+    if MONTANA_ZIP_PATTERN.search(combined):
+        score += 1.0
+
+    has_mt_context = "montana" in combined or " mt " in combined or " mt." in combined
+    has_other_state_dateline = OTHER_STATE_DATELINE_PATTERN.search(combined) is not None
+    if has_other_state_dateline and not has_mt_context:
+        score -= 4.0
+
+    has_statewide_impact = any(term in combined for term in LOCAL_OVERRIDE_TERMS)
+    if has_mt_context and has_statewide_impact:
+        score = max(score, LOCAL_NEWS_MIN_SCORE)
+        score += 2.0
+
+    return score
 
 
 def _parse_selection(response: str, total: int, limit: int) -> list[int]:
