@@ -91,23 +91,31 @@ topics:
       - name: "Ars Technica (Science)"
         url: "https://arstechnica.com/science/feed/"
 
-  - name: "Montana News"
-    items_per_topic: 5
-    lookback_hours: 24
-    feeds:
-      # Non-paywalled, locally relevant sources for Montana coverage.
-      - name: "Montana Free Press"
-        url: "https://montanafreepress.org/feed/"
-      - name: "Missoula Current"
-        url: "https://missoulacurrent.com/feed/"
-      - name: "Montana Public Radio"
-        url: "https://www.mtpr.org/?format=RSS"
-      - name: "Yellowstone Public Radio"
-        url: "https://www.ypradio.org/?format=RSS"
-      - name: "Montana State University News"
-        url: "https://www.montana.edu/news/rss.xml"
-      - name: "University of Montana News"
-        url: "https://www.umt.edu/news/rss.xml"
+- name: "Local News"
+  items_per_topic: 4
+  lookback_hours: 24
+  feeds:
+    - name: "Flathead Beacon"
+      url: "https://flatheadbeacon.com/feed/"
+    - name: "KPAX News"
+      url: "https://www.kpax.com/index.rss"
+    - name: "Montana Free Press"
+      url: "https://montanafreepress.org/feed/"
+    - name: "Missoula Current"
+      url: "https://missoulacurrent.com/feed/"
+    - name: "Montana Public Radio"
+      url: "https://www.mtpr.org/rss"
+    - name: "Lake County, MT - News Flash RSS"
+      url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml"
+    - name: "Lake County, MT - Alerts"
+      url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=63&CID=All-0"
+    - name: "Lake County, MT - Agendas"
+      url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=65&CID=All-0"
+    - name: "Montana State University News"
+      url: "https://www.montana.edu/news/rss.xml"
+    - name: "University of Montana News"
+      url: "https://www.umt.edu/news/rss.xml"
+
 
   - name: "U.S. Governance"
     items_per_topic: 6
@@ -169,9 +177,9 @@ topics:
       - name: "AJ+"
         url: "https://www.ajplus.net/stories?format=rss"
 
-  - name: "Catholic News (Past Week)"
+  - name: "Catholic News (Past 3 Days)"
     items_per_topic: 5
-    lookback_hours: 168
+    lookback_hours: 72
     feeds:
     - name: "Vatican News (EN)"
       url: "https://www.vaticannews.va/en.rss.xml"
