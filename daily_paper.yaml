@@ -5,7 +5,7 @@ archive_dir: "archive"
 
 # Content handling
 fetch_full_text: true
-max_full_text_chars: 1800
+max_full_text_chars: 2500
 # Default item count per topic (can be overridden per topic below).
 items_per_topic: 5
 

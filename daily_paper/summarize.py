@@ -15,6 +15,7 @@ ITEM_SYSTEM_PROMPT = (
     "If no specific significance is supported, output ONLY sentence 1.\n"
     "Do NOT restate sentence 1 in different words.\n"
     "Do NOT use tautological or generic significance lines (e.g., 'this changes leadership', 'this is important', 'this could have impacts').\n"
+    "If the title indicates a roundup/comparison/list format (e.g., 'what you can buy', 'top', 'roundup', 'X under $Y'), summarize the article's overall framing, not a single example item.\n"
     "Neutral and factual: no sensational adjectives, no loaded framing, no speculation, no motive attribution.\n"
     "Grounding: use ONLY facts present in the provided title/summary/text. Do not add new details.\n"
     "If evidence is unclear, output exactly: Details are unclear.\n"
