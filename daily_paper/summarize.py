@@ -236,7 +236,7 @@ def _filter_local_news_entries(config: DailyPaperConfig, entries: list[FeedEntry
 
 
 def _local_news_relevance_score(entry: FeedEntry) -> float:
-    combined = f"{entry.title} {entry.summary} {entry.source} {entry.feed_name}".lower()
+    combined = f"{entry.title} {entry.summary}".lower()
     score = 0.0
 
     for term in LOCAL_STRONG_POSITIVE_TERMS:
