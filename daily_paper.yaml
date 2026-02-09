@@ -5,7 +5,7 @@ archive_dir: "archive"
 
 # Content handling
 fetch_full_text: true
-max_full_text_chars: 2000
+max_full_text_chars: 1800
 # Default item count per topic (can be overridden per topic below).
 items_per_topic: 5
 
@@ -21,7 +21,7 @@ dry_run: false
 verbose: true
 
 # OpenAI request behavior
-openai_timeout_secs: 180.0
+openai_timeout_secs: 200.0
 openai_max_retries: 1
 openai_retry_backoff_secs: 1.0
 openai_retry_on_timeout: false
@@ -90,31 +90,34 @@ topics:
         url: "https://arstechnica.com/gadgets/feed/"
       - name: "Ars Technica (Science)"
         url: "https://arstechnica.com/science/feed/"
+      - name: "The Rundown AI"
+        url: "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"
 
-- name: "Local News"
-  items_per_topic: 4
-  lookback_hours: 24
-  feeds:
-    - name: "Flathead Beacon"
-      url: "https://flatheadbeacon.com/feed/"
-    - name: "KPAX News"
-      url: "https://www.kpax.com/index.rss"
-    - name: "Montana Free Press"
-      url: "https://montanafreepress.org/feed/"
-    - name: "Missoula Current"
-      url: "https://missoulacurrent.com/feed/"
-    - name: "Montana Public Radio"
-      url: "https://www.mtpr.org/rss"
-    - name: "Lake County, MT - News Flash RSS"
-      url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml"
-    - name: "Lake County, MT - Alerts"
-      url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=63&CID=All-0"
-    - name: "Lake County, MT - Agendas"
-      url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=65&CID=All-0"
-    - name: "Montana State University News"
-      url: "https://www.montana.edu/news/rss.xml"
-    - name: "University of Montana News"
-      url: "https://www.umt.edu/news/rss.xml"
+
+  - name: "Local News"
+    items_per_topic: 4
+    lookback_hours: 24
+    feeds:
+      - name: "Flathead Beacon"
+        url: "https://flatheadbeacon.com/feed/"
+      - name: "KPAX News"
+        url: "https://www.kpax.com/index.rss"
+      - name: "Montana Free Press"
+        url: "https://montanafreepress.org/feed/"
+      - name: "Missoula Current"
+        url: "https://missoulacurrent.com/feed/"
+      - name: "Montana Public Radio"
+        url: "https://www.mtpr.org/rss"
+      - name: "Lake County, MT - News Flash RSS"
+        url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml"
+      - name: "Lake County, MT - Alerts"
+        url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=63&CID=All-0"
+      - name: "Lake County, MT - Agendas"
+        url: "https://www.lakemt.gov/RSSFeed.aspx?ModID=65&CID=All-0"
+      - name: "Montana State University News"
+        url: "https://www.montana.edu/news/rss.xml"
+      - name: "University of Montana News"
+        url: "https://www.umt.edu/news/rss.xml"
 
 
   - name: "U.S. Governance"
