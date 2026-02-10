@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech story centers on AI systems becoming both more capable and more embedded in everyday services, while the security and safety scaffolding around them lags and is being actively tested. As agent-like tools gain privileges to act, run code, and handle transactions, failures around verification, third‑party extensions, and domain-specific reliability become key constraints. Readers should view new product and platform moves through the lens of trust boundaries: who controls execution, what can be indexed or acted on, and what guardrails exist when mistakes carry real-world costs.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-09 · <a href="https://arxiv.org/abs/2602.06345" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A paper analyzes AP2, finds runtime enforcement gaps, and proposes a zero‑trust runtime verification framework using time‑bound nonces to enforce context binding and consume‑once mandates.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Gadgets) · 2026-02-09 · <a href="https://arstechnica.com/gadgets/2026/02/report-imminent-apple-hardware-updates-include-macbook-pro-ipads-and-iphone-17e" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Bloomberg reports Apple will imminently update the low-end iPhone (iPhone 17e), the basic iPad and iPad Air, and high-end MacBook Pros; the 17e reportedly uses an A19 chip and adds MagSafe.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-02-09 · <a href="https://developers.cloudflare.com/changelog/2026-02-09-indexing-improvements" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare&#x27;s AI Search adds granular indexing controls, letting users reindex individual files and crawl only selected sitemaps. This lets you get content updates into AI Search faster and avoid full rescans.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-02-09 · <a href="https://developers.cloudflare.com/changelog/2026-02-09-pty-terminal-support" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Sandbox SDK now supports PTY passthrough via sandbox.terminal(request), proxying WebSocket upgrades to a container&#x27;s PTY. It enables browser-based terminal UIs to connect and buffers output for replay on reconnect.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-09 · <a href="https://arxiv.org/abs/2602.06547" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers verified 98,380 third-party agent skills from two registries and confirmed 157 malicious skills with 632 vulnerabilities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-09 · <a href="https://arxiv.org/abs/2601.09200" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A.X K1, a 519B-parameter Mixture-of-Experts language model, was trained from scratch on ≈10T tokens using a Think-Fusion training recipe. It is competitive with leading open-source models and shows an advantage on Korean benchmarks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-09 · <a href="https://arxiv.org/abs/2602.05088" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Clinicians and an LLM judge rated simulated conversations between LLM user-agents and general chatbots using the VERA-MH rubric. The study assessed VERA-MH&#x27;s validity and reliability for suicide risk detection and response.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local coverage points to a community balancing accountability and growth: institutions face pressure to improve reporting and oversight, while development plans and land-management debates highlight competing priorities for how shared resources and public spaces are used. At the same time, housing listings underscore ongoing affordability and investment choices for residents. Readers can view these items through who bears the costs when systems fail or projects stall—patients, taxpayers, and households.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-09 · <a href="https://montanafreepress.org/2026/02/09/inside-the-systemic-sexual-abuse-reporting-failure-at-one-montana-hospital" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A 2025 federal investigation found a dozen staffers at St. Peter’s in Helena failed more than a dozen times to file required reports about staff allegedly sexually harassing and abusing patients.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-09 · <a href="https://montanafreepress.org/2026/02/09/gfda-agritech-park-requires-cash-infusion-to-build-out" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Great Falls Development Alliance asked the city to extend an industrial tax increment financing district’s term and to issue bonds to help complete the AgriTech Park buildout.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-09 · <a href="https://flatheadbeacon.com/2026/02/09/steve-pearce-is-the-wrong-choice-for-blm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new bipartisan RABA Research poll found 75% of Montana voters oppose Steve Pearce&#x27;s nomination to lead the Bureau of Land Management. Public lands unite Montanans across parties and regions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-09 · <a href="https://flatheadbeacon.com/2026/02/09/floor-space-what-you-can-buy-for-about-400000-3" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A local real-estate roundup shows examples of how much home floor space buyers can get around a $400,000 budget in the area.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how institutions handle accountability and rights under political pressure. Federal law enforcement and Congress are revisiting high-stakes matters—from election administration to allegations of abuse—while immigration detention practices keep drawing scrutiny. The tension is between transparency and due process versus security, privacy, and partisan incentives, shaping trust in oversight and enforcement decisions.</div>
+  
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-09 · <a href="https://www.propublica.org/article/kevin-moncla-election-researcher-fulton-county-georgia" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kevin Moncla, a conservative researcher, is being linked to the FBI’s late-January seizure of 2020 election records from Fulton County, Georgia.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-09 · <a href="https://www.propublica.org/article/life-inside-ice-dilley-children" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Fourteen-year-old Ariana Velasquez had been held with her mother at the immigrant detention center in Dilley, Texas, for about 45 days when a reporter met her.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-09 · <a href="https://www.npr.org/2026/02/09/nx-s1-5704371/jeffrey-epstein-co-conspirator-ghislaine-maxwell-to-testify-before-congress" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ghislaine Maxwell will sit Monday for closed-door, virtual testimony with lawmakers on the Republican-led House Oversight Committee.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-08 · <a href="https://www.pbs.org/newshour/nation/ap-review-on-what-the-epstein-files-show-about-the-fbi-investigation-of-possible-sex-trafficking" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An Associated Press review of internal Justice Department records shows the FBI found proof Jeffrey Epstein sexually abused underage girls but little evidence of a sex trafficking ring.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-09 · <a href="https://www.npr.org/2026/02/09/nx-s1-5704794/trump-house-of-representatives-republicans-midterm-elections" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Five warning signs indicate Republicans face an uphill battle retaining House control in this year&#x27;s midterm elections.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-02-09 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/02/sentencing-in-jimmy-lai-case" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Hong Kong&#x27;s High Court sentenced Jimmy Lai to 20 years. The U.S. State Department said the sentence shows Beijing will silence advocates of fundamental freedoms and disregard the 1984 Sino‑British Joint Declaration.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage points to rising pressure on civilian safety and basic rights across conflict zones, migration routes, and tightly controlled political environments. A central tension is how governments pursue security and territorial or legal objectives while humanitarian conditions deteriorate and protections for people on the move, patients, and detainees remain contested. For readers, the lens is practical: these developments shape displacement risks, access to medical care, and the operating space for media and aid groups.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-02-09 · <a href="https://news.un.org/feed/view/en/story/2026/02/1166922" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Fifty-three migrants, including two babies, are dead or missing after a large rubber dinghy capsized off Libya&#x27;s coast, the UN migration agency said.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-02-09 · <a href="https://reliefweb.int/report/sudan/attacks-health-care-sudan-21-january-03-february-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Insecurity Insight recorded 689 incidents of violence against or obstruction of health care in Sudan (Apr 2023–30 Dec 2025), killing 175 health workers, arresting 96, and obstructing medicine deliveries.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Mussa Qawasma, Reuters · 2026-02-09 · <a href="https://www.france24.com/en/middle-east/20260209-arab-states-condemn-israel-expands-control-over-occupied-west-bank" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Saudi Arabia and Arab states condemned Israel after its security cabinet approved steps easing settlers&#x27; land purchases in the occupied West Bank. The West Bank has been occupied by Israel since 1967.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-09 · <a href="https://www.bbc.com/news/articles/c8d5pl34vv0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Hong Kong court jailed British media tycoon Jimmy Lai for 20 years for colluding with foreign forces under the national security law. It is the harshest punishment under the law.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-09 · <a href="https://www.bbc.com/news/articles/cjd9k852zdjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Japan&#x27;s LDP won 316 of 465 lower-house seats, gaining a two-thirds majority, as the Nikkei hit a record high. That majority will help Takaichi advance pro-business policies without extensive negotiation with opposition.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-02-09 · <a href="https://reliefweb.int/report/democratic-republic-congo/dr-congo-humanitarian-key-figures-31-january-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN Office for the Coordination of Humanitarian Affairs published key humanitarian figures for the Democratic Republic of the Congo as of 31 January 2026.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-3-days">
+  <h2>Catholic News (Past 3 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage highlights a church balancing pastoral governance and public moral witness with hands-on humanitarian response, while operating in settings where insecurity directly threatens clergy and communities. The tension is between promoting human dignity through peace-building and everyday service, and confronting violence and exploitation driven by conflict and inequality. These developments matter most for local Catholics, aid partners, and church leaders making safety, resource, and leadership decisions.</div>
+  
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-09 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68396" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gunmen attacked a village in the Kauru area of Kaduna State, Nigeria, on Feb. 7, killing three people and abducting 11, including a priest.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-07 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68382" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV issued &quot;Life in Abundance,&quot; a letter on the value of sport for the 25th Winter Olympics and 14th Paralympic Games, and it is the lengthiest papal document on athletics.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-09 · <a href="https://www.vaticannews.va/en/pope/news/2026-02/the-pope-s-solidarity-amid-ukraine-s-freezing-winter.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo arranged delivery of 80 electricity generators, plus medicine and food, to Ukraine. They aim to help address hardships caused by bombings of energy infrastructure and intense cold.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">USCCB - News Releases (EN) · 2026-02-07 · <a href="https://www.usccb.org/news/2026/pope-leo-xiv-accepts-resignation-archbishop-samuel-aquila-denver-appoints-bishop-james" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV accepted Archbishop Samuel J. Aquila&#x27;s resignation as head of the Archdiocese of Denver and named Bishop James R. Golka his successor.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-02-07 · <a href="https://www.ewtnnews.com/vatican/pope-leo-xiv-peace-begins-with-dignity-not-weapons" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV issued a message for the Church’s Feb. 8 World Day of Prayer and Awareness against Human Trafficking. He warned that conflict and inequality fuel exploitation.</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--past-week">
+  <h2>Economic News (Past Week)</h2>
+  <div class="macro-summary">This week’s data point to an economy where overall inflation is still rising, while underlying conditions vary widely by place, sector, and household. Weather-driven energy disruptions and shifting consumer preferences are creating uneven pressure points for costs and demand. At the same time, regulators are holding key bank safeguards steady as they test resilience, shaping credit conditions that matter for borrowers and local growth.</div>
+  
+<div class="item">
+  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-02-06 · <a href="https://www.bls.gov/bls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>In December 2025, CPI rose 0.3%, the unemployment rate was 4.4%, and payroll employment increased by 50,000(p).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-02-04 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve Board finalized hypothetical scenarios for its annual stress test and voted to keep current stress-test capital requirements until public feedback can be considered.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-05 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67124" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Working natural gas stocks in the Lower 48 fell 360 billion cubic feet for the week ending January 30, 2026, the largest weekly net withdrawal in the report&#x27;s history.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-09 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67144" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Hybrid electric vehicle market share increased in 2025 while battery electric and plug-in hybrid sales decreased, and electrified vehicles made up about 22% of U.S. light-duty vehicle sales, up from 20%.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BEA News Releases · 2026-02-05 · <a href="https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>In 2024, estimates show real GDP rose in 2,273 counties, fell in 809, was unchanged in 24, while personal income rose in 2,768 counties, fell in 331, and was unchanged in 7.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-03 · <a href="https://www.census.gov/housing/hvs" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. homeownership was 65.7% in Q4 2025, virtually unchanged from Q4 2024.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-02-09 09:17 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">81</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
