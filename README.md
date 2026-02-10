@@ -44,7 +44,7 @@ weighted title+summary (and optional body excerpt) similarity second, and transl
 matching for same-source items that share publish-time proximity and metadata anchors (entities,
 numbers, and dates).
 Selection favors higher-information items and source diversity while remaining deterministic.
-When `max_items_per_source` is set, over-limit items are replaced with the next highest-ranked eligible items so section length remains filled when alternatives exist. The same cap is enforced for both `source_group` and individual feed sources.
+When `max_items_per_source` is set, the selection prompt instructs the model to keep the picked items under that per-source limit (with `source_group` used as the source label when configured).
 For the Local News topic, entries are scored for local relevance, items below a minimum threshold are filtered out, and candidates are pre-sorted by that score before model selection.
 
 To use a different config file:
