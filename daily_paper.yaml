@@ -29,6 +29,7 @@ openai_retry_on_timeout: false
 topics:
   - name: "Tech News"
     items_per_topic: 7
+    max_items_per_source_group: 3
     # Limit entries to a recent window so the tech digest stays timely.
     lookback_hours: 24
     feeds:
@@ -50,8 +51,10 @@ topics:
         url: "https://arstechnica.com/ai/feed/"
       - name: "arXiv cs.AI"
         url: "https://rss.arxiv.org/rss/cs.AI"
+        source_group: "arXiv"
       - name: "arXiv cs.LG"
         url: "https://rss.arxiv.org/rss/cs.LG"
+        source_group: "arXiv"
       - name: "NVIDIA Developer Blog"
         url: "https://developer.nvidia.com/blog/feed"
       - name: "Mozilla Hacks"
