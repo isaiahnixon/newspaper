@@ -14,6 +14,7 @@ CONFIG_PATH = Path("daily_paper.yaml")
 class FeedSource:
     name: str
     url: str
+    source_group: str | None = None
 
 
 @dataclass(frozen=True)
@@ -22,6 +23,7 @@ class TopicConfig:
     lookback_hours: int
     feeds: tuple[FeedSource, ...]
     items_per_topic: int
+    max_items_per_source_group: int | None
 
 
 @dataclass(frozen=True)
@@ -197,6 +199,10 @@ def _require_topics(
             "items_per_topic",
             default_items_per_topic,
         )
+        max_items_per_source_group = _require_optional_int_or_none(
+            raw_topic,
+            "max_items_per_source_group",
+        )
         feeds = _require_feeds(raw_topic.get("feeds"), name)
         topics.append(
             TopicConfig(
@@ -204,6 +210,7 @@ def _require_topics(
                 lookback_hours=lookback_hours,
                 feeds=feeds,
                 items_per_topic=items_per_topic,
+                max_items_per_source_group=max_items_per_source_group,
             )
         )
     return tuple(topics)
@@ -217,6 +224,20 @@ def _require_optional_int(
     value = data.get(key, default)
     if not isinstance(value, int) or isinstance(value, bool):
         raise ValueError(f"Config key '{key}' must be an integer.")
+    return value
+
+
+def _require_optional_int_or_none(
+    data: Mapping[str, object],
+    key: str,
+) -> int | None:
+    value = data.get(key)
+    if value is None:
+        return None
+    if not isinstance(value, int) or isinstance(value, bool):
+        raise ValueError(f"Config key '{key}' must be an integer or null.")
+    if value < 1:
+        raise ValueError(f"Config key '{key}' must be at least 1 when provided.")
     return value
 
 
@@ -240,5 +261,12 @@ def _require_feeds(value: object, topic_name: str) -> tuple[FeedSource, ...]:
             raise ValueError(
                 f"Feed entry {idx} in topic '{topic_name}' needs a non-empty 'url'."
             )
-        feeds.append(FeedSource(name=name, url=url))
+        source_group = raw_feed.get("source_group")
+        if source_group is not None and (
+            not isinstance(source_group, str) or not source_group.strip()
+        ):
+            raise ValueError(
+                f"Feed entry {idx} in topic '{topic_name}' has invalid 'source_group'."
+            )
+        feeds.append(FeedSource(name=name, url=url, source_group=source_group))
     return tuple(feeds)
