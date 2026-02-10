@@ -35,6 +35,7 @@ class DailyPaperConfig:
     fetch_full_text: bool
     max_full_text_chars: int
     items_per_topic: int
+    max_items_processed_per_source: int
     # Explicitly set models so the config is the single source of truth.
     item_model: str
     selection_model: str
@@ -104,6 +105,11 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
     fetch_full_text = _require_bool(data, "fetch_full_text")
     max_full_text_chars = _require_int(data, "max_full_text_chars")
     items_per_topic = _require_int(data, "items_per_topic")
+    max_items_processed_per_source = _require_optional_int(
+        data,
+        "max_items_processed_per_source",
+        50,
+    )
     item_model = _require_str(data, "item_model")
     selection_model = _require_str(data, "selection_model")
     topic_model = _require_str(data, "topic_model")
@@ -124,6 +130,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         fetch_full_text=fetch_full_text,
         max_full_text_chars=max_full_text_chars,
         items_per_topic=items_per_topic,
+        max_items_processed_per_source=max_items_processed_per_source,
         item_model=item_model,
         selection_model=selection_model,
         topic_model=topic_model,

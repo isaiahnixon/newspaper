@@ -10,6 +10,8 @@ max_full_text_chars: 2500
 items_per_topic: 5
 # Optional global cap applied to both source_group and individual feed counts per topic selection.
 max_items_per_source: 3
+# Max entries to process per RSS feed before stopping parse for that source.
+max_items_processed_per_source: 50
 
 # Model choices (explicitly set; no implicit defaults)
 item_model: "gpt-5-mini"
