@@ -25,6 +25,7 @@ SELECTION_SYSTEM_PROMPT = (
     "You are a neutral news editor selecting the most important items for a topic.\n"
     "Primary goals, in order: (1) relevance/public significance, (2) source diversity, (3) deduplication.\n"
     "Treat source_group as the diversity unit when provided; these feeds are intentionally grouped.\n"
+    "Do not select more than the configured maximum from any one source_group or any one feed source.\n"
     "\n"
     "Duplicate policy (strict):\n"
     "- Treat translated, reworded, or URL-variant versions of the same event from the same source as duplicates.\n"
@@ -180,12 +181,11 @@ def select_top_items(
         filtered_entries = _filter_local_news_entries(config, entries)
 
     if len(filtered_entries) <= limit:
-        return _apply_source_group_limit(
+        return _apply_source_limits(
             config,
             filtered_entries,
             ranked_entries=filtered_entries,
             limit=limit,
-            topic=topic,
         )
 
     # Use a dedicated model for selection so ranking can be tuned independently.
@@ -224,28 +224,27 @@ def select_top_items(
     indices = _parse_selection(selection, len(ranked_entries), limit)
     chosen = [ranked_entries[idx - 1] for idx in indices]
     constrained = _apply_selection_constraints(chosen, ranked_entries, meta_by_link, limit)
-    return _apply_source_group_limit(config, constrained, ranked_entries, limit, topic)
+    return _apply_source_limits(config, constrained, ranked_entries, limit)
 
 
-def _apply_source_group_limit(
+def _apply_source_limits(
     config: DailyPaperConfig,
     selected: list[FeedEntry],
     ranked_entries: list[FeedEntry],
     limit: int,
-    topic: str,
 ) -> list[FeedEntry]:
-    topic_config = config.get_topic_config(topic)
-    group_limit = topic_config.max_items_per_source_group
-    if group_limit is None:
+    source_limit = config.max_items_per_source
+    if source_limit is None:
         return selected
 
     trimmed: list[FeedEntry] = []
-    counts: dict[str, int] = {}
+    group_counts: dict[str, int] = {}
+    feed_counts: dict[str, int] = {}
+
     for entry in selected:
-        group = entry.source_group
-        if counts.get(group, 0) >= group_limit:
+        if _is_over_source_limits(entry, group_counts, feed_counts, source_limit):
             continue
-        counts[group] = counts.get(group, 0) + 1
+        _track_source_counts(entry, group_counts, feed_counts)
         trimmed.append(entry)
 
     if len(trimmed) >= limit:
@@ -256,14 +255,35 @@ def _apply_source_group_limit(
             break
         if entry in trimmed:
             continue
-        group = entry.source_group
-        if counts.get(group, 0) >= group_limit:
+        if _is_over_source_limits(entry, group_counts, feed_counts, source_limit):
             continue
         if _is_near_duplicate(entry, trimmed):
             continue
-        counts[group] = counts.get(group, 0) + 1
+        _track_source_counts(entry, group_counts, feed_counts)
         trimmed.append(entry)
     return trimmed
+
+
+def _is_over_source_limits(
+    entry: FeedEntry,
+    group_counts: dict[str, int],
+    feed_counts: dict[str, int],
+    source_limit: int,
+) -> bool:
+    if group_counts.get(entry.source_group, 0) >= source_limit:
+        return True
+    if feed_counts.get(entry.feed_name, 0) >= source_limit:
+        return True
+    return False
+
+
+def _track_source_counts(
+    entry: FeedEntry,
+    group_counts: dict[str, int],
+    feed_counts: dict[str, int],
+) -> None:
+    group_counts[entry.source_group] = group_counts.get(entry.source_group, 0) + 1
+    feed_counts[entry.feed_name] = feed_counts.get(entry.feed_name, 0) + 1
 
 def _filter_local_news_entries(config: DailyPaperConfig, entries: list[FeedEntry]) -> list[FeedEntry]:
     scored_entries: list[tuple[float, FeedEntry]] = [
