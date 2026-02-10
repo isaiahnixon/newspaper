@@ -25,6 +25,7 @@ Key options:
 - `topics[].items_per_topic`: Optional override for a specific topic’s item count.
 - `topics[].lookback_hours`: Per-topic window (in hours) for eligible feed entries.
 - `max_items_per_source`: Optional global cap for how many selected items can come from any one source group or any one feed source within a topic.
+- `max_items_processed_per_source`: Max number of entries parsed from a single RSS feed before processing stops for that source (defaults to `50`).
 - `topics[].feeds[].source_group`: Optional grouping label so related feeds (for example multiple arXiv feeds) share the same cap.
 - `item_model`: Model for headline-style item summaries.
 - `selection_model`: Model used to rank items before summarization.
@@ -44,6 +45,7 @@ weighted title+summary (and optional body excerpt) similarity second, and transl
 matching for same-source items that share publish-time proximity and metadata anchors (entities,
 numbers, and dates).
 Selection favors higher-information items and source diversity while remaining deterministic.
+Feed parsing also stops per source once `max_items_processed_per_source` entries have been processed to reduce runtime and unnecessary fetch work.
 When `max_items_per_source` is set, the selection prompt instructs the model to keep the picked items under that per-source limit (with `source_group` used as the source label when configured).
 For the Local News topic, entries are scored for local relevance, items below a minimum threshold are filtered out, and candidates are pre-sorted by that score before model selection.
 

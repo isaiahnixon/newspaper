@@ -94,7 +94,10 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
             skipped = 0
             duplicates = 0
             out_of_window = 0
-            for entry in parsed.entries:
+            max_feed_items = config.max_items_processed_per_source
+            for idx, entry in enumerate(parsed.entries, start=1):
+                if idx > max_feed_items:
+                    break
                 link = entry.get("link")
                 title = entry.get("title", "").strip()
                 if not link or not title:
@@ -143,6 +146,7 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
             log_verbose(
                 config.verbose,
                 f"Feed summary for {feed.name}: total={len(parsed.entries)}, "
+                f"processed={min(len(parsed.entries), max_feed_items)}, "
                 f"added={added}, duplicates={duplicates}, skipped={skipped}, "
                 f"out_of_window={out_of_window}.",
             )
