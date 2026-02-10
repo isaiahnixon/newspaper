@@ -23,7 +23,6 @@ class TopicConfig:
     lookback_hours: int
     feeds: tuple[FeedSource, ...]
     items_per_topic: int
-    max_items_per_source_group: int | None
 
 
 @dataclass(frozen=True)
@@ -49,6 +48,7 @@ class DailyPaperConfig:
     openai_max_retries: int
     openai_retry_backoff_secs: float
     openai_retry_on_timeout: bool
+    max_items_per_source: int | None
     topics: tuple[TopicConfig, ...]
 
     @property
@@ -114,6 +114,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
     openai_max_retries = _require_int(data, "openai_max_retries")
     openai_retry_backoff_secs = _require_float(data, "openai_retry_backoff_secs")
     openai_retry_on_timeout = _require_bool(data, "openai_retry_on_timeout")
+    max_items_per_source = _require_optional_int_or_none(data, "max_items_per_source")
     topics = _require_topics(data.get("topics"), items_per_topic)
 
     return DailyPaperConfig(
@@ -133,6 +134,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         openai_max_retries=openai_max_retries,
         openai_retry_backoff_secs=openai_retry_backoff_secs,
         openai_retry_on_timeout=openai_retry_on_timeout,
+        max_items_per_source=max_items_per_source,
         topics=topics,
     )
 
@@ -199,10 +201,6 @@ def _require_topics(
             "items_per_topic",
             default_items_per_topic,
         )
-        max_items_per_source_group = _require_optional_int_or_none(
-            raw_topic,
-            "max_items_per_source_group",
-        )
         feeds = _require_feeds(raw_topic.get("feeds"), name)
         topics.append(
             TopicConfig(
@@ -210,7 +208,6 @@ def _require_topics(
                 lookback_hours=lookback_hours,
                 feeds=feeds,
                 items_per_topic=items_per_topic,
-                max_items_per_source_group=max_items_per_source_group,
             )
         )
     return tuple(topics)
