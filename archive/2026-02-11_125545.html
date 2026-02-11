@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Tech is moving toward more automation and more control at the same time: companies are tightening identity and access rules after sensitive data exposure, while new devices and features aim to broaden adoption across price tiers. Research underscores the tradeoff: AI systems can speed security and computer tasks but can also behave unsafely or unreliably without stronger guardrails. Readers should view this as a shift in how risk, trust, and usability are being balanced for consumers and security teams.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-02-09 · <a href="https://arstechnica.com/tech-policy/2026/02/discord-faces-backlash-over-age-checks-after-data-breach-exposed-70000-ids" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Discord announced it will require users to verify ages with video selfies or government IDs to access adult content, prompting backlash after a prior breach exposed 70,000 IDs.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Gadgets) · 2026-02-09 · <a href="https://arstechnica.com/gadgets/2026/02/report-imminent-apple-hardware-updates-include-macbook-pro-ipads-and-iphone-17e" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Apple is reportedly preparing imminent updates to high-end MacBook Pros, the basic iPad and iPad Air, and a new low-end iPhone called the iPhone 17e.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-10 · <a href="https://arxiv.org/abs/2509.23573" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper studied LLM vulnerabilities in cyber threat intelligence (CTI) reasoning. It used a human-in-the-loop categorization and found three failures: spurious metadata correlations, contradictory sources, and poor generalization to new threats.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-10 · <a href="https://arxiv.org/abs/2602.08235" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced AutoElicit to perturb benign instructions and elicit unintended harmful behaviors in computer-use agents. Using it they surfaced hundreds of harms in models including Claude 4.5 Haiku and Opus.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-02-09 · <a href="https://css-tricks.com/trying-to-make-the-perfect-pie-chart-in-css" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A CSS-Tricks author tried to build a semantic, flexible pie chart using only CSS, avoiding a JavaScript library.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-10 · <a href="https://arxiv.org/abs/2503.10602" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers propose TruthPrInt to mitigate object hallucination in large vision-language models by learning a truthful decoding direction from internal states and applying truthful-guided inference-time intervention.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-10 · <a href="https://arxiv.org/abs/2512.23075" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>arXiv:2512.23075v3 presents trust-region bounds for long-horizon LLM reinforcement learning. They replace O(T^2) scaling with O(T^{3/2}) or O(T) bounds and tie guarantees to max token-level divergence.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local items point to communities juggling public safety and institutional accountability alongside the practical demands of growth. A central tension is how quickly systems—from policing and hospitals to housing and development finance—can respond when needs surface suddenly or at scale. Residents, workers, and local decision-makers are most affected as they weigh trust, capacity, and costs in planning and oversight.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-09 · <a href="https://flatheadbeacon.com/2026/02/09/kalispell-police-department-investigating-death-of-man-found-in-depot-park" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kalispell police are investigating the death of 42-year-old Matthew Rasmussen, who was found dead in Depot Park Sunday morning. No criminal activity is suspected.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-09 · <a href="https://flatheadbeacon.com/2026/02/09/hospitality-company-proposes-west-glacier-work-camp-to-centralize-seasonal-staff" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pursuit applied to Flathead County to build a West Glacier &quot;work camp&quot; to house 230 seasonal employees. Neighbors raised traffic and public safety concerns.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-09 · <a href="https://montanafreepress.org/2026/02/09/inside-the-systemic-sexual-abuse-reporting-failure-at-one-montana-hospital" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A 2025 federal investigation found a dozen staffers at St. Peter’s Hospital in Helena repeatedly failed to file required reports about alleged employee sexual harassment and abuse of patients.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-09 · <a href="https://montanafreepress.org/2026/02/09/gfda-agritech-park-requires-cash-infusion-to-build-out" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Great Falls Development Alliance asked the city to extend an industrial tax increment financing district’s term and to issue bonds to help complete the AgriTech Park’s buildout.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Federal governance is being shaped by deadline-driven bargaining that ties core security and immigration operations to contentious conditions, sharpening the tradeoff between enforcement choices and keeping agencies funded. At the same time, courts and congressional oversight are being used more aggressively as checks, with legal challenges and testimony disputes testing transparency and due process. Trade and foreign-policy moves add pressure, affecting border communities, detainees, and planners who need predictable rules to make near-term decisions.</div>
+  
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-10 · <a href="https://www.npr.org/2026/02/10/nx-s1-5707411/top-immigration-officials-to-testify-before-house-as-dhs-funding-deadline-approaches" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Top immigration officials will testify before a House committee. The testimony comes as lawmakers debate enforcement changes and a DHS funding deadline approaches.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-09 · <a href="https://www.pbs.org/newshour/politics/watch-live-house-gavels-in-as-deadline-for-homeland-security-funding-nears" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The House gavels in as the deadline for Homeland Security funding nears. Debate focuses on whether to ban masks, with a Friday midnight deadline risking a partial agency shutdown.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-10 · <a href="https://www.propublica.org/article/habeas-petitions-immigrant-detentions-trump" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Immigrants have filed more than 18,000 federal cases claiming their detention is illegal. That total exceeds the number filed under the previous three administrations combined.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-09 · <a href="https://www.pbs.org/newshour/show/epstein-files-fallout-grows-as-ghislaine-maxwell-pleads-fifth-before-congress" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ghislaine Maxwell invoked her Fifth Amendment right and declined to answer questions from a congressional committee. Lawmakers were given the same day access to view unredacted Epstein files.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-10 · <a href="https://www.npr.org/2026/02/10/nx-s1-5708607/trump-block-bridge-detroit-canada" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump threatened to block the opening of the Gordie Howe International Bridge between Detroit and Windsor. He demanded Canada give up at least half ownership and other unspecified concessions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-02-09 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/02/joint-statement-on-the-global-coalition-to-defeat-isis-meeting-on-iraq-and-syria" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Kingdom of Saudi Arabia hosted a meeting of senior diplomatic and defense officials from the Small Group of the Global Coalition to Defeat ISIS/Daesh in Riyadh on February 9, 2026.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage points to governments asserting tighter control over borders, territory, and people flows while alliances and institutions strain to respond. The tension is between security and sovereignty claims on one hand, and legal norms, humanitarian access, and economic connectivity on the other. Readers can view these developments through who gains leverage at crossings, in recruitment pipelines, and across digital platforms—and what that means for travel, trade, and rights.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-02-10 · <a href="https://www.france24.com/en/video/20260210-un-says-gravely-concerned-as-international-outrage-grows-over-israel-s-plans-for-west-bank" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN chief said he was &quot;gravely concerned&quot; about Israeli plans to tighten control of the occupied West Bank. Saudi Arabia and seven Muslim-majority states condemned them as enabling more settlements.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-02-10 · <a href="https://www.france24.com/en/video/20260210-palestinians-return-to-gaza-after-long-awaited-rafah-reopening" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gazans stuck in Egypt began returning after Rafah reopened. It opened for the first time since mid-2024 to meet a main US‑backed ceasefire demand.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-10 · <a href="https://www.bbc.com/news/articles/c3wlpqpe2z4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A landmark Los Angeles jury trial began accusing Meta and YouTube of creating social-media &quot;addiction machines&quot; linked to a minor&#x27;s mental health. The companies say other issues in her life caused the addiction.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-10 · <a href="https://www.bbc.com/news/articles/ce8n1zdnpd3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>French President Emmanuel Macron urged Europe to assert itself as a world power, warning of growing threats from China, Russia and the US. He urged EU-wide mutualised loans (eurobonds) for industrial investment.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-10 · <a href="https://www.bbc.com/news/articles/c0k1jzvrykro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kenya will confront Russia over reports that about 200 Kenyan nationals were recruited to fight for Russia in Ukraine.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-10 · <a href="https://www.bbc.com/news/articles/cpw052pkvl0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump threatened to block opening of the Gordie Howe International Bridge, which connects Michigan and Ontario, until the United States is &quot;fully compensated for everything&quot; it has given to Canada.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-3-days">
+  <h2>Catholic News (Past 3 Days)</h2>
+  <div class="macro-summary">Recent Catholic news highlights the Church operating on several fronts at once: responding to violence against clergy and communities, addressing humanitarian crises that expose the human cost of migration and war, and trying to strengthen accountability through greater transparency on abuse-handling rules. At the same time, internal milestones in sainthood causes continue alongside these pressures. For readers, the key lens is how leadership balances pastoral support and emergency aid with institutional credibility and governance.</div>
+  
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-09 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68396" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gunmen attacked a village near Kauru, Kaduna State, Nigeria on February 7, killing three and abducting 11, including a priest.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-09 · <a href="https://www.vaticannews.va/en/world/news/2026-02/migrants-shipwreck-libya-iom.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Fifty-three migrants, including two babies, drowned when a rubber boat carrying 55 people capsized off Libya. IOM reports at least 375 migrants were dead or missing in January.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-10 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68403" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Dicastery for the Doctrine of the Faith published online, &quot;for study purposes,&quot; four Vatican documents (1962–2004) on Church discipline in addressing sexual abuse, including the 1962 Crimen sollicationis and 2001 norms.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-02-09 · <a href="https://www.ewtnnews.com/world/us/fulton-sheen-beatification" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Holy See informed the Diocese of Peoria that the cause for Venerable Archbishop Fulton J. Sheen can proceed to beatification, the diocese said.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-09 · <a href="https://www.vaticannews.va/en/pope/news/2026-02/the-pope-s-solidarity-amid-ukraine-s-freezing-winter.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo arranged delivery of 80 electricity generators, medicine and food supplies to Ukraine.</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--past-week">
+  <h2>Economic News (Past Week)</h2>
+  <div class="macro-summary">This week’s data point to an economy where headline inflation remains a key constraint while conditions vary widely by region and sector. Energy markets showed how extreme weather can quickly tighten supplies, adding volatility risks for households and businesses. Consumers and manufacturers appear to be shifting toward incremental technology choices rather than full leaps, while housing and banking signals suggest stability is being balanced against resilience requirements.</div>
+  
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-05 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67124" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Working natural gas stocks fell 360 billion cubic feet in the Lower 48 for the week ending January 30, 2026. It was the largest weekly withdrawal in the Weekly Natural Gas Storage Report’s history.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-02-06 · <a href="https://www.bls.gov/bls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Bureau of Labor Statistics reported December 2025 figures: CPI +0.3% (month), unemployment 4.4%, and payroll employment +50,000 (p).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BEA News Releases · 2026-02-05 · <a href="https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Real GDP increased in 2,273 counties, decreased in 809, and was unchanged in 24 in 2024, with changes ranging from 76.6% in Carter County, MT, to −46.3% in Baca County, CO.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-09 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67144" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>About 22% of U.S. light-duty vehicle sales in 2025 were hybrid, battery electric, or plug-in hybrid vehicles, up from 20% in 2024.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-02-04 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve Board finalized hypothetical scenarios for its annual stress test and voted to maintain current stress-test capital requirements pending public feedback.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-03 · <a href="https://www.census.gov/housing/hvs" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. homeownership rate was 65.7 percent in the fourth quarter of 2025, virtually unchanged from fourth quarter 2024, with the Northeast higher and the Midwest, South, and West not statistically different.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-02-10 13:32 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">81</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
