@@ -101,7 +101,7 @@ topics:
 
 
   - name: "Local News"
-    items_per_topic: 4
+    items_per_topic: 5
     lookback_hours: 24
     feeds:
       - name: "Flathead Beacon"

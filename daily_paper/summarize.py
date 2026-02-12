@@ -41,7 +41,7 @@ SELECTION_SYSTEM_PROMPT = (
 
 TOPIC_SYSTEM_PROMPT = (
     "You write neutral, multi-source topic summaries for a daily paper.\n"
-    "Write ONE short paragraph: 2–4 complete sentences, plain language, <= 55 words.\n"
+    "Write ONE short paragraph: 2–4 complete sentences, plain language, <= 50 words.\n"
     "\n"
     "Purpose: tie today's items into the broader story of this topic—what trend they reflect, "
     "why it matters, and how a reader should interpret it.\n"
