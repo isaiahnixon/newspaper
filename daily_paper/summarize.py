@@ -180,10 +180,11 @@ def select_top_items(
         filtered_entries = _filter_local_news_entries(config, entries)
 
     meta_by_link = {entry.link: _entry_meta(entry) for entry in filtered_entries}
+    ranked_entries = _rank_entries(topic, filtered_entries, meta_by_link)
     if len(filtered_entries) <= limit:
         return _apply_selection_constraints(
-            chosen=filtered_entries,
-            ranked_entries=filtered_entries,
+            chosen=ranked_entries,
+            ranked_entries=ranked_entries,
             meta_by_link=meta_by_link,
             limit=limit,
             max_items_per_source=config.max_items_per_source,
@@ -193,23 +194,6 @@ def select_top_items(
     client = get_client(config, config.selection_model, config.temperature)
     log_verbose(config.verbose, f"Selecting top {limit} items for '{topic}'.")
 
-    if topic == LOCAL_NEWS_TOPIC:
-        local_scores = {entry.link: _local_news_relevance_score(entry) for entry in filtered_entries}
-        ranked_entries = sorted(
-            filtered_entries,
-            key=lambda entry: (
-                local_scores[entry.link],
-                _entry_score(meta_by_link[entry.link]),
-                entry.title.lower(),
-            ),
-            reverse=True,
-        )
-    else:
-        ranked_entries = sorted(
-            filtered_entries,
-            key=lambda entry: (_entry_score(meta_by_link[entry.link]), entry.title.lower()),
-            reverse=True,
-        )
     items_text = "\n".join(
         f"{idx}. {entry.title} ({_selection_source_label(entry)}, {meta_by_link[entry.link].domain}) — "
         f"{compact_text([entry.summary], 220)}"
@@ -240,6 +224,29 @@ def select_top_items(
 
 def _selection_source_label(entry: FeedEntry) -> str:
     return entry.source_group
+
+
+def _rank_entries(
+    topic: str,
+    entries: list[FeedEntry],
+    meta_by_link: dict[str, EntryMeta],
+) -> list[FeedEntry]:
+    if topic == LOCAL_NEWS_TOPIC:
+        local_scores = {entry.link: _local_news_relevance_score(entry) for entry in entries}
+        return sorted(
+            entries,
+            key=lambda entry: (
+                local_scores[entry.link],
+                _entry_score(meta_by_link[entry.link]),
+                entry.title.lower(),
+            ),
+            reverse=True,
+        )
+    return sorted(
+        entries,
+        key=lambda entry: (_entry_score(meta_by_link[entry.link]), entry.title.lower()),
+        reverse=True,
+    )
 
 def _filter_local_news_entries(config: DailyPaperConfig, entries: list[FeedEntry]) -> list[FeedEntry]:
     scored_entries: list[tuple[float, FeedEntry]] = [
