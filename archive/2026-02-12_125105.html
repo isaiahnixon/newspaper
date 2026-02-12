@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Tech firms and researchers are pushing AI deeper into products and infrastructure, while also confronting the cost and reliability constraints that come with deploying it at scale. The trend mixes heavy capital needs with practical engineering work—compressing models, improving developer tooling, and testing where autonomous systems break down in operations. Readers can view this as a shift from demos to durable, governed deployment, affecting budgets, uptime expectations, and platform risk.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-02-10 · <a href="https://arstechnica.com/gadgets/2026/02/alphabet-selling-very-rare-100-year-bunds-to-help-fund-ai-investment" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Alphabet is selling a rare 100-year bond to help fund its AI investments. It is the first tech company to issue century bonds in nearly three decades.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-11 · <a href="https://arxiv.org/abs/2602.09937" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers ran 1,675 LLM-agent RCA trials on OpenRCA and classified failures into 12 pitfall types. They report these pitfalls persist across models, implicating agent architecture over model capability.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-02-11 · <a href="https://arxiv.org/abs/2602.09130" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced UniComp, a unified evaluation framework comparing pruning, quantization, and knowledge distillation for compressing large language models. They found quantization gives the best performance–efficiency trade-off while distillation yields strong runtime acceleration.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-02-11 · <a href="https://developers.cloudflare.com/changelog/2026-02-11-vite-plugin-child-environments" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare&#x27;s Vite plugin now integrates @vitejs/plugin-rsc and adds a childEnvironments option for multiple environments in one Worker. A parent can import child modules to use a separate module graph.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Google AI Blog · 2026-02-10 · <a href="https://blog.google/products-and-platforms/products/photos/ask-button-ask-photos-tips" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google Photos added an Ask button available on Android and iOS in the U.S. It uses Gemini models to answer questions, find similar images, suggest edits and discover related moments.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-02-10 · <a href="https://arstechnica.com/tech-policy/2026/02/wikipedia-might-blacklist-archive-today-after-site-maintainer-ddosed-a-blog" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Wikipedia editors are considering blacklisting Archive.today after its CAPTCHA page was used to direct a DDoS attack on a blogger. Option A would remove over 695,000 links from roughly 400,000 pages.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-02-10 · <a href="https://arstechnica.com/ai/2026/02/grok-maker-xai-loses-another-co-founder" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Tony Wu abruptly resigned as a co-founder of xAI. His exit is the latest in a string of senior executives leaving the company.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, public agencies and residents are renegotiating how to manage shared resources and rights under changing conditions. Climate pressures are forcing tougher tradeoffs between recreation access and ecological limits, while housing and elections are seeing sharper disputes over oversight, data use, and price control. For readers, the key lens is how new rules and collective action shift day-to-day access, costs, and trust in institutions.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-11 · <a href="https://flatheadbeacon.com/2026/02/11/federal-agencies-release-proposed-rewrite-of-flathead-river-management-plan" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Flathead National Forest and Glacier National Park released a proposed rewrite and assessment of the Flathead River management plan, setting user capacities and management actions for its three Wild and Scenic forks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-11 · <a href="https://montanafreepress.org/2026/02/10/warming-summers-force-early-fishing-closures-yellowstone-national-park-is-making-a-shift" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Yellowstone National Park will open fishing season nearly a month early after summer heat frequently forced river closures. Anglers and fisheries managers are considering adding spring days to alleviate late-summer river pressures.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-10 · <a href="https://montanafreepress.org/2026/02/10/residents-of-missoula-area-mobile-home-parks-unionize-join-effort-to-limit-rent-increases" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Residents of two Missoula mobile home parks unionized to limit rent increases. They acted after out-of-state investors bought parks and raised rents.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-02-11 · <a href="https://www.kpax.com/news/montana-politics/jacobsens-office-pushes-back-on-report-about-sharing-voter-data-with-federal-government" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Secretary of State Christi Jacobsen’s office rejected a Montana Free Press report that it complied with a federal request for voter data, calling the article &quot;recklessly false&quot; and seeking a retraction.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">U.S. governance is showing sharper politicization of federal institutions, especially around climate and election administration, while agencies face scrutiny over transparency and workplace safety. At the same time, deadline-driven budgeting and immigration disputes are straining basic operational capacity, even as the government uses enforcement tools like sanctions. Readers should view this as a tradeoff between rapid policy reversals and institutional stability, affecting regulators, courts, frontline workers, and public trust.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-10 · <a href="https://www.pbs.org/newshour/politics/trump-set-to-gut-u-s-climate-change-policy-and-environmental-regulations-white-house-official-says" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The EPA will issue a final rule rescinding the 2009 endangerment finding. A White House official said it would gut U.S. climate-change policy and environmental regulations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-10 · <a href="https://www.propublica.org/article/federal-judicial-center-climate-change-republican-pressure" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Under pressure from Republican state attorneys general, the Federal Judicial Center removed its climate-change chapter from a new judicial reference manual.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-10 · <a href="https://www.npr.org/2026/02/10/nx-s1-5710649/fulton-county-2020-election-affidavit-fbi" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>FBI executed a search warrant at Fulton County&#x27;s election hub, seizing more than 650 boxes of 2020 ballots and related materials. The affidavit relied on already-disproven claims.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-11 · <a href="https://www.npr.org/2026/02/11/nx-s1-5709006/with-just-days-left-until-funding-deadline-lawmakers-seem-no-closer-to-making-a-deal" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A contentious House hearing with senior immigration leaders did little to bring lawmakers closer to a deal to fund the Department of Homeland Security.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-10 · <a href="https://www.propublica.org/article/forest-service-forever-chemical-firefighter-pfas" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Officials at the U.S. Forest Service knew for years that wildland firefighters&#x27; gear contained PFAS but did not publicly acknowledge it. PFAS are linked to cancers and delayed child development.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-02-10 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/02/sanctioning-hizballah-finance-operatives-2" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United States sanctioned Hizballah operatives exploiting Lebanon’s informal financial sector. The U.S. said they aided sanctions-evasion schemes tied to Hizballah-controlled Al-Qard Al-Hassan and an Iran-based finance team operative.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global-affairs picture blends high-stakes diplomacy and active conflict with escalating civilian vulnerability. Security debates are tightening around how to limit regional threats while violence and stalled political pathways keep daily living conditions fragile. At the same time, floods and alerts across multiple regions show disaster pressures compounding humanitarian needs, shaping priorities for governments and aid groups.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-11 · <a href="https://www.bbc.com/news/articles/c0k1j2j4607o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli Prime Minister Benjamin Netanyahu will meet President Donald Trump at the White House as negotiations over Iran&#x27;s nuclear programme reach a critical stage.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-11 · <a href="https://www.bbc.com/news/articles/crm820dp0yro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Russian strikes near Kharkiv killed four people, including three toddlers, after a drone hit a house in Bohodukhiv. The attack resumed after a week-long pause Donald Trump had asked Putin to observe.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-02-11 · <a href="https://www.france24.com/en/video/20260211-thousands-forced-from-homes-as-deadly-floods-wreak-havoc-in-morocco" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Deadly floods in Morocco forced thousands from their homes and killed four people last weekend. Farmers say thousands of livestock and hectares of land are underwater.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-02-11 · <a href="https://www.france24.com/en/yossi-mekelberg-warns-israel-s-current-measures-intended-to-kill-peace-and-a-two-state-solution" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Yossi Mekelberg warned that Israel&#x27;s current measures are intended to &#x27;kill&#x27; peace and a two-state solution. He said bans on aid groups and ongoing operations have left civilians, especially children, suffering.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-02-11 · <a href="https://reliefweb.int/report/yemen/yemen-health-cluster-bulletin-july-august-2025" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Health Cluster bulletin for Yemen covering July and August 2025 was published by the Health Cluster and the World Health Organization on ReliefWeb.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-02-11 · <a href="https://reliefweb.int/report/world/floods-and-flash-flood-alerts-last-24-hours-european-flood-awareness-system-efas-echo-daily-flash-11-february-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>EFAS issued flood and flash-flood alerts across Europe: France (several regions 2/3), Poland (Noteć 2/3), Portugal (Douro/Tejo/Sado 1/2; Lima/Mondego 2/2), Spain (multiple 2/3 and 3/3), United Kingdom (97 England, 3 Scotland).</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-3-days">
+  <h2>Catholic News (Past 3 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage points to a Church balancing pastoral response to conflict with increased emphasis on accountability and transparency. Humanitarian needs in war and communal violence are being met through local faith networks, while concerns about civil liberties and political repression continue to shape the Church’s public-facing context. At the same time, internal governance is highlighted by moves that clarify how misconduct allegations are handled alongside recognition of prominent religious figures. For readers, the through-line is how the Church allocates attention and resources between urgent relief, institutional trust, and its moral voice in fraught public life.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-08 · <a href="https://www.vaticannews.va/en/world/news/2026-02/violence-continues-to-sweep-across-nigeria.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At least 13 people were killed Friday at Anwase Market in Benue State; attackers abducted women and burned stalls. The attacks have deepened a humanitarian crisis in northwest and north‑central Nigeria.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-02-10 · <a href="https://www.ewtnnews.com/vatican/pope-leo-xiv-sends-80-generators-medicine-food-to-ukraine" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo sent 80 generators, medicine, and food to Ukraine. The aid is headed to hard-hit areas including Fastiv and Kyiv and will be distributed through parish networks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-02-09 · <a href="https://www.ncronline.org/news/pro-democracy-activist-jimmy-lai-sentenced-20-year-imprisonment" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pro-democracy activist and media entrepreneur Jimmy Lai was sentenced to 20 years in prison. His arrest nearly six years ago prompted outrage around the world.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-02-09 · <a href="https://www.ewtnnews.com/world/us/fulton-sheen-beatification" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Holy See informed the Diocese of Peoria that the cause for Venerable Archbishop Fulton J. Sheen may proceed to beatification.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-10 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68403" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Dicastery for the Doctrine of the Faith published online, &quot;for study purposes,&quot; four Vatican documents (1962–2004) on the Church’s discipline for addressing sexual-abuse accusations.</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--past-week">
+  <h2>Economic News (Past Week)</h2>
+  <div class="macro-summary">This week’s data point to a slower-moving consumer economy alongside still-firm prices, while business activity looks supported by modest gains in sales and inventories. A major energy shock tightened near-term fuel supply conditions, underscoring how weather-driven volatility can complicate inflation and spending trends. Regulators are also prioritizing bank resilience, which matters for credit availability to households and businesses.</div>
+  
+<div class="item">
+  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-02-10 · <a href="https://www.bls.gov/bls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The BLS reported December 2025: CPI +0.3%, unemployment 4.4%, and payroll employment up 50,000 (preliminary).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-02-04 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve Board finalized hypothetical scenarios for its annual stress test and voted to maintain current stress-test capital requirements until public feedback can be considered.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-05 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67124" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Working natural gas stocks in the Lower 48 fell 360 Bcf the week ending Jan 30, 2026, amid Winter Storm Fern. It was the largest weekly withdrawal on record.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-10 · <a href="https://www.census.gov/retail/index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. retail and food services sales in December 2025 were $735.0 billion, essentially unchanged from the previous month (0.0% change) after a revised +0.6% increase in November.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-10 · <a href="https://www.census.gov/mtis/index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. total business end-of-month inventories for November 2025 were $2,678.3 billion, up 0.1% from last month, and total business sales were $1,955.1 billion, up 0.6%.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BEA News Releases · 2026-02-05 · <a href="https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>In 2024, real GDP rose in 2,273 U.S. counties, fell in 809, and was unchanged in 24; personal income rose in 2,768 counties, fell in 331, and was unchanged in 7.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-02-11 12:55 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">78</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
