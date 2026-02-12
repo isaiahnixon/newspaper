@@ -46,7 +46,7 @@ matching for same-source items that share publish-time proximity and metadata an
 numbers, and dates).
 Selection favors higher-information items and source diversity while remaining deterministic.
 Feed parsing also stops per source once `max_items_processed_per_source` entries have been processed to reduce runtime and unnecessary fetch work.
-When `max_items_per_source` is set, the selection prompt instructs the model to keep the picked items under that per-source limit (with `source_group` used as the source label when configured).
+When `max_items_per_source` is set, selection enforces the per-source limit in code (with `source_group` used as the source label when configured), so model output cannot exceed the cap.
 For the Local News topic, entries are scored for local relevance, items below a minimum threshold are filtered out, and candidates are pre-sorted by that score before model selection.
 
 To use a different config file:

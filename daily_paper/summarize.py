@@ -179,14 +179,20 @@ def select_top_items(
     if topic == LOCAL_NEWS_TOPIC:
         filtered_entries = _filter_local_news_entries(config, entries)
 
+    meta_by_link = {entry.link: _entry_meta(entry) for entry in filtered_entries}
     if len(filtered_entries) <= limit:
-        return filtered_entries
+        return _apply_selection_constraints(
+            chosen=filtered_entries,
+            ranked_entries=filtered_entries,
+            meta_by_link=meta_by_link,
+            limit=limit,
+            max_items_per_source=config.max_items_per_source,
+        )
 
     # Use a dedicated model for selection so ranking can be tuned independently.
     client = get_client(config, config.selection_model, config.temperature)
     log_verbose(config.verbose, f"Selecting top {limit} items for '{topic}'.")
 
-    meta_by_link = {entry.link: _entry_meta(entry) for entry in filtered_entries}
     if topic == LOCAL_NEWS_TOPIC:
         local_scores = {entry.link: _local_news_relevance_score(entry) for entry in filtered_entries}
         ranked_entries = sorted(
@@ -223,7 +229,13 @@ def select_top_items(
     selection = client.chat_completion(SELECTION_SYSTEM_PROMPT, user_prompt)
     indices = _parse_selection(selection, len(ranked_entries), limit)
     chosen = [ranked_entries[idx - 1] for idx in indices]
-    return _apply_selection_constraints(chosen, ranked_entries, meta_by_link, limit)
+    return _apply_selection_constraints(
+        chosen,
+        ranked_entries,
+        meta_by_link,
+        limit,
+        max_items_per_source=config.max_items_per_source,
+    )
 
 
 def _selection_source_label(entry: FeedEntry) -> str:
@@ -353,6 +365,7 @@ def _apply_selection_constraints(
     ranked_entries: list[FeedEntry],
     meta_by_link: dict[str, EntryMeta],
     limit: int,
+    max_items_per_source: int | None,
 ) -> list[FeedEntry]:
     candidate_pool = chosen + [entry for entry in ranked_entries if entry not in chosen]
     selected: list[FeedEntry] = []
@@ -361,6 +374,9 @@ def _apply_selection_constraints(
         if len(selected) >= limit:
             break
         if _is_near_duplicate(entry, selected):
+            continue
+        if _hits_source_cap(entry, selected, max_items_per_source):
+            deferred.append(entry)
             continue
         if _violates_diversity(entry, selected, candidate_pool[idx + 1 :], meta_by_link):
             deferred.append(entry)
@@ -375,6 +391,8 @@ def _apply_selection_constraints(
             break
         if _is_near_duplicate(entry, selected):
             continue
+        if _hits_source_cap(entry, selected, max_items_per_source):
+            continue
         selected.append(entry)
     if len(selected) < limit:
         for entry in candidate_pool:
@@ -384,8 +402,21 @@ def _apply_selection_constraints(
                 continue
             if _is_near_duplicate(entry, selected):
                 continue
+            if _hits_source_cap(entry, selected, max_items_per_source):
+                continue
             selected.append(entry)
     return selected
+
+
+def _hits_source_cap(
+    entry: FeedEntry,
+    selected: list[FeedEntry],
+    max_items_per_source: int | None,
+) -> bool:
+    if max_items_per_source is None:
+        return False
+    source_key = _selection_source_label(entry)
+    return sum(1 for item in selected if _selection_source_label(item) == source_key) >= max_items_per_source
 
 
 def _is_near_duplicate(entry: FeedEntry, selected: list[FeedEntry], threshold: float = 0.86) -> bool:
