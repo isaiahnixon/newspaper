@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech thread shows AI systems moving from lab novelty to infrastructure that needs governance: attackers are finding new multimodal jailbreak paths, while researchers work on editing models to reduce memorized sensitive data and on detecting quality regressions as systems are optimized. At the same time, business and platform pressures—monetization, service reliability, and bot-scale content access—are shaping incentives and risks. Privacy expectations are also under strain as cloud services demonstrate deeper retention and recovery capabilities than many users assume, affecting consumer trust and legal outcomes. Readers should view these items as tradeoffs between capability and cost, and between safety, transparency, and commercial scale.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-12 · <a href="https://arxiv.org/abs/2602.10148" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers propose CrossTALK, a scalable attack that entangles clues across images and text to jailbreak vision-language models. It aims to exceed VLMs&#x27; safety alignment patterns for more effective red-teaming.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-12 · <a href="https://arxiv.org/abs/2602.10134" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers revealed that parameter updates from locate-then-edit model editing leak edited data and proposed KSTER, a two-stage reverse-engineering attack that recovers edited subjects and prompts.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-02-11 · <a href="https://arstechnica.com/information-technology/2026/02/openai-researcher-quits-over-fears-that-chatgpt-ads-could-manipulate-users" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Zoë Hitzig resigned the day OpenAI began testing ads in ChatGPT. She warned the ad strategy risks repeating Facebook’s mistakes because users share sensitive information with the chatbot.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Gadgets) · 2026-02-11 · <a href="https://arstechnica.com/google/2026/02/google-recovers-deleted-nest-video-in-high-profile-abduction-case" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Investigators released Nest doorbell footage from Nancy Guthrie’s abduction that had been believed deleted. Google recovered it despite Nest’s three-hour free storage limit.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-02-11 · <a href="https://github.blog/news-insights/company-news/github-availability-report-january-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>In January, GitHub experienced two incidents that caused degraded performance across its services.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-02-12 · <a href="https://developers.cloudflare.com/changelog/2026-02-12-radar-ai-bots-content-type" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Radar now includes a content_type dimension and filter showing the distribution of MIME-type categories returned to AI bots and crawlers, available at /ai/bots/summary/content_type and /ai/bots/timeseries_groups/content_type.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-12 · <a href="https://arxiv.org/abs/2602.10144" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers propose a statistically sound hypothesis-testing framework based on McNemar&#x27;s test to detect LLM degradations from optimizations and numerical errors.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local coverage shows how policy decisions and investment pressures are reshaping access to basic services, especially health coverage and clean water. Communities face tradeoffs between economic development and resource limits, while governments and advocates turn to investigations and lawsuits to settle disputes over enforcement and standards. The stakes are highest for tribal residents and small municipalities weighing compliance, costs, and environmental risk.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-11 · <a href="https://montanafreepress.org/2026/02/11/end-of-enhanced-obamacare-subsidies-puts-tribal-health-lifeline-at-risk" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The expiration of enhanced Affordable Care Act subsidies threatens tribal insurance programs that give Native Americans access to affordable health care when the Indian Health Service falls short.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-12 · <a href="https://montanafreepress.org/2026/02/12/as-ai-investors-eye-montana-for-new-data-centers-communities-brace-for-water-impacts" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>AI investors are proposing new data centers in Montana&#x27;s Butte and Broadview areas, prompting standing-room-only public meetings about water and electricity impacts.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-11 · <a href="https://flatheadbeacon.com/2026/02/11/gianforte-knudsen-announce-state-investigation-of-city-of-helena-over-noncooperation-with-federal-immigration-agents" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Attorney General Austin Knudsen said he will investigate Helena for refusing to assist U.S. Immigration and Customs Enforcement agents.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-02-11 · <a href="https://www.mtpr.org/montana-news/2026-02-11/groups-file-court-challenge-over-new-state-water-quality-standards" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Water watchdog groups and tribes sued federal regulators over the EPA&#x27;s approval of Montana&#x27;s new water quality standards. They say the approval violated the Endangered Species Act and Clean Water Act.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across federal and state government, basic functions are being shaped by funding brinkmanship, tighter eligibility rules, and the limits of oversight. A key tension is whether stricter controls and accountability measures improve integrity and safety or instead add barriers and leave gaps when agencies lack resources or clarity. These shifts matter most for voters, migrants, and residents relying on safe water and regulated products, and for policymakers weighing tradeoffs between enforcement, services, and fiscal sustainability.</div>
+  
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-12 · <a href="https://www.npr.org/2026/02/12/nx-s1-5707281/senate-dhs-oversight-hearing" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Top ICE, CBP and USCIS leaders testified before the Senate Homeland Security Committee. They testified one day before a potential DHS funding shutdown.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-12 · <a href="https://www.npr.org/2026/02/12/g-s1-109745/house-pushes-strict-requirement-for-voters" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>House Republicans rushed to approve legislation requiring proof of U.S. citizenship and photo ID to register and vote. The SAVE America Act is a Trump priority and faces Senate blowback.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-11 · <a href="https://www.pbs.org/newshour/politics/federal-deficits-and-debt-will-worsen-over-next-decade-congressional-budget-office-finds" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Congressional Budget Office found federal deficits and debt will worsen over the next decade. It projects inflation will not hit the Federal Reserve&#x27;s 2% target until 2030.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-11 · <a href="https://www.pbs.org/newshour/world/russia-says-it-will-stick-to-new-starts-nuclear-arms-limits-as-long-as-the-u-s-does" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Russia said it will follow New START&#x27;s nuclear limits while the U.S. does. The treaty expired Feb. 5, leaving the two largest arsenals unrestricted for the first time in over 50 years.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-12 · <a href="https://www.propublica.org/article/oklahoma-oil-polluted-drinking-water-boarman-family" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>After moving into their built home near Oklahoma City, Tammy and Chris Boarman&#x27;s private well water tasted salty and oily and left sores in their mouths. Oklahoma officials refused to investigate why.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-11 · <a href="https://www.propublica.org/article/colorado-regulators-marijuana-lab-testing-system" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Colorado regulators discussed a proposal to ban manufacturers from selecting which cannabis product samples go to mandatory contaminant testing and to require independent labs or outside vendors to collect samples.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Across regions, politics and security are colliding with questions of basic rights and civilian protection. A push for more competitive governance sits alongside intensifying military pressure and scrutiny of conduct in conflict zones. At the same time, governments are tightening control over information channels, raising tradeoffs between security aims and privacy. These developments shape risk for civilians, aid access, and how external partners calibrate support and accountability.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-02-12 · <a href="https://www.france24.com/en/pivotal-election-in-bangladesh-as-the-country-goes-to-the-polls-after-17-years-of-authoritarianism" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Bangladesh went to the polls after 17 years of authoritarianism. Voters were concerned about who would win, and about breaking concentrated power, tackling corruption, economic development and social rights.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-02-12 · <a href="https://www.france24.com/en/nato-defence-ministers-to-meet-on-ukraine-weapons-greenland-security" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>NATO defence ministers met to discuss keeping weapons flowing to Ukraine and to launch the &quot;Arctic Sentry&quot; mission to strengthen security in Greenland and the Arctic.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-11 · <a href="https://www.bbc.com/news/articles/crm820dp0yro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Russian drone strike in Bohodukhiv killed three toddlers and their father, and injured the mother. They had recently evacuated from near the Russian border and it was their first night there.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-12 · <a href="https://www.bbc.com/news/articles/clygd10pg5lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Russia has ordered a block on WhatsApp amid a Kremlin crackdown on messaging apps. WhatsApp said the move aims to push its users in Russia to a &quot;state-owned surveillance app&quot;.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Press releases - European Parliament · 2026-02-12 · <a href="https://www.europarl.europa.eu/news/en/press-room/20260205IPR33627" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>MEPs condemned violence against civilians in north‑east Syria, said credible reports of abuses may amount to violations of international humanitarian law or war crimes, and urged parties to respect the ceasefire.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Press releases - European Parliament · 2026-02-12 · <a href="https://www.europarl.europa.eu/news/en/press-room/20260205IPR33628" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Parliament adopted three resolutions on the human rights situations in Iran, Türkiye and Uganda. It urges UN documentation and preservation of evidence for possible crimes against humanity in Iran.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-3-days">
+  <h2>Catholic News (Past 3 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage is converging on the Church’s role where human vulnerability meets state power: conflict and displacement, political detention and civil rights, and internal questions of authority and unity. The tension is between maintaining dialogue and communion while speaking plainly about coercion and violence. For readers, the practical lens is how Church actors use aid networks and public statements to shape outcomes for civilians and detainees.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-09 · <a href="https://www.vaticannews.va/en/world/news/2026-02/migrants-shipwreck-libya-iom.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Fifty-three migrants, including two babies, drowned after a rubber boat carrying fifty-five people capsized off the coast of Libya.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-02-09 · <a href="https://www.ncronline.org/news/pro-democracy-activist-jimmy-lai-sentenced-20-year-imprisonment" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pro-democracy activist Jimmy Lai was sentenced to 20 years in prison. His arrest nearly six years ago prompted outrage around the world.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-02-12 · <a href="https://www.ewtnnews.com/vatican/vatican-offers-talks-with-sspx-warns-illicit-consecrations-would-end-dialogue" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Vatican&#x27;s doctrinal office offered talks with the Society of Saint Pius X and warned that consecrating bishops without a papal mandate would cause a &quot;decisive rupture&quot; of communion.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-02-10 · <a href="https://www.ewtnnews.com/vatican/pope-leo-xiv-sends-80-generators-medicine-food-to-ukraine" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo sent 80 generators, medicine and food to Ukraine. Aid is headed to Fastiv and Kyiv and will be distributed via parish networks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-11 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68417" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Venezuelan bishops issued a pastoral exhortation urging respect for human rights and popular sovereignty, release of all political prisoners, and forgiveness instead of violence.</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--past-week">
+  <h2>Economic News (Past Week)</h2>
+  <div class="macro-summary">Recent data point to a mixed but steady start to the year: prices are still rising month to month while consumer spending is flat and overall sales are only modestly higher. At the same time, inventories are edging up and oil markets are expected to stay well supplied, which could ease some cost pressures even as fuel taxes and fees creep higher in some places. New business applications rebounded, suggesting continued interest in starting firms despite uneven demand signals. For households and businesses, the key lens is whether easing energy inputs and stable inventories offset ongoing inflation in everyday budgets and pricing decisions.</div>
+  
+<div class="item">
+  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-02-11 · <a href="https://www.bls.gov/bls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Consumer Price Index rose 0.3% in December 2025, the unemployment rate was 4.3% in January 2026, and payroll employment increased by 130,000 in January 2026.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-11 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67164" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The EIA forecasts Brent crude oil prices will fall from $69 per barrel in 2025 to $58 in 2026 and $53 in 2027 as production exceeds demand and stocks build.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-10 · <a href="https://www.census.gov/retail/index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. retail and food services sales in December 2025 totaled $735.0 billion, virtually unchanged (0.0% change) from November 2025.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-11 · <a href="https://www.census.gov/econ/bfs" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Total U.S. business applications were 532,319 in January 2026, up 7.2% from December 2025.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-12 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67165" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Many states slightly increased their taxes and fees on gasoline in the past year. State rates ranged from 70.9 c/gal in California to 9.0 c/gal in Alaska, averaging 33.5 c/gal.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-10 · <a href="https://www.census.gov/mtis/index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. total business end-of-month inventories in November 2025 were $2,678.3 billion, up 0.1% from October, and total business sales were $1,955.1 billion, up 0.6% from October.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-02-12 14:39 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">78</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
