@@ -30,6 +30,7 @@ Key options:
 - `item_model`: Model for headline-style item summaries.
 - `selection_model`: Model used to rank items before summarization.
 - `topic_model`: Model for section summaries.
+- `topic_summary_max_retries`: Number of attempts to get a non-empty topic summary before falling back to empty output.
 - `temperature`: Set to a number or `null` to omit the override and use provider defaults.
 - `dry_run`: Set to `true` to skip API calls and return placeholder summaries.
 - `openai_timeout_secs`, `openai_max_retries`, `openai_retry_backoff_secs`, `openai_retry_on_timeout`: Request controls for the OpenAI client.

@@ -17,6 +17,8 @@ max_items_processed_per_source: 50
 item_model: "gpt-5-mini"
 selection_model: "gpt-5-mini"
 topic_model: "gpt-5.2"
+# Number of attempts to generate a non-empty topic summary.
+topic_summary_max_retries: 3
 # Use null to omit a temperature override and keep provider defaults.
 temperature: null
 

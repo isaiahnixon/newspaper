@@ -346,7 +346,7 @@ def summarize_item(client: OpenAIClient, entry: FeedEntry, config: DailyPaperCon
         f"Description: {description}\n"
         f"Source: {entry.source}\n"
     )
-    return client.chat_completion(ITEM_SYSTEM_PROMPT, user_prompt)
+    return client.chat_completion(ITEM_SYSTEM_PROMPT, user_prompt, topic=entry.topic)
 
 
 def summarize_topic(
@@ -363,8 +363,25 @@ def summarize_topic(
         f"Write the macro summary for {topic}. Use only the items below.\n\n"
         f"Items:\n{bullet_points}"
     )
-    summary = client.chat_completion(TOPIC_SYSTEM_PROMPT, user_prompt)
-    return TopicSummary(topic=topic, summary=summary)
+    # Retry topic summary generation if the model returns empty/whitespace output.
+    max_attempts = config.topic_summary_max_retries
+    for attempt in range(max_attempts):
+        summary = client.chat_completion(TOPIC_SYSTEM_PROMPT, user_prompt, topic=topic)
+        if summary.strip():  # Check if the summary is not empty or just whitespace
+            log_verbose(
+                config.verbose,
+                f"Topic summary generated successfully on attempt {attempt + 1} for '{topic}'.",
+            )
+            return TopicSummary(topic=topic, summary=summary)
+        log_verbose(
+            config.verbose,
+            f"Topic summary empty on attempt {attempt + 1} for '{topic}'. Retrying...",
+        )
+    log_verbose(
+        config.verbose,
+        f"Failed to generate a non-empty topic summary after {max_attempts} attempts for '{topic}'.",
+    )
+    return TopicSummary(topic=topic, summary="")
 
 
 def _apply_selection_constraints(

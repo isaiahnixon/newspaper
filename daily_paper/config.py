@@ -40,6 +40,7 @@ class DailyPaperConfig:
     item_model: str
     selection_model: str
     topic_model: str
+    topic_summary_max_retries: int
     temperature: float | None
     # Use dry_run to avoid network calls while testing prompts safely.
     dry_run: bool
@@ -86,6 +87,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         "item_model",
         "selection_model",
         "topic_model",
+        "topic_summary_max_retries",
         "temperature",
         "dry_run",
         "verbose",
@@ -113,6 +115,9 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
     item_model = _require_str(data, "item_model")
     selection_model = _require_str(data, "selection_model")
     topic_model = _require_str(data, "topic_model")
+    topic_summary_max_retries = _require_int(data, "topic_summary_max_retries")
+    if topic_summary_max_retries < 1:
+        raise ValueError("Config key 'topic_summary_max_retries' must be at least 1.")
     temperature = _require_optional_float(data, "temperature")
     dry_run = _require_bool(data, "dry_run")
     verbose = _require_bool(data, "verbose")
@@ -134,6 +139,7 @@ def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
         item_model=item_model,
         selection_model=selection_model,
         topic_model=topic_model,
+        topic_summary_max_retries=topic_summary_max_retries,
         temperature=temperature,
         dry_run=dry_run,
         verbose=verbose,
