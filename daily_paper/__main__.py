@@ -19,9 +19,16 @@ if __name__ == "__main__":
         action="store_true",
         help="Enable verbose logging for each step of the pipeline.",
     )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Run in dry-run mode, skipping API calls and using placeholder summaries.",
+    )
     args = parser.parse_args()
 
     config = load_config(args.config)
     if args.verbose:
         config = replace(config, verbose=True)
+    if args.dry_run:
+        config = replace(config, dry_run=True)
     run(config)

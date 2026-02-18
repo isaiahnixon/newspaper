@@ -1,0 +1,67 @@
+{
+  "Tech News": {
+    "topic_summary": "Today\u2019s tech news highlights a shift toward cheaper, faster, and more specialized AI, alongside growing concern about the risks and measurement gaps that come with wider adoption. As models move onto smaller hardware and into coordinated agent setups, competition increasingly hinges on efficiency, safety, and reliable benchmarks. For developers and maintainers, the practical lens is how trust, privacy controls, and interoperability standards keep pace with lower barriers to building and copying advanced systems.",
+    "item_summaries": [
+      "Attackers prompted Google's Gemini over 100,000 times while trying to clone it, Google says. Google says distillation lets copycats mimic Gemini at a fraction of the development cost.",
+      "OpenAI released GPT\u20115.3\u2011Codex\u2011Spark, a coding model on Cerebras chips that delivers over 1,000 tokens per second. It is OpenAI's first production model deployed on non\u2011Nvidia hardware.",
+      "Gemini 3 Deep Think was upgraded to solve modern science, research and engineering challenges.",
+      "GitHub said open source is entering an \"Eternal September\" and outlined plans to support maintainers. It described maintainers adopting new trust signals, triage approaches and community-led solutions.",
+      "The Interop Project launched Interop 2026, a cross-browser initiative involving Apple, Google, Igalia, Microsoft, and Mozilla to improve web compatibility. They prioritize features with Web Platform Tests and track pass rates.",
+      "Researchers introduced AgentLeak, a full-stack benchmark for privacy leakage in multi-agent LLMs across 1,000 scenarios. Tests found internal channels raised exposure to 68.9% and output-only audits miss 41.7% of violations.",
+      "A new arXiv paper introduces RooflineBench, a Roofline-model benchmarking framework for on-device language models. It defines Relative Inference Potential and finds sequence length and increased depth reduce operational intensity."
+    ]
+  },
+  "Local News": {
+    "topic_summary": "Across Montana, fast-moving growth pressures are colliding with basic safeguards and services: new industrial development raises local resource and infrastructure questions, while healthcare oversight and public safety accountability are under scrutiny. At the same time, immigration and housing debates are shaping local politics, and communities are expanding low-barrier support for food access. For residents and local officials, the practical lens is how policy and investment choices shift costs and protections at the city and county level.",
+    "item_summaries": [
+      "Proposed data center projects in the Butte and Broadview areas prompted standing-room-only community meetings where Montanans sought information about water and electricity impacts.",
+      "Helena hospital CEO Wade Johnson acknowledged St. Peter\u2019s stored sexual-abuse reports in uncoordinated locations, not the centralized reporting system. He made the remarks as his first comments on the 2025 federal inspection.",
+      "Four Democrats seeking Montana\u2019s western U.S. House seat held their first public forum Tuesday on housing and immigration. The winner advances to the general election and likely faces incumbent Rep. Ryan Zinke.",
+      "The Kalispell Salvation Army Corps now brings the Mobile Hope Market, a weekly mobile food pantry, to different Flathead Valley cities. People choose foods to meet cultural and dietary needs.",
+      "Gov. Greg Gianforte and Attorney General Austin Knudsen launched a formal investigation into Helena to determine whether a resolution limiting cooperation with federal law enforcement violates Montana's sanctuary-city ban. They may penalize."
+    ]
+  },
+  "U.S. Governance": {
+    "topic_summary": "Federal governance is being shaped by sharper swings in executive action, with major policy reversals colliding with basic operational risks like funding lapses. Immigration enforcement is increasingly intertwined with data access and administrative systems, raising accuracy, privacy, and due-process tradeoffs. Oversight and transparency efforts face friction, leaving lawmakers and the public to weigh accountability against institutional capacity.",
+    "item_summaries": [
+      "The Trump administration revoked the scientific finding underpinning U.S. greenhouse-gas regulations. PBS called it the president's most aggressive rollback of climate regulations.",
+      "A stopgap bill funding DHS expires Friday night. That could leave DHS unfunded for days as the House and Senate recess next week.",
+      "A court filing says data of thousands of taxpayers were wrongly shared with the Department of Homeland Security.",
+      "A newly expanded federal system flagged 74 people on Boone County, Missouri's voter roll as potential noncitizens.",
+      "Lawmakers are reviewing unredacted Justice Department Epstein files for the first time. Lawmakers who've read them say the process is complicated and they've reviewed less than 1% of the files.",
+      "President Donald Trump is threatening to block the Gordie Howe International Bridge between Detroit and Windsor, despite having previously supported the project."
+    ]
+  },
+  "Global Affairs": {
+    "topic_summary": "Today\u2019s global affairs signal sharper political polarization and rising security friction, as governments test institutional guardrails at home while managing high-stakes disputes abroad. The tension is between deregulation or crackdowns framed as sovereignty and reform, and the costs these moves can impose on public welfare, rights, and stability. Readers should view this as a shift that affects legal protections, diplomatic leverage, and the risk of escalation for citizens and allies.",
+    "item_summaries": [
+      "Trump revoked the 2009 \"endangerment finding\" that greenhouse gases endanger public health. The White House called it the largest deregulation and said it would cut automakers' costs by $2,400 per car.",
+      "Satellite images show Iran fortifying an underground complex near one of its nuclear facilities. Experts say it may be intended to protect uranium enrichment activities or key equipment.",
+      "Venezuelan lawmakers postponed an amnesty bill to stop courts being used against dissenters after failing to agree on implementation. Thousands rallied in Caracas demanding the release of political prisoners.",
+      "North Korea warned of a \"terrible response\" if South Korean drones cross its border. Pyongyang said it shot down a surveillance drone last month, escalating tensions despite Seoul's efforts to improve ties.",
+      "Sir Chris Wormald has been forced out as head of the Civil Service and cabinet secretary. He becomes the shortest-serving cabinet secretary in the post's history.",
+      "Nigel Farage said Reform UK is replacing the \"old, fuddy-duddy\" Conservative Party as several senior Conservatives, including Suella Braverman, Robert Jenrick, Danny Kruger and Nadhim Zahawi, have defected to Reform."
+    ]
+  },
+  "Catholic News (Past 3 Days)": {
+    "topic_summary": "Recent Catholic coverage links pastoral appeals with institutional efforts to shape behavior and maintain unity: leaders are responding to violence and trauma while emphasizing restraint in speech and solidarity. At the same time, the church is using dialogue and financial tools to set boundaries and promote values in public life. For readers, the lens is how faith communities balance moral witness, internal cohesion, and practical guidance during insecurity.",
+    "item_summaries": [
+      "A mass shooting in northern British Columbia killed at least ten people, including teens, and wounded many. The Prince George bishop urged prayer and penance, saying it \"has traumatized us all.\"",
+      "The Holy See proposed theological dialogue with the SSPX if it suspends planned episcopal ordinations. The talks would define minimum requirements for full communion and a canonical status.",
+      "The Vatican Bank launched two equity indexes of 50 companies each aligned with Catholic social teachings. They are intended to promote ethical Catholic investing.",
+      "Pope Leo XIV released a Lent 2026 message urging Catholics to abstain from harsh words and rash judgment. He said this abstinence makes room for hope and peace.",
+      "The Catholic Secretariat of Nigeria issued a statement, \"The Cry of the Innocent: Stop This Slaughterhouse,\" decrying a relentless wave of killings and abductions and saying silence can be labeled complicit."
+    ]
+  },
+  "Economic News (Past Week)": {
+    "topic_summary": "Recent data point to a mixed economy: consumer prices are still rising month to month while household spending looks flat, suggesting demand may be less buoyant even as inflation pressures persist. At the same time, new business starts are rebounding, indicating continued appetite for entrepreneurship. Lower expected energy prices and a shift in vehicle purchases toward hybrids over fully electric models highlight how cost and reliability considerations are shaping both inflation inputs and consumer choices, while financial approvals underscore steady supervisory activity affecting credit access.",
+    "item_summaries": [
+      "U.S. CPI rose 0.3% in December 2025; unemployment was 4.3% and payroll employment increased by 130,000 in January 2026.",
+      "EIA forecasts Brent prices will fall to $58/b in 2026 and $53/b in 2027 from $69/b in 2025. High inventory builds are pressuring prices despite export uncertainty.",
+      "U.S. retail and food services sales in December 2025 were $735.0 billion, virtually unchanged (0.0%) from November. The December release was rescheduled to February 10, 2026 after a lapse in federal funding.",
+      "Total U.S. Business Applications were 532,319 in January 2026, up 7.2% from December 2025. This follows a 7.5% decline in December 2025.",
+      "Hybrid vehicle market share rose in 2025 while battery electric and plug-in hybrid sales fell. About 22% of U.S. light-duty vehicle sales were hybrid, BEV, or PHEV, up from 20% in 2024.",
+      "The Federal Reserve Board approved an application by Cooperativa de Ahorro y Credito Elga, Ltda."
+    ]
+  }
+}

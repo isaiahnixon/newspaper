@@ -36,6 +36,8 @@ When changing functionality:
 - Keep output text-only constraints intact (no injected scripts).
 
 ## Validation Requirements (must run before finalizing)
+- Always use the `--dry-run` flag when invoking the `daily_paper` script for testing or verification to prevent unnecessary API calls and costs.
+- If changes affect summarization logic (item or topic summaries), ensure mock data used by dry-run is updated to reflect these changes.
 - Run syntax check for changed Python files:
   - `python -m compileall -q .`
 - If tests exist, run the relevant subset.

@@ -3,9 +3,10 @@ from __future__ import annotations
 import time
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
-from typing import Iterable
+from typing import Iterable, Any
 
 import feedparser
+from feedparser import FeedParserDict  # Import FeedParserDict
 import requests
 from bs4 import BeautifulSoup
 
@@ -98,8 +99,8 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
             for idx, entry in enumerate(parsed.entries, start=1):
                 if idx > max_feed_items:
                     break
-                link = entry.get("link")
-                title = entry.get("title", "").strip()
+                link = str(entry.get("link"))
+                title = str(entry.get("title", "")).strip()
                 if not link or not title:
                     skipped += 1
                     continue
@@ -107,10 +108,10 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                 published = entry.get("published") or entry.get("updated")
                 published_dt = parse_published(published)
                 # Only keep entries from the topic's window to keep the paper timely.
-                if not is_within_hours(published_dt, now, topic_lookback_hours):
+                if not config.dry_run and not is_within_hours(published_dt, now, topic_lookback_hours):
                     out_of_window += 1
                     continue
-                summary = entry.get("summary", "")
+                summary = str(entry.get("summary", ""))
                 item = FeedEntry(
                     topic=topic.name,
                     title=title,
@@ -124,6 +125,7 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
                 if config.fetch_full_text:
                     item.full_text = fetch_full_text(item, config)
                 action = _register_entry(
+                    config=config,
                     entries_by_topic=entries_by_topic,
                     seen_urls=seen_urls,
                     seen_entries=seen_entries,
@@ -162,6 +164,7 @@ def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], F
 
 
 def _register_entry(
+    config: DailyPaperConfig,
     entries_by_topic: dict[str, list[FeedEntry]],
     seen_urls: set[str],
     seen_entries: list[SeenEntry],
@@ -171,6 +174,12 @@ def _register_entry(
     compare_window_hours: int,
     prune_window_hours: int,
 ) -> str:
+    if config.dry_run:
+        # In dry-run mode, skip deduplication and just add the item.
+        entries_by_topic[item.topic].append(item)
+        log_verbose(config.verbose, f"[dry run] Added item '{item.title}' to topic '{item.topic}'.")
+        return "added"
+
     _prune_seen_entries(seen_entries, now, prune_window_hours)
     hostname = get_hostname(item.link)
     metadata = _build_story_metadata(item)
@@ -357,6 +366,28 @@ def _entry_quality_score(entry: FeedEntry) -> float:
 
 
 def parse_feed(feed: FeedSource, config: DailyPaperConfig) -> feedparser.FeedParserDict:
+    if config.dry_run:
+        log_verbose(config.verbose, f"[dry run] Skipping feed request for {feed.name}.")
+        # Return a dummy FeedParserDict with some placeholder entries.
+        # This ensures the rest of the pipeline has some data to process.
+        dummy_entries = [
+            FeedParserDict({
+                "title": f"[dry run] {feed.name} Item 1",
+                "link": f"https://example.com/dry-run/{feed.name}/item1",
+                "published": (datetime.now(timezone.utc) - timedelta(minutes=5)).isoformat(),
+                "summary": f"[dry run] Summary for {feed.name} item 1.",
+                "source": {"title": feed.name},
+            }),
+            FeedParserDict({
+                "title": f"[dry run] {feed.name} Item 2",
+                "link": f"https://example.com/dry-run/{feed.name}/item2",
+                "published": (datetime.now(timezone.utc) - timedelta(minutes=10)).isoformat(),
+                "summary": f"[dry run] Summary for {feed.name} item 2.",
+                "source": {"title": feed.name},
+            }),
+        ]
+        return FeedParserDict({"entries": dummy_entries, "bozo": False})
+
     try:
         response = requests.get(feed.url, timeout=15, headers=DEFAULT_HEADERS)
     except requests.RequestException as exc:
@@ -379,6 +410,10 @@ def parse_feed(feed: FeedSource, config: DailyPaperConfig) -> feedparser.FeedPar
 
 
 def fetch_full_text(entry: FeedEntry, config: DailyPaperConfig) -> str | None:
+    if config.dry_run:
+        log_verbose(config.verbose, f"[dry run] Skipping full text fetch for {entry.title}.")
+        return f"[dry run] Full text for {entry.title} (skipped in dry run)."
+
     try:
         response = requests.get(entry.link, timeout=15, headers=DEFAULT_HEADERS)
     except requests.RequestException:
