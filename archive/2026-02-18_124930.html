@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Tech coverage is splitting between rapid rollout of smaller, more capable agent-style AI and growing scrutiny of how these systems are released, secured, and governed. New tooling and research emphasize autonomy and coordination, while parallel work highlights data-leakage pathways and reputational risks from weak controls. Meanwhile, advances in energy storage and legal fights over clean-energy competition show how technology progress can be constrained—or accelerated—by regulation and market power, shaping investment and adoption decisions for developers, firms, and policymakers.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-17 · <a href="https://arxiv.org/abs/2602.13367" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers present Nanbeige4.1-3B, a 3B-parameter open-source generalist language model combining agentic behavior, code generation, and general reasoning. Authors report it significantly outperforms prior similar-scale models and some much larger models in experiments.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-17 · <a href="https://arxiv.org/abs/2602.13477" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers demonstrated OMNI-LEAK, an attack where a single indirect prompt injection caused multiple orchestrator agents to leak sensitive data.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-02-16 · <a href="https://arstechnica.com/tech-policy/2026/02/bytedance-backpedals-after-seedance-2-0-turned-hollywood-icons-into-ai-clip-art" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>ByteDance said it will add safeguards after Seedance 2.0 generated AI videos of iconic copyrighted characters. Disney and Paramount sent cease-and-desist letters accusing the tool of hijacking characters.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Science) · 2026-02-16 · <a href="https://arstechnica.com/science/2026/02/dna-inspired-molecule-breaks-records-for-storing-solar-heat" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>UC Santa Barbara and UCLA researchers demonstrated a fluid that stores solar energy in molecules and releases the heat months later. Their Science paper suggests a breakthrough addressing MOST failures.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-02-17 · <a href="https://developers.cloudflare.com/changelog/2026-02-17-agents-sdk-v050" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare released Agents SDK v0.5.0 adding retry utilities, per-connection protocol message control, and a rewritten @cloudflare/ai-chat with data parts and tool approval persistence. The @cloudflare/ai-chat rewrite has zero breaking changes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-02-16 · <a href="https://arstechnica.com/tech-policy/2026/02/michigan-accuses-oil-companies-of-antitrust-violations-in-climate-change-lawsuit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Michigan Attorney General Dana Nessel filed a federal antitrust lawsuit accusing BP, Chevron, ExxonMobil, Shell and the American Petroleum Institute of conspiring to suppress competition from solar power and electric vehicles.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, local decisions are increasingly being shaped by higher-level legal standards, major infrastructure and market shifts, and the practical limits of public capacity. Communities face tradeoffs between individual rights and enforcement authority, preserving neighborhood character while meeting mandated growth, and protecting local interests as outside consolidation and election cycles raise the stakes. Residents, property owners, and service providers are most affected, as these debates guide where housing goes, how public safety is resourced, and how accountability is set.</div>
+  
+<div class="item">
+  <div class="meta">Missoula Current · 2026-02-16 · <a href="https://missoulacurrent.com/montana-traffic-stop" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Supreme Court ruled unanimously against a Kalispell man arrested for filming a traffic stop. Justices said he raised constitutional claims too late, so they considered only whether evidence could convict.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-17 · <a href="https://flatheadbeacon.com/2026/02/17/whitefish-cant-freeze-neighborhoods-and-solve-its-housing-crisis" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At a Whitefish council meeting, debate focused on preserving single-family character and aesthetic controls in high-value neighborhoods rather than on SB 382-required zoning alignment and 20-year housing planning.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-16 · <a href="https://montanafreepress.org/2026/02/16/what-does-an-85m-railroad-merger-have-to-do-with-montana" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana politicians raised concerns about a proposed $85 million merger of Union Pacific and Norfolk Southern. They have minimal presence in Montana, where BNSF controls over 90% of rail lines.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-16 · <a href="https://montanafreepress.org/2026/02/16/sun-prairie-fire-department-seeks-county-land" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Sun Prairie fire department is seeking county land.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-02-17 · <a href="https://www.kpax.com/news/montana-politics/montana-u-s-house-races-zinke-downing-prepare-to-campaign-for-reelection" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Reps. Ryan Zinke and Troy Downing are preparing to seek reelection to Montana&#x27;s U.S. House seats. Montana hasn&#x27;t elected a House Democrat since 1994.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across governance, today’s items show heightened friction between public security powers and civil rights, spanning elections, immigration enforcement, and official communications. A parallel thread is institutional strain from budget brinkmanship that disrupts basic operations while policy fights continue. Meanwhile, foreign policy is being advanced through security partnerships and energy agreements, shaping priorities and resource tradeoffs. Voters, immigrants, federal workers, and state and local officials are the most directly affected, and the key lens is how accountability mechanisms hold up under pressure.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-16 · <a href="https://www.pbs.org/newshour/politics/naacp-asks-judge-to-protect-against-misuse-after-fbi-seized-of-voter-data-in-fulton-county" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The NAACP and allied groups asked a judge to protect against misuse after the FBI seized ballots and other election documents from the Fulton County elections hub on Jan. 28.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-16 · <a href="https://www.pbs.org/newshour/show/democrats-pushing-to-get-ice-under-control-with-dhs-shutdown-jeffries-says" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A partial government shutdown left many Department of Homeland Security employees working without pay while Congress is out. Jeffries said Democrats want to &quot;get ICE under control.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-02-16 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/02/secretary-rubio-advances-national-security-through-civil-nuclear-deals-in-central-europe" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Secretary of State Marco Rubio announced concrete steps to build nuclear power plants in Central Europe using U.S. nuclear energy technologies. He said the projects advance mutual security interests.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-02-16 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/02/joint-statement-on-the-philippines-united-states-bilateral-strategic-dialogue" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On 16 February 2026, senior Philippine and U.S. officials met in Manila for the 12th Philippines–United States Bilateral Strategic Dialogue. The BSD is the annual forum for political, security and economic discussions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-16 · <a href="https://www.npr.org/2026/02/16/nx-s1-5704347/extremist-rhetoric-is-often-found-in-government-messaging-whos-the-target" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The White House removed a racist post from one of President Trump&#x27;s social media accounts. Extremism researchers say it fits a pattern of mainstreaming extremist rhetoric and imagery from the Trump administration.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-17 · <a href="https://www.npr.org/2026/02/17/nx-s1-5713854/immigration-crackdown-maine-top-issue-battle-key-senate-seat" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Federal immigration authorities launched a new enforcement operation in Maine called Operation Catch of the Day aimed at identifying and arresting undocumented immigrants.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Diplomacy is proceeding in parallel with continued military pressure, underscoring how negotiations can coexist with escalation rather than pause it. At the same time, security and technology partnerships are tightening, with advanced capabilities and arms sales increasingly shaping external relationships. In democracies, scrutiny over influence and transparency is rising, affecting how governments manage trade outreach and political operations. Readers can view these developments through who gains leverage—combatants at the table, states building deterrence, and institutions trying to defend credibility.</div>
+  
+<div class="item">
+  <div class="meta">© Alina Smutko, Reuters · 2026-02-17 · <a href="https://www.france24.com/en/europe/20260217-trump-urges-ukraine-to-strike-russia-deal-fast-before-geneva-talks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Russia conducted missile and drone strikes across Ukraine on Tuesday ahead of US-brokered peace talks in Geneva, Ukrainian officials said. Talks are expected to focus on land, the main sticking point.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-17 · <a href="https://www.bbc.com/news/articles/cge812y2549o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Russian and Ukrainian delegations are set to meet in Geneva for a third round of US‑brokered talks. Nightly strikes are further damaging Ukraine&#x27;s power grid amid subzero temperatures.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-17 · <a href="https://www.bbc.com/news/articles/cwyknjnd706o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Second round of indirect US–Iran nuclear talks began in Geneva. Trump said Iran seeks a deal; Tehran said the US stance is more realistic.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Ludovic Marin, AFP · 2026-02-16 · <a href="https://www.france24.com/en/asia-pacific/20260216-macron-visits-india-defence-ai" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>French President Emmanuel Macron arrived in India for a three-day visit focused on artificial intelligence cooperation, defence deals and strengthening strategic ties, with talks expected on a potential multibillion-dollar Rafale fighter-jet agreement.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-02-17 · <a href="https://www.bbc.com/news/articles/c93wkxgydy2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Business and Trade Committee will meet next Tuesday to decide whether to investigate Andrew Mountbatten-Windsor over allegations he forwarded sensitive government and commercial documents while serving as a UK trade envoy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-02-16 · <a href="https://www.bbc.com/news/articles/c0q3wx2j3x1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The prime minister ordered a Cabinet Office investigation into minister Josh Simons over claims Labour Together paid APCO Worldwide £30,000 to probe the origins of a Sunday Times story and a journalist.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-3-days">
+  <h2>Catholic News (Past 3 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage links global conflict and fragility with the Church’s practical responses, from urging access for relief and reconciliation to grassroots protection of vulnerable girls where state authority is weak. At the same time, internal moves to formalize values-based investing show institutions testing how faith principles translate into modern financial tools. Readers can view these developments through the lens of risk to civilians and the choices faced by donors, policymakers, and Church bodies.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-16 · <a href="https://www.vaticannews.va/en/world/news/2026-02/un-says-israel-blocked-three-aid-missions-as-gaza-crisis-pers.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United Nations said Israeli authorities denied three of eight humanitarian missions, while five were fully facilitated. UN officials say the scale-up saved countless lives and pushed back famine.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-16 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68473" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Vatican bank, the Institute for the Works of Religion (IOR), launched two equity indexes with Morningstar. They follow market best practices and Catholic ethical criteria as references for Catholic investments worldwide.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-02-16 · <a href="https://www.ncronline.org/social-justice/south-africas-coal-belt-girls-disappear-and-catholic-sisters-quietly-pull-them-back" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Catholic sisters in South Africa&#x27;s coal belt rescue girls coerced into sex and early marriage amid illegal mining. They risk their lives in communities the state struggles to protect.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-02-16 · <a href="https://www.ewtnnews.com/vatican/pope-leo-to-mark-start-of-lent-with-historic-procession-on-ancient-roman-hill" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV will preside over the Ash Wednesday procession and Mass Feb. 18 on Rome’s Aventine Hill. The Aventine has been a Christian pilgrimage site for more than 1,500 years.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-16 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68468" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Vatican newspaper warned that over 825,000 children are at risk of malnutrition in South Sudan amid escalating violence as the peace agreement unravels.</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--past-week">
+  <h2>Economic News (Past Week)</h2>
+  <div class="macro-summary">This week’s data point to easing inflation pressures alongside soft but stable consumer spending, while new business starts show renewed momentum after a prior dip. Energy markets look shaped by ample supply, which can lower input costs but also signal weaker pricing power for producers. Households, small firms, and policymakers should weigh cooling price dynamics against still-mixed demand.</div>
+  
+<div class="item">
+  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-02-13 · <a href="https://www.bls.gov/bls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Bureau of Labor Statistics reported January 2026 CPI rose 0.2%, unemployment was 4.3%, and payroll employment increased by 130,000.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-11 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67164" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>EIA forecasts Brent will fall from $69/b in 2025 to $58/b in 2026 and $53/b in 2027. Persistent global inventory builds are putting downward pressure despite export uncertainty from Russia and Venezuela.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-13 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67166" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>EIA forecasts U.S. natural gas production at 120.8 Bcf/d in 2026 and a record 122.3 Bcf/d in 2027. About 69% is from Appalachia, Haynesville and Permian.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-10 · <a href="https://www.census.gov/retail/index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. retail and food services sales in December 2025 were $735.0 billion, essentially unchanged (+/-0.4%) from November 2025.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-11 · <a href="https://www.census.gov/econ/bfs" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Total U.S. Business Applications were 532,319 in January 2026, up 7.2% from December 2025.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-02-12 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/orders20260212a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve Board approved an application by Cooperativa de Ahorro y Credito Elga, Ltda.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-02-17 12:46 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">78</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
