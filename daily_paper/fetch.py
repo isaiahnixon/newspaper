@@ -68,16 +68,30 @@ class SeenEntry:
 
 
 def fetch_feeds(config: DailyPaperConfig) -> tuple[dict[str, list[FeedEntry]], FetchStats]:
-    entries_by_topic: dict[str, list[FeedEntry]] = {topic.name: [] for topic in config.topics}
     seen_urls: set[str] = set()
     seen_entries: list[SeenEntry] = []
     stats = FetchStats()
     now = datetime.now(timezone.utc)
+    active_topics = config.active_topics(now)
+    entries_by_topic: dict[str, list[FeedEntry]] = {topic.name: [] for topic in active_topics}
+    inactive_topic_names = [
+        topic.name for topic in config.topics if topic.name not in entries_by_topic
+    ]
+    if inactive_topic_names:
+        log_verbose(
+            config.verbose,
+            "Skipping topics for "
+            f"{now.strftime('%A')} (UTC) due to frequency_days: "
+            f"{', '.join(inactive_topic_names)}.",
+        )
+    if not active_topics:
+        log_verbose(config.verbose, "No active topics scheduled for this run.")
+        return entries_by_topic, stats
     # Keep enough seen entries to honor the largest per-topic lookback window.
-    max_lookback_hours = max(topic.lookback_hours for topic in config.topics)
+    max_lookback_hours = max(topic.lookback_hours for topic in active_topics)
 
     log_verbose(config.verbose, "Starting feed fetch.")
-    for topic in config.topics:
+    for topic in active_topics:
         topic_lookback_hours = topic.lookback_hours
         log_verbose(
             config.verbose,

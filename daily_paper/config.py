@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable, Mapping, Sequence
 
@@ -8,6 +9,26 @@ import yaml
 
 
 CONFIG_PATH = Path("daily_paper.yaml")
+
+WEEKDAY_INDEX_BY_NAME = {
+    "mon": 0,
+    "monday": 0,
+    "tue": 1,
+    "tues": 1,
+    "tuesday": 1,
+    "wed": 2,
+    "wednesday": 2,
+    "thu": 3,
+    "thur": 3,
+    "thurs": 3,
+    "thursday": 3,
+    "fri": 4,
+    "friday": 4,
+    "sat": 5,
+    "saturday": 5,
+    "sun": 6,
+    "sunday": 6,
+}
 
 
 @dataclass(frozen=True)
@@ -23,6 +44,12 @@ class TopicConfig:
     lookback_hours: int
     feeds: tuple[FeedSource, ...]
     items_per_topic: int
+    frequency_days: tuple[int, ...] | None = None
+
+    def runs_on_weekday(self, weekday: int) -> bool:
+        if self.frequency_days is None:
+            return True
+        return weekday in self.frequency_days
 
 
 @dataclass(frozen=True)
@@ -66,6 +93,11 @@ class DailyPaperConfig:
             if topic.name == name:
                 return topic
         raise KeyError(f"Unknown topic: {name}")
+
+    def active_topics(self, now: datetime | None = None) -> tuple[TopicConfig, ...]:
+        current_time = now or datetime.now(timezone.utc)
+        weekday = current_time.weekday()
+        return tuple(topic for topic in self.topics if topic.runs_on_weekday(weekday))
 
 
 def load_config(path: Path = CONFIG_PATH) -> DailyPaperConfig:
@@ -214,6 +246,7 @@ def _require_topics(
             "items_per_topic",
             default_items_per_topic,
         )
+        frequency_days = _require_optional_frequency_days(raw_topic, name)
         feeds = _require_feeds(raw_topic.get("feeds"), name)
         topics.append(
             TopicConfig(
@@ -221,9 +254,39 @@ def _require_topics(
                 lookback_hours=lookback_hours,
                 feeds=feeds,
                 items_per_topic=items_per_topic,
+                frequency_days=frequency_days,
             )
         )
     return tuple(topics)
+
+
+def _require_optional_frequency_days(
+    data: Mapping[str, object],
+    topic_name: str,
+) -> tuple[int, ...] | None:
+    value = data.get("frequency_days")
+    if value is None:
+        return None
+    if not isinstance(value, Sequence) or isinstance(value, (str, bytes)):
+        raise ValueError(
+            f"Topic '{topic_name}' key 'frequency_days' must be a list of weekday names."
+        )
+    weekdays: list[int] = []
+    for idx, raw_day in enumerate(value, start=1):
+        if not isinstance(raw_day, str) or not raw_day.strip():
+            raise ValueError(
+                f"Topic '{topic_name}' has invalid weekday at frequency_days[{idx}]."
+            )
+        normalized = raw_day.strip().lower()
+        weekday = WEEKDAY_INDEX_BY_NAME.get(normalized)
+        if weekday is None:
+            raise ValueError(
+                f"Topic '{topic_name}' has unsupported weekday '{raw_day}' in 'frequency_days'."
+            )
+        weekdays.append(weekday)
+    if not weekdays:
+        raise ValueError(f"Topic '{topic_name}' key 'frequency_days' cannot be empty.")
+    return tuple(sorted(set(weekdays)))
 
 
 def _require_optional_int(

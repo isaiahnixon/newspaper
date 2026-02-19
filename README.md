@@ -24,6 +24,7 @@ Key options:
 - `items_per_topic`: Default number of items per topic section.
 - `topics[].items_per_topic`: Optional override for a specific topic’s item count.
 - `topics[].lookback_hours`: Per-topic window (in hours) for eligible feed entries.
+- `topics[].frequency_days`: Optional weekday schedule (for example `['monday', 'wednesday', 'friday']`). Topics are skipped on other days using UTC weekday evaluation.
 - `max_items_per_source`: Optional global cap for how many selected items can come from any one source group or any one feed source within a topic.
 - `max_items_processed_per_source`: Max number of entries parsed from a single RSS feed before processing stops for that source (defaults to `50`).
 - `topics[].feeds[].source_group`: Optional grouping label so related feeds (for example multiple arXiv feeds) share the same cap.
