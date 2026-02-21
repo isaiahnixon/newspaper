@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech thread is AI getting more capable and more embedded in real workflows, while trust and safety lag behind. As models shift from answering to acting through tools, the main tradeoff is speed and convenience versus unpredictable behavior and weak evaluation. This matters most for developers, platforms, and anyone relying on media authenticity.</div>
+  
+<div class="item">
+  <div class="meta">DeepMind Blog · 2026-02-19 · <a href="https://deepmind.google/blog/gemini-3-1-pro-a-smarter-model-for-your-most-complex-tasks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google released Gemini 3.1 Pro, an upgraded AI model, across the Gemini API, Vertex AI, the Gemini app and NotebookLM. It shows improved reasoning and higher scores on complex benchmarks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-02-19 · <a href="https://www.microsoft.com/en-us/research/blog/media-authenticity-methods-in-practice-capabilities-limitations-and-directions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft Research published a report exploring media authenticity methods, their capabilities, limitations, and directions for provenance across images, audio, and video.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-02-19 · <a href="https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub&#x27;s Octoverse 2025 shows AI is reshaping developer preferences. It finds AI compatibility is becoming the new standard for technology choice.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-20 · <a href="https://arxiv.org/abs/2602.16943" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced the GAP benchmark to measure divergence between text-level and tool-call safety in LLM agents. They found cases where models&#x27; text refusals coincided with tool-call execution of forbidden actions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-02-20 · <a href="https://arxiv.org/abs/2602.16984" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv paper proves fundamental limits on black-box safety evaluation, showing provable lower bounds for passive and adaptive evaluators and a computational separation under trapdoor one-way function assumptions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-02-19 · <a href="https://arstechnica.com/ai/2026/02/openclaw-security-fears-lead-meta-other-ai-firms-to-restrict-its-use" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Meta and other AI firms have restricted employee use of OpenClaw. Executives warned staff to keep it off company hardware and work-linked accounts, citing unpredictability and privacy-breach risk.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Science) · 2026-02-19 · <a href="https://arstechnica.com/science/2026/02/rare-gifted-word-learner-dogs-like-to-share-their-toys" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers found gifted word-learner dogs prefer novel toys and often share them with their owners. They suggest social motivation may help explain these dogs&#x27; ability to learn object names.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across the region, communities are navigating how public decisions shape long-term stability: conserving shared natural resources, paying for local services, and managing economic anchors. The common tension is between protection and affordability, and between sudden disruption and local resilience. These developments matter most for residents and workers weighing taxes, jobs, and the durability of place-based institutions.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-19 · <a href="https://flatheadbeacon.com/2026/02/19/its-not-perfect-but-were-proud-of-this-plan-agency-specialists-detail-revisions-to-wild-and-scenic-flathead-river-strategy" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Agency specialists released a draft revised management plan for the Wild and Scenic Flathead River, open for public review until March 13.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-02-20 · <a href="https://flatheadbeacon.com/2026/02/20/cayuse-prairie-school-to-take-300000-levy-pitch-to-voters-this-may" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cayuse Prairie School board approved a $300,000 levy to appear on May’s ballot. It would maintain programming, fund teacher cost-of-living adjustments, and add support staff; without it the district could cut programs.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-19 · <a href="https://montanafreepress.org/2026/02/19/employees-locals-blindsided-by-looming-closure-of-historic-izaak-walton-inn" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Employees and locals were blindsided by the looming closure of the historic Izaak Walton Inn. The closure would eliminate jobs and employee housing and remove a local gathering spot.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-02-19 · <a href="https://montanafreepress.org/2026/02/19/what-exactly-is-illegal-reentry" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Roberto Orozco-Ramirez, a Froid mechanic, was charged with the felony of illegal reentry into the U.S. Montana Free Press interviewed seven lawyers about the charge and its consequences.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-02-19 · <a href="https://missoulacurrent.com/candidates-file-office" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Nearly 150 candidates filed official paperwork on the first day to run for district, legislative and statewide offices in Montana. Most filed for legislative seats, where Republicans currently control both chambers.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across U.S. governance, partisan competition and executive discretion are colliding with basic access and rights, from elections and district lines to immigration enforcement and foreign-policy signaling. The tension is between tighter control and perceived security on one side, and claims of disenfranchisement, legal vulnerability, and service gaps on the other. Voters, refugees, and patients stand to feel the most immediate effects, while state and federal courts and agencies shape how quickly changes take hold.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-19 · <a href="https://www.pbs.org/newshour/world/why-trumps-remark-about-discussing-taiwan-arms-sales-with-china-has-raised-concerns" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump said he is discussing arms sales to Taiwan with Chinese President Xi Jinping. Taipei is concerned because it relies on U.S. support against China&#x27;s territorial claims.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-02-19 · <a href="https://www.pbs.org/newshour/politics/virginia-judge-temporarily-blocks-democrats-from-work-on-congressional-redistricting-bid" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Virginia judge temporarily barred Democrats from preparing an April referendum to redraw the state&#x27;s congressional maps. It set back Democrats&#x27; effort to gain four U.S. House seats.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-20 · <a href="https://www.propublica.org/article/wisconsin-postpartum-medicaid-new-mothers-robin-vos" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Wisconsin’s Assembly voted 95–1 to extend postpartum Medicaid coverage from 60 days to one year after Assembly Speaker Robin Vos ended his holdout.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-02-19 · <a href="https://www.propublica.org/article/emblem-health-ghost-network-settlement-mental-health" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>EmblemHealth agreed to a $2.5 million settlement with New York&#x27;s attorney general over inaccurate in-network mental health provider listings. It is the largest fine secured by the office in its yearslong crackdown.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-19 · <a href="https://www.npr.org/2026/02/19/g-s1-110721/trump-administration-refugees-memo-arrest" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Refugees in the U.S. could be detained after one year unless they obtain a green card or &quot;present themselves to the agency,&quot; under a new Department of Homeland Security memo.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-02-19 · <a href="https://www.npr.org/2026/02/19/nx-s1-5719252/trump-voting-save-america-act-explainer" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Republican voting overhaul returned to Congress with a new photo-ID provision and new name, narrowly passing the House but facing Senate hurdles due to Democratic opposition and the 60-vote filibuster threshold.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Not enough accessible detail to synthesize today.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-19 · <a href="https://www.bbc.com/news/articles/cpqw74d81jqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A UN fact‑finding mission found evidence that atrocities during the RSF&#x27;s capture of el‑Fasher point to genocide. It is the closest the UN has come to calling RSF actions in Darfur genocide.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-02-20 · <a href="https://www.bbc.com/news/articles/c86yjnw4x49o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump said the world has 10 days to see if the US will reach a deal with Iran or take military action. He spoke as the US surged forces.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Cristian Hernandez, AP · 2026-02-20 · <a href="https://www.france24.com/en/americas/20260220-venezuela-approves-amnesty-law-free-hundreds-political-prisoners" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Venezuela’s National Assembly unanimously approved an amnesty law expected to free hundreds of political prisoners. The measure marks a major shift after years of socialist rule.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">AP · 2026-02-20 · <a href="https://www.france24.com/en/technology/20260220-us-totally-rejects-global-ai-governance-white-house-adviser-tells-india-summit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>White House adviser Michael Kratsios said the US &quot;totally&quot; rejects global AI governance at an AI summit in New Delhi. He spoke a day after Macron urged Europe as a &quot;safe space.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-02-19 · <a href="https://www.bbc.com/news/articles/cx28yel4811o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Andrew Mountbatten-Windsor was released under investigation after being arrested on suspicion of misconduct in public office. Thames Valley Police said searches in Norfolk had concluded.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-02-19 · <a href="https://www.bbc.com/news/articles/c3rz8z33rqxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Prime Minister Sir Keir Starmer has appointed Dame Antonia Romeo as cabinet secretary, replacing Sir Chris Wormald. She will be the first woman to hold the post in its 110-year history.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage highlights a church balancing internal unity and doctrinal boundaries with a public moral voice on war and humanitarian crises. Leaders are stressing spiritual themes that connect penitence to real-world devastation, while also weighing how to engage political initiatives without compromising principles. The stakes fall on Catholics navigating worship, authority, and security in affected communities.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-20 · <a href="https://www.vaticannews.va/en/vatican-city/news/2026-02/society-of-st-pius-x-rejects-dialogue-proposed-by-holy-see.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Society of St. Pius X rejected the Holy See&#x27;s proposal for a &quot;specifically theological&quot; dialogue. They confirmed they will proceed with the episcopal ordinations scheduled for July 1.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-18 · <a href="https://www.vaticannews.va/en/pope/news/2026-02/pope-leo-ash-wednesday-death-lent-young-people-sin-repentance.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo presided over Ash Wednesday Mass at Rome’s Basilica of Saint Sabina and urged people to “call death for what it is” while reflecting on repentance, community and cities destroyed by war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-02-18 · <a href="https://www.ncronline.org/vatican/holy-see-will-not-join-trumps-board-peace-gaza-cardinal-parolin-says" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Holy See will not participate in President Donald Trump&#x27;s &quot;Board of Peace&quot; for Gaza, Cardinal Pietro Parolin said Feb. 17. He cited &quot;points that leave us somewhat perplexed.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-02-20 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68519" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Jihadist fighters set fire to seven Nigerian villages on February 18, killing dozens. A bishop said kidnappings and violence are worsening and named Boko Haram, ISWAP and radicalized Fulani militants as present.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">USCCB - News Releases (EN) · 2026-02-19 · <a href="https://www.usccb.org/news/2026/bishops-representing-latin-america-canada-and-united-states-gather-pray-discuss-and" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Eleven bishops from CELAM, CCCB and USCCB met in Tampa Feb 15–17 to pray and discuss. They issued a joint statement reaffirming one Church in the Americas.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-02-20 12:43 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">69</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
