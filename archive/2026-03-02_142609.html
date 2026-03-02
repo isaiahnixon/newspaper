@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">A clear shift is underway from AI as a feature to AI as an always-on system: chips, frameworks, and developer tools are moving toward autonomous “agent” workloads that run longer, take actions, and therefore need stronger reliability and visibility. In parallel, tighter privacy controls like knowledge unlearning are emerging as a constraint on how these systems are trained and updated. Policy enforcement disputes add uncertainty about how evenly rules will be applied, shaping where companies invest and how products are deployed—especially in workplace computing.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (Gadgets) · 2026-03-02 · <a href="https://arstechnica.com/gadgets/2026/03/amd-ryzen-ai-400-cpus-will-bring-upgraded-graphics-to-socket-am5-desktops" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>AMD announced its first Ryzen AI desktop processors for AM5 PCs, the Ryzen AI 400-series. They qualify for Microsoft&#x27;s Copilot+ label, enabling Windows 11 features like Recall and Click to Do.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-03-02 · <a href="https://arxiv.org/abs/2602.23720" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv paper (arXiv:2602.23720v1) describes the Auton Agentic AI Framework, a principled architecture for standardizing creation, execution, and governance of autonomous agent systems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-03-02 · <a href="https://arstechnica.com/tech-policy/2026/03/trump-fccs-equal-time-crackdown-doesnt-apply-equally-or-at-all-to-talk-radio" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>FCC Chairman Brendan Carr threatened to enforce the equal-time rule against TV talk shows but has not applied similar enforcement to talk radio.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-03-02 · <a href="https://arxiv.org/abs/2602.23798" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers propose MPU, a privacy-preserving &quot;Multiple Perturbed Copies&quot; framework letting clients unlearn private forget sets from perturbed model copies. Tests on seven algorithms show most degradations well below 1% at 10% noise.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-03-02 · <a href="https://developers.cloudflare.com/changelog/post/2026-03-02-agents-sdk-v070" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Agents SDK v0.7.0 rewrites observability to use diagnostics_channel, adds keepAlive(), and introduces waitForMcpConnections. Observability is silent by default and incurs zero overhead when nobody is listening.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Not enough accessible detail to synthesize today.</div>
+  
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how war and disaster readiness strain decision-making and accountability. Lawmakers are again testing the limits of executive authority over military action, while the public is asked to absorb real costs amid unclear objectives. At the same time, frontline emergency officials are signaling resource and coordination gaps that shape how well government can protect communities when crises hit.</div>
+  
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-03-02 · <a href="https://www.npr.org/2026/03/02/g-s1-112092/iran-war-powers-congress-trump" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Congress is set to vote on bipartisan war powers resolutions this week meant to limit President Trump&#x27;s military operations in Iran. They face uphill battles after attempts failed to assert congressional authority.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-03-02 · <a href="https://www.npr.org/2026/03/02/nx-s1-5731556/trump-says-more-american-troops-will-likely-die-in-war-against-iran" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump said in a video address that more American troops will &quot;likely&quot; die in the war with Iran. He provided few details about U.S. objectives in the conflict.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-03-02 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/03/joint-statement-on-irans-missile-and-drone-attacks-in-the-region" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United States, Bahrain, Jordan, Kuwait, Qatar, Saudi Arabia, and the United Arab Emirates released a joint statement about recent missile and drone attacks launched by Iran across the region.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-03-02 · <a href="https://www.propublica.org/article/emergency-managers-united-states-resource-needs" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Local emergency managers say they need adequate resources before disasters; in some cases resources arrived too late, as after Hurricane Helene devastated Yancey County and a St. Louis tornado killed four people.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-03-02 · <a href="https://www.propublica.org/getinvolved/emergency-managers-disaster-needs-survey" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>ProPublica asked emergency managers and disaster partners to report needs to help prepare coverage of the next disaster. Dozens already reported growing challenges from more frequent disasters and uncertain federal funding.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Escalation between major militaries and Iran is widening beyond battlefield targets, bringing civilian harm and new risks to Gulf security, including accidental incidents. The conflict is also disrupting a critical shipping chokepoint, sharpening the tradeoff between military pressure and global energy and price stability. In parallel, large-scale displacement and humanitarian needs underscore how regional crises strain aid capacity and protection systems, shaping decisions for governments, shippers, and relief agencies.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-02 · <a href="https://www.france24.com/en/hundreds-killed-in-iran-as-us-and-israeli-strike-targets-include-civilian-areas" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At least 555 people have been killed in Iran in a US- and Israeli-led campaign that has struck more than 130 cities. The US said Kuwait accidentally shot down three F-35 jets.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-02 · <a href="https://www.france24.com/en/strait-of-hormuz-closure-sparks-concern-over-possible-global-oil-shock" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iranian attacks on tankers in the Strait of Hormuz effectively closed the route and pushed crude futures up about 8% on March 2. The strait carries about a fifth of global oil.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-01 · <a href="https://www.bbc.com/news/articles/cx2dyz6p3weo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iran launched missiles and drones toward Israel and four Gulf Arab countries that host US military bases.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-02 · <a href="https://www.bbc.com/news/videos/ce8wed33e07o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>BBC‑verified video appears to show a US F-15 crashing near Kuwait City. The US says Kuwaiti air defenses mistakenly shot down six F-15s; all six crew ejected safely and are stable.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-03-02 · <a href="https://reliefweb.int/report/sudan/sudan-release-2026-humanitarian-needs-and-response-plan-hnrp-unocha-echo-daily-flash-2-march-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On 26 February UNOCHA released the 2026 Humanitarian Needs and Response Plan, which reports Sudan has 33.7 million people in need, 60% of them children.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-03-02 · <a href="https://reliefweb.int/report/world/unhcr-regional-bureau-west-and-central-africa-forcibly-displaced-and-stateless-persons-presence-january-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>UNHCR&#x27;s Regional Bureau for West and Central Africa published an infographic on the presence of forcibly displaced and stateless persons in the region in January 2026.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage centers on intensifying regional conflict and the Church’s emphasis on de‑escalation, framing moral urgency against fast-moving military decisions. Alongside appeals for prayer and public safety for local communities, leaders are pressing dialogue as casualties and retaliation risks rise. In parallel, internal governance updates show ongoing institutional recalibration even amid crisis.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-03-01 · <a href="https://www.vaticannews.va/en/world/news/2026-03/iran-s-supreme-leader-killed-in-u-s-israeli-attack.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iran’s Supreme Leader Ali Khamenei was killed in what Iranian officials called a US–Israeli attack. Iran vowed &quot;the most devastating offensive operation&quot; and strikes were reported across Gulf states and Israel.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-03-01 · <a href="https://www.ncronline.org/pope-warns-tragedy-enormous-proportions-after-us-israeli-strikes-iran" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV issued a forceful appeal to end escalating Middle East violence as the United States, Israel and Iran exchanged missile strikes and threats.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">USCCB - News Releases (EN) · 2026-03-01 · <a href="https://www.usccb.org/news/2026/archbishop-coakley-echoes-pope-leo-xivs-appeal-renewed-dialogue-amid-rising-tensions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Archbishop Paul S. Coakley urged the U.S., Iran and the international community to return to dialogue and pursue every avenue toward a just, lasting peace amid escalating Middle East hostilities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-03-02 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68624" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV promulgated new statutes for the Pontifical Academy for Life, replacing the 2016 statutes issued by Pope Francis. They add a new category of non-academic supporters to existing member types.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-02-28 · <a href="https://www.vaticannews.va/en/church/news/2026-02/apostolic-vicar-northern-arabia-explosions-bahrein-qatar-kuwait.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Apostolic Vicariate of Northern Arabia suspended all church activities and called the faithful to prayer after explosions were reported in Bahrain, Kuwait and Qatar.</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--past-week">
+  <h2>Economic News (Past Week)</h2>
+  <div class="macro-summary">This week’s data point to an economy with mixed momentum: goods demand looks softer while overall building activity edges up and prices keep rising modestly. At the same time, energy policy and operations are pulling in two directions—export capacity keeps expanding even as retirements on the power grid are being pushed out. Financial oversight is also shifting toward narrower, more rule-based supervision, affecting how banks prioritize compliance and risk management.</div>
+  
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-24 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67224" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Since the first Sabine Pass cargo in 2016, U.S. LNG exports rose from 0.5 to 15 Bcf/d in 2025. The U.S. is now the world&#x27;s top LNG exporter.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-02-23 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67206" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. power plant owners plan to retire nearly 11 gigawatts of utility-scale generating capacity this year, mostly coal-fired plants (58%) and steam turbines/simple-cycle natural gas units (42%).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-23 · <a href="https://www.census.gov/manufacturing/m3" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>New orders for manufactured goods in December decreased $4.3 billion (0.7 percent) to $617.5 billion. It was the second decline in three months.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Bureau of Labor Statistics Releases · 2026-02-27 · <a href="https://www.bls.gov/bls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Bureau of Labor Statistics released latest indicators: CPI +0.2% (Jan 2026), unemployment 4.3% (Jan 2026), and payroll employment +130,000 (Jan 2026).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-02-27 · <a href="https://www.census.gov/construction/c30/c30index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Total U.S. construction activity in December 2025 was $2,168.8 billion, 0.3% above November 2025&#x27;s $2,163.1 billion.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-02-23 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260223a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve Board requested public comment on a proposal to codify removing &quot;reputation risk&quot; from its supervision of banks.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-03-02 12:44 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">78</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
