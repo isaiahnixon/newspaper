@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Across tech, AI is moving from general chat into specialized, tool-using systems and domain models, alongside new interfaces that embed creation and automation into everyday workflows. At the same time, standards work is pushing more interoperable identity and data formats, while hardware research highlights reliability limits that could constrain deployment. This matters for teams choosing platforms, managing risk in high-stakes use, and planning for portability across ecosystems.</div>
+  
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-03-04 · <a href="https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft Research announced Phi-4-reasoning-vision-15B, a 15-billion-parameter open-weight multimodal reasoning model. It is available via Microsoft Foundry, HuggingFace and GitHub for vision-language tasks like image captioning.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-03-04 · <a href="https://arstechnica.com/science/2026/03/large-genome-model-open-source-ai-trained-on-trillions-of-bases" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers unveiled Evo 2, an open-source AI trained on trillions of DNA bases across bacteria, archaea and eukaryotes. It learned regulatory DNA and splice-site features in complex genomes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Google AI Blog · 2026-03-04 · <a href="https://blog.google/products-and-platforms/products/search/ai-mode-canvas-writing-coding" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Canvas in AI Mode is now available in the U.S. It can draft documents and build interactive Search tools using live web and Knowledge Graph data.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">W3C News · 2026-03-05 · <a href="https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifiers-dids-v1-1" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>W3C invites implementations of Decentralized Identifiers (DIDs) v1.1. The document specifies DID syntax, a common data model, core properties, serialized representations, operations, and the DID resolution process.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-03-05 · <a href="https://arxiv.org/abs/2603.03491" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper examines reliability limits of compute-in-memory neural accelerators built with emerging non-volatile memories and demonstrates device-level non-idealities threaten accuracy and safety.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-03-05 · <a href="https://arxiv.org/abs/2603.03655" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>arXiv:2603.03655v1 presents Mozi, a dual-layer architecture governing LLM agents for drug discovery via a control plane and a workflow plane. It aims to prevent irreproducible, multiplicative failures in pharmaceutical pipelines.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">W3C News · 2026-03-05 · <a href="https://www.w3.org/news/2026/first-public-working-draft-yaml-ld-1-0" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>W3C published the first public working draft of YAML-LD 1.0, defining conventions to serialize Linked Data in YAML using JSON-LD syntax, semantics, and APIs.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Montana is entering a volatile election cycle as sudden retirements and late-entry candidacies rapidly reshuffle major races and test party cohesion versus independent alternatives. At the same time, deadly roadway incidents and strains on behavioral health response capacity underscore practical public-safety and service-delivery pressures. Voters and local leaders face intertwined choices about representation, funding stability, and emergency readiness.</div>
+  
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-03-05 · <a href="https://www.mtpr.org/montana-news/2026-03-04/sen-daines-wont-seek-reelection" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana U.S. Sen. Steve Daines withdrew his reelection bid and announced his retirement. He immediately endorsed U.S. Attorney Kurt Alme, who filed as the Republican Senate candidate minutes before the filing deadline.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-03-04 · <a href="https://montanafreepress.org/2026/03/04/bodnar-launches-montana-senate-run" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Seth Bodnar resigned as University of Montana president to run for U.S. Senate as an independent and officially launched his campaign against incumbent Republican Steve Daines.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-03-05 · <a href="https://www.kpax.com/news/western-montana-news/four-people-killed-in-head-on-crash-on-highway-2-in-lincoln-county" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Four people died in a head-on collision on Highway 2 south of Libby, Montana. Montana Highway Patrol is investigating the cause.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-03-04 · <a href="https://montanafreepress.org/2026/03/04/despite-successes-some-mobile-crisis-response-teams-are-in-crisis" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Some Montana mobile crisis response teams are in crisis despite successes, with inadequate, inconsistent funding causing many communities to struggle and programs in Great Falls and Billings recently shutting down.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-03-04 · <a href="https://www.mtpr.org/montana-news/2026-03-04/secretary-of-state-christi-jacobsen-joins-western-district-house-race" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Secretary of State Christi Jacobsen joined the Republican primary for the state&#x27;s western U.S. House district. If she resigns, the governor can appoint a replacement until the next general election.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s governance story centers on how much power sits with the executive branch—both in launching military action and in steering core economic and administrative decisions—while Congress struggles to impose limits or ensure clear preparedness. At the same time, scrutiny is rising over conflicts of interest and the accuracy of officials’ testimony, testing oversight and public trust. These dynamics matter most for lawmakers weighing authorizations and confirmations, and for Americans affected by security and policy fallout.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-03-04 · <a href="https://www.pbs.org/newshour/politics/watch-live-senate-expected-to-vote-on-war-powers-resolution-after-u-s-israeli-strikes-on-iran" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senate Republicans voted down an effort Wednesday to halt President Trump&#x27;s war against Iran. The vote showed GOP support as the conflict spread across the Middle East with no clear U.S. exit.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-03-04 · <a href="https://www.npr.org/2026/03/04/nx-s1-5735867/war-powers-congress-iran" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Senate voted 47–53 to block a resolution requiring President Trump to seek congressional approval for further action in Iran.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-03-04 · <a href="https://www.npr.org/2026/03/04/nx-s1-5734489/trump-faces-criticism-for-not-have-evacuation-plans-in-place-before-starting-the-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump faces criticism for not having evacuation plans in place before starting the war. The State Department is racing to evacuate thousands of Americans amid confused guidance and hotline access problems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-03-04 · <a href="https://www.pbs.org/newshour/politics/white-house-formally-nominates-kevin-warsh-to-be-next-federal-reserve-chair" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The White House formally nominated Kevin Warsh to be the next Federal Reserve chair. The nomination was forwarded to the Senate Wednesday and will be taken up by the Senate Banking Committee.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-03-05 · <a href="https://www.propublica.org/article/trump-administration-financial-disclosures-steve-feinberg" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Documents reveal Trump officials had financial ties to industries they regulate, including that at least four firms awarded missile-defense contracts are owned by Cerberus, founded by Steve Feinberg, now deputy defense secretary.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-03-04 · <a href="https://www.propublica.org/article/kristi-noem-dhs-misled-senate-judiciary-corey-lewandowski-contracts" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Homeland Security Secretary Kristi Noem misled Congress about the powers of her top aide Corey Lewandowski. Lewandowski is not a paid government employee but has been acting as a top DHS official.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s developments show a widening regional conflict pulling in outside powers while governments debate how much force to authorize and what support to provide. The central tension is between escalation risks and domestic constraints on military action. Civilians, displaced communities, and deployed troops face immediate consequences, while policymakers weigh alliance commitments against political accountability.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-05 · <a href="https://www.france24.com/en/video/20260305-us-senate-blocks-resolution-that-would-stop-attacks-in-iran" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>US senators narrowly blocked the &quot;war powers resolution&quot; requiring congressional approval for future strikes in Iran. A similar House vote is expected March 5, where Republicans hold a slight majority.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-05 · <a href="https://www.france24.com/en/video/20260305-israel-escalates-attacks-across-lebanon" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Israeli military said it launched targeted attacks in Lebanon at the Iranian-backed Hezbollah militant group. Lebanon reported 72 deaths since Monday and tens of thousands displaced by the bombings.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-03-05 · <a href="https://news.un.org/feed/view/en/story/2026/03/1167082" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On day six of the Middle East war, bombs, drones and rockets struck Iran, Israel, Lebanon and Gulf states, and NATO reported intercepting a missile fired at Türkiye, which Tehran denied.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-05 · <a href="https://www.bbc.com/news/articles/c4gq33ynl07o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Pentagon identified six US soldiers killed after a drone struck a command centre in Port Shuaiba, Kuwait. They were Army Reserve members providing logistical support to US military operations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-05 · <a href="https://www.bbc.com/news/articles/cqxddwl93qjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>China cut its annual economic growth target to 4.5–5%, the lowest expansion goal since 1991. One analyst said it gives China room to manage the economy without large financial commitments.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-03-04 · <a href="https://www.bbc.com/news/articles/c5y4458d9jdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sir Keir Starmer defended the government&#x27;s approach to the Iran conflict, saying protecting British nationals is his priority after criticism for refusing US use of UK bases in US‑Israel strikes.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-03-05 12:45 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">60</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
