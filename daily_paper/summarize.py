@@ -41,7 +41,7 @@ SELECTION_SYSTEM_PROMPT = (
 
 TOPIC_SYSTEM_PROMPT = (
     "You write neutral, multi-source topic summaries for a daily paper.\n"
-    "Write ONE short paragraph: 2–4 complete sentences, plain language, <= 50 words.\n"
+    "Write ONE short paragraph: 2–4 complete sentences, plain language, <= 65 words.\n"
     "\n"
     "Purpose: tie today's items into the broader story of this topic—what trend they reflect, "
     "why it matters, and how a reader should interpret it.\n"
@@ -57,8 +57,11 @@ TOPIC_SYSTEM_PROMPT = (
     "\n"
     "Neutral and factual: no sensational framing, no speculation, no motive attribution.\n"
     "Grounding: use ONLY the provided items as evidence. Do not add external facts or forecasts.\n"
-    "If the items lack enough detail to synthesize, write: 'Not enough accessible detail to synthesize today.'\n"
+    "If the items truly share no coherent direction, write exactly: 'Insufficient cross-item overlap to synthesize a reliable theme.'\n"
 )
+
+TOPIC_ABSTAIN_LINE = "Insufficient cross-item overlap to synthesize a reliable theme."
+TOPIC_LEGACY_ABSTAIN_LINE = "Not enough accessible detail to synthesize today."
 
 @dataclass
 class SummarizedItem:
@@ -353,10 +356,11 @@ def summarize_topic(
     config: DailyPaperConfig, topic: str, items: list[SummarizedItem]
 ) -> TopicSummary:
     # Use the configured topic model for multi-item synthesis.
-    client = get_client(config, config.topic_model, config.temperature)
+    topic_temperature = config.temperature if config.temperature is not None else 0.2
+    client = get_client(config, config.topic_model, topic_temperature)
     log_verbose(config.verbose, f"Generating topic summary for '{topic}'.")
     bullet_points = "\n".join(
-        f"- {item.entry.title}: {compact_text([item.entry.summary], 280)}"
+        f"- {item.entry.title}: {compact_text([item.summary], 220)}"
         for item in items
     )
     user_prompt = (
@@ -365,17 +369,30 @@ def summarize_topic(
     )
     # Retry topic summary generation if the model returns empty/whitespace output.
     max_attempts = config.topic_summary_max_retries
+    retry_blocked_lines = {
+        TOPIC_ABSTAIN_LINE.lower(),
+        TOPIC_LEGACY_ABSTAIN_LINE.lower(),
+    }
     for attempt in range(max_attempts):
-        summary = client.chat_completion(TOPIC_SYSTEM_PROMPT, user_prompt, topic=topic)
-        if summary.strip():  # Check if the summary is not empty or just whitespace
+        attempt_prompt = user_prompt
+        if attempt > 0:
+            attempt_prompt = (
+                f"{user_prompt}\n\n"
+                "Retry instruction: provide a best-effort synthesis using the shared direction "
+                "across at least two items. If the set is genuinely fragmented, explain that briefly "
+                f"and then output exactly: '{TOPIC_ABSTAIN_LINE}'"
+            )
+        summary = client.chat_completion(TOPIC_SYSTEM_PROMPT, attempt_prompt, topic=topic)
+        normalized = summary.strip()
+        if normalized and normalized.lower() not in retry_blocked_lines:
             log_verbose(
                 config.verbose,
                 f"Topic summary generated successfully on attempt {attempt + 1} for '{topic}'.",
             )
-            return TopicSummary(topic=topic, summary=summary)
+            return TopicSummary(topic=topic, summary=normalized)
         log_verbose(
             config.verbose,
-            f"Topic summary empty on attempt {attempt + 1} for '{topic}'. Retrying...",
+            f"Topic summary unusable on attempt {attempt + 1} for '{topic}'. Retrying...",
         )
     log_verbose(
         config.verbose,
