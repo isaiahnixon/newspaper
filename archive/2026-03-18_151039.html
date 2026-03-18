@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech thread is about tightening control over systems that now shape both information and infrastructure: AI tools can be misused in ways that create direct harm, while public officials are also testing the boundaries of pressure on media narratives. In response, engineering work is leaning toward deterministic, auditable “gates” and reproducible logic, alongside modernization of critical build-and-release plumbing. For readers, the practical lens is governance: which safeguards are enforceable, who is accountable when automation fails, and how much transparency exists in the pipelines and platforms you rely on.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-03-16 · <a href="https://arstechnica.com/tech-policy/2026/03/elon-musks-xai-sued-for-turning-three-girls-real-photos-into-ai-csam" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Elon Musk’s xAI was sued after three girls’ real photos were turned into AI-generated child sexual abuse material.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-03-16 · <a href="https://arstechnica.com/tech-policy/2026/03/trump-and-his-fcc-chair-demand-more-positive-news-coverage-of-iran-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump and FCC Chair Brendan Carr demanded more positive media coverage of the Iran war, with Carr threatening to revoke broadcasters&#x27; licenses over alleged &quot;hoaxes and news distortions.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-03-17 · <a href="https://arxiv.org/abs/2603.13247" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper presents ILION, a deterministic pre-execution safety gate for agentic AI systems. It claims zero labeled data, sub-millisecond latency, fully interpretable BLOCK/ALLOW verdicts, and no statistical training or API dependencies.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-03-17 · <a href="https://arxiv.org/abs/2603.13287" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Authors propose using LLMs to generate executable, human-readable decision logic that runs deterministically over structured data, avoiding per-sample LLM calls and enabling reproducible, auditable predictions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-03-17 · <a href="https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Kubernetes image promoter kpromo was rewritten from scratch, removing 20% of its codebase and becoming dramatically faster. If it breaks, no Kubernetes release ships.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-03-16 · <a href="https://css-tricks.com/whats-important-7" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>CSS-Tricks published &quot;What&#x27;s !important #7,&quot; covering older and newer CSS topics such as random(), random-item(), folded corners (clip-path), backdrop-filter, the Popover API, anchored container queries, :open, scroll-triggered animations, and more.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-03-16 · <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-actions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub published a how-to guide explaining how to set up your first GitHub Actions workflow.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, courts and state officials are increasingly shaping outcomes in disputes over land, taxes, and development, showing how legal process is becoming a primary arena for resolving competing uses of property and public resources. The tension is between encouraging investment and protecting existing communities and environmental or public interests, with decisions often split across different permits and jurisdictions. Residents, ranchers, and local businesses are most affected, as rulings and state actions can quickly change costs, access, and what projects move forward.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-03-17 · <a href="https://montanafreepress.org/2026/03/17/gianforte-petitions-to-block-montana-property-tax-lawsuit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gov. Greg Gianforte petitioned the Montana Supreme Court to block a lawsuit challenging his property tax law. It lowers taxes for primary residences and long-term rentals while raising rates on other properties.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-03-16 · <a href="https://flatheadbeacon.com/2026/03/16/judge-grants-injunction-prohibiting-further-construction-of-159-foot-dock-on-flathead-lake-for-lakeside-marina" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Flathead County judge granted an injunction halting construction of a 159-foot dock on Flathead Lake. He denied injunctive relief for the lakeshore permit, so the marina&#x27;s construction can continue.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-03-16 · <a href="https://montanafreepress.org/2026/03/16/accused-shooter-in-anaconda-case-undergoing-treatment-at-state-psychiatric-hospital" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The man accused of fatally shooting four people at an Anaconda bar in 2025, Michael Paul Brown, is undergoing treatment at Montana State Hospital in Warm Springs to determine fitness for trial.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-03-16 · <a href="https://flatheadbeacon.com/2026/03/16/defending-montana-ranchers-and-the-school-trust-on-the-land-board" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Land Board members said they will defend Montana ranchers and the school trust against efforts by American Prairie and out-of-state billionaires to displace ranching communities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-03-17 · <a href="https://www.kpax.com/news/western-montana-news/montana-morning-headlines-tuesday-march-17-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Western Montana headlines: an AI data center proposed for Bonner, a Billings bondsman pleaded not guilty to attempted assault with a weapon, and the Izaak Walton Inn was listed for $18 million.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across federal and state government, today’s developments point to sharper use of administrative power in high-stakes areas—elections, immigration, and national security—while courts and internal turnover test how far and how fast policy can move. At the same time, basic public-service capacity and regulatory follow-through are under strain, raising questions about enforcement credibility and operational continuity. For voters, immigrants, and communities reliant on essential services, the practical lens is how rule changes, leadership shifts, and legal review translate into access, stability, and accountability.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-03-17 · <a href="https://www.nytimes.com/2026/03/17/us/politics/trump-voter-id-bill.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Republicans are pushing a bill that would require voters to prove citizenship in person when registering, ban non‑photo IDs at polling places, and criminalize failures to enforce those rules.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-03-16 · <a href="https://www.pbs.org/newshour/politics/trumps-mass-deportation-agenda-is-at-a-crossroads-as-dhs-changes-leadership" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>DHS changed leadership, placing Trump&#x27;s mass deportation agenda at a crossroads. All indications are the deportation operation is intensifying.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-03-16 · <a href="https://www.scotusblog.com/2026/03/justices-will-hear-argument-on-trump-administrations-removal-of-protected-status-for-syrian-and-haitian-nationals" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court announced it will hear oral argument on whether the Trump administration can end Temporary Protected Status for Syrian and Haitian nationals.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-03-17 · <a href="https://www.npr.org/2026/03/17/nx-s1-5750419/usps-running-out-of-money-postal-service-david-steiner" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Postal Service warned it could run out of cash in less than a year and may have to stop deliveries. It relies on stamps and service fees, not tax dollars.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-03-17 · <a href="https://www.propublica.org/article/oklahoma-injection-wells-oil-regulators-database" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Oklahoma oil regulators found hundreds of injection wells violating state rules and then ignored their findings.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-03-17 · <a href="https://www.nytimes.com/2026/03/17/world/middleeast/joe-kent-counterterrorism-resigns-iran-war.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Joe Kent, a top Trump counterterrorism official, resigned citing the war with Iran. He was the first Trump official to quit in opposition, saying Israeli pressure pushed the president into war.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Escalation across the Middle East is widening beyond front lines, drawing in neighboring states and raising the risk of miscalculation as strikes, reprisals, and attacks on diplomatic sites continue alongside a growing humanitarian burden. The conflict is also spilling into global politics and household economics, disrupting high-level diplomacy and feeding through to energy costs that governments are now trying to cushion. Readers should view these developments through the lens of exposure to regional security shocks—especially for civilians, cross-border actors, and energy-dependent consumers.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-17 · <a href="https://www.france24.com/en/video/20260317-us-embassy-in-baghdad-attacked-as-iraq-pulled-deeper-into-mideast-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A drone-and-rocket attack hit the US embassy in Baghdad and a strike killed four people at a house reportedly hosting Iranian advisors. Officials said it pulled Iraq deeper into the Mideast war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-17 · <a href="https://www.france24.com/en/video/20260317-israel-says-killed-iran-national-security-chief-larijani" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel said it killed Iran&#x27;s national security chief Ali Larijani and the head of its Basij militia in overnight airstrikes. Tehran kept up attacks against Gulf neighbours that pushed up energy prices.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-03-17 · <a href="https://news.un.org/feed/view/en/story/2026/03/1167146" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Strikes and counterstrikes continue across the Middle East as the humanitarian toll rises and hundreds of thousands are displaced, especially in Lebanon.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-17 · <a href="https://www.bbc.com/news/articles/c4g8n7e0l40o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Pakistani air strike killed at least 100 people at a drug treatment centre in Kabul, forensic laboratory sources told the BBC. The UN has called for a swift investigation and de‑escalation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-17 · <a href="https://www.bbc.com/news/articles/cn9e0z7v3nxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Donald Trump said he will delay a visit to China by about a month because of the Iran war. Beijing says it is negotiating timing and rejects a Strait of Hormuz link.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-03-16 · <a href="https://www.bbc.com/news/articles/cp9mgpzn901o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Keir Starmer announced £53m support to help vulnerable households with rising heating oil costs. It will target low-income rural households and be distributed by local councils.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-03-17 14:57 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
