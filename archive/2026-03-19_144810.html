@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news shows AI moving from demos into high‑stakes settings, where reliability, accountability, and security become the limiting factors. A key tension is that systems can look consistent or capable while still drifting from ground truth, behaving unpredictably under small input changes, or creating new attack surfaces when connected to critical networks. In response, the focus is shifting toward better evaluation methods, tighter governance of autonomy, stronger identity controls for automated agents, and sustained funding to shore up open‑source and supply‑chain security—choices that matter most for operators, researchers, and platform owners deciding what to deploy and how to constrain it.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-03-18 · <a href="https://arxiv.org/abs/2603.15840" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv preprint presents an evaluation framework showing LLMs can be stable yet diverge from statistical ground truth in gene-prioritization. They over-select under relaxed thresholds and react to minor prompt wording.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-03-18 · <a href="https://arxiv.org/abs/2603.15885" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper argues embodied AI in critical infrastructure requires bounded autonomy within a hybrid governance architecture. It outlines four oversight modes mapped to sectors by task complexity, risk, and consequence severity.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">DeepMind Blog · 2026-03-17 · <a href="https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google DeepMind introduced a cognitive framework to measure progress toward AGI and launched a Kaggle hackathon to build the evaluations. Participants can compete for a $200,000 prize pool.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-03-17 · <a href="https://arstechnica.com/ai/2026/03/world-id-wants-you-to-put-a-cryptographically-unique-human-identity-behind-your-ai-agents" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>World launched a beta of Agent Kit so humans can prove they direct AI agents and sites can limit agent access. Iris-backed World ID tokens could help stop agent swarms overwhelming systems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-03-17 · <a href="https://arstechnica.com/security/2026/03/researchers-disclose-vulnerabilities-in-ip-kvms-from-4-manufacturers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers from security firm Eclypsium disclosed nine vulnerabilities in IP KVMs made by four manufacturers. The devices grant BIOS/UEFI-level remote access, risking broad network compromise when internet-exposed, misconfigured, or with vulnerable firmware.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Google AI Blog · 2026-03-17 · <a href="https://blog.google/innovation-and-ai/technology/safety-security/ai-powered-open-source-security" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google and Amazon, Anthropic, Microsoft/GitHub and OpenAI pledged $12.5 million collectively as founding members of the Linux Foundation&#x27;s Alpha-Omega Project. Funding will help maintainers counter AI-driven threats and move beyond finding vulnerabilities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-03-17 · <a href="https://github.blog/security/supply-chain-security/investing-in-the-people-shaping-open-source-and-securing-the-future-together" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub is investing in open source security by funding maintainers, partnering with Alpha-Omega, and expanding access. These actions aim to reduce burden and strengthen software supply chains.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, policy and politics are colliding with practical constraints: courts and elections are being used to settle high-stakes questions about taxes and land management, while counties adjust basic infrastructure rules that shape growth and public health. At the same time, near-term weather risks are testing local readiness and can quickly shift attention and resources. For residents, the key lens is how these decisions affect household costs, property use, and community resilience.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-03-17 · <a href="https://flatheadbeacon.com/2026/03/17/gianforte-moves-to-speed-up-property-tax-lawsuit-asking-supreme-court-to-step-in" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gov. Gianforte asked the Montana Supreme Court to step into a property-tax lawsuit. If accepted, it would bypass a lengthy process to rule on the bill’s constitutionality regarding property-tax rebates.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-03-17 · <a href="https://montanafreepress.org/2026/03/17/spiking-roadless-rule-is-mandate-in-search-of-a-problem-experts-say" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Experts at Montana hearings called the &quot;spiking&quot; Roadless Rule a &quot;mandate in search of a problem,&quot; saying studies show few trees remain to log or fires to stop in undeveloped Forest Service lands.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-03-18 · <a href="https://flatheadbeacon.com/2026/03/18/flathead-county-commissioners-adopt-new-septic-regulations" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Flathead County Commissioners approved new septic regulations and construction standards allowing gravity-fed septic systems. It reverses a since-2004 policy that permitted only pressurized &quot;pressure dosed&quot; systems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-03-18 · <a href="https://www.kpax.com/weather/weather-forecast-warming-temperatures-and-rising-rivers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Flood Watch covers northwest Montana as warming temperatures and rain rapidly melt snow, raising rivers and creeks. Expect ponding on roads and possible seepage into houses and basements.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-03-17 · <a href="https://missoulacurrent.com/gop-congressional-district" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Republican candidates Aaron Flint, Christi Jacobsen, Al Olszewski, Ray Curtis and Jonathan Ambarian are running for Montana&#x27;s western congressional district after Rep. Ryan Zinke chose not to seek another term.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s governance story centers on stress tests for federal capacity: leadership turnover and internal dissent on national security, major procurement decisions that appear to accept higher cyber risk, and mounting operational strain in core public services. At the same time, courts and enforcement actions show how election rules and citizenship status can hinge on high-stakes legal interpretations. For readers, the practical lens is institutional resilience—how well agencies manage risk, continuity, and accountability when budgets, technology, and political pressure collide.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-03-17 · <a href="https://www.pbs.org/newshour/politics/joe-kent-top-counterterrorism-official-says-iran-posed-no-imminent-threat-as-he-resigns-over-trumps-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Joe Kent, a top counterterrorism official and former candidate with connections to right-wing extremists, resigned, saying Iran posed no imminent threat and he &quot;cannot in good conscience&quot; back the Trump administration&#x27;s war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-03-18 · <a href="https://www.nytimes.com/2026/03/18/us/politics/markwayne-mullin-homeland-security-confirmation-hearing.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senator Markwayne Mullin of Oklahoma was chosen to replace the ousted secretary Kristi Noem and will face senators at a confirmation hearing on Wednesday.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-03-18 · <a href="https://www.scotusblog.com/2026/03/court-to-hear-argument-in-case-that-could-have-significant-impact-on-2026-elections" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court will hear Watson v. Republican National Committee in March.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-03-18 · <a href="https://www.nytimes.com/2026/03/17/us/politics/usps-postal-service-finances.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S.P.S. postmaster said at a hearing the service could run out of cash within a year. He asked lawmakers to increase its borrowing limits.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-03-18 · <a href="https://www.propublica.org/article/microsoft-cloud-fedramp-cybersecurity-government" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>In late 2024, federal cybersecurity evaluators judged one of Microsoft&#x27;s major cloud offerings poorly, citing a lack of detailed security documentation and calling the package &quot;a pile of shit.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-03-18 · <a href="https://www.justice.gov/opa/pr/justice-department-files-case-revoke-us-citizenship-mastermind-behind-multimillion-dollar" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The DOJ filed a civil denaturalization complaint against Emmanuel Oluwatosin Kazeem in federal court in Baltimore. Convicted in 2017 of identity theft and fraud, he had a 15-year sentence commuted in 2024.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage reflects a widening regional conflict with rising civilian harm, mass displacement, and spillover risks to critical infrastructure, alongside visible strains inside allied governments over strategy and escalation. The key tension is between military pressure and the mounting humanitarian and safety costs, including concerns around sensitive sites. For readers, the practical lens is how quickly security conditions and policy positions can shift, affecting travel, aid needs, and diplomatic calculations.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-17 · <a href="https://www.bbc.com/news/articles/c24deezq6meo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iranian security chief Ali Larijani and Basij commander Gholamreza Soleimani were killed in an Israeli air strike, state TV confirmed. He was Iran&#x27;s most senior official killed since 28 February.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-03-18 · <a href="https://news.un.org/feed/view/en/story/2026/03/1167154" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ongoing strikes in the Middle East coincide with more than one million people displaced in Lebanon, and a projectile struck Iran’s Bushehr nuclear power plant site with no casualties reported.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-18 · <a href="https://www.france24.com/en/video/20260318-iran-strikes-tel-aviv-with-cluster-warheads-in-retaliation-for-killing-of-security-chief" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An Iranian missile barrage killed two people near Tel Aviv, medics said. Shrapnel impacts disrupted train services, the national railway company said.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-18 · <a href="https://www.france24.com/en/video/20260318-beirut-building-collapses-amid-fresh-israeli-strikes-in-capital-city-s-centre" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A building in Beirut collapsed amid fresh Israeli strikes in the city&#x27;s centre. At least a dozen people died, bringing the death toll since early March to at least 900.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-18 · <a href="https://www.bbc.com/news/articles/cg4g66r3z40o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>National Counterterrorism Center Director Joe Kent resigned over the war in Iran, urging President Trump to &quot;reverse course&quot;. He is the most high-profile official to publicly criticize the US‑Israeli attack on Iran.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-03-18 · <a href="https://reliefweb.int/report/world/measles-rubella-bi-weekly-bulletin-07-08-28-february-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Pan American Health Organization released the World Measles Rubella bi-weekly bulletin (07-08) on 28 February 2026.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage links institutional accountability with the Church’s public witness in conflict and crisis. Legal proceedings and calls for stronger due process sit alongside renewed emphasis on truthful reporting about war, as communities face insecurity, displacement, and strain. At the same time, high-profile travel and local acts of sacrifice show how leadership and pastoral presence are being framed as responses to instability, shaping how Catholics weigh trust, safety, and solidarity.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-03-17 · <a href="https://www.vaticannews.va/en/vatican-city/news/2026-03/holy-see-partial-mistrial-financial-management-court-appeals.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Vatican Court of Appeal ordered a partial mistrial in the trial over the Holy See&#x27;s financial management. It preserved the judgment&#x27;s legal effect while ordering re‑examination and fuller defence access.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-03-17 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68782" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On March 16, the Vatican announced the program for Pope Leo XIV’s apostolic journey to Algeria (April 13–15), Cameroon (April 15–18), Angola (April 18–21) and Equatorial Guinea (April 21–23).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-03-17 · <a href="https://www.ncronline.org/news/war-exodus-and-hunger-lebanons-catholics-face-new-wave-fear-and-exhaustion" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Renewed violence in Lebanon has revived fears and exhaustion among Catholic communities, many concentrated in towns near the Israeli border.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-03-16 · <a href="https://www.ewtnnews.com/vatican/leo-xiv-to-journalists-war-is-not-a-video-game-guard-against-propaganda-verify-the-news" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV exhorted journalists to fact-check news and reveal the true face of war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-03-16 · <a href="https://www.ewtnnews.com/world/americas/two-priests-save-two-altar-boys-from-drowning-in-sea-but-die-in-the-effort" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two priests saved two altar boys from drowning during a Lenten retreat in Ecuador but died in the effort.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-03-18 15:10 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
