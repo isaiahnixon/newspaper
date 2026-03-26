@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech developments point to a tightening loop between regulation, platform governance, and AI safety work, with security and child protection driving more gatekeeping in both hardware markets and online services. At the same time, AI builders are pushing practical safeguards—better alignment methods, hallucination checks, and “fail-soft” product patterns—while also hardening deployment hygiene through stricter secret handling. The tension is faster compliance and safety controls versus openness, interoperability, and user friction, affecting consumers, developers, and digital-rights advocates deciding how to ship and use new tools.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-03-24 · <a href="https://arstechnica.com/tech-policy/2026/03/trump-fcc-prohibits-import-and-sale-of-new-wi-fi-routers-made-outside-us" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Communications Commission said it will no longer approve consumer-grade routers made outside the U.S., banning imports and sales of new foreign-produced router models unless DoD or DHS grants an exemption.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-03-25 · <a href="https://arstechnica.com/tech-policy/2026/03/apple-begins-age-checks-in-the-uk-with-latest-ios-update" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Apple has begun asking millions of iPhone owners in the UK to verify they are over 18 to access certain services after an iOS update.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-03-25 · <a href="https://arxiv.org/abs/2603.22303" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Authors propose a training-free hallucination detector for LLMs that computes pairwise optimal-transport (Wasserstein) distances between token-embedding sets to derive AvgWD and EigenWD signals.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-03-25 · <a href="https://arxiv.org/abs/2603.22829" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv paper introduces Balanced Direct Preference Optimization (B-DPO) to reduce overfitting in LLM safety alignment. Experiments show B-DPO improves safety while keeping competitive general capabilities on benchmarks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-03-25 · <a href="https://developers.cloudflare.com/changelog/post/2026-03-24-secrets-config-property" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Workers added a &quot;secrets&quot; property to Wrangler to declare required secret names. Those secrets are validated locally and at deploy and used for type generation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-03-24 · <a href="https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub published a post explaining how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries. It includes production patterns for graceful degradation and caching.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-03-24 · <a href="https://arstechnica.com/tech-policy/2026/03/trump-made-opposing-government-spying-cool-again-effs-departing-chief-says" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Electronic Frontier Foundation is changing leaders. Its incoming director intends to build on rising public concern about government tech abuses amid escalating AI and ICE-related fights.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, state–local friction is rising as officials and residents clash over who sets the rules on enforcement, land use, and taxation. At the same time, cost pressures are sharpening debates about how to fund local services without worsening household budgets, pushing proposals that would constrain revenue growth. For readers, the practical lens is how these fights could reshape city authority, public spending, and environmental tradeoffs that affect daily costs and community priorities.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-03-24 · <a href="https://montanafreepress.org/2026/03/24/inside-states-conflict-with-helena-over-immigration-enforcement" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana’s Department of Justice has threatened to sue Helena, accusing it of violating a state law banning cities from sheltering undocumented immigrants; a meeting is set March 26 at Helena Civic Center.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-03-24 · <a href="https://flatheadbeacon.com/2026/03/24/groups-to-sue-flathead-forest-over-logging-project-in-grizzly-bear-bull-trout-habitat" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two conservation groups will sue the Flathead National Forest for approving a timber sale without revising its road management policy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-03-25 · <a href="https://flatheadbeacon.com/2026/03/25/the-flathead-affordability-gap" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana is now among the top five states with the largest &quot;affordability gaps.&quot; Table founder Gormley said many middle-class families with full-time jobs in the Flathead cannot afford groceries.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-03-25 · <a href="https://www.kpax.com/news/montana-politics/republican-lawmaker-proposes-constitutional-amendment-to-cap-local-property-tax-growth" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sen. Wylie Galt submitted Ballot Issue #11 to the Montana Secretary of State proposing a constitutional amendment to cap local property tax increases at 2% annually, excluding new property or improvements.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-03-24 · <a href="https://www.mtpr.org/montana-news/2026-03-24/montana-politicos-talk-democracy-2026-elections-at-helena-forum" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Former U.S. Sen. Jon Tester and former governors Marc Racicot and Steve Bullock drew an overflowing crowd to a Helena forum to discuss the 2026 elections, the Trump agenda, and defending democracy.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how power is being exercised and contested across security, immigration, and elections. Federal actions are tightening control at the border and expanding military posture abroad, while lawmakers and courts weigh tradeoffs between enforcement, humanitarian impacts, and basic government operations. At the same time, electoral outcomes and new legal organizing show heightened sensitivity to who sets the rules of democratic administration. For readers, the practical lens is how these moves affect civil liberties, service continuity, and confidence in election processes.</div>
+  
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-03-25 · <a href="https://www.npr.org/2026/03/25/nx-s1-5760675/iran-war-military-deployment" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Pentagon ordered up to 3,000 troops from the 82nd Airborne to deploy to the Middle East. They would supplement 50,000 U.S. troops and thousands of Marines en route.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-03-24 · <a href="https://www.nytimes.com/2026/03/24/us/politics/senate-republicans-homeland-security-shutdown-ice.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senate Republicans sent Democrats a plan to strip ICE enforcement funding and reopen the rest of the Department of Homeland Security to end the shutdown.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-03-25 · <a href="https://www.nytimes.com/2026/03/24/us/politics/florida-special-election-emily-gregory.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Democrat Emily Gregory won a special election in the Palm Beach district that includes Mar-a-Lago. Her victory brought a Democratic surge to President Trump’s backyard.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-03-24 · <a href="https://www.scotusblog.com/2026/03/court-appears-likely-to-side-with-trump-administration-on-rights-of-asylum-seekers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court appeared likely to uphold the federal government&#x27;s policy of turning back asylum seekers before they reach the U.S. border with Mexico.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-03-24 · <a href="https://www.propublica.org/article/american-kids-detained-trump-immigration-deportation-democrats-investigation" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>House and Senate Democrats held a forum spotlighting American children whom ProPublica documented were kicked, dragged and detained during the Trump administration’s immigration crackdown. It is part of a congressional investigation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-03-24 · <a href="https://thehill.com/homenews/campaign/5798417-trump-elections-save-america-act" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Former DNC and RNC lawyers formed the Bipartisan American Election Project, led by Bob Bauer and Ben Ginsberg, to preserve election procedures after President Trump urged nationalizing elections.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage points to rising insecurity on multiple fronts, with large-scale aerial warfare in Europe and escalating cross-border fighting in the Middle East driving civilian harm, displacement, and pressure on key shipping routes. At the same time, diplomacy is being pursued alongside military deployments, underscoring the tension between de‑escalation efforts and hardening positions. Separate domestic and criminal developments highlight how governance and public safety concerns can compete for attention even as international crises intensify.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-24 · <a href="https://www.bbc.com/news/articles/cz90gpyw90wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Russia launched 948 drones in the largest 24-hour aerial attack of the war, striking cities across Ukraine and killing at least eight people while causing dozens of injuries.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-25 · <a href="https://www.france24.com/en/us-sends-15-point-peace-plan-to-iran-while-deploying-troops-in-the-region" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US sent a 15-point peace plan to Iran while deploying at least 1,000 troops to the Middle East. Iran dismissed the idea of negotiating with Washington.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-03-25 · <a href="https://www.france24.com/en/the-humanitarian-crisis-here-is-worsening-by-the-minute-israel-continues-to-bomb-lebanon" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel has bombarded Lebanon, seized land south of the Litani River, and driven more than a million people from their homes. FRANCE 24 correspondent Renée Davis reports rising resentment in Beirut.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-03-25 · <a href="https://news.un.org/feed/view/en/story/2026/03/1167195" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli strikes have intensified against Hezbollah in Lebanon, while Iran told the UN maritime agency the Strait of Hormuz remains open to non‑hostile ships not associated with the US and Israel.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-03-25 · <a href="https://www.bbc.com/news/articles/clydj9gj24jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>About 32 bodies, including 25 children and seven adults, were exhumed from a mass grave in Kericho, western Kenya.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-03-24 · <a href="https://www.bbc.com/news/articles/c0ljrp76ywxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Elections are taking place across Great Britain in May, including Scottish and Welsh parliaments, councils and mayors in parts of England.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage is emphasizing moral pressure for de-escalation in active conflicts while also pushing for accountability around historical harms and their lasting effects on vulnerable communities. The common tension is between calls for dialogue and care on one hand, and the realities of violence, displacement, and institutional legacies on the other. For readers, the practical lens is how church leaders are using public advocacy and remembrance to shape policy debates and humanitarian priorities.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-03-24 · <a href="https://www.vaticannews.va/en/pope/news/2026-03/pope-leo-brief-appeal-castel-gandolfo-24-march-2026.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV renewed his appeal for a ceasefire and urged authorities to pursue peace through dialogue, denouncing rising hatred, worsening violence and numerous deaths.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-03-23 · <a href="https://www.ncronline.org/news/us-bishops-call-house-advance-bill-investigate-indian-boarding-school-legacy" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. bishops urged the House to advance a bill investigating Indian boarding schools&#x27; legacy. It would establish an effort to document their histories, practices and long-term effects on Native peoples.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-03-25 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=68870" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Vatican newspaper warned the Tigray war could reignite and decried indifference to displaced persons&#x27; deaths. It said more than 1,300 displaced persons died in camps from lack of food and medicine.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-03-25 · <a href="https://www.vaticannews.va/en/vatican-city/news/2026-03/fulton-sheen-to-be-beatified-in-st-louis-on-24-september.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Fulton J. Sheen will be beatified in St. Louis on 24 September 2026 by Cardinal Luis Antonio Tagle. A 2019 decree recognizing a miracle cleared him for beatification.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Aleteia - News Feed · 2026-03-25 · <a href="https://aleteia.org/2026/03/25/work-for-peace-with-words-not-weapons-pope" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo renewed his appeal for a ceasefire, urging peace through dialogue rather than weapons as he left Castel Gandolfo.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-03-25 15:02 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
