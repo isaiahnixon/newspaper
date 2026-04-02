@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news shows AI systems moving from demos into operational roles, especially in customer-facing workflows, while the tooling around them is maturing to support safer iteration and debugging before deployment. At the same time, the attack surface and governance burden are growing: accidental code exposure, research on deceptive behavior, and validation frameworks all point to reliability and security becoming first-order constraints. Readers should view this as a shift toward “production AI,” where adoption decisions hinge on controls, testing, and data stewardship as much as model capability.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-03-31 · <a href="https://arstechnica.com/ai/2026/03/entire-claude-code-cli-source-code-leaks-thanks-to-exposed-map-file" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Anthropic&#x27;s Claude Code CLI source was leaked after an npm package included a source map file. It gives competitors and hobbyists a detailed blueprint and is a setback for Anthropic.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">OpenAI News · 2026-04-01 · <a href="https://openai.com/index/gradient-labs" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gradient Labs gives every bank customer an AI account manager. The agents use GPT-4.1 and GPT-5.4 mini and nano to automate banking support workflows with low latency and high reliability.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Google AI Blog · 2026-04-01 · <a href="https://blog.google/products-and-platforms/products/earth/satellite-imagery-brazilian-deforestation" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google and Brazil created the first highly detailed satellite map of the country&#x27;s early-2000s landscape to help protect its forests. Imagery is up to six times more precise for tracking deforestation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-04-01 · <a href="https://arxiv.org/abs/2603.26846" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper proposes Stability Asymmetry Regularization (SAR) to mitigate LLM deception by measuring contrasts between internal chain-of-thought stability and external response stability under perturbation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-01 · <a href="https://arxiv.org/abs/2603.29848" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>AgentFixer is a validation framework with 15 detection tools and two root-cause modules for LLM agentic systems. Applied to IBM CUGA, it helped mid-sized models narrow the accuracy gap with frontier models.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-04-01 · <a href="https://developers.cloudflare.com/changelog/post/2026-04-01-wrangler-workflows-local" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>All wrangler workflows commands now accept --local to target a Workflow in a local wrangler dev session instead of the production API. It lets you manage the full Workflow lifecycle locally.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-04-01 · <a href="https://css-tricks.com/css-olfactive-api" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>CSS-Tricks published a deep examination of the proposed CSS Olfactive API, which would add smell-based features for immersive web experiences. It says generalized scent hardware doesn&#x27;t exist and calls the proposal premature.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local items point to growing strain on basic public services as communities face overlapping environmental, health, and infrastructure pressures. The tension is between urgent, time-sensitive risks and the capacity of agencies and systems to respond smoothly amid administrative uncertainty and legal conflict. For residents, the practical lens is preparedness and access: how to get timely care safely, what to expect from emergency response, and how local governance decisions affect costs and reliability.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-01 · <a href="https://montanafreepress.org/2026/04/01/wildfire-forecast-part-2" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>As fire season approaches, a fractured federal wildland fire service, with Trump administration changes still in limbo, is complicating firefighting efforts.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-03-31 · <a href="https://montanafreepress.org/2026/03/31/helena-measles-exposure" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>There was a measles exposure at St. Peter’s Health emergency department in Helena. Public health officials urged people who suspect they have measles to avoid unannounced medical visits.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-03-31 · <a href="https://flatheadbeacon.com/2026/03/31/conservation-groups-sue-to-stop-cabinet-mountains-mining-project" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Environmental groups sued to block federal approval of an underground copper-and-silver exploration project in the Cabinet Mountains. They say it threatens water quality and protected species in a federally designated wilderness.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-03-31 · <a href="https://flatheadbeacon.com/2026/03/31/spring-snowstorm-forecast-to-drop-a-foot-of-snow-in-northern-rockies" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A low-pressure system moving into northwest Montana will drop several inches near the Continental Divide and over a foot on the highest peaks. It may add to river basins amid snowpack deficits.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-04-01 · <a href="https://www.kpax.com/news/western-montana-news/montana-morning-headlines-wednesday-april-1-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Western Montana headlines: Thompson Falls residents pay about $110 monthly for unconnected utilities prompting recall petitions, two Missoula restaurants close to rebrand, and Travelers&#x27; Rest marks 25 years. About 80,000 visit annually.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across these developments, major policy fights are being pushed into courts as the executive branch tests the edges of its authority on citizenship, elections, and federal property decisions. The trend highlights a tension between rapid unilateral action and the legal constraints of statutes, constitutional interpretation, and procedural checks, with outcomes uncertain and likely to shape what future administrations can do. Readers can view this as a governance stress test affecting immigrants, voters, regulated industries, and states deciding whether to comply or litigate.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-01 · <a href="https://www.nytimes.com/2026/04/01/us/politics/supreme-court-birthright-citizenship-arguments.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court will consider the constitutionality of President Trump’s executive order ending birthright citizenship for children of undocumented people and some temporary foreign visitors.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-04-01 · <a href="https://www.npr.org/2026/04/01/g-s1-116019/trump-attend-supreme-court-birthright-citizenship" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Donald Trump plans to attend Wednesday&#x27;s Supreme Court hearing on birthright citizenship. He would be the first sitting president to attend oral arguments at the nation&#x27;s highest court.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-01 · <a href="https://www.nytimes.com/2026/03/31/us/politics/trump-mail-in-ballots-voting-executive-order.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump signed an order seeking federal control of mail voting. Election experts and Democratic officials called it legally invalid, and Arizona and Oregon pledged immediate court challenges.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-03-31 · <a href="https://www.pbs.org/newshour/politics/trump-administration-must-halt-white-house-ballroom-construction-unless-congress-oks-it-judge-orders" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A judge ordered that construction of Trump&#x27;s White House ballroom must halt unless Congress approves it.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-03-31 · <a href="https://www.scotusblog.com/2026/03/supreme-court-sides-with-therapist-in-challenge-to-colorados-ban-on-conversion-therapy" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court sent a challenge to Colorado&#x27;s ban on &quot;conversion therapy&quot; back to lower courts, ruling 8–1 for therapist Kaley Chiles.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-04-01 · <a href="https://www.propublica.org/article/trump-epa-methane-deregulation-aaron-szabo-oil-gas-axpc" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Aaron Szabo, an EPA official, is listed in PDF metadata as the author of a January 2022 oil-industry letter opposing proposed methane controls. He had been an oil-and-gas lobbyist four years earlier.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs signals a sharper mix of military escalation and diplomatic positioning, with fighting widening in the Middle East even as outside powers try to shape outcomes and protect their interests. Governments are also leaning more heavily on hard‑line legal and security tools, raising human‑rights and discrimination concerns alongside immediate battlefield risks. For readers, the key lens is how these moves affect civilian safety, regional stability, and the room leaders have for negotiation while alliances and rivalries are being tested.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-01 · <a href="https://www.bbc.com/news/articles/cvg07j6yeweo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel intensified attacks on Lebanon this week, striking areas outside Hezbollah&#x27;s control — including north of Beirut, the Jnah neighbourhood, southern suburbs and the south — and killing a paramedic.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-01 · <a href="https://www.france24.com/en/video/20260401-israel-champagne-in-the-knesset-as-death-penalty-law-for-palestinians-passes" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel’s Knesset passed a law permitting hanging of Palestinians convicted on terror charges. Rights groups condemned it and a UN spokesperson called it &quot;cruel and discriminatory.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-01 · <a href="https://www.bbc.com/news/articles/cze0kz7gr84o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>China is trying to play peacemaker in the Iran war. Beijing&#x27;s move positions it as a rival to Washington ahead of Xi-Trump trade talks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-01 · <a href="https://www.france24.com/en/video/20260401-nasa-set-for-first-crewed-moon-return-in-over-half-a-century" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>NASA is preparing to launch the first crewed mission toward the moon in over 53 years with its second Artemis mission.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-03-31 · <a href="https://www.bbc.com/news/articles/c7vq76g45rvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UK will send extra troops and air-defence systems to Saudi Arabia, Bahrain and Kuwait, and extend Typhoon operations in Qatar. About 1,000 UK personnel will now defend the Gulf and Cyprus.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-03-31 · <a href="https://www.bbc.com/news/articles/cjd8nkezdyxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>King Charles and Queen Camilla will make a state visit to the US in late April to meet President Trump. He is not expected to meet his son, the Duke of Sussex.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic news highlights a church navigating both external pressure and internal governance: legal debates over speech and pastoral practice are colliding with efforts to protect minors, while violence against Christian communities underscores persistent security risks for local churches. At the same time, Vatican leadership moves and appointments signal a push to align central administration with priorities on peace-making and human development. Readers can view these developments through who bears the consequences—families and youth, vulnerable communities facing attacks, and policymakers weighing rights, safety, and social support.</div>
+  
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-03-31 · <a href="https://www.ewtnnews.com/world/us/supreme-court-strikes-down-colorado-ban-on-conversion-therapy-for-minors" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court struck down Colorado&#x27;s ban on conversion therapy for minors. The court said the state&#x27;s strict law violated the First Amendment in a near-unanimous ruling.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-03-30 · <a href="https://www.ewtnnews.com/world/africa/palm-sunday-attack-in-nigeria-s-jos-archdiocese-leaves-11-dead-curfew-imposed" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Suspected gunmen attacked the Gari Ya Waye community in Angwan Rukuba, within Nigeria’s Jos Archdiocese, killing at least 11 people and injuring several others.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-03-31 · <a href="https://www.vaticannews.va/en/pope/news/2026-03/pope-trump-world-leaders-war-castel-gandolfo.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV urged President Trump and other world leaders to return to the negotiating table and find solutions to end the war. He renewed the appeal just days before Easter.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-03-31 · <a href="https://www.ncronline.org/vatican/pope-leo-reshuffles-top-vatican-posts-tapping-new-chief-staff" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV reshuffled top Vatican posts and tapped a new chief of staff. The move consolidated his leadership over the church and the Roman Curia almost one year into his pontificate.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-03-30 · <a href="https://www.ncronline.org/news/pope-leo-names-us-catholics-vaticans-social-justice-office" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV named three U.S. Catholic academics and the head of a church-based center for migrants at the U.S.-Mexico border to the Dicastery for Promoting Integral Human Development.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-04-01 15:09 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
