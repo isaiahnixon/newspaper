@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech thread is about AI systems becoming more agent-like and widely deployed, while safety work shifts from broad claims to measurable controls and diagnostics. New evaluation and mitigation approaches emphasize refusal behavior, conditional decoding, and performance prediction to reduce misuse and better anticipate failures, but they also highlight the tradeoff between capability, transparency, and guardrails. For readers, the practical lens is operational: teams adopting multi-agent tooling and assistants need to weigh productivity gains against governance, testing, and the risk of hidden or hard-to-audit behaviors.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-02 · <a href="https://arxiv.org/abs/2604.00788" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UK AI Security Institute evaluated four frontier coding-assistant models for sabotage of safety research and found no confirmed instances. Claude Opus 4.5 Preview and Sonnet 4.5 often refused safety-relevant tasks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-04-02 · <a href="https://arxiv.org/abs/2604.00310" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The paper introduces CASA, a conditional decoding method that predicts a binary safety token from MLLM representations. It cut attack success by over 97% and preserved utility in automated and human tests.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-04-01 · <a href="https://arstechnica.com/ai/2026/04/heres-what-that-claude-code-source-leak-reveals-about-anthropics-plans" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A leak of Anthropic&#x27;s Claude Code source revealed references to a persistent agent called Kairos, a stealth &quot;Undercover&quot; mode, and a virtual assistant named Buddy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-04-01 · <a href="https://www.microsoft.com/en-us/research/blog/adele-predicting-and-explaining-ai-performance-across-tasks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft researchers, with Princeton and Universitat Politècnica de València, introduced ADeLe, a method to predict and explain AI performance across tasks. It aims to explain failures and predict outcomes on new tasks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-04-01 · <a href="https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub&#x27;s Copilot CLI now supports a /fleet command to dispatch multiple agents in parallel. The post explains how to write prompts to split work across files, declare dependencies, and avoid common pitfalls.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-04-02 · <a href="https://css-tricks.com/complex-css-shapes-with-shape-function" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>CSS-Tricks published a guide on using the CSS shape() function to create complex shapes like triangles, hexagons, stars and wavy &quot;blob&quot; forms.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-04-01 · <a href="https://arstechnica.com/tech-policy/2026/04/trump-defunding-of-npr-and-pbs-blocked-by-judge-but-damage-is-already-done" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A federal judge blocked President Trump&#x27;s order defunding NPR and PBS as violating the First Amendment. But Congress rescinded CPB&#x27;s $1.1B funding and CPB dissolved, so the ruling may have limited effect.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, courts, elections rules, and public institutions are being pulled into sharper conflict over who sets the rules and how far government power can reach. Recent developments show judges acting as key arbiters while experts and the public scrutinize both legal boundaries and the quality of information used in civic debate. For residents, the practical lens is how these disputes affect access to services, confidence in voting, tax obligations, and classroom time.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-01 · <a href="https://flatheadbeacon.com/2026/04/01/montana-supreme-court-affirms-block-on-abortion-clinic-restrictions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Supreme Court on March 31 upheld a preliminary injunction blocking 2023 law restrictions, allowing abortion clinics to continue providing procedures without a state license.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-01 · <a href="https://montanafreepress.org/2026/04/01/elections-experts-skeptical-of-trump-restrictions-on-mail-in-voting" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Election watchdogs say President Trump&#x27;s attempt to control mail-in ballots and voter eligibility in this year&#x27;s midterm elections appears unconstitutional. It shares characteristics with other recent federal attempts to influence Montana elections.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-01 · <a href="https://montanafreepress.org/2026/04/01/thousands-of-people-joined-no-kings-demonstrations-across-montana-but-how-many-thousands" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On March 28, thousands of people joined &#x27;No Kings&#x27; demonstrations across Montana to protest President Donald Trump&#x27;s agenda. Montana Free Press consulted experts about how journalists should measure and report crowd sizes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-04-02 · <a href="https://www.mtpr.org/montana-news/2026-04-02/montana-schools-do-too-much-testing-researchers-say" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A nationwide report found students take too many exams, echoing Montana teachers&#x27; and parents&#x27; concerns. Montana’s MAST exam, meant to cut testing, has often led to more tests and lost instructional time.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-04-01 · <a href="https://missoulacurrent.com/property-tax-case" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Supreme Court denied Gov. Greg Gianforte&#x27;s request to take over a property tax lawsuit challenging Senate Bill 542.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how far executive power can go in security, elections, and citizenship—and how quickly other institutions push back. Courts are testing the limits of presidential authority and personal legal protections, while Congress is showing both brinkmanship and dealmaking to keep core agencies operating. For readers, the practical lens is institutional checks: these disputes shape voting access, border enforcement exposure, and the stability of federal services.</div>
+  
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-04-02 · <a href="https://www.propublica.org/article/military-zones-border-migrants-charges" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Reporters found that, after the White House designated large swaths along the U.S. southern border as national defense areas, prosecutors filed more trespassing-on-military-property charges in 2025 than in the prior decade.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-04-01 · <a href="https://www.pbs.org/newshour/world/watch-live-president-trump-addresses-the-nation" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump said he could walk away from the war in two to three weeks once confident Iran couldn&#x27;t build a nuclear weapon, even if Tehran rejects a ceasefire.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-04-02 · <a href="https://thehill.com/homenews/campaign/5811266-trump-mail-in-voting-midterms" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump signed an executive order to limit mail-in voting ahead of the midterms. It mandates creation of state eligible-voter lists and restricts absentee ballots to specified voters.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-04-01 · <a href="https://www.scotusblog.com/2026/04/supreme-court-appears-likely-to-side-against-trump-on-birthright-citizenship" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>After oral arguments, the Supreme Court appears likely to rule against President Donald Trump&#x27;s Jan. 20, 2025 executive order ending birthright citizenship. Every federal court that considered the order has struck it down.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-01 · <a href="https://www.nytimes.com/2026/04/01/us/politics/senate-house-homeland-security-shutdown.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senate and House Republicans struck a deal to end a DHS shutdown. It reverses a Friday House GOP rejection and could pass as soon as Thursday.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-04-01 · <a href="https://www.pbs.org/newshour/politics/trump-isnt-immune-from-civil-claims-that-his-jan-6-rally-speech-incited-riot-judge-rules" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Judge Amit Mehta ruled Trump isn&#x27;t immune from civil claims that his Jan. 6 rally speech incited a riot. The decision allows a possible civil trial.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs developments show how conflict and policy shifts are compounding cross-border risks: fighting in one region is disrupting energy and essential supply chains, while displacement and humanitarian needs are rising faster than funding and access can keep up. At the same time, domestic legal and legislative moves are sharpening questions about rights and accountability that can influence migration pressures and international responses. For readers, the key lens is how quickly shocks travel—affecting aid delivery, prices, and protection for civilians and migrants.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-04-02 · <a href="https://news.un.org/feed/view/en/story/2026/04/1167243" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Middle East crisis is exposing a global economic vulnerability: reliance on fossil-fuel flows through conflict-affected regions. The UN says this strengthens the case for faster transition to cheaper, more resilient renewables.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-04-02 · <a href="https://reliefweb.int/report/yemen/yemen-breaking-point-historic-funding-collapse-pushes-communities-toward-edge" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>International NGOs warn that four years after the UN-brokered truce, Yemen&#x27;s humanitarian conditions are more fragile than at the response&#x27;s peak, with over 22.3 million people facing dire needs.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-02 · <a href="https://www.france24.com/en/video/20260402-critical-aid-supplies-to-sudan-disrupted-by-ripple-effect-from-middle-east-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>WFP warned critical aid to Sudan is being disrupted by the Iran war&#x27;s &quot;ripple effect.&quot; Gas, oil and fertiliser shortages are delaying urgent food aid.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-02 · <a href="https://www.france24.com/en/video/20260402-protests-erupt-in-west-bank-as-israel-approves-death-penalty-for-palestinians" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Hundreds of protesters took to the streets across the Palestinian territories on Tuesday, a day after Israel&#x27;s parliament approved the death penalty by hanging for Palestinians convicted of murdering Israelis.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-01 · <a href="https://www.bbc.com/news/articles/cje47jk49k0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US Supreme Court appeared sceptical of President Donald Trump&#x27;s executive order limiting birthright citizenship. That suggests the justices could strike down a key element of his immigration agenda.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-04-02 · <a href="https://reliefweb.int/report/lebanon/iom-chief-sounds-alarm-and-urges-international-support-during-lebanon-visit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>IOM Director General Amy Pope concluded a visit to Lebanon and urged much greater international support as humanitarian needs rapidly escalate. She said over one million people have been displaced.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-04-02 14:54 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
