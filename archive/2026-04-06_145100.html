@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news highlights how fast-moving AI and cloud infrastructure are colliding with privacy, security, and governance limits. As more capable models and multi-agent systems spread, attention is shifting to whether they can be evaluated for misuse and whether safeguards work in practice. At the same time, shared compute and data flows create high-impact failure modes—from hardware-level attacks to alleged chat-data sharing—while enforcement tools can overreach. This matters most for organizations deploying AI and cloud services, who must weigh capability gains against exposure, compliance, and operational risk.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-04-02 · <a href="https://arstechnica.com/tech-policy/2026/04/perplexitys-incognito-mode-is-a-sham-lawsuit-says" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A lawsuit alleges Perplexity, Google, and Meta shared millions of users&#x27; chat conversations, including personally identifiable information, without users&#x27; knowledge or consent.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-04-02 · <a href="https://arstechnica.com/security/2026/04/new-rowhammer-attacks-give-complete-control-of-machines-running-nvidia-gpus" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GDDRHammer and GeForge are Rowhammer attacks that let a malicious user gain root on hosts with Nvidia GPUs by flipping bits in GPU memory. They&#x27;re often shared among dozens of cloud users.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">DeepMind Blog · 2026-04-02 · <a href="https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>DeepMind introduced Gemma 4, a new family of open models purpose-built for advanced reasoning and agentic workflows. It is released under an Apache 2.0 license and offered in four sizes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-03 · <a href="https://arxiv.org/abs/2604.00788" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UK AI Security Institute evaluated four frontier coding-assistant models for sabotage of safety research and found no confirmed instances.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-03 · <a href="https://arxiv.org/abs/2604.01151" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The paper introduces NARCBench and five probing techniques to detect collusion in multi-agent LLM systems, achieving 1.00 AUROC in-distribution and 0.60–0.86 AUROC on zero-shot transfers.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-04-02 · <a href="https://developers.cloudflare.com/changelog/post/2026-04-02-warp-windows-ga" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new GA release for the Windows Cloudflare One Client (version 2026.3.846.0) is now available, containing minor fixes and improvements.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-04-02 · <a href="https://arstechnica.com/ai/2026/04/anthropic-says-its-leak-focused-dmca-effort-unintentionally-hit-legit-github-forks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An Anthropic-backed DMCA effort to remove leaked Claude Code from GitHub accidentally removed many legitimate forks of its public repository. GitHub has since reversed the overbroad takedown.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local developments point to growing friction between different levels of government over land use, election rules, immigration cooperation, and rural investment. Courts and agencies are increasingly shaping what moves forward, while local officials and affected communities face uncertainty about funding, enforcement expectations, and project timelines. For readers, the practical lens is who has decision-making power—judges, state leaders, federal agencies, or voters—and how those choices shift costs and benefits across counties, tribes, and industries.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-02 · <a href="https://flatheadbeacon.com/2026/04/02/federal-judge-suspends-tally-lake-logging-project-west-of-whitefish" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A federal judge this week suspended the Tally Lake logging project west of Whitefish.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-02 · <a href="https://flatheadbeacon.com/2026/04/02/state-supreme-court-dismisses-challenge-to-dark-money-initiative" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Supreme Court dismissed a challenge to a proposed ballot initiative aimed at dark money in politics. The Montana Plan would bar businesses and nonprofits from donating to political campaigns.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-03 · <a href="https://montanafreepress.org/2026/04/02/tribes-in-montana-lose-millions-after-usda-kills-farm-grants" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Department of Agriculture terminated 49 of 50 farm grants it awarded in 2023—about $300 million total—including at least three to Montana grantees. Montana-based awardees called the terminations &quot;devastating.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-02 · <a href="https://montanafreepress.org/2026/04/02/montana-attorney-general-accuses-gallatin-county-of-not-sharing-information-with-ice" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Attorney General Austin Knudsen accused Gallatin County of withholding confidential criminal-justice information from federal immigration authorities. It was his second demand this year about local immigration policies.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-04-02 · <a href="https://www.mtpr.org/montana-news/2026-04-02/kimberly-persico-interview" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Public Radio&#x27;s Shaylee Ragar interviewed Kimberly Persico, an independent candidate for Montana&#x27;s western U.S. House seat, as part of MTPR&#x27;s series of interviews with 2026 federal office candidates.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s developments point to a governance environment where executive control, agency policy shifts, and court scrutiny are colliding at a faster pace. The main tension is between rapid administrative action—especially around immigration, elections data, and health regulation—and legal or procedural checks that can narrow, delay, or redirect those moves. For readers, the practical lens is how institutional guardrails (courts, privacy oversight, and confirmation and funding processes) shape what actually changes on the ground for voters, patients, and people in the justice system.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-02 · <a href="https://www.nytimes.com/2026/04/02/us/politics/trump-fires-bondi-attorney-general.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pam Bondi was fired as President Trump’s attorney general and replaced on an interim basis by her deputy, Todd Blanche, according to a social media post by President Trump.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-03 · <a href="https://www.nytimes.com/2026/04/02/us/politics/birthright-citizenship-trump-supreme-court.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court gave respectful consideration to a birthright citizenship challenge. Justices could rule against the theory on grounds that would let Congress revisit the issue.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-04-03 · <a href="https://www.npr.org/2026/04/03/nx-s1-5768455/privacy-doj-dhs-voter-data" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A key privacy officer in the Justice Department&#x27;s Civil Rights Division, Kilian Kagle, resigned as DOJ prepares to share sensitive state voter data with the Department of Homeland Security.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-04-02 · <a href="https://www.pbs.org/newshour/show/republicans-in-congress-announce-plan-to-end-dhs-shutdown-but-political-battle-continues" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Republicans in Congress announced a plan to end the Department of Homeland Security shutdown. Any nominee President Trump selects to replace Pam Bondi will face Senate confirmation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-04-02 · <a href="https://www.scotusblog.com/2026/04/court-appears-sympathetic-to-death-row-inmates-attempt-to-challenge-racial-discrimination-in-jury-selection" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court on Tuesday appeared sympathetic to death-row inmate Terry Pitchford’s claim that a Mississippi district attorney unconstitutionally removed four Black potential jurors at his trial.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-04-03 · <a href="https://www.propublica.org/article/peptide-safety-fda-compounding-pharmacies" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Under HHS Secretary Robert F. Kennedy Jr., the FDA is poised to reverse a three‑year‑old decision that deemed 19 peptide drugs too unsafe to be dispensed by compounding pharmacies.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs picture mixes escalating conflict and legal scrutiny with widening spillover into trade routes and alliance planning. Governments are weighing coercive tools like sanctions and higher defense budgets against the risks of further destabilization, while civilians and frontline services bear the immediate costs through casualties, displacement, and acute shortages. Readers can view these developments through who is being protected—shipping, deterrence, or humanitarian needs—and what tradeoffs that implies.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-03 · <a href="https://www.bbc.com/news/articles/c937g7nd5x4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Artemis II left Earth&#x27;s orbit after Orion&#x27;s 5 minute 50 second translunar injection, sending the four astronauts on a looping trajectory around the far side of the Moon.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-03 · <a href="https://www.bbc.com/news/articles/cy91x2n29nlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>More than 100 international law experts signed an open letter alleging serious violations of international law by the US, Israel and Iran in the Middle East war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-04-03 · <a href="https://news.un.org/feed/view/en/story/2026/04/1167230" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Violence in Sudan’s South Kordofan has forced tens of thousands to flee and left doctors at a maternity hospital making impossible choices amid severe supply shortages and overwhelming patient numbers.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-03 · <a href="https://www.france24.com/en/video/20260403-nato-members-boost-defence-spending-to-cut-reliance-on-us" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>NATO members have increased defence spending. They are trying to reduce reliance on the United States for weapons imports and have significantly raised budgets in the past year.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-03 · <a href="https://www.france24.com/en/video/20260403-8-killed-95-wounded-in-us-israeli-attacks-on-iran-bridge" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Eight civilians killed and 95 wounded in US and Israeli strikes on Iran&#x27;s B1 bridge. The B1 is among the Middle East&#x27;s highest bridges and one of Iran&#x27;s most complicated projects.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-04-02 · <a href="https://www.bbc.com/news/articles/cx2d0md89v2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UK and allies agreed to explore sanctions to pressure Iran into reopening the Strait of Hormuz after a virtual summit of 40+ countries. The US did not take part.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Across these developments, Catholic institutions are being pulled into high-stakes debates where law, punishment, and migration policy collide with pastoral care and human dignity. The tension is between governments asserting tougher enforcement and communities insisting on access, mercy, and limits on state power, especially around life-and-death penalties and the treatment of families and detainees. At the same time, the Church is still reckoning with accountability for past harm while trying to project moral leadership in public life. For readers, the practical lens is how legal rulings and policy shifts shape who receives protection, spiritual support, and redress.</div>
+  
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-04-01 · <a href="https://www.ewtnnews.com/world/us/supreme-court-grills-both-sides-in-birthright-citizenship-oral-arguments-as-bishops-watch" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Supreme Court heard oral arguments on the constitutionality of President Donald Trump&#x27;s executive order denying citizenship to children of parents without legal immigration status.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-04-01 · <a href="https://www.ncronline.org/news/all-my-heart-i-want-say-how-sorry-we-are-says-albany-bishop-abuse-settlement-reached" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Diocese of Albany reached a $148 million settlement with survivors of sexual abuse on March 27, over three years after filing Chapter 11 amid nearly 440 Child Victims Act claims.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-04-02 · <a href="https://www.vaticannews.va/en/pope/news/2026-04/pope-leo-xiv-chrism-mass-holy-thursday-priesthood-peace.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At the Chrism Mass Pope Leo XIV urged priests and Christians to &quot;spread the fragrance of Christ where the stench of death reigns.&quot; His homily was his first as Bishop of Rome.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-04-02 · <a href="https://www.ncronline.org/news/jerusalem-church-leaders-decry-death-penalty-law-lifeless-holy-city-ahead-easter" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Jerusalem church leaders decried the Knesset&#x27;s passage of a law allowing death by hanging for Palestinians convicted of lethal attacks on Israelis. They said it contradicted Easter&#x27;s celebration of life.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-04-01 · <a href="https://www.ewtnnews.com/world/us/judge-permits-access-for-clergy-at-illinois-immigration-facility-for-holy-week" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. District Judge Robert Gettleman allowed clergy access to an Illinois immigration facility for Holy Week. His order cited Pope Leo XIV&#x27;s November 2025 comments urging spiritual care for detained migrants.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-04-03 14:45 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
