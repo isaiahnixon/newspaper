@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news points to AI moving from demos to governed, auditable systems that can run inside enterprise infrastructure, with stronger controls around what agents can do, what they can access, and how outputs are checked. The tradeoff is that more capable automation and “human-like” interfaces raise new trust and accountability questions, especially when AI is used to represent people or to produce work that’s hard to verify. This matters most for organizations deploying agents at scale and for educators and knowledge workers deciding where to permit, constrain, or require proof for AI-assisted work.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-13 · <a href="https://arxiv.org/abs/2604.08549" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced VerifAI, an open-source biomedical question-answering system combining retrieval-augmented generation with a post-hoc claim verification mechanism. Its verification component outperforms GPT-4 on the HealthVer benchmark and the full pipeline is open-sourced.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-13 · <a href="https://arxiv.org/abs/2604.08601" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper introduces OpenKedge, a protocol that governs autonomous AI agents&#x27; state mutations by requiring declarative intent proposals and enforcing bounded execution contracts.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-04-13 · <a href="https://developers.cloudflare.com/changelog/post/2026-04-13-sandbox-outbound-workers-tls-auth" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare added zero-trust credential injection, TLS interception, allow/deny lists and dynamic per-instance egress policies to Outbound Workers for Sandboxes and Containers. They prevent sandboxed workloads from accessing injected credentials.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-04-13 · <a href="https://developers.cloudflare.com/changelog/post/2026-04-13-containers-sandbox-ga" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare Containers and Sandboxes are now generally available. Higher limits let you run thousands of containers concurrently, and active-CPU pricing charges only used CPU cycles.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">OpenAI News · 2026-04-13 · <a href="https://openai.com/index/cloudflare-openai-agent-cloud" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare added OpenAI&#x27;s GPT-5.4 and Codex to Agent Cloud. This lets enterprises build, deploy, and scale AI agents for real-world tasks with speed and security.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-04-13 · <a href="https://arstechnica.com/ai/2026/04/meta-spins-up-ai-version-of-mark-zuckerberg-to-engage-with-employees" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Meta is building an AI version of Mark Zuckerberg to engage employees. Trained on his mannerisms, tone and public statements, it could offer conversation and feedback and make employees feel more connected.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-04-13 · <a href="https://arstechnica.com/science/2026/04/to-teach-in-the-time-of-chatgpt-is-to-know-pain" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A part-time college Earth science instructor says generative AI (ChatGPT) has made teaching asynchronous online courses mostly miserable and that LLM use is the most demoralizing problem they&#x27;ve faced.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana communities, local government is leaning into long-horizon choices that shape daily life: investing in physical assets, setting leadership for major public institutions, and defining how strictly to interpret state authority in local policy. The tension is between collaborative problem-solving and hard lines that can trigger legal conflict, while residents also face the immediate costs of funding upgrades. For readers, the practical lens is how these decisions affect services, public spaces, and the rules that guide local governance.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-13 · <a href="https://flatheadbeacon.com/2026/04/13/restoration-begins-on-salish-point-park" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>CSKT and the city of Polson began restoring the Flathead Lake waterfront at Salish Point Park. It will improve the beach&#x27;s gravel-based, wave-absorbing dynamic-equilibrium system.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-13 · <a href="https://montanafreepress.org/2026/04/13/in-montanas-western-district-aaron-flint-is-the-talked-up-candidate-for-congress" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Aaron Flint, a first-time candidate and 25-year local broadcaster, is the talked-up contender for Congress in Montana’s Western District. The article questions whether his talk-show audience can win the crowded Republican primary.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-13 · <a href="https://montanafreepress.org/2026/04/13/how-will-money-from-utility-hikes-be-spent" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Great Falls City Commission approved a framework to spend money from recent utility rate hikes. The Strategic Capital Investment Reserve will direct about $6M annually to infrastructure for residents and future growth.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-04-13 · <a href="https://missoulacurrent.com/helena-immigration-policy" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Attorney General Austin Knudsen said his office won&#x27;t negotiate with Helena over its proposed immigration enforcement resolution. He had threatened legal action, saying it violated Montana&#x27;s ban on &quot;sanctuary cities.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-04-13 · <a href="https://missoulacurrent.com/regents-president-university" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Board of Regents will consider hiring Jeremiah Shinn as University of Montana president on April 14. Terms list a $467,197 salary and a July 1, 2026 start date.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">The items point to a governance style that concentrates decision-making in the executive branch while testing institutional checks at home and abroad. A key tension is between rapid, forceful action—through military posture, immigration adjudication, and election-related interventions—and the legitimacy and durability that come from shared buy-in, due process, and independent oversight. For readers, the practical lens is how these moves affect accountability: whether outcomes are constrained by courts, Congress, and allies, or proceed largely through unilateral authority.</div>
+  
+<div class="item">
+  <div class="meta">Fox News - Politics · 2026-04-12 · <a href="https://www.foxnews.com/politics/timeline-trumps-escalating-threats-iran-strait-hormuz" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Donald Trump ordered the U.S. Navy to blockade the Strait of Hormuz and interdict vessels that paid tolls to Iran after peace talks with Tehran stalled.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-13 · <a href="https://www.nytimes.com/2026/04/13/world/middleeast/trump-iran-blockade-strait-of-hormuz.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump said other countries would help blockade Iran, but so far none have agreed. He announced a U.S. blockade to pressure Iran after weekend talks failed.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-04-13 · <a href="https://www.propublica.org/article/trump-midterm-elections-takeover" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>In mid-December 2020, Attorney General William Barr summoned federal election-protection officials to the Justice Department as Trump pressed conspiracy claims about voting machines switching votes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-12 · <a href="https://www.nytimes.com/2026/04/11/us/politics/immigration-judges-deportations-students.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Immigration judges were abruptly fired after blocking deportations of pro‑Palestinian students. Their dismissals were part of the Trump administration&#x27;s efforts to reshape the immigration courts.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Fox News - Politics · 2026-04-13 · <a href="https://www.foxnews.com/politics/lawmakers-put-expulsion-threats-atop-house-agenda-return-sets-up-high-stakes-week" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Multiple House members face potential expulsion votes this week after Rep. Eric Swalwell suspended his California gubernatorial campaign amid sexual assault and misconduct allegations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-04-13 · <a href="https://thehill.com/homenews/campaign/5828384-swalwell-suspends-governor-campaign" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Rep. Eric Swalwell suspended his campaign for California governor on Sunday. It came just over 48 hours after reports alleged he twice sexually assaulted a former aide, while he was a frontrunner.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s developments point to a sharper mix of political realignment in Europe and rising security and humanitarian strain around key shipping routes. A major leadership change signals how quickly domestic mandates can reshape a country’s external posture, while the breakdown of diplomacy and new maritime restrictions increase the risk of trade disruption and test allied coordination. At the same time, worsening displacement and funding gaps show how conflict pressures outpace relief capacity, affecting civilians and aid planning.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-13 · <a href="https://www.bbc.com/news/articles/cd9vg782kx7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Péter Magyar defeated Viktor Orbán in a landslide, ending Orbán&#x27;s 16‑year rule. Preliminary results put his Tisza party at 138 seats, enabling him to overturn Orbán&#x27;s policies and reset Hungary&#x27;s global relationships.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-13 · <a href="https://www.france24.com/en/video/20260413-a-former-govt-insider-promising-system-change-who-is-hungary-new-pm-peter-magyar" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Peter Magyar won Sunday&#x27;s election, ending Viktor Orbán’s 16-year grip on power. The 45-year-old lawyer and Tisza party leader rose rapidly since early 2024 and secured a powerful mandate.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-04-13 · <a href="https://news.un.org/feed/view/en/story/2026/04/1167285" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>US and Iran talks on Saturday ended without agreement. A planned US blockade of Iranian ports is due to take effect, raising concerns about escalation and global trade disruption.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-13 · <a href="https://www.france24.com/en/video/20260413-oil-surge-as-trump-says-to-blockade-hormuz-after-iran-talks-fail" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US military said it will begin a blockade of all maritime traffic entering and exiting Iranian ports and coastal areas on Monday. The move jeopardizes a fragile two-week ceasefire.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-04-13 · <a href="https://reliefweb.int/report/sudan/crisis-motion-ifrc-sounds-alarm-sudans-humanitarian-needs-escalate" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>IFRC warned shifting displacement and returns in Sudan are creating rapidly evolving humanitarian needs affecting 33 million people. Declining funding threatens humanitarian actors&#x27; ability to respond.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-04-13 · <a href="https://www.bbc.com/news/articles/c393wxzw4yjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sir Keir Starmer said the UK will not take part in enforcing the US military blockade of Iran&#x27;s ports. UK minesweepers and anti-drone capabilities will continue operating in the region.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic news highlights a church leadership increasingly visible in global diplomacy and conflict, using travel and public appeals to press for de‑escalation while also drawing sharper political pushback. At the same time, internal governance remains in focus as leadership transitions unfold under the shadow of institutional accountability concerns. For readers, the key lens is how religious authority is being used to shape debates on war and migration, and how that intersects with both state power and church credibility.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-04-13 · <a href="https://www.vaticannews.va/en/pope/news/2026-04/pope-leo-embarks-on-longest-apostolic-journey-headed-to-algeria.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV departed Rome for his third and longest Apostolic Journey to Algeria, Cameroon, Angola and Equatorial Guinea. The trip includes the first-ever papal visit to Algeria.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-04-11 · <a href="https://www.ncronline.org/vatican/pope-leo-issues-fiery-plea-peace-prayer-vigil-enough-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo issued a fiery plea for peace at a prayer vigil. He urged world leaders to choose dialogue and mediation over rearmament and deadly actions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-04-12 · <a href="https://www.ncronline.org/news/trump-attacks-pope-leo-incendiary-social-media-post" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Donald J. Trump posted a lengthy social-media attack on Pope Leo XIV Sunday night, calling the first U.S.-born pope &quot;terrible on Foreign Policy&quot; and leveling other accusations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-04-12 · <a href="https://www.ewtnnews.com/world/chaldean-church-chooses-archbishop-amel-nona-as-patriarch-succeeding-cardinal-sako" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Chaldean Church chose Archbishop Amel Nona as patriarch, succeeding Cardinal Raphael Sako. His appointment follows Sako&#x27;s March 9 resignation amid a legal and financial scandal involving a former bishop.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-04-13 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=69073" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Three U.S. cardinals criticized the Iran war and ICE deportations in a joint interview. Cardinal McElroy said the Iran war is &quot;not a just war,&quot; and Cardinal Tobin called ICE &quot;lawless.&quot;</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--past-week">
+  <h2>Economic News (Past Week)</h2>
+  <div class="macro-summary">This week’s data point to modest overall growth that is increasingly shaped by uneven sector momentum and external shocks. Household and investment activity are supporting output, but manufacturing demand looks softer and new business starts have edged down, suggesting a more cautious near-term expansion. At the same time, a sharp jump in energy prices highlights inflation and cost risks, while payments-system changes and rising gas output reflect efforts to improve financial plumbing and meet shifting energy demand.</div>
+  
+<div class="item">
+  <div class="meta">BEA News Releases · 2026-04-09 · <a href="https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Real GDP rose 0.5% annualized in Q4 2025, the BEA reported. Consumer spending and investment increased, partly offset by lower government spending and exports.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-04-07 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67424" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Crude oil and petroleum product prices rose sharply in 1Q26. They rose after Feb. 28 military action in the Middle East and a de facto closure of the Strait of Hormuz.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-04-08 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67425" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>EIA projects U.S. dry natural gas production will rise over the next decades to meet growing domestic and international demand. Dry natural gas made up 38% of U.S. energy production in 2025.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-04-08 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/other20260408a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve Board invited public comment on a proposal that would allow U.S. banks and credit unions to use intermediaries to transfer funds through the FedNow Service.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-04-07 · <a href="https://www.census.gov/manufacturing/m3" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>New orders for manufactured durable goods in February decreased $4.4 billion, or 1.4 percent, to $315.5 billion. They were down in four of the last five months.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-04-08 · <a href="https://www.census.gov/econ/bfs" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Total U.S. business applications were 491,941 in March 2026, down 0.9% from February 2026.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-04-13 15:20 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">82</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
