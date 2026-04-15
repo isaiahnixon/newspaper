@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech items point to a shift toward making security and reliability more “built in” and easier to verify, from quick organization-wide exposure checks to safer networking defaults and hardening legacy components. At the same time, teams are pushing more private connectivity and automation into day-to-day operations, including AI-assisted support and more structured ways to analyze system behavior. The tradeoff is speed and convenience versus new complexity in tooling, trust boundaries, and reproducibility. This matters most for engineering and operations leaders deciding how to reduce risk while scaling internal services and workflows.</div>
+  
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-04-14 · <a href="https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub released the new Code Security Risk Assessment, which provides a one-click view of vulnerabilities across an organization at no cost.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-04-14 · <a href="https://developers.cloudflare.com/changelog/post/2026-04-14-cloudflare-mesh" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare made Cloudflare Mesh available, a service that connects services and devices with private networking. It uses post-quantum encrypted networking to route TCP, UDP, and ICMP traffic between enrolled nodes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-04-14 · <a href="https://developers.cloudflare.com/changelog/post/2026-04-14-vpc-networks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Workers VPC Networks and Cloudflare Mesh entered public beta. VPC Network bindings let Workers reach any private service without pre-registering hosts; bind via tunnel_id or cf1:network to reach Mesh nodes or subnets.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Gadgets) · 2026-04-13 · <a href="https://arstechnica.com/gadgets/2026/04/google-shoehorned-rust-into-pixel-10-modem-to-make-legacy-code-safer" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google shoehorned a Rust-based component into the Pixel 10 modem to make its legacy modem code safer. That followed Project Zero showing remote code execution was possible against Pixel modems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-14 · <a href="https://arxiv.org/abs/2604.09563" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv paper (arXiv:2604.09563v1) proposes a seven-step pipeline for log analysis in AI systems. It provides code examples in the Inspect Scout library and detailed guidance to enable rigorous, reproducible analyses.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-14 · <a href="https://arxiv.org/abs/2604.09579" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduce Vigil, a proactive agent system that operates throughout the on-call lifecycle to assist human analysts without explicit invocation and continuously self-improves by extracting knowledge from human-resolved cases.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-04-14 · <a href="https://css-tricks.com/the-radio-state-machine" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An article on CSS-Tricks introduces the &quot;Radio State Machine,&quot; a technique using radio inputs to manage components with multiple visual states in CSS.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Several local developments point to rising friction over who gets to shape public life in Montana—through elections, public gatherings, and political messaging—while courts and city rules set the boundaries. The central tradeoff is between tighter oversight and administrative control versus easier access for citizens and groups to participate and organize. Readers can view these stories through how rule changes and disputes may affect grassroots campaigns, community events, and the tone of upcoming races.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-13 · <a href="https://flatheadbeacon.com/2026/04/13/montana-supreme-court-hears-arguments-over-ballot-initiative-restrictions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Supreme Court on Friday heard arguments in a case challenging restrictions on ballot initiatives. The challenged law would require a $3,700 fee and let lawmakers weigh in before signature-gathering.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-13 · <a href="https://montanafreepress.org/2026/04/13/sen-sheehy-passenger-unharmed-in-emergency-plane-landing-near-ennis" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Sen. Tim Sheehy and a passenger were unharmed after the engine of the plane he was piloting failed and they made an emergency landing near Ennis on April 10.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-04-14 · <a href="https://www.kpax.com/community/community-spotlight/community-spotlight-jazzoula" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Jazzoula, Montana&#x27;s premiere jazz festival since 1984, returns April 29–May 2 at the Zootown Arts Community Center with more than 20 jazz combos, septets, big bands, vocalists, and student groups.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-14 · <a href="https://flatheadbeacon.com/2026/04/14/zinkes-lies-and-deceit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Rep. Zinke weighed in on the 2026 Republican primary for Montana&#x27;s open MT-01 seat. The author calls it a &quot;dying campaign&quot; attempt to claw back against the frontrunner.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-13 · <a href="https://montanafreepress.org/2026/04/13/helena-group-claims-citys-permitting-requirements-for-events-are-unconstitutional" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A volunteer group in Helena asked the city to change its event-permitting rules, saying they violate the group&#x27;s constitutional rights. The group, Indivisible Helena, is a local chapter of Indivisible National.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how foreign conflict and domestic politics are tightening constraints on decision-making across branches of government. Economic pressure from energy-driven inflation is colliding with competing demands on monetary policy and election messaging, while lawmakers and courts face high-stakes disputes over surveillance powers and citizenship rules. At the same time, oversight and enforcement are under scrutiny, with delays and weak follow-through shaping how accountability is felt by voters, protesters, and security agencies.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-04-14 · <a href="https://www.pbs.org/newshour/economy/u-s-wholesale-prices-surged-4-last-month-during-the-iran-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. wholesale prices surged 4% last month during the Iran war. It complicates Fed decisions, as Trump pressures for cuts while some officials favor rate hikes amid higher energy-driven inflation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-04-14 · <a href="https://www.npr.org/2026/04/14/nx-s1-5768270/what-to-know-about-section-702-surveillance" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Congress is debating whether to renew Section 702 of FISA, a surveillance authority set to expire. Officials say it underpins key intelligence; critics say it allows warrantless spying on Americans.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-13 · <a href="https://www.nytimes.com/2026/04/13/world/middleeast/iran-war-pentagon-officials-testimony-trump.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>House Republicans postponed a scheduled next-week hearing with the head of U.S. military operations in the Middle East until late May.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-04-13 · <a href="https://www.scotusblog.com/2026/04/birthright-citizenship-oral-argument-highlights" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>SCOTUSblog compared its prior analyses of Trump v. Barbara to the April 1 oral-argument remarks. They found virtually every justice voiced at least one point aligning with their analysis.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-04-14 · <a href="https://www.propublica.org/article/caught-in-crackdown-ice-cbp-doj-trump-arrests-convictions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Arrests at anti-ICE protests piled up while prosecutions crumbled. The report was co-published with FRONTLINE and ties to a documentary premiering April 14.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-04-14 · <a href="https://thehill.com/homenews/administration/5829493-trump-gas-prices-midterms" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump said high gas prices may be here to stay until November. The comment contradicts GOP midterm messaging and highlights how the Iran war could hurt Republicans&#x27; chances to keep Congress.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs developments point to how regional conflicts and political transitions are increasingly spilling into economic security, civilian protection, and postwar recovery. Disruption risks in a key shipping chokepoint show the tradeoff between coercive pressure and wider fallout for energy supplies, food flows, and transport networks. At the same time, deadly operations and cross-border tensions underline the limits of military approaches, while governance change and justice efforts shape where outside support may stabilize—or strain—fragile states.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-14 · <a href="https://www.france24.com/en/video/20260414-will-europe-s-airports-run-out-of-jet-fuel" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The head of French energy group Total warned Europe&#x27;s airports could face jet fuel shortages in coming weeks or months if the situation at the Strait of Hormuz does not improve.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-14 · <a href="https://www.france24.com/en/video/20260414-nigerian-airstrike-hits-market-in-northeast-yobe-state" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At least 200 people are feared dead after Nigerian military jets struck a village market in northeast Yobe state while pursuing Islamist militants, residents and a local councillor said.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-13 · <a href="https://www.bbc.com/news/articles/ckgw8w7mzxgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>US is gambling on a blockade to deny Iran vital trade. Retired Admiral Mark Montgomery says it is less risky than seizing Kharg Island or escorting convoys through the Strait of Hormuz.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-13 · <a href="https://www.bbc.com/news/videos/c0q93vgkxnzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Viktor Orbán&#x27;s 16-year rule ended after he was defeated by 45-year-old ex-party insider Péter Magyar. Hungarian voters celebrated what they called a &quot;much-needed&quot; change.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-04-14 · <a href="https://news.un.org/feed/view/en/story/2026/04/1167294" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel and Lebanon prepared for Washington talks while the UN Secretary‑General urged diplomatic efforts to end hostilities. A Strait of Hormuz blockade is affecting global trade and food security.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-04-14 · <a href="https://news.un.org/feed/view/en/story/2026/04/1167291" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A UN expert said Syria made &quot;remarkable progress&quot; on transitional justice this year and urged global investment. That progress raises hopes for accountability and recovery after more than a decade of conflict.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-04-14 15:12 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
