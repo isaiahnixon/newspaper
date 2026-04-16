@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech items point to two parallel shifts: more consumer devices are leaning on satellite links for coverage, while cloud and developer platforms are tightening security and compliance controls as AI systems become more attackable. The tension is between expanding capability and connectivity versus managing new risk surfaces, from web and container deployments to agentic and vision-based models. For readers, the practical lens is how vendors are baking in safeguards—risk assessments, training, patch coverage, and data-location controls—that will shape procurement, governance, and incident readiness.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-04-14 · <a href="https://arstechnica.com/tech-policy/2026/04/amazon-to-merge-with-globalstar-become-iphones-primary-satellite-provider" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Amazon announced an $11.6 billion deal to buy Globalstar and signed an agreement to provide satellite connectivity to iPhones and Apple Watches.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-04-15 · <a href="https://developers.cloudflare.com/changelog/post/2026-04-15-waf-release" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare WAF added detection for Mesop RCE (CVE-2026-33057) and protections for Cisco FMC (CVE-2026-20079) and FortiClient EMS (CVE-2026-21643), and updated React Server DoS coverage (CVE-2026-23869).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-15 · <a href="https://arxiv.org/abs/2604.12616" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper introduces MemJack, a memory-augmented multi-agent jailbreak framework that exploits visual semantics to automate attacks on vision-language models. It maps visual entities to malicious intents, using INLP to evade refusals.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-15 · <a href="https://arxiv.org/abs/2604.12459" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced a lightweight sequential unlearning framework that stabilises benign capabilities, then applies layer-restricted negative fine-tuning to suppress designated sensitive patterns in large language models.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-04-14 · <a href="https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub launched a new Code Security Risk Assessment that provides a one-click view of vulnerabilities across an organization at no cost.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-04-15 · <a href="https://developers.cloudflare.com/changelog/post/2026-04-05-regional-placement" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare added placement constraints to control where Containers run. Regions limit geographic placement; jurisdiction restricts to compliance boundaries (eu → EEUR, WEUR; fedramp → ENAM, WNAM).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-04-14 · <a href="https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub released a free, open-source Secure Code Game with five progressive challenges to teach finding and exploiting real-world agentic AI vulnerabilities. Over 10,000 developers have used it to sharpen security skills.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local items point to institutions under pressure—schools, universities, courts, forests, and elections—making high-stakes decisions amid limited resources and public scrutiny. The tension runs between safety and accountability on one hand and budgets, staffing, and operational capacity on the other, with outcomes shaped through formal processes like hiring, legal proceedings, public meetings, and campaign debates. For readers, the practical lens is how these choices affect students, families, and communities through education quality, public trust, wildfire mitigation tradeoffs, and the policy direction set by upcoming elections.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-14 · <a href="https://montanafreepress.org/2026/04/14/shinn-hired-um-president" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Board of Regents selected Jeremiah Shinn to be the 20th president of the University of Montana. He was the sole finalist and had been interim president of Boise State University.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-14 · <a href="https://montanafreepress.org/2026/04/14/helena-educator-pleads-not-guilty" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Helena middle school educator pleaded not guilty to allegations he sexually abused a 12-year-old student. Police recovered 36,000 deleted messages between Huber and the victim, including sexual conversations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-14 · <a href="https://flatheadbeacon.com/2026/04/14/flathead-forest-authorizes-logging-project-west-of-blacktail-mountain" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Flathead National Forest authorized an emergency logging and thinning project three miles west of Blacktail Mountain. It authorizes 2,823 acres of treatment and 5.6 miles of temporary roads to reduce wildfire risk.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-15 · <a href="https://flatheadbeacon.com/2026/04/15/kalispell-middle-school-health-instructors-say-program-cuts-have-had-negative-impacts" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kalispell Middle School teachers held a comment period at a board meeting saying last year’s cuts to the health program harmed the department. Administrators warned more cuts if the levy fails.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-04-14 · <a href="https://missoulacurrent.com/democrats-debate-helena" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Democratic Congressional and Senate candidates debated in Helena on April 12, 2026. All three Democratic candidates for Montana’s eastern district urged Congress to impeach President Donald Trump.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across branches of government, today’s developments point to rising strain on institutional guardrails: prosecutorial choices, congressional ethics lapses, and intensified oversight fights are colliding with efforts to change Senate rules to speed partisan priorities. At the same time, immigration enforcement and major court cases are sharpening the tradeoff between public-safety aims, civil liberties, and due process. Readers can view this as a test of how durable accountability mechanisms remain when political incentives favor faster, more centralized action.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-14 · <a href="https://www.nytimes.com/2026/04/14/us/politics/justice-dept-vacate-jan-6-convictions.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Justice Dept. moved to vacate Jan. 6 convictions for far-right extremists. Defending them would likely have required administration officials to assert the groups acted for President Trump on Jan. 6, 2021.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-04-14 · <a href="https://www.pbs.org/newshour/show/sexual-misconduct-claims-trigger-resignations-and-broader-ethics-concerns-in-congress" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two members of Congress are resigning after separate sexual misconduct allegations. The cases have raised broader ethics concerns in Congress.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-04-15 · <a href="https://www.propublica.org/article/memphis-safe-task-force-immigration-arrests-crime-data" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump’s Memphis Crime Task Force arrested over 800 immigrants. Only 2% of those arrests were for violent crimes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-04-14 · <a href="https://www.npr.org/2026/04/14/nx-s1-5771526/senate-filibuster-save-america-act" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump pressured Senate leaders to abolish the filibuster to pass the SAVE America Act. Many Senate Republicans are reluctant, wary of what abolishing it would mean if they lost their majority.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-14 · <a href="https://www.nytimes.com/2026/04/14/us/politics/actblue-republicans-foreign-donations.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Three Republican-led House committees accused ActBlue of withholding documents from a subpoena after a New York Times report.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-04-15 · <a href="https://www.scotusblog.com/2026/04/last-arguments-of-the-term-huge-cases-for-the-fourth-amendment-and-immigration" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court will hear oral arguments in the next two weeks in two important immigration cases and one of the biggest Fourth Amendment cases in years.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Across several flashpoints, diplomacy and coercive measures are unfolding alongside continued violence that is hitting civilians, including children, even where pauses or talks exist. The pattern shows a widening regional security strain—from cross-border fighting and evacuations to maritime pressure and contested border areas—while international forums struggle to reduce tensions among neighboring states. For readers, the key lens is how these moves change immediate civilian risk and the room leaders have to negotiate without escalation.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-15 · <a href="https://www.france24.com/en/video/20260415-toddler-among-10-killed-in-israeli-strikes-on-gaza" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A toddler was among 10 people killed in separate Israeli strikes in northern Gaza, the territory&#x27;s civil defence agency said. The strikes occurred despite a ceasefire in effect since October 10.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-15 · <a href="https://www.france24.com/en/video/20260415-168-children-killed-by-israel-s-strikes-in-lebanon" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An Israeli strike killed Jawad Younes, 11, and his cousin while they were playing soccer.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-04-15 · <a href="https://news.un.org/feed/view/en/story/2026/04/1167304" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Security Council held an open briefing on worsening security in eastern DRC and the Great Lakes region. Tensions among DRC, Rwanda and Burundi remain acute despite mediation in Doha and Washington.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-14 · <a href="https://www.bbc.com/news/articles/cp8ddydl18vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Lebanon and Israel held their first talks since 1993 aimed at ending fighting involving Iran-backed Hezbollah. They agreed to launch direct negotiations at an unspecified time and place.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-14 · <a href="https://www.bbc.com/news/articles/c5yv6xr6me3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US has started a naval blockade of maritime traffic to and from Iranian ports. Washington says this aims to curb Iran&#x27;s oil revenue and toll income.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-04-15 · <a href="https://news.un.org/feed/view/en/story/2026/04/1167302" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel expanded evacuation orders in Lebanon while its military operations continued after direct talks between the two governments in Washington.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">The past two days’ Catholic news highlights a church leadership trying to project moral authority both outward—through interreligious outreach and peace language—and inward, by signaling priorities for governance and pastoral direction. At the same time, that public role is colliding with polarized politics, as high-profile criticism and the response to it show how quickly religious leadership becomes a proxy battleground. For readers, the practical lens is how these dynamics shape the church’s influence on migration and human-dignity debates, and how internal agenda-setting may affect its public posture.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-04-13 · <a href="https://www.vaticannews.va/en/pope/news/2026-04/pope-leo-apostolic-journey-algeria-grand-mosque-algiers-dialogue.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV visited the Grand Mosque of Algiers. He paused in silent meditation, called it a sacred space and invoked Augustine of Hippo as his spiritual link to Algeria.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-04-13 · <a href="https://www.ewtnnews.com/world/us/president-trump-s-criticism-of-pope-leo-xiv-triggers-global-reaction" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Donald Trump criticized Pope Leo XIV, prompting condemnation from politicians and faith leaders worldwide.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-04-14 · <a href="https://www.ewtnnews.com/vatican/pope-leo-xiv-calls-june-consistory-of-cardinals-says-evangelii-gaudium-must-be-relaunched" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV called a June consistory of cardinals and said the exhortation Evangelii Gaudium must be relaunched.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-04-14 · <a href="https://www.ncronline.org/news/us-bishops-express-grave-concern-over-ice-treatment-pregnant-women" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two U.S. bishops who lead the Catholic bishops&#x27; pro-life and migration efforts told the new Homeland Security secretary they are &quot;gravely concerned&quot; about treatment of pregnant and postpartum women in immigration detention.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-04-13 · <a href="https://www.ncronline.org/news/backlash-grows-religious-and-political-leaders-criticize-trumps-comments-pope-leo-xiv" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Donald Trump doubled down on his attack on Pope Leo XIV. Catholic bishops, clergy, religious sisters, congressional representatives, political pundits and foreign heads of state condemned his statements.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-04-15 15:12 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
