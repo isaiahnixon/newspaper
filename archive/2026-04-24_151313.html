@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech items point to a push to make AI systems more capable while also making them safer, more verifiable, and easier to deploy. The tension is that higher autonomy and faster infrastructure raise the cost of mistakes, so teams are investing in testing, repair, and stronger guarantees alongside performance gains. In parallel, platform and web standards changes are shifting implementation details, meaning developers and operators need to audit compatibility and update workflows rather than assume upgrades are risk-free.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-04-22 · <a href="https://arstechnica.com/ai/2026/04/google-unveils-two-new-tpus-designed-for-the-agentic-era" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google unveiled eighth-generation Tensor AI chips as two separate TPUs, the TPU8t for training and TPU8i for inference. Google says they provide a faster, more efficient platform for the &quot;agentic era&quot;.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-23 · <a href="https://arxiv.org/abs/2604.18789" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The paper introduces ARES, a framework that discovers and repairs vulnerabilities in both LLM policies and reward models used in RLHF.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-04-23 · <a href="https://arxiv.org/abs/2604.20098" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced Differentiable Coherent Factuality (DCF), a differentiable relaxation of Coherent Factuality enabling learned scorers while provably preserving its guarantees. On two reasoning benchmarks, DCF improved claim retention up to 141%.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-04-22 · <a href="https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kubernetes made SELinux volume label changes GA and will enable the SELinuxMount feature gate by default in v1.37. This speeds setup for most workloads but can break apps using recursive relabeling; audit in v1.36.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-04-22 · <a href="https://www.microsoft.com/en-us/research/blog/autoadapt-automated-domain-adaptation-for-large-language-models" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft Research published a blog post introducing AutoAdapt, an automated domain adaptation method for large language models. It targets slow, manual, hard-to-reproduce model adaptation in high-stakes domains like law and medicine.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">W3C News · 2026-04-23 · <a href="https://www.w3.org/news/2026/first-public-working-drafts-for-the-linked-web-storage-lws-1-0-authentication-suite" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Linked Web Storage Working Group published four First Public Working Drafts for the Linked Web Storage (LWS) 1.0 Authentication Suite.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-04-23 · <a href="https://css-tricks.com/recreating-apples-vision-pro-animation-in-css" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>CSS-Tricks recreated Apple’s Vision Pro scrolling animation using only CSS. It demonstrates recent CSS scrolling features can replicate animations previously done with JavaScript and aims for responsiveness.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local developments point to a state grappling with how power is exercised and paid for, from court scrutiny of executive authority to debates over how to fund core services. At the same time, environmental conditions and public attitudes are sharpening pressure on land and resource decisions, with a gap between what residents say they want and what politics delivers. For readers, the practical lens is accountability: who has legal standing to act, who bears costs through taxes or local levies, and how public input translates into policy.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-22 · <a href="https://montanafreepress.org/2026/04/22/judge-orders-state-to-halt-paychecks-for-commerce-department-director" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Cascade County District Court judge ruled Montana Department of Commerce Director Marta Bertoglio was unconstitutionally appointed and ordered she stop working and receiving paychecks and benefits.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-04-23 · <a href="https://www.mtpr.org/montana-news/2026-04-23/proposal-would-use-state-funds-to-boost-education-funding-teacher-pay" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Advocates proposed a $1.7 billion plan to Montana lawmakers to boost school funding and teacher pay. It would boost state funding to a &quot;quality assurance line&quot; and cut reliance on local levies.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-04-23 · <a href="https://www.mtpr.org/montana-news/2026-04-23/snow-drought-climate-change" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana experienced a warm, snowless winter with early snowmelt and persistent drought, which climatologists say reflects climate change.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-04-23 · <a href="https://missoulacurrent.com/um-poll-land" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A University of Montana poll found Montanans across political lines consistently value public lands and want to conserve them. It also found their elected representatives tend not to.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-04-23 · <a href="https://missoulacurrent.com/flint-olszewski-debate" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Aaron Flint and Dr. Al Olszewski faced off in a 90-minute Republican primary debate for Montana’s western congressional district at Calvary Chapel in Bozeman on April 21.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s governance developments point to a federal system under strain as major policy shifts collide with contested institutional legitimacy. Enforcement-heavy budgeting and tighter federal control over regulated substances show how Washington is using fiscal and administrative tools to steer outcomes, while redistricting fights and warnings from election administrators highlight rising pressure on election administration and public trust. Leadership turnover in national security and uneven access to legal remedies underscore how high-stakes decisions can leave affected communities and agencies facing uncertainty about accountability and stability.</div>
+  
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-04-23 · <a href="https://www.justice.gov/opa/pr/justice-department-places-fda-approved-marijuana-products-and-products-containing-marijuana" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Justice Department and DEA placed FDA-approved marijuana products and state-licensed marijuana products into Schedule III and opened an expedited hearing to consider rescheduling marijuana starting June 29, 2026.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-23 · <a href="https://www.nytimes.com/2026/04/23/us/politics/senate-gop-budget-immigration.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Senate adopted a GOP budget plan that includes a $70 billion increase for immigration enforcement. The move lays the groundwork to fund ICE and reopen the Department of Homeland Security.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-04-22 · <a href="https://www.npr.org/2026/04/22/nx-s1-5794707/virginia-approved-a-plan-to-draw-four-more-seats-that-lean-heavily-for-democrats" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Virginia voters approved a mid-decade redistricting plan that creates four additional congressional districts leaning Democratic. The plan aims to help Democrats win 10 of the state&#x27;s 11 congressional seats.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-04-23 · <a href="https://www.propublica.org/article/purdue-settlement-leaves-opioid-victims-behind" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Many opioid victims will be shut out of the Purdue settlement after years of waiting.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-23 · <a href="https://www.nytimes.com/2026/04/22/us/politics/navy-secretary-john-phelan.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Navy Secretary John Phelan is leaving the Pentagon and the Trump administration. He left after months of tension with Pete Hegseth and other Pentagon leaders during the Navy&#x27;s war with Iran.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-04-22 · <a href="https://www.pbs.org/newshour/show/election-officials-sound-alarm-over-political-interference-in-midterms" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Local election officials warned of political interference in the midterms after President Trump, without evidence, called a Virginia vote to redraw congressional maps &quot;rigged.&quot;</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s developments show how conflict dynamics are increasingly intertwined with energy flows, financial leverage, and humanitarian strain across the region and into Europe. Governments are balancing support for partners and pressure on rivals against risks of economic disruption and further escalation, while violence affecting civilians and media workers sharpens legal and accountability disputes. For readers, the key lens is how these tools—funding, oil infrastructure, and sanctions-like controls—shape stability and aid access as international institutions face credibility tests.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-22 · <a href="https://www.bbc.com/news/articles/cnv8l99r3yyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ukraine reopened the Druzhba pipeline, resuming Russian oil flows into Hungary and Slovakia. EU ambassadors then gave preliminary approval to a €90bn loan for Ukraine.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-04-23 · <a href="https://reliefweb.int/report/iran-islamic-republic/world-health-organization-middle-east-escalation-conflict-global-situation-report-5-23-april-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>WHO published its fifth global situation report on the Middle East conflict, detailing health conditions and WHO operational updates in affected Eastern Mediterranean and European region countries and global response activities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Studio graphique, FMM · 2026-04-23 · <a href="https://www.france24.com/en/middle-east/20260423-washington-uses-iraq-own-oil-money-to-bend-baghdad-to-its-will-iran-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration blocked a shipment of nearly $500 million in cash to Iraq to pressure Baghdad to dismantle Iranian-backed armed groups. Analysts say the move risks destabilising an already fragile economy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-04-23 · <a href="https://reliefweb.int/report/occupied-palestinian-territory/child-and-man-killed-near-school-al-mughayyir-settler-militarisation-intensifies" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli settlers killed 14-year-old Aws Hamdi Naasan and 35-year-old Jihad Abu Naiem in Al Mughayyir, and 25-year-old Odeh Awawdeh in Deir Dibwan.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-23 · <a href="https://www.france24.com/en/video/20260423-the-world-s-most-impossible-job-who-will-lead-the-united-nations-next" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Four candidates are vying to succeed Antonio Guterres as UN secretary-general next year. The winner must restore the UN&#x27;s credibility after its global influence declined.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-23 · <a href="https://www.bbc.com/news/articles/c5yvn036evlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli air strikes in southern Lebanon killed journalist Amal Khalil and wounded photographer Zeinab Faraj. PM Salam accused Israel of war crimes, saying the IDF obstructed rescuers and hit an ambulance.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-04-23 15:38 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
