@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news points to AI and cloud platforms becoming less closed and more contested, as regulators and partners push for interoperability while companies try to preserve preferred defaults. At the same time, the attack surface is widening from model training data to core developer pipelines, raising the premium on fast detection and hardening. For builders, the practical lens is balancing portability and compliance against security risk, while using new platform and web performance tools to keep systems reliable under change.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-04-27 · <a href="https://arstechnica.com/ai/2026/04/no-longer-exclusive-microsoft-agrees-to-let-openai-see-other-cloud-providers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI and Microsoft amended their deal so Microsoft&#x27;s license is non-exclusive, allowing OpenAI to run models on other clouds like Amazon Bedrock. Microsoft retains a license through 2032; Azure remains primary.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-04-27 · <a href="https://arstechnica.com/ai/2026/04/europe-could-force-google-to-open-android-to-other-ai-assistants" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The European Commission told Google to open up Android&#x27;s AI after finding Gemini got preferential treatment, and Google called that &quot;unwarranted intervention.&quot; Under the DMA, the commission could force changes this summer.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-28 · <a href="https://arxiv.org/abs/2604.22117" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper describes PermaFrost (Stealth Pretraining Seeding), an attack that plants tiny poisoned content on stealth websites so web crawlers include it in LLM pretraining corpora.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-04-28 · <a href="https://arxiv.org/abs/2604.22154" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers proposed a framework for multi-agent LLM screening of self-harm risk with stochastic agent models, confidence bounds, and adaptive sampling. Adaptive sampling had the lowest false positive rate on two datasets.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-04-28 · <a href="https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub validated, fixed, and investigated a critical remote code execution vulnerability in its git push pipeline in under two hours and confirmed there was no exploitation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-04-27 · <a href="https://kubernetes.io/blog/2026/04/27/kubernetes-v1-36-mutable-pod-resources-for-suspended-jobs" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kubernetes v1.36 promotes the ability to modify container resource requests and limits in a suspended Job&#x27;s pod template to beta.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">W3C News · 2026-04-28 · <a href="https://www.w3.org/news/2026/first-public-working-draft-long-animation-frames-api" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>W3C published a Working Draft of the Long Animation Frames API. It lets web authors detect &quot;long animation frames&quot; monopolizing the UI thread and blocking tasks like reacting to user input.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, public decisions are increasingly framed around stewardship and access—protecting land and waterways while weighing how restrictions affect recreation, local economies, and habitat. The clearest tension is between conservation measures that limit certain uses and demands for stronger evidence and fairness in how rules are applied. At the same time, voter sentiment and campaign messaging suggest public-land policy remains a high-salience issue shaping how residents judge candidates and government priorities.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-04-28 · <a href="https://flatheadbeacon.com/2026/04/28/fwp-lays-preliminary-plans-for-20854-acre-stimson-timberland-conservation-project" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana FWP is proposing to purchase a conservation easement protecting 20,854 acres of Stimson timberland in Lincoln, Mineral and Sanders counties. It is part of a 230,000-acre conservation effort.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-27 · <a href="https://montanafreepress.org/2026/04/27/fwp-floats-proposal-to-close-east-gallatin-to-fishing-from-boats" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Fish, Wildlife and Parks proposed banning fishing from boats on the East Gallatin River. Anglers are split, some saying it would protect an important spawning tributary while others seek more justification.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-04-27 · <a href="https://www.mtpr.org/montana-news/2026-04-27/survey-montanans-overwhelmingly-support-preserving-public-lands" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A University of Montana poll found 85% of Montanans support banning sale or transfer of public land. It follows a withdrawn proposal to sell federal land after public backlash.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-04-27 · <a href="https://montanafreepress.org/2026/04/27/sheehy-white-house-ballroom-bill" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana U.S. Sen. Tim Sheehy said he will introduce a bill to authorize construction of a White House East Wing ballroom for President Donald Trump.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-04-27 · <a href="https://www.mtpr.org/montana-news/2026-04-27/michael-eisenhauer-interview" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>MTPR&#x27;s Victoria Traxler interviewed Michael Eisenhauer, an independent candidate for Montana’s eastern congressional district. He said independents are better positioned to solve problems than be part of partisan bickering.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Recent developments show governance being shaped by a mix of acute security threats, intensified partisan bargaining over federal authority, and renewed scrutiny of how government uses and preserves information. Courts are weighing where constitutional limits should fall on surveillance and election rules, while criminal cases highlight accountability for both violence and record-handling. At the same time, policy shifts affecting disabled adults underscore how administrative choices can change household finances and care arrangements.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-04-27 · <a href="https://www.pbs.org/newshour/show/accused-correspondents-dinner-gunman-charged-with-attempted-assassination-of-trumpassassination-attempt-sot" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The suspect who tried to storm the White House Correspondents&#x27; Dinner was charged with attempted assassination of President Trump and federal weapons charges. If convicted, he could face life in prison.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-04-27 · <a href="https://www.nytimes.com/2026/04/27/us/politics/trump-ballroom-white-house-dinner-shooting.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An attack targeted a press dinner in Washington that is being called an attempted assassination of President Trump. It has renewed the fight over reopening the Homeland Security Department.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-04-28 · <a href="https://www.propublica.org/article/trump-social-security-ssi-disability-benefits-cuts-parents-children" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration aims to penalize disabled adults who live with their families.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-04-28 · <a href="https://www.justice.gov/opa/pr/former-senior-niaid-official-indicted-concealing-federal-records-during-covid-19-pandemic-0" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>David M. Morens, a former senior NIAID advisor, was indicted for allegedly concealing and falsifying federal records to evade FOIA requests related to COVID-19 research grants.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-04-27 · <a href="https://www.scotusblog.com/2026/04/justices-appear-mixed-on-whether-geofence-warrant-violated-the-fourth-amendment-" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Justices appeared divided on whether a geofence warrant violated the Fourth Amendment in Chatrie v. United States. Some favored a narrow ruling to clarify geofence-warrant requirements.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-04-27 · <a href="https://thehill.com/regulation/court-battles/5851256-virginia-supreme-court-redistricting-case" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Virginia Supreme Court on Monday heard oral arguments in a Republican challenge to the legality of Democrats&#x27; redistricting referendum. That referendum gave Democrats a more favorable edge ahead of the midterms.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s developments show how conflict and diplomacy are increasingly intertwined with humanitarian access and energy security. Ceasefires, relief missions, and food-crisis warnings highlight the strain on civilians and aid delivery, while maritime chokepoints, oil-supply coordination, and attacks on refining infrastructure underscore how quickly political decisions and battlefield events can ripple into fuel availability and prices. Readers should view these as linked pressures shaping both emergency response and economic risk for importers, shippers, and households.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-04-28 · <a href="https://news.un.org/feed/view/en/story/2026/04/1167392" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN Security Council met in New York on Tuesday to debate the fragile Gaza ceasefire, a worsening humanitarian crisis and efforts to advance a US-backed peace plan.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-04-28 · <a href="https://reliefweb.int/report/south-sudan/hunger-intensifies-south-sudan-78-million-people-face-high-acute-food-insecurity-and-22-million-children-suffer-acute-malnutrition" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>FAO, WFP and UNICEF warn 7.8 million people in South Sudan will face high acute food insecurity (IPC 3+) April–July 2026. 73,300 face Catastrophe (IPC 5), a 160% rise from last estimate.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-04-28 · <a href="https://reliefweb.int/report/iran-islamic-republic/icrc-president-arrives-iran-discuss-urgent-humanitarian-concerns" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>ICRC president Mirjana Spoljaric has arrived in Iran for an official visit. She will meet officials and Iran&#x27;s Red Crescent to discuss humanitarian consequences and delivering additional relief.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-04-28 · <a href="https://www.france24.com/en/video/20260428-iran-offers-to-reopen-strait-of-hormuz-if-us-lifts-its-blockade-and-the-war-ends" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iran offered to reopen the Strait of Hormuz if the US lifts its blockade and ends the war. The proposal would postpone talks on Iran&#x27;s nuclear program.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-28 · <a href="https://www.bbc.com/news/articles/cj4pxwlr52yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United Arab Emirates will quit Opec and Opec+ next month after nearly 60 years of membership. The exit removes about 15% of Opec&#x27;s capacity and one of its most compliant members.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-04-28 · <a href="https://www.bbc.com/news/articles/cvgzd4qk7qgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A major Tuapse oil refinery was hit by Ukrainian drones for a third time this month, sparking a massive fire and evacuations. The Kremlin said the strike destabilised global energy markets.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-04-28 16:14 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
