@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news points to a widening gap between fast-moving AI adoption and the controls, infrastructure, and user consent needed to make it dependable. New “trust” and runtime safety layers, along with research critiques of benchmark-based alignment, reflect a shift from model scores toward deployment-time verification and tool-use governance, while real-world exploits underline the cost of weak operational security. At the same time, AI’s footprint is showing up in energy sourcing and in product decisions that trade convenience for transparency, affecting enterprises managing risk and users trying to retain control over their devices.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-07 · <a href="https://arxiv.org/abs/2605.04785" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced AgentTrust, a runtime safety layer that intercepts AI agent tool calls and issues allow/warn/block/review verdicts using deobfuscation, SafeFix, RiskChain, and an LLM-as-Judge, plus benchmark releases.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-07 · <a href="https://arxiv.org/abs/2605.04454" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper argues deployment-relevant alignment cannot be inferred from model-level evaluation alone. It backs this with an audit of 16 benchmarks finding no user-facing verification and little process steerability.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-07 · <a href="https://www.theregister.com/cyber-crime/2026/05/07/state-backed-hackers-hammer-palo-alto-firewall-zero-day-before-patch-lands/5234737" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>State-backed hackers have been exploiting a zero-day (CVE-2026-0300) in Palo Alto Networks PAN-OS Captive Portal to gain remote root code execution on internet-exposed PA-Series and VM-Series firewalls.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-05-06 · <a href="https://arstechnica.com/gadgets/2026/05/tsmc-taps-wind-power-as-ai-chip-demand-soars-taiwan-feels-energy-crunch" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>TSMC signed a 30-year deal to buy 100% of output from the Hai Long offshore wind project. The project would supply over 1 gigawatt and power more than 1 million households.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-05-06 · <a href="https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub published a post on building a &quot;Trust Layer&quot; for Copilot Coding Agents using dominatory analysis to validate agentic behavior when correctness isn&#x27;t deterministic. It avoids brittle scripts and black-box judgments.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-05-07 · <a href="https://developers.cloudflare.com/changelog/post/2026-05-07-csv-export-for-rfis" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare added CSV export for Requests for Information (RFI) history and a selectable page density (10, 25, or 50 records per page) in the Security Center dashboard.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-05-06 · <a href="https://css-tricks.com/googles-prompt-api" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Chrome silently pushed a 4GB Gemini Nano download to users without asking permission. Mat Marquis likens the move to U2&#x27;s album marketing.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local developments point to growing pressure on Montana communities to balance resource development and regulatory decisions with public health, water protection, and basic services. The tension is between promised economic activity and the risks or costs that may fall unevenly on rural residents, whether through access to care, potential impacts on shared waterways, or uneven capacity to fund schools. For readers, the practical lens is how these choices shift burdens across regions and who gains or loses access, protection, or stability.</div>
+  
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-06 · <a href="https://www.mtpr.org/montana-news/2026-05-06/epa-approves-permits-for-wastewater-injection-into-pondera-county-aquifer" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The EPA exempted part of the Madison Aquifer from the Clean Water Act and approved permits to inject wastewater into the aquifer under Pondera County, Montana.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-06 · <a href="https://www.mtpr.org/montana-news/2026-05-06/abortion-medication-remains-available-by-mail-pending-court-decision" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Supreme Court temporarily blocked a ruling that had stopped mailing mifepristone, keeping abortion medication available by mail. Rural women could face drives of 90 miles or more.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-06 · <a href="https://montanafreepress.org/2026/05/06/public-school-levies-pass-in-3-of-montanas-larger-school-districts-fail-in-3-others" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Levies passed in Bozeman, Missoula and Butte but failed in Helena, Billings and Kalispell. Results came amid a difficult period for school districts seeking resident approval.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-07 · <a href="https://www.kpax.com/news/montana-ag-network/montana-ag-network-federal-investigation-draws-attention-from-ranchers-and-processors" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Department of Justice said it is continuing to investigate competition among major meatpackers and possible anti-competitive practices in the cattle market.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-05-07 · <a href="https://missoulacurrent.com/candidates-sheep-creek" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>More than 130 people, including political candidates and a scientist, met in Hamilton to discuss ideas to impede the proposed Sheep Creek rare-earth exploration at the Bitterroot River headwaters.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how foreign-policy choices and domestic enforcement are feeding into public trust and legal scrutiny. Military posture and diplomacy are moving in parallel, but uncertainty abroad is colliding with rising voter disapproval at home. At the same time, disputes over election administration, immigration tactics affecting children, and potential map changes show institutions testing the boundaries of authority. For readers, the key lens is how these actions shape legitimacy—through courts, public opinion, and state-level power.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-07 · <a href="https://www.nytimes.com/2026/05/07/world/americas/trump-brazil-lula-meeting.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump will host Brazil’s President Luiz Inácio Lula da Silva at the White House on Thursday for talks on security, trade and critical minerals.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-06 · <a href="https://www.nytimes.com/2026/05/06/us/politics/us-troops-iran.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. troops in the Middle East are on standby amid mixed signals about the status of the Iran war effort.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-06 · <a href="https://www.pbs.org/newshour/show/new-poll-shows-growing-number-of-americans-disapprove-of-trumps-handling-of-iran-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A PBS News/NPR/Marist poll found six in 10 Americans disapprove of President Trump&#x27;s handling of the Iran war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-06 · <a href="https://www.pbs.org/newshour/politics/justice-department-can-keep-2020-ballots-seized-from-fulton-county-in-georgia-judge-rules" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A judge ruled the Justice Department may keep 2020 ballots seized in Fulton County, Georgia. The Jan. 28 FBI seizure targeted Fulton County&#x27;s elections hub, in Georgia&#x27;s most populous, heavily Democratic county.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-07 · <a href="https://www.propublica.org/article/kids-tear-gas-trump-immigration-crackdown" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At least 79 children have been harmed by tear gas or pepper spray during President Donald Trump’s immigration crackdown.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-05-07 · <a href="https://thehill.com/homenews/campaign/5867706-south-carolina-redistricting-fight" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>South Carolina state House Republicans voted Wednesday to extend their legislative calendar, leaving the door open to drawing new congressional lines. It must also pass the state Senate.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs developments point to a widening gap between diplomatic efforts to contain conflict and the on-the-ground reality of continued strikes and damage, raising questions about how durable any ceasefire or rapid settlement can be. At the same time, political timelines in parts of Africa are colliding with insecurity, while humanitarian operations face tighter constraints as funding cuts erode the data systems needed to target aid. For readers, the practical lens is risk management: security exposure for forces and civilians, governance uncertainty for voters, and weaker evidence for aid decisions as climate-related pressures loom.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-07 · <a href="https://www.france24.com/en/video/20260507-war-in-the-middle-east-satellite-imagery-reveal-scale-of-damage-to-us-bases-in-gulf" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Washington Post verified satellite imagery—published by Iranian state-affiliated media—showing damage to at least 228 structures or pieces of equipment at US military sites across the Middle East since the war began.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-07 · <a href="https://www.bbc.com/news/articles/cj0pq2q8221o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iran said a US proposal to end the war is still being considered.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-07 · <a href="https://www.france24.com/en/video/20260507-israel-says-it-killed-hezbollah-commander-in-first-strike-on-beirut-since-ceasefire" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel said it killed a Hezbollah Radwan commander in a Beirut airstrike, its first attack on the capital since last month&#x27;s ceasefire. The strike raised pressure on the ceasefire.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-07 · <a href="https://www.bbc.com/news/articles/c202dkkk70po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>DR Congo&#x27;s Félix Tshisekedi said he may seek a third term in 2028. He said any extension would require a referendum and polls could be delayed by fighting in Kivu.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-05-07 · <a href="https://reliefweb.int/report/democratic-republic-congo/safeguarding-humanitarian-information-systems-west-and-central-africa-amid-funding-cuts-april-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A 2025 funding shortfall has gutted humanitarian information systems and core data tools in West and Central Africa. 2026 risks a low-evidence baseline undermining humanitarian response effectiveness.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-05-07 · <a href="https://reliefweb.int/report/guatemala/latin-america-caribbean-el-nino-humanitarian-snapshot-april-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN OCHA snapshot says ENSO‑neutral conditions prevail but El Niño is likely to emerge May–July 2026. If it develops, humanitarian risks may increase across parts of Latin America and the Caribbean.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-07 16:08 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
