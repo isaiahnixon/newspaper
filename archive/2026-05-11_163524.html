@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news shows AI moving from experimentation into core engineering workflows—writing code, finding security flaws, and shaping how teams review and govern changes—while also reshaping staffing and toolchain priorities. At the same time, the stack is still constrained by physical reliability and operational risk in cloud infrastructure, reminding readers that automation gains don’t remove dependency on resilient platforms. For developers and IT leaders, the practical lens is balancing faster delivery and broader capability with new failure modes, review discipline, and infrastructure contingency planning.</div>
+  
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-08 · <a href="https://www.theregister.com/off-prem/2026/05/08/aws-warns-of-ec2-impairment-as-power-loss-hits-notorious-us-east-1-region/5235509" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>AWS reported a power loss and thermal event impairing EC2 instances and EBS volumes in US‑EAST‑1&#x27;s use1‑az4 zone. It warned dependent AWS services may also be impaired.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-08 · <a href="https://www.theregister.com/off-prem/2026/05/08/cloudflare-to-fire-1100-staff-whose-jobs-just-arent-ai-enough/5235536" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare will reduce its workforce by more than 1,100 employees globally. It said its AI usage increased by more than 600% in the last three months.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-05-07 · <a href="https://kubernetes.io/blog/2026/05/07/kubernetes-v1-36-dra-136-updates" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kubernetes v1.36 advances Dynamic Resource Allocation with feature graduations, usability improvements, extended support for native resources (memory, CPU) and ResourceClaims in PodGroups, plus expanded drivers including networking hardware.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-05-07 · <a href="https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Mozilla says Anthropic Mythos identified 271 Firefox security vulnerabilities over two months. Engineers attributed the result mainly to improved models and a custom analysis harness.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Mozilla Hacks · 2026-05-07 · <a href="https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Mozilla announced it had identified and fixed an unprecedented number of latent Firefox security bugs using Claude Mythos Preview and other AI models. It details their approach and offers advice.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-05-07 · <a href="https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub published a practical guide to reviewing agent-generated pull requests. It details what to look for, where issues hide, and how to catch technical debt before it ships.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-08 · <a href="https://arxiv.org/abs/2605.04361" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers tested context injection in multi-agent software design across 10 tasks, seven context conditions and over 2,700 runs, finding a crossover effect where the same artifact both improved and degraded exploration.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local coverage points to communities balancing growth and daily safety needs: expanding and modernizing core facilities while confronting risks in workplaces and outdoor recreation. The tension is between adding capacity and keeping people protected through clear procedures, maintenance, and emergency readiness. At the same time, seasonal pressure on household budgets is showing up in demand for basic assistance. Readers can view these developments as shaping near-term priorities for public spending, safety standards, and representation.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-08 · <a href="https://flatheadbeacon.com/2026/05/07/missing-glacier-national-park-hiker-killed-in-apparent-bear-attack" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A missing hiker was found dead in Glacier National Park with injuries consistent with a bear attack. If confirmed, it would be the park&#x27;s first fatal bear attack since 1998.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-07 · <a href="https://flatheadbeacon.com/2026/05/07/from-runway-rehab-to-a-new-jail-local-infrastructure-projects-take-off-across-the-flathead-valley" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Flathead Valley officials are advancing a slate of infrastructure projects—runway rehabilitation, a new jail, water and wastewater upgrades, and a public safety facility—to replace aging systems and add capacity for growth.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-07 · <a href="https://montanafreepress.org/2026/05/07/stillwater-mine-electrician-who-died-in-2025-used-wrong-switch-report-shows" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Stillwater Mine electrician was electrocuted in 2025. A government report found he used the wrong switch because it wasn’t properly labeled.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-08 · <a href="https://montanafreepress.org/2026/05/08/food-bank-in-need-of-donations-ahead-of-summer" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Missoula residents can donate to the Stamp Out Hunger food drive Saturday by leaving nonperishable food at their mailboxes for U.S. Postal Service letter carriers to pick up.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-08 · <a href="https://www.kpax.com/news/montana-politics/primary-2026-congressional-candidate-interviews" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>MTN interviewed candidates in all of Montana&#x27;s contested congressional primaries for the 2026 elections, covering the open U.S. Senate race and the two contested U.S. House races.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across states and courts, election rules and district lines are being repeatedly reworked, with disputes centering on procedure, representation, and how much partisan advantage is permissible. At the same time, federal authority is being tested at both ends of government: the judiciary is shaping access to a major health service, while the executive branch is shown using informal channels to relax environmental enforcement. Alongside these domestic fights, military actions and retaliation underscore how governance also involves rapid, high-stakes decisions with external spillovers.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-08 · <a href="https://www.nytimes.com/2026/05/07/us/elections/tennessee-house-redistricting.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Tennessee approved a new map that splits a majority-Black Memphis seat, a Republican-drawn plan aimed at flipping the state&#x27;s last Democratic seat after a Supreme Court ruling weakened the Voting Rights Act.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-08 · <a href="https://www.nytimes.com/2026/05/07/us/politics/iran-us-ships-attack-strait-hormuz.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. forces struck Iranian targets, and Iran said it returned fire. The exchange was described as the latest twist amid tensions over the Strait of Hormuz.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-08 · <a href="https://www.npr.org/2026/05/08/nx-s1-5805193/redistricting-virginia-trump-midterms" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court of Virginia struck down the congressional redistricting approved by voters in April.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-07 · <a href="https://www.npr.org/2026/05/07/nx-s1-5815294/abortion-pill-mifepristone-supreme-court-telemedicine" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court paused a 5th Circuit ruling that would have ended telehealth access to mifepristone. The stay keeps telemedicine prescribing and mail delivery of mifepristone in effect through May 11.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-08 · <a href="https://www.propublica.org/article/clean-air-act-exemptions-trump-emails" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration let coal and chemical plants and other factories seek Clean Air Act exemptions via an email. Those rules are estimated to have prevented thousands of premature deaths.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-05-08 · <a href="https://thehill.com/regulation/court-battles/5869616-virginia-supreme-court-tosses-redistricting-map-2026-midterms" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Virginia Supreme Court threw out Democrats’ redistricting referendum, ruling 4-3 that it didn’t follow proper procedures. The decision nullifies the proposed 10-1 Democratic map and keeps the existing 6-5 map.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs signals how quickly security and stability can be tested across domains: battlefield momentum can shift without ending a conflict, ceasefires can coexist with continued strikes, and even symbolic restraint can sit alongside high-tempo attacks. At the same time, non-military shocks—from cyber disruptions to public-health alerts—show how cross-border risks can hit daily life and institutions with little warning. Readers should view these developments through resilience and risk-management choices facing governments, schools, and civilians.</div>
+  
+<div class="item">
+  <div class="meta">© Andriy Andriyenko, AP · 2026-05-08 · <a href="https://www.france24.com/en/europe/20260508-russia-loses-ground-but-not-the-war-in-ukraine-institute-for-study-of-war-isw" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Moscow lost about 116 km² of territory across several front-line areas in April 2026. An analysis said it was Moscow’s first such loss since Ukraine’s August 2024 Kursk incursion.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-08 · <a href="https://www.france24.com/en/israel-and-hezbollah-continue-to-trade-blows-despite-the-ceasefire" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel struck Beirut’s southern suburbs Wednesday; Netanyahu said he personally authorised the attack to kill Hezbollah commander Malek Balou. The incursions are pressuring U.S.-backed talks between Tel Aviv and Beirut.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-08 · <a href="https://www.bbc.com/news/articles/c202zn5gg0lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Russia and Ukraine accused each other of breaching Victory Day ceasefires, reporting hundreds of drone attacks and over 1,000 violations. For the first time, the parade will have no military hardware.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-08 · <a href="https://www.bbc.com/news/articles/ce3pq0136eqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A hacking group breached the academic software Canvas, disrupting thousands of schools and universities worldwide. About 9,000 institutions were affected, disrupting coursework and exams during the end-of-year period.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-08 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167465" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The WHO said the risk of hantavirus spreading to the general population is &quot;absolutely low&quot; after a flight attendant tested negative following contact with an infected cruise passenger who later died.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-08 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167462" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>UN News published &quot;Every Bird Counts,&quot; showing city residents can help protect migratory birds and may observe millions flying overhead from home.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent developments show the church trying to balance accountability and unity at the same time: tightening oversight when misconduct allegations surface while also elevating figures and projects meant to broaden representation and strengthen identity. At the leadership level, emphasis on dialogue and peace is being tested by polarization and political pressure, including sensitive engagement with government officials. For readers, the key lens is how these choices affect trust—among abuse survivors, clergy in conflict zones, and Catholics watching whether reform and diplomacy can advance together.</div>
+  
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-05-08 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=69354" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Dicastery for Bishops authorized the archbishop of New Orleans to investigate whether Bishop Michael Duca of Baton Rouge failed to respond appropriately to an abuse complaint.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-05-07 · <a href="https://www.vaticannews.va/en/church/news/2026-05/venerable-augustine-tolton-united-states-unity-peace-illinois.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Diocese of Springfield, Illinois announced plans to build a shrine to Venerable Father Augustine Tolton at St. Boniface Church in Quincy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">USCCB - News Releases (EN) · 2026-05-08 · <a href="https://www.usccb.org/news/2026/one-year-pope-leo-navigates-division-through-dialogue-his-push-peace" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>One year in, Pope Leo XIV has pushed peace and dialogue to steer a polarized church and fractured world. He remained consistent despite U.S. administration criticism calling him &quot;weak.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-05-07 · <a href="https://www.ewtnnews.com/world/middle-east/a-breath-of-hope-leo-xiv-encourages-lebanese-priests" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV encouraged priests working in war-torn southern Lebanon via a video call. He said he prays for them, supports them, and gave them his blessing.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-05-07 · <a href="https://www.ewtnnews.com/vatican/pope-leo-meets-rubio-amid-tensions-with-trump" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo met with U.S. Secretary of State Rubio. The meeting occurred amid President Trump&#x27;s ongoing criticism of the Holy Father and the Vatican.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-08 15:28 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
