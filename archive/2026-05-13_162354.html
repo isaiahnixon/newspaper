@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech thread is a push to make widely used digital systems both more capable and more trustworthy, while exposing how hard that is in practice. Security and privacy are moving forward through stronger defaults and isolation, yet critical infrastructure still faces high-impact flaws and expanding third-party access to sensitive data. Meanwhile, AI shows measurable gains in expert workflows but also brings reliability and fairness tradeoffs that matter for clinicians, platform operators, and teams deciding what to deploy and how to govern it.</div>
+  
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-12 · <a href="https://www.theregister.com/security/2026/05/12/apple-google-drag-cross-platform-texting-into-the-encrypted-age/5238556" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Apple announced encrypted RCS messaging is rolling out in beta for iPhone users on iOS 26.5 and Android users on the latest Google Messages.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-12 · <a href="https://www.theregister.com/databases/2026/05/12/nhs-england-confirms-palantir-staff-can-access-patient-data/5238712" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>NHS England confirmed it is allowing Palantir staff to access patient data. A document says they can get an &quot;admin&quot; role to access the National Data Integration Tenant and identifiable patient data.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-05-11 · <a href="https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new Linux vulnerability, Dirty Frag, lets containers and low-privilege users—including virtual machines—escalate to root. Production-version patches are coming online and should be installed promptly.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-12 · <a href="https://arxiv.org/abs/2605.08533" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An experiment with seven physicians showed interactive LLM dialogue improved diagnostic accuracy in 52 emergency cases. Residents&#x27; hard-case correctness rose from 0.589 to 0.734 and any-match accuracy increased 0.156 (p&lt;0.0001).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-05-12 · <a href="https://arxiv.org/abs/2605.08137" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A study found weight pruning—especially Wanda—preserved perplexity yet amplified bias in instruction-tuned LLMs. Unstructured pruning yielded no storage or latency savings on edge hardware.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-05-11 · <a href="https://www.microsoft.com/en-us/research/blog/socialreasoning-bench-measuring-whether-ai-agents-act-in-users-best-interests" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Using SocialReasoning-Bench, researchers found that AI agents execute tasks competently but fail to consistently improve the user&#x27;s position, even when explicitly instructed to optimize for user interest.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-05-12 · <a href="https://css-tricks.com/soon-we-can-finally-banish-javascript-to-the-shadowrealm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The proposed ShadowRealm API introduces a new kind of realm designed solely for isolation. The proposal is part of TC39&#x27;s ongoing work on JavaScript standards.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local coverage highlights how public safety, civic access, and infrastructure pressures are increasingly being shaped by legal and regulatory decisions. Courts and agencies are being asked to balance individual rights and community protections against contested rules and permits, often while investigations or lawsuits remain unresolved. At the same time, rapid industrial and tech-driven growth is raising questions about who bears new costs and risks, especially households and ratepayers.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-11 · <a href="https://flatheadbeacon.com/2026/05/11/one-dead-another-injured-in-columbia-falls-shooting" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>One person was killed and another injured in a shooting on Dawn Drive in Columbia Falls on May 11. Law enforcement responded at 7:09 a.m. and is investigating.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-12 · <a href="https://www.mtpr.org/montana-news/2026-05-12/court-order-keeps-voter-registration-open-on-election-day" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A district court judge blocked Montana&#x27;s 2025 law and preserved the 8 p.m. Election Day voter-registration deadline for June’s primary, keeping the law blocked until the related lawsuit is resolved.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-11 · <a href="https://montanafreepress.org/2026/05/11/epa-grants-long-contested-permit-to-dispose-of-montana-refinerys-wastewater" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The EPA approved a permit allowing Great Falls biorefinery Montana Renewables to send hundreds of thousands of gallons of wastewater to disposal sites in Pondera County. The permit had been long contested.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-11 · <a href="https://montanafreepress.org/2026/05/11/what-happens-to-utility-bills-when-data-centers-come-to-town" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Data center developers propose projects that could double NorthWestern Energy’s electricity demand. An expert urged regulators to protect customers from ballooning power bills amid the &quot;arms race&quot; for data centers.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-12 · <a href="https://flatheadbeacon.com/2026/05/11/defendant-admits-to-intentionally-striking-victim-with-vehicle-after-shots-were-fired" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Defendant Jeffrey Scott Serio testified he intentionally struck 67-year-old Raymond &#x27;Mory&#x27; Grigg with his vehicle because he feared for his life after Grigg fired shots during a trespass on Aug. 19, 2025.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across branches of government, major policy fights are being shaped by tight timelines and procedural chokepoints: courts are issuing short-term stays that keep contested rules in place, while Congress faces expiring authorities and funding deadlines that force near-term decisions. At the same time, executive agencies are navigating leadership choices and rising operational costs that may require new appropriations. For readers, the key lens is how legal uncertainty and budget pressure can quickly change access to services, election dynamics, and preparedness for emergencies.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-11 · <a href="https://www.nytimes.com/2026/05/11/us/politics/supreme-court-abortion-pill-mifepristone.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Justice Samuel A. Alito Jr. paused a federal appeals court ruling that would restrict FDA-authorized mail delivery of mifepristone until at least Thursday.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-12 · <a href="https://www.nytimes.com/2026/05/12/us/politics/iran-war-cost-hegseth-congress.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Pentagon estimated the Iran war&#x27;s cost at $29 billion. That figure is $4 billion higher than two weeks ago, and Secretary Pete Hegseth declined to say when the administration would request additional funding.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-11 · <a href="https://www.pbs.org/newshour/show/congress-back-in-session-facing-key-funding-and-security-deadlines" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Congress returned to session this week. Lawmakers face looming deadlines on DHS funding, a farm bill and a nearly expired national security and foreign intelligence law.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-11 · <a href="https://www.npr.org/2026/05/11/nx-s1-5818675/trump-fema-disaster-emergency-hamilton-nominate" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump nominated Cameron Hamilton to lead the Federal Emergency Management Agency again. If confirmed, he would retake control as FEMA heads into the Atlantic hurricane season.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-05-12 · <a href="https://thehill.com/homenews/house/5873130-house-democrats-redistricting-fight" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>After the Virginia Supreme Court struck down a new House map that would have aided Democrats, House Democratic leaders are ramping up an affordability-focused message.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-05-11 · <a href="https://thehill.com/regulation/court-battles/5873036-virginia-democrats-supreme-court-appeal-redistricting" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Virginia Democrats asked the Supreme Court on Monday to restore their new congressional map. They said the map would give the party up to four House pickup opportunities in the midterms.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage points to governments tightening security and political control while facing scrutiny over civilian harm, legal safeguards, and democratic legitimacy. The tension is between asserting authority—through military action, harsher justice measures, and strategic basing or diplomacy—and the risks of escalating violence, eroding due process, or weakening public trust. Readers can view these developments through who bears the costs: civilians in conflict zones, voters navigating contested elections, and allies weighing security cooperation against domestic and reputational constraints.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-12 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167488" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>UN agencies warned Israeli military operations and settler attacks in the occupied West Bank kill and maim Palestinian children, while tens of thousands in Gaza with life‑changing injuries lack access to treatment.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-12 · <a href="https://www.bbc.com/news/articles/c202ngg45x8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel passed a law allowing the death penalty and public trials for those linked to the October Hamas attacks and hostage-taking. It passed 93–0 and was jointly sponsored by government and opposition.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-12 · <a href="https://www.bbc.com/news/articles/cx21669452lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US is in closely guarded talks with Denmark to open three new bases in southern Greenland. Officials say talks aim to resolve a diplomatic crisis from President Trump&#x27;s threat to seize Greenland.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-12 · <a href="https://www.france24.com/en/france-invites-kenya-to-attend-g7-summit-amid-africa-forward-summit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>France invited Kenya to the G7 summit amid the Africa Forward Summit. This occurs as France withdraws forces from West Africa and pitches a new partnership model amid signs of declining influence.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Gerardo Marin, AP · 2026-05-12 · <a href="https://www.france24.com/en/americas/20260512-conservative-fujimori-and-leftist-sanchez-lead-first-round-of-peru-disrupted-presidential-poll" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Keiko Fujimori leads Peru&#x27;s presidential count with Roberto Sanchez second as counting nears completion. Final results are expected May 15 after weeks of delays from logistical failures and fraud allegations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-05-11 · <a href="https://www.bbc.com/news/articles/c3r2pr95yq0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sir Keir Starmer&#x27;s speech led Catherine West to stand down from triggering a leadership contest. Dozens of MPs publicly call for his departure, but not yet a majority.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-12 16:17 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
