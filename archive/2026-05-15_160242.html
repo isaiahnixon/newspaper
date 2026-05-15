@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Across software platforms, AI systems, and autonomous vehicles, the trend is toward tighter oversight and more formal safety and reliability controls. Regulators and courts are testing accountability and market power, while engineers respond with guardrails like automated rollback, weather-aware constraints, and more structured scheduling and resource management. At the same time, new research highlights that long-context AI can still lose task focus, pushing evaluation toward benchmarks that measure goal retention rather than surface behavior. For readers, the key lens is operational risk: these shifts affect how quickly new capabilities ship versus how strongly they are constrained to prevent failures.</div>
+  
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-14 · <a href="https://www.theregister.com/oses/2026/05/14/uk-begins-antitrust-inquiry-into-microsofts-business-software-ecosystem/5240452" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UK’s Competition and Markets Authority launched a strategic market status investigation into Microsoft’s business software ecosystem.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-14 · <a href="https://www.theregister.com/ai-ml/2026/05/14/waymo-recalls-3800-cars-over-flooded-roads-software-snafu/5240594" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Waymo recalled 3,791 robotaxis after one drove into floodwater, taking them off the road and issuing an April 20 software update that added weather constraints and updated vehicle maps.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-05-13 · <a href="https://arstechnica.com/tech-policy/2026/05/altman-forced-to-confront-claims-at-openai-trial-that-hes-a-prolific-liar" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sam Altman was forced to confront claims at an OpenAI trial that he is a prolific liar.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-14 · <a href="https://arxiv.org/abs/2605.12922" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers propose a channel-transition account for LLM instruction loss in long multi-turn interactions and introduce the Goal Accessibility Ratio (GAR) to measure attention to task-defining goal tokens.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-14 · <a href="https://arxiv.org/abs/2605.13542" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced RealICU, a hindsight-annotated benchmark for evaluating LLMs on long ICU data and released two 30-minute-window datasets: RealICU-Gold (930 windows, 94 MIMIC‑IV patients) and RealICU-Scale (11,862 windows).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-05-13 · <a href="https://kubernetes.io/blog/2026/05/13/kubernetes-v1-36-advancing-workload-aware-scheduling" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kubernetes v1.36 separates the Workload API (as a static template) from a new PodGroup API for runtime state and adds a PodGroup scheduling cycle, topology-aware scheduling, workload-aware preemption, and ResourceClaim/DRA support.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Gadgets) · 2026-05-13 · <a href="https://arstechnica.com/gadgets/2026/05/windows-update-is-getting-better-at-saving-your-pc-from-buggy-drivers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Windows Update is adding driver recovery to protect PCs from buggy drivers. Driver recovery automates what used to be a manual driver-rollback process.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local coverage points to communities balancing rule enforcement with changing realities: courts and public safety systems are handling serious violence, while lawmakers face pressure to clarify access and trespass rules as new tools and tactics test old statutes. At the same time, economic strain shows up in business restructuring, even as civic life continues through elections and large public events. For residents, the throughline is how legal decisions and policy clarity shape safety, livelihoods, and access to shared spaces.</div>
+  
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-14 · <a href="https://www.kpax.com/news/western-montana-news/montana-morning-headlines-thursday-may-14-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Three Western Montana stories: a jury found a man guilty of deliberate homicide in Kalispell; Pangea Restaurant Group filed Chapter 11 after closing Missoula restaurants; CSKT completed a landmark water rights settlement.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-14 · <a href="https://flatheadbeacon.com/2026/05/14/flathead-county-man-found-guilty-in-hit-and-run-homicide-trial" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Flathead County jury convicted 49-year-old Jeffrey Scott Serio of deliberate homicide for fatally running over 67-year-old Raymond Maurice “Mory” Grigg in an Evergreen cornfield in August 2025.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-13 · <a href="https://flatheadbeacon.com/2026/05/13/2026-primary-election-open-seat-in-lincoln-countys-senate-district-1-draws-three-way-republican-contest" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two four-term Republican state representatives and a Merchant Marine from Libby are running in a three-way race for Lincoln County’s open Senate District 1 seat.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-13 · <a href="https://montanafreepress.org/2026/05/13/drones-enter-montana-corner-crossing-debate" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana lawmakers are grappling with unclear trespassing statutes as hunters use drones and other methods to access &quot;corner-locked&quot; public land.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-14 · <a href="https://www.kpax.com/community/community-spotlight/community-spotlight-garden-city-shootout" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The 32nd annual Garden City Shootout 3-on-3 basketball tournament will take place June 13–14 at the Scheels parking lot by Southgate Mall in Missoula.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s developments point to a governance agenda centered on tightening federal control over security decisions, economic stewardship, and major entitlement programs, while using oversight and enforcement to shape outcomes. The main tension is between executive flexibility and institutional checks—both in foreign policy authority and in protecting the credibility of independent bodies and rule-based funding. For readers, the practical lens is how these moves can affect access to health coverage and provider participation, and how Congress is positioning itself on war powers and economic governance.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-13 · <a href="https://www.nytimes.com/2026/05/13/us/politics/iran-war-powers-trump.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Senate effort to halt the conflict and require President Trump to obtain congressional approval failed again, though Republican opposition grew as Senator Lisa Murkowski switched her vote.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-13 · <a href="https://www.nytimes.com/2026/05/13/us/politics/kevin-warsh-fed-chair-confirmed.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Senate confirmed Kevin Warsh as Federal Reserve chair. He takes the helm amid economic uncertainty and heightened concerns about the Fed&#x27;s independence.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-05-14 · <a href="https://www.justice.gov/opa/pr/owner-health-care-software-company-convicted-1-billion-dollar-medicare-fraud-conspiracy" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A federal jury in the Southern District of Florida convicted HealthSplash’s founder for running a platform that created false medical orders to defraud Medicare and other federal health programs of $1B.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-05-13 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/05/the-united-states-is-ready-to-provide-100-million-in-direct-assistance-to-the-cuban-people-if-the-cuban-regime-will-permit-it" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United States said it is ready to provide $100 million in direct assistance to the Cuban people if the Cuban regime permits it.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-14 · <a href="https://www.npr.org/2026/05/14/nx-s1-5819567/a-look-at-trumps-goals-for-his-summit-in-china" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>NPR&#x27;s Steve Inskeep asked Rep. John Moolenaar about President Trump&#x27;s goals for his summit in Beijing.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-13 · <a href="https://www.pbs.org/newshour/politics/watch-vance-and-oz-announce-numerous-moves-on-medicaid-and-medicare-fraud-focusing-on-democratic-run-states" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration announced a nationwide six-month freeze on some new Medicare enrollments and warned states to investigate Medicaid fraud or risk losing funding.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs thread is a push to manage instability on several fronts at once: major-power diplomacy is being staged as “stability” even as core disputes remain, while regional rivals appear to be trading covert strikes that raise escalation risks. At the same time, climate-driven extremes are increasingly treated as a security and humanitarian variable, shaping how governments and aid systems plan. Reconstruction and remembrance efforts show how societies try to turn destruction into workable futures, affecting civilians most and informing policy choices about deterrence, recovery, and resilience.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-14 · <a href="https://www.france24.com/en/video/20260514-xi-trump-diplomacy-beijing-envisions-4-pillars-of-stability-warns-us-over-taiwan-interference" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Donald Trump visited Beijing, where China outlined four &quot;pillars of stability&quot; and warned the US over Taiwan. Commentators said the leaders&#x27; talks would shape ties and present Beijing as a &quot;responsible&quot; mediator.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Faisal Al Nasser, Reuters · 2026-05-14 · <a href="https://www.france24.com/en/middle-east/20260514-why-did-saudi-arabia-and-the-uae-allegedly-carry-out-secret-bombing-raids-iran" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United Arab Emirates and Saudi Arabia secretly carried out air strikes against Iran in April. Analysts say they were clandestine counterattacks after Tehran’s drone and missile strikes on Gulf-state infrastructure.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-14 · <a href="https://www.bbc.com/weather/articles/cvgzn11v421o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Scientists warn a developing El Niño is increasingly likely to be one of the strongest on record. Forecasters warn it could drive record global temperatures and huge humanitarian impacts.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-14 · <a href="https://www.bbc.com/news/articles/cdxpypg9dgeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Donald Trump received a grand welcome in Beijing from Xi Jinping, including a military honour guard, gun salute, band, cheering schoolchildren and public gestures and praise during his visit.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-14 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167506" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A feasibility study is examining whether Gaza’s war debris could be recycled to reclaim coastal land and build artificial islands as part of reconstruction.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-14 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167507" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Artist Sandy Walker uses art to confront the legacy of Hiroshima. Her work, inspired by survivor Tamiki Hara, seeks to transform the catastrophe into intimate acts of memory, grief and attention.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-14 16:12 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
