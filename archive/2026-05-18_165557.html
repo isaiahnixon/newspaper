@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news highlights a push to harden the software and AI stack as real-world failures show up in both security and reliability. Organizations are tightening controls across the supply chain, encryption defaults, cloud configuration, and vulnerability reporting, reflecting a tradeoff between ease of use and reducing attack surface. At the same time, audits and research underscore that AI systems can drift in long interactions and produce plausible but wrong outputs, while their training and optimization carry measurable energy costs. The practical lens is risk management: teams deploying widely used tooling or AI in sensitive workflows need clearer accountability, safer defaults, and validation that covers both correctness and operational impact.</div>
+  
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-15 · <a href="https://www.theregister.com/security/2026/05/15/openai-caught-in-tanstack-npm-supply-chain-chaos-after-employee-devices-compromised/5241019" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI said attackers stole internal credentials after malware in poisoned TanStack npm packages reached two employee devices. The company rotated desktop signing certificates and said customer data and production systems appear unaffected.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-05-14 · <a href="https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The YellowKey zero-day lets someone with physical access bypass default Windows 11 BitLocker and unlock an encrypted drive. BitLocker is mandatory for many organizations, including government contractors.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-05-14 · <a href="https://arstechnica.com/health/2026/05/your-doctors-ai-notetaker-may-be-making-things-up-ontario-audit-finds" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An Ontario auditor found AI medical scribe vendors regularly produced incorrect, incomplete and hallucinated information in simulated transcription tests.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-05-15 · <a href="https://github.blog/security/raising-the-bar-quality-shared-responsibility-and-the-future-of-githubs-bug-bounty-program" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub updated its bug bounty program standards to prioritize quality submissions, clarify shared responsibility boundaries, and evolve how low-risk findings are rewarded.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-05-14 · <a href="https://kubernetes.io/blog/2026/05/14/kubernetes-v1-36-deprecation-and-removal-of-service-externalips" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kubernetes v1.36 deprecated and removed the .spec.externalIPs field for Service objects. It addresses security issues such as CVE-2020-8554 and follows prior recommendations to disable the field; alternative load-balancer options exist.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-15 · <a href="https://arxiv.org/abs/2605.12922" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers proposed a channel-transition account for how LLMs lose instructions over long multi-turn interactions, introduced the Goal Accessibility Ratio, and showed attention closure yields distinct failure modes and collapsed recall in Mistral.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-05-15 · <a href="https://arxiv.org/abs/2605.13981" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers presented a comprehensive energy-accounting framework that measures end-to-end GPU energy and emissions of distillation pipelines and used it to quantify stage-wise costs for two common distillation methods, producing energy–quality Pareto frontiers.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local developments point to a state balancing competing pressures: how land and resources are managed, how institutions handle politically charged disputes, and how communities cope with both sudden disruptions and slower demographic shifts. The tension is between stability and change—policy reversals, court decisions, and election dynamics can quickly reshape expectations, while weather and growth patterns test local capacity. For residents, businesses, and local governments, the practical lens is risk and planning: infrastructure resilience, workforce and housing needs, and confidence in fair, predictable rules.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-14 · <a href="https://montanafreepress.org/2026/05/14/public-lands-rule-goes-away" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On June 11, the Bureau of Land Management will rescind the Conservation and Landscape Health Rule. That reverses a year-old policy treating conservation as co-equal with mining, grazing and energy development.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-15 · <a href="https://www.kpax.com/news/local-news/powerful-winds-sweep-montana-causing-dust-storms-downed-trees-and-power-outages" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Strong winds swept across Montana, causing dust storms, downed trees, property damage and power outages. In northeastern Montana visibility dropped below five feet, forcing highway closures.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-14 · <a href="https://montanafreepress.org/2026/05/14/roberto-orozco-ramirez-froid-judge-release" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A federal judge in Great Falls ordered the release of Froid diesel mechanic Roberto Orozco-Ramirez, who walked out of the Cascade County Detention Center after more than 100 days in custody.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-15 · <a href="https://www.mtpr.org/montana-news/2026-05-12/concerns-over-partisanship-judicial-activism-shape-montana-supreme-court-race" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two Flathead County district judges will advance to the 2026 general election for a seat on Montana’s Supreme Court. The race is driven by concerns over partisanship and judicial activism.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-14 · <a href="https://flatheadbeacon.com/2026/05/14/flathead-county-cities-retain-modest-population-growth-amid-overall-slowdown" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Census Bureau released city and town population estimates showing an overall slowing of growth in the Flathead Valley over the last year.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s developments point to a governance landscape where major policy outcomes are increasingly shaped by courts, internal congressional rules, and procedural gatekeeping rather than durable legislative bargains. They also show rising strain between accountability and power: lawmakers seek to signal consequences for dysfunction while still limiting votes that would constrain executive action. At the same time, national security and technology policy are being steered through selective threat framing and diplomacy that prioritizes competition over restraint, with electoral map changes influencing who gets to participate in these decisions.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-14 · <a href="https://www.pbs.org/newshour/nation/supreme-court-preserves-access-to-widely-used-abortion-pill-while-lawsuit-plays-out" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court preserved access to the abortion pill mifepristone during a lawsuit. Access is likely to remain uninterrupted into next year while the case and any appeal proceed.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-14 · <a href="https://www.pbs.org/newshour/politics/senators-vote-to-withhold-their-own-pay-during-future-government-shutdowns" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senators voted to withhold their own pay during future government shutdowns. Bipartisan support reflects frustration over longer, more frequent federal closures and calls for punishment when Congress fails basic duties.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-15 · <a href="https://www.nytimes.com/2026/05/14/us/politics/war-powers-vote-house-trump-iran.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The House again blocked a war powers vote to halt action against Iran. Two vulnerable Republicans joined Democrats to force President Trump to seek congressional authorization.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-15 · <a href="https://www.nytimes.com/2026/05/14/world/asia/china-us-ai-safety.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. and China will begin talks on A.I. safety, Treasury Secretary Scott Bessent said. He said neither side is willing to slow development despite shared fears about A.I. threats.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-14 · <a href="https://www.propublica.org/article/trump-counterterrorism-plan-ignores-far-rights-gorka" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sebastian Gorka released a 16-page national counterterrorism strategy that ranks threats politically and omits the violent far right. It places Islamist militant groups second to Latin American drug cartels.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-05-15 · <a href="https://thehill.com/homenews/house/5880062-cohen-retires-tennessee-redistricting" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Rep. Steve Cohen (D‑Tenn.) announced he will retire at the end of his term. He is the earliest casualty of Republicans&#x27; redistricting campaign ahead of November&#x27;s midterms.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs signals a dual track of intensifying conflict accountability and widening humanitarian strain. Efforts to formalize legal pathways for wartime responsibility are advancing even as aid delivery is increasingly exposed to attack and political ambiguity around security commitments persists. At the same time, overlapping shocks are pushing multiple countries toward extreme hunger and disease outbreaks, raising cross-border coordination demands. For readers, the key lens is how legal, security, and relief systems are being tested simultaneously—affecting civilians first and shaping governments’ choices on support, deterrence, and aid access.</div>
+  
+<div class="item">
+  <div class="meta">© Vladislav Culiomza, Reuters · 2026-05-15 · <a href="https://www.france24.com/en/europe/20260515-36-countries-approve-creation-of-special-ukraine-tribunal-prosecute-russia" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Thirty-four European states, plus Australia and Costa Rica, approved creating a special tribunal enabling Ukraine to prosecute Russia for a &quot;crime of aggression&quot; over its invasion.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-15 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167516" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At least six million people in Somalia are going days without enough food, UN aid teams warned. Nearly two million of them are young children at high risk of illness or death.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-05-15 · <a href="https://reliefweb.int/report/sudan/risk-famine-persists-nearly-195-million-people-face-acute-food-insecurity-sudan-0" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>FAO, WFP and UNICEF warned nearly 19.5 million people—about two in five in Sudan—face crisis-level acute food insecurity, with nearly 135,000 people in 14 hotspots at Catastrophic (IPC Phase 5) risk.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-15 · <a href="https://www.france24.com/en/video/20260515-ukraine-un-convoy-targeted-by-drone-attacks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A UN convoy delivering humanitarian aid to Kherson was struck twice by drones. Kyiv blamed Moscow, and the strikes came amid nearly 1,600 drones launched over two days.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-15 · <a href="https://www.bbc.com/news/articles/ce8p61v7l68o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump said he &quot;made no commitment either way&quot; on defending Taiwan after Xi asked if the US would do so. US law requires providing Taiwan means to defend itself.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-15 · <a href="https://www.bbc.com/news/articles/cze2wpk7y76o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Africa CDC declared an Ebola outbreak in Ituri province, DR Congo, reporting about 246 cases and 65 deaths. It will meet DR Congo, Uganda and South Sudan on response and cross-border surveillance.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage highlights a church balancing internal cohesion with calls for wider participation in governance, while also responding to acute humanitarian and moral crises beyond its walls. The tension runs between enforcing unity and discipline on one hand and expanding consultative decision-making on the other, even as war, communal violence, and contested bioethical policy shape pastoral priorities. For readers, the practical lens is how these pressures affect local communities’ safety, leadership legitimacy, and access to care.</div>
+  
+<div class="item">
+  <div class="meta">Aleteia - News Feed · 2026-05-14 · <a href="https://aleteia.org/2026/05/14/vatican-warns-sspx-against-incurring-schism" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Vatican warned that unauthorized ordinations by the Priestly Fraternity of Saint Pius X would be “a schismatic act.” It said Pope Leo XIV is praying for SSPX members.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-05-15 · <a href="https://www.ncronline.org/opinion/synod-study-group-calls-greater-role-laity-selection-bishops" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A study group set up by Pope Francis after the Synod called for greater laity and clergy roles in selecting bishops, involving diocesan priests’ councils and pastoral councils.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-05-15 · <a href="https://www.vaticannews.va/en/vatican-city/news/2026-05/interview-apostolic-nuncio-ukraine-archbishop-visvaldas-kulbokas.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Archbishop Visvaldas Kulbokas said Russia carried out intense bombings in Ukraine on May 13–14 that killed and injured civilians, including children. He said they suggest no intention to end the war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-05-15 · <a href="https://www.vaticannews.va/en/africa/news/2026-05/nigeria-wukari-diocese-facing-violence-devastation-and-humanit.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Violence in southern Taraba State has killed over 100 people, displaced more than 98,000—including 16 priests—and destroyed 217 churches within the Catholic Diocese of Wukari.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-05-14 · <a href="https://www.ewtnnews.com/world/us/supreme-court-allows-abortion-by-mail-to-continue" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Supreme Court restored telehealth access to the abortion drug mifepristone, preserving mail-order abortions nationwide.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-15 16:02 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
