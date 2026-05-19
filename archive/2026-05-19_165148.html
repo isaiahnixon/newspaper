@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech items point to a widening gap between rapid AI adoption and the operational guardrails needed to keep systems reliable, fair, and predictable. Efforts to make models faster and cheaper can introduce sharp capability drop-offs and new bias behaviors that aren’t obvious from standard quality metrics, while AI features can also create cost surprises and overwhelm existing workflows like vulnerability triage. At the same time, widely used infrastructure remains a fast-moving target for exploitation, and developer tooling is shifting toward easier remote exposure—raising the stakes for security and cost controls for teams and IT operators.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-05-18 · <a href="https://arxiv.org/abs/2605.15413" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A study of 118 transformers found success fell from 88.1% at 512 tokens to 44.9% at 1024 and 0% at 2048. Compressed models achieved 649.2 versus 12.5 tokens/sec/M for large generative models.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-05-18 · <a href="https://arxiv.org/abs/2605.15208" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A study found 3-bit quantization made 6–21% of previously unbiased benchmark items exhibit new stereotypical behaviors. Perplexity rose &lt;0.5% yet &quot;unknown&quot; responses dropped 17.4%.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-18 · <a href="https://www.theregister.com/security/2026/05/18/nginx-rift-attackers-waste-no-time-targeting-exposed-servers/5241851" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Exploit attempts began days after disclosure of an 18-year-old heap buffer overflow (CVE-2026-42945) in NGINX&#x27;s rewrite module affecting both NGINX Open Source and NGINX Plus.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-18 · <a href="https://www.theregister.com/ai-ml/2026/05/18/surprise-ai-bills-leave-aws-and-google-cloud-users-aghast/5241348" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>AWS and Google Cloud customers have received unexpected AI-related bills totaling tens of thousands of dollars. Providers reportedly gave no prior notice and offered little urgent help.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-05-18 · <a href="https://arstechnica.com/ai/2026/05/bug-bounty-businesses-bombarded-with-ai-slop" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Bug bounty programs are being inundated with low-quality AI-generated reports, prompting some suspensions. Experts say generative AI lowers entry barriers and floods programs with automated, erroneous submissions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Gadgets) · 2026-05-18 · <a href="https://arstechnica.com/gadgets/2026/05/five-years-later-windows-11-brings-back-much-missed-taskbar-options-and-more" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft released an Insider Preview build restoring taskbar options in Windows 11. The taskbar can now dock to any edge and have different icon alignment and settings per position.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-05-18 · <a href="https://developers.cloudflare.com/changelog/post/2026-05-18-local-dev-tunnels" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Wrangler and Cloudflare&#x27;s Vite plugin can now expose local dev servers via Cloudflare Tunnel with a public URL. Choose temporary *.trycloudflare.com hostnames or named tunnels for a stable hostname with Cloudflare Access.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across western Montana, local decisions are colliding with bigger political and budget pressures: voters are weighing crowded primary choices and campaign‑finance rules while communities debate how to pay for services and who bears the cost. The tension is between funding needs—whether for utilities, public safety, or agriculture policy—and affordability for residents, especially those in more price‑sensitive housing. For readers, the practical lens is how upcoming votes and rate changes could shift household bills and local service levels.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-18 · <a href="https://flatheadbeacon.com/2026/05/18/2026-primary-election-a-northwest-montana-voters-guide-to-local-and-statewide-races" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Voters in Flathead, Lake, Lincoln and Glacier counties are casting ballots in the June 2 primary to decide more than a dozen competitive local and statewide races. Both Zinke and Daines declined reelection bids.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-18 · <a href="https://montanafreepress.org/2026/05/18/citys-new-rates-could-hit-mobile-home-parks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A city&#x27;s new rates could hit mobile home parks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-18 · <a href="https://montanafreepress.org/2026/05/18/buttigieg-rallies-montana-election-initiative-mum-on-political-plans" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pete Buttigieg rallied in Butte for a Montana initiative to ban corporate money from politics while repeatedly declining to discuss potential 2028 political plans.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-18 · <a href="https://www.kpax.com/news/western-montana-news/montana-morning-headlines-monday-may-18-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Western Montana headlines include farmers urging changes to the House Farm Bill, volunteers cleaning the Missoula Marathon route while supporting at‑risk youth, and East Missoula Rural Fire securing a $222,000 levy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-17 · <a href="https://flatheadbeacon.com/2026/05/17/triage-needed-in-d-c" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The author recounts 16 years working with Dr. Al Olszewski and praises his thoughtful voting record, legislative efforts, responsiveness, and background as a Great Falls–born Air Force veteran.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s governance story centers on how courts and the executive branch are reshaping the rules and guardrails of political competition. Legal settlements and new funding mechanisms are being framed as responses to claims of politicized enforcement, while election-map disputes show the judiciary narrowing some voting protections even as states move quickly to adjust lines mid-cycle. For readers, the practical lens is how these shifts affect accountability and representation—especially for voters and candidates navigating changing legal standards.</div>
+  
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-05-18 · <a href="https://www.justice.gov/opa/pr/justice-department-announces-anti-weaponization-fund" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Department of Justice announced creation of &quot;The Anti-Weaponization Fund&quot; under the settlement in President Donald J. Trump v. Internal Revenue Service to redress weaponization and lawfare claims.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-18 · <a href="https://www.npr.org/2026/05/18/g-s1-119783/trump-irs-lawsuit-settlement" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump moved to dismiss his $10 billion suit against the IRS and Treasury over leaked tax returns. DOJ said the deal creates a $1.776 billion &quot;anti-weaponization fund&quot; for settlements.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-18 · <a href="https://www.npr.org/2026/05/18/nx-s1-5616665/supreme-court-voting-rights-act-private-right" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court sent Mississippi and North Dakota redistricting cases back to lower courts instead of taking up a Voting Rights Act enforcement question. It follows an April ruling that weakened protections.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-18 · <a href="https://www.nytimes.com/2026/05/18/us/politics/poll-trump-republicans-midterms-iran.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump’s approval rating has hit a second-term low as voters question his handling of the economy, a New York Times/Siena poll found.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-18 · <a href="https://www.nytimes.com/2026/05/18/us/politics/supreme-court-voting-rights-act-timing.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court’s voting rights decision spurred swift action in Louisiana and Alabama to redraw voting maps even as some primaries were underway.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">SCOTUSblog · 2026-05-18 · <a href="https://www.scotusblog.com/2026/05/justices-decline-to-reinstate-virginia-map" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court denied a request to reinstate Virginia&#x27;s new congressional map.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs signals point to rising cross-border risk—from infectious disease and escalating regional violence to nuclear signaling and tighter control of strategic waterways—while humanitarian needs grow faster than the resources available to meet them. The tension is between security-driven actions and the spillover costs for civilians, trade, and public health, especially when aid budgets are constrained. Readers can view these developments through who bears the immediate burden: displaced communities, shipping and energy-linked supply chains, and governments balancing crisis response with long-term urban stability.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-18 · <a href="https://www.bbc.com/news/articles/cq6pz60p996o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At least 100 deaths have been reported in an Ebola outbreak in DR Congo with over 390 suspected cases. WHO declared an international emergency and six Americans were reportedly exposed.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-18 · <a href="https://www.bbc.com/news/articles/cqjpglyjwjeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Lebanon&#x27;s health ministry says Israeli strikes have killed 3,020 people during the conflict with Hezbollah. It says over 400 of those deaths occurred since the ceasefire began on 17 April.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-05-18 · <a href="https://reliefweb.int/report/world/perfect-storm-global-conflict-drives-record-humanitarian-needs-aid-funding-stalls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The HALO Trust warned that global conflict is driving record humanitarian needs while aid funding stalls ahead of the Global Partnership Conference 2026 in London.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Russian Defense Ministry Press Service via AP · 2026-05-18 · <a href="https://www.france24.com/en/europe/20260518-russia-and-belarus-stage-joint-nuclear-weapons-drills" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Moscow and Minsk held joint drills to practice using Russian nuclear weapons, the Belarus defence ministry said.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-18 · <a href="https://www.france24.com/en/iran-sets-up-new-strait-of-hormuz-managing-body-amid-stalled-talks-with-us" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iran has formed a new body to manage the Strait of Hormuz. Iranian media said vessels would need permits disclosing ownership, insurance, crew and cargo.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-18 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167533" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>UN Secretary-General António Guterres told participants at the World Urban Forum in Baku that now is the time to place housing at the heart of sustainable development.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic news shows faith communities navigating modern pressures on multiple fronts: new technologies shaping how teachings are framed and even how texts are received, while public health and security concerns reshape worship and pilgrimage. At the same time, religion’s role in national identity and public life is being contested, with debates over inclusion, power, and labeling. For readers, the through-line is how institutions and believers balance evangelization, safety, and civic coexistence under rising scrutiny and risk.</div>
+  
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-05-17 · <a href="https://www.ewtnnews.com/vatican/vatican-sets-up-commission-on-artificial-intelligence" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV approved a Vatican commission on artificial intelligence. It was formed as the Vatican prepares his first encyclical expected to address AI through Catholic social teaching.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-05-18 · <a href="https://www.vaticannews.va/en/africa/news/2026-05/uganda-postpones-martyrs-day-celebrations-amid-ebola-outbreak-c.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Uganda has postponed the annual Martyrs’ Day commemorations, set for 3 June. Museveni said the postponement follows consultations and aims to protect pilgrims because of an Ebola outbreak in eastern DRC.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-05-18 · <a href="https://www.ewtnnews.com/world/asia-pacific/indian-catholics-denied-bail-after-confronting-mob-that-disrupted-mass" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Nine Indian parishioners in Rajasthan were denied bail after confronting intruders who stormed a village church during Mass and now face charges including conversion and attempted murder.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-05-17 · <a href="https://www.ncronline.org/news/thousands-flock-national-mall-washington-america-themed-prayer-rally" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Thousands gathered on the National Mall for a daylong prayer rally billed as a &quot;rededication&quot; of the country to God. Critics said it promoted Christian nationalism; a speaker embraced that label.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Aleteia - News Feed · 2026-05-17 · <a href="https://aleteia.org/2026/05/17/the-hidden-new-detail-making-sacred-texts-easier-to-read" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers found that font choice can subconsciously affect perceived believability, and the Baskerville typeface is being used to make sacred texts easier to read.</div>
+</div>
+
+</section>
+
+
+<section id="economic-news--past-week">
+  <h2>Economic News (Past Week)</h2>
+  <div class="macro-summary">This week’s items point to steady demand alongside a shifting energy and regulatory backdrop. Consumer spending and business activity show continued expansion, while inventories are also rising, highlighting the balance between meeting demand and avoiding overstock. At the same time, power generation and industrial fuel use are moving in different directions, underscoring how the energy mix is changing even as overall consumption grows. Household well-being and the winding down of certain bank oversight actions add context for how these trends may affect financial resilience and risk management decisions.</div>
+  
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-05-15 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67686" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The EIA forecasts U.S. industrial natural gas consumption will climb to record highs through 2027. The outlook ties higher consumption to a slight rise in the natural gas-weighted manufacturing index.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">EIA - Today in Energy · 2026-05-13 · <a href="https://www.eia.gov/todayinenergy/detail.php?id=67685" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The EIA forecasts that utility-scale solar generation in ERCOT will exceed coal generation for the first time in 2026. Solar is projected at 78 billion kilowatt-hours versus 60 BkWh for coal.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-05-14 · <a href="https://www.census.gov/mtis/index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. total business end-of-month inventories in March 2026 were $2,709.7 billion, up 0.9% from February, and total business sales were $2,059.2 billion, up 2.1%.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">US Census Economic Indicators · 2026-05-14 · <a href="https://www.census.gov/retail/index.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. retail and food services sales for April 2026 were $757.1 billion, up 0.5 percent from the previous month. This followed a revised 1.6 percent increase in March 2026.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-05-13 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/other20260513a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve Board issued the Economic Well-Being of U.S. Households in 2025 report.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Federal Reserve Press Releases · 2026-05-15 · <a href="https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260515a.htm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Federal Reserve Board announced it has terminated enforcement actions against UBS Group AG, Credit Suisse AG, Credit Suisse Holdings (USA), Inc., and Credit Suisse AG, New York Branch.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-18 16:55 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">82</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
