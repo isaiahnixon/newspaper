@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech thread is about systems becoming more agent-driven and more dependent on shared infrastructure, while trust and resilience lag behind. New work points to a push for stronger, proof-based controls over what automated systems are allowed to do, even as real-world evaluations show these agents still struggle with complex, long workflows. At the same time, supply-chain compromises and geopolitical pressure on connectivity highlight how fragile the software and network layers remain, with consequences for developers, operators, and businesses planning around reliability and security.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-19 · <a href="https://arxiv.org/abs/2605.15228" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv paper introduces the Distributed Trust Framework (DTF) that derives execution authority from verifiable artifacts and adds a Justification Proof plus a consensus model for governed mutation systems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-19 · <a href="https://arxiv.org/abs/2605.15777" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced SaaS-Bench, a benchmark of 106 realistic long‑horizon tasks across 23 deployable SaaS systems in six professional domains. Experiments show representative LLM-based agents struggle on these tasks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-05-18 · <a href="https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Remote control for GitHub Copilot sessions is now generally available on github.com and GitHub Mobile. It lets you start work in VS Code or the CLI and finish it from your phone.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-19 · <a href="https://www.theregister.com/networks/2026/05/19/iran-hints-it-could-interfere-with-submarine-cables-in-the-strait-of-hormuz/5242319" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iran hinted it could disrupt submarine internet cables in the Strait of Hormuz, posting on X that it would &quot;impose fees&quot; on cable operators. Only major kinetic action would stop data flows entirely.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-19 · <a href="https://www.theregister.com/cyber-crime/2026/05/19/shai-hulud-keeps-burrowing-314-npm-packages-infected-after-another-account-compromise/5242601" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An npm account compromise infected 314 packages with malware, including size-sensor, echarts-for-react, timeago.js and @antv packages, in a 22-minute burst early Tuesday morning. Size-sensor had 4.2 million monthly downloads.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-05-19 · <a href="https://arstechnica.com/tech-policy/2026/05/electrical-utility-megamerger-is-all-about-the-data-centers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>NextEra Energy proposed a $67 billion merger to acquire Dominion, creating a US utility megacompany. It pairs NextEra&#x27;s scale with Dominion as the local utility for northern Virginia&#x27;s data centers.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Science) · 2026-05-18 · <a href="https://arstechnica.com/science/2026/05/pompeii-victim-idd-as-a-likely-doctor" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Archaeologists used CT scans and 3D reconstruction to identify a Pompeii victim of the 79 CE eruption as most likely a Roman doctor. Scans revealed a small locked case with metal instruments.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local developments point to a push for clearer rules and stronger oversight in how public systems handle safety, access, and accountability—from violent incidents and corrections scrutiny to campaign finance and federal land management. The tension is between tighter controls and transparency on one hand, and the practical limits they impose on individual freedom, political activity, and recreation on the other. For residents, visitors, and local businesses, these shifts matter because they shape day-to-day security, how to plan peak-season travel, and which institutions may face closer public review.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-19 · <a href="https://flatheadbeacon.com/2026/05/19/identity-of-deceased-released-in-columbia-falls-shooting" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Donald J. Schwindt, 59, of Columbia Falls, died after exchanging gunfire on the 200 block of Dawn Drive at 7:09 a.m. on May 11. Both parties sustained gunshot wounds.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-18 · <a href="https://flatheadbeacon.com/2026/05/18/buttigieg-rallies-for-montana-election-initiative-stays-mum-on-political-plans" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pete Buttigieg rallied in Butte to endorse Initiative 194, urging a ban on corporate money in Montana politics while avoiding discussion of a 2028 presidential run.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-19 · <a href="https://www.kpax.com/news/local-news/flathead-county/glacier-national-park-officials-hold-community-meeting-in-kalispell" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Glacier National Park officials held a community meeting in Kalispell. They said parking at Logan Pass is limited to three hours July 1–Labor Day and shuttles for long hikes require reservations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-18 · <a href="https://montanafreepress.org/2026/05/18/steve-pearce-confirmed-blm" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Senate confirmed Steve Pearce to lead the Bureau of Land Management in a 46–43 party-line vote. He will oversee the BLM’s 245 million acres of public land.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-05-19 · <a href="https://missoulacurrent.com/department-corrections-watchdog" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Advocates and lawmakers discussed creating an independent Department of Corrections watchdog via an ombudsman during Interim Law and Justice Committee meetings. They added an ombudsman panel to the May 7 agenda.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across courts and the executive branch, federal power is being tested in ways that shape who gets relief, who bears costs, and how rights are enforced. The throughline is uneven accountability: some disputes are being narrowed or deferred through procedural moves, while other actions expand discretion over benefits, enforcement, and even military posture. Readers can view these developments through their practical effects on patients, voters, families, and defendants whose outcomes hinge on how aggressively government authority is checked or exercised.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-18 · <a href="https://www.pbs.org/newshour/nation/supreme-court-rejects-appeals-from-drug-manufacturers-over-medicare-price-negotiations-with-government" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court rejected drugmakers&#x27; appeals over Medicare price negotiations. It stems from the 2022 Inflation Reduction Act, ending years of debate over government negotiation of Medicare drug prices.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-18 · <a href="https://www.pbs.org/newshour/politics/supreme-court-sends-closely-watched-native-american-voting-rights-decision-back-to-lower-court" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court sent a Voting Rights Act case by Native American tribes back to a lower court. It followed the Court&#x27;s weakening of the Civil Rights-era law.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-18 · <a href="https://www.nytimes.com/2026/05/18/us/politics/trump-anti-weaponization-fund.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration is creating a $1.8 billion fund to compensate people it says were wronged by the federal government. Recipients could be largely the president’s allies.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-18 · <a href="https://www.propublica.org/article/trump-immigration-child-parent-separation-estimates-brookings" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Brookings report estimates over 100,000 U.S. children had a parent detained in immigration sweeps. The detentions are breaking up families nationwide, not just at the U.S.–Mexico border.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-19 · <a href="https://www.nytimes.com/2026/05/18/us/politics/trump-iran-strikes.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump threatened to restart military action against Iran, then pulled back the same day. He stopped short of plunging the United States directly back into an unpopular war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-19 · <a href="https://www.propublica.org/article/conviction-challenges-philadelphia-law" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Milique Wagner, convicted in 2013 based on an informant who later confessed and implicated police and prosecutors, received a new lawyer who never spoke with the informant or investigated the detective.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global picture links great-power positioning with widening stress on humanitarian and public-health systems. Conflict and sanctions are reshaping diplomatic alignments while violence—from war zones to places of worship—keeps civilians and aid workers at risk even when protections are signaled in advance. At the same time, fast-moving disease threats and funding gaps are testing international response capacity, affecting displaced people, frontline health staff, and the institutions that coordinate relief.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-19 · <a href="https://www.france24.com/en/china-projects-itself-as-a-stable-power-as-it-greets-us-and-russia-in-less-than-a-week" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Vladimir Putin visited Xi Jinping less than a week after Donald Trump&#x27;s visit. Talks were likely to focus on trade, with China presenting a lifeline to sanctioned Russia.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-19 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167542" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A fast-spreading Ebola outbreak in the Democratic Republic of the Congo has produced hundreds of suspected cases. WHO said health workers rush to stop transmission and any vaccine rollout is months away.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-19 · <a href="https://www.france24.com/en/funding-and-ebola-epidemic-loom-over-who-s-annual-summit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The World Health Organization&#x27;s annual summit kicked off on May 18, its first since the United States and Argentina withdrew.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-05-19 · <a href="https://reliefweb.int/report/sudan/sudan-crisis-situation-analysis-period-040526-100526" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sudan&#x27;s conflict between the SAF and RSF has caused the world&#x27;s largest displacement and hunger crisis, with over 24.6 million acutely food insecure and famine confirmed in el-Fasher and Kadugli.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-05-19 · <a href="https://reliefweb.int/report/ukraine/ms-edem-wosornu-director-crisis-response-division-ocha-behalf-mr-tom-fletcher-under-secretary-general-humanitarian-affairs-and-emergency-relief-coordinator-briefing-security-council-ukraine-19-may-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two United Nations-marked humanitarian convoys carrying aid in Ukraine were struck by drones last week, injuring at least one driver. Both missions had been notified in advance through established channels.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-19 · <a href="https://www.bbc.com/news/articles/clyp3gkrwg9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Amin Abdullah, a security guard and father of eight, was killed in a San Diego mosque shooting. Police said his actions were heroic and prevented the attack from being much worse.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-19 16:51 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
