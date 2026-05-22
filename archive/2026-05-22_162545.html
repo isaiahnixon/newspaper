@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news underscores a widening gap between rapid platform expansion—especially around AI agents and new developer connectivity options—and the security and privacy controls needed to keep pace. Multiple items point to high-impact weaknesses and access concerns that can enable broad compromise, while other releases focus on building safer automation and minimizing data exposure through stronger verification. For readers, the practical lens is operational risk: teams adopting new AI and network capabilities need to weigh speed and integration benefits against patch urgency, access governance, and privacy-by-design choices.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-05-20 · <a href="https://arstechnica.com/security/2026/05/google-publishes-exploit-code-threatening-millions-of-chromium-users" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google published exploit code for an unfixed Chromium vulnerability exposing millions of Chrome, Edge and other Chromium-based users. It can create persistent connections to proxy browsing and enable proxied DDoS.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-05-20 · <a href="https://github.blog/security/investigating-unauthorized-access-to-githubs-internal-repositories" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub is investigating unauthorized access to GitHub-owned repositories. If any impact is discovered, customers will be notified via established incident response and notification channels.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-21 · <a href="https://www.theregister.com/security/2026/05/21/microsoft-open-sources-agentic-ai-safety-tools/5243822" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft open-sourced two tools to build and maintain safer AI agents. RAMPART embeds automated red-team tests into CI/CD pipelines and supports statistical trials requiring actions safe in at least 80% of runs.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-05-21 · <a href="https://www.microsoft.com/en-us/research/blog/vega-zero-knowledge-proofs-for-digital-identity-in-the-age-of-ai" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft Research released Vega, which turns a full credential into a single zero-knowledge proof that shares only needed data while offering performance suitable for real applications.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-21 · <a href="https://www.theregister.com/security/2026/05/21/cisco-serves-up-yet-another-perfect-10-bug-with-secure-workload-admin-flaw/5244012" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cisco warned of a critical bug in Secure Workload that lets unauthenticated attackers gain Site Admin access via crafted API requests. Attackers could read data and alter configurations across tenant boundaries.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Google AI Blog · 2026-05-20 · <a href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google announced 100 highlights at I/O 2026, unveiling new models, agents and tools including Gemini 3.5 Flash and its availability via Google Antigravity, the Gemini API, Google AI Studio and Android Studio.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-05-21 · <a href="https://developers.cloudflare.com/changelog/post/2026-05-21-vpc-networks-cloudflare-wan" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Workers can now use VPC Network bindings (network_id: &quot;cf1:network&quot;) to reach private Cloudflare destinations such as Cloudflare Mesh nodes, Tunnel-announced routes, and WAN on-ramps.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Montana’s policy agenda is increasingly focused on tightening rules and planning amid uncertainty, from how public benefits can be used to how elections are administered and how infrastructure priorities are set. At the same time, shifting trade conditions are pressuring local firms and complicating long-term business decisions. For residents and employers, the practical lens is how these changes affect household purchasing power, confidence in local governance, and where future public investment and economic risk will concentrate.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-20 · <a href="https://flatheadbeacon.com/2026/05/20/starting-sept-30-montanans-may-no-longer-use-snap-dollars-for-candy-soda" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Department of Agriculture approved Gov. Greg Gianforte&#x27;s request to prohibit purchasing soft drinks, junk food and candy with SNAP benefits in Montana starting Sept. 30.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-20 · <a href="https://montanafreepress.org/2026/05/20/jacobsen-busse-most-favorable-montanas-western-district-primaries" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Montana Free Press–Eagleton poll of registered voters found Ryan Busse most favorable and familiar among Western District Democrats and Christi Jacobsen most favorable among Republicans.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-20 · <a href="https://montanafreepress.org/2026/05/20/cascade-county-clerk-and-recorder-candidates-aim-for-stability-after-past-controversies" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cascade County clerk and recorder candidates pledged to restore stability after election-management controversies that drastically changed the office&#x27;s functions. All three candidates were linked to those past events.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-21 · <a href="https://www.mtpr.org/montana-news/2026-05-21/montana-businesses-still-feeling-the-weight-of-shifting-tariff-policies" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana businesses continue to face wide-scale uncertainty after tariffs issued under emergency declarations disrupted relationships with foreign partners. Montana&#x27;s global exports fell 13% between 2024 and 2025.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-21 · <a href="https://www.kpax.com/news/montana-news/mdt-transportation-study-asks-montanans-to-put-it-on-the-map" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>MDT is asking Montanans to identify future transportation needs through a Central Montana study covering nine counties. Officials say it will guide planning for growth, development and the Air Force’s Sentinel project.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across federal and local government, today’s developments highlight a push-and-pull between executive discretion and the guardrails meant to constrain it, from how money is routed and who benefits to how force is authorized. Courts and lawmakers are leaning on statutory requirements and oversight tools to clarify limits, while agencies expand capacity to manage high-volume adjudication. For readers, the practical lens is accountability: how decisions are documented, funded, and reviewed affects legal rights, public trust, and the speed and fairness of enforcement.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-20 · <a href="https://www.nytimes.com/2026/05/20/us/politics/trump-fund-legal-questions.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump reached a deal establishing a $1.8 billion fund that relies on a mechanism created by Congress. Legal experts warned the mechanism was subject to manipulation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-20 · <a href="https://www.nytimes.com/2026/05/20/us/politics/trump-court-text-messages.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A judge ruled that White House officials must follow the Presidential Records Act. The judge overruled an April government memo that had rejected the law’s requirement to preserve all official presidential documents.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-20 · <a href="https://www.pbs.org/newshour/politics/why-legal-experts-say-trumps-new-anti-weaponization-fund-is-unprecedented" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump&#x27;s administration created a nearly $1.8 billion fund to pay people alleging government &quot;weaponization.&quot; It raises questions about payouts to allies, including Jan. 6 rioters, and Trump&#x27;s influence over the fund.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-21 · <a href="https://www.pbs.org/newshour/politics/watch-live-house-expected-to-vote-on-senate-resolution-to-limit-trumps-war-powers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The House is expected to vote on a Senate resolution to limit Trump&#x27;s war powers. Previous similar votes failed, but Democrats hope Thursday could be a turning point.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-21 · <a href="https://www.propublica.org/article/maricopa-county-sheriff-audit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Maricopa County Sheriff&#x27;s Office said racial profiling reforms were too costly, while auditors found it had misused $163 million from the settlement meant to root out racial profiling.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-05-21 · <a href="https://www.justice.gov/opa/pr/eoir-announces-77-immigration-judges-and-5-temporary-immigration-judges" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>EOIR swore in 77 immigration judges and 5 temporary immigration judges. It&#x27;s the largest class, bringing the judge corps to nearly 700 and totaling 153 permanent hires this fiscal year.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage shows how conflict and crisis are compounding across security, economics, and public health, with civilian protection and basic needs increasingly central. A key tension is between short-term stabilization measures—ceasefires, aid delivery, air defenses, and emergency diplomacy—and the longer-term political and logistical constraints that limit durable outcomes. Readers can view these developments through who bears the immediate costs: displaced communities, households facing higher prices, and governments balancing deterrence, humanitarian access, and outbreak control.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-21 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167563" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN Security Council debated Gaza&#x27;s stalled progress, a fragile ceasefire, and worsening West Bank conditions with civilian casualties and growing humanitarian needs. They debated governance without disarmament and recovery.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-05-21 · <a href="https://reliefweb.int/report/occupied-palestinian-territory/wfp-palestine-emergency-response-external-situation-report-89-21-may-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>WFP reported continuing large-scale food and increasing cash assistance in Gaza and the West Bank amid severe hardship, market pressures, and rising needs from violence and displacement.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© AFP, Kirill Kudryavtse · 2026-05-21 · <a href="https://www.france24.com/en/europe/20260521-iran-war-squeezes-europe-economy-growth-slumps-prices-surge-energy-shock" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Europe&#x27;s economy is slowing as the Iran war raises energy costs, squeezing growth and pushing up prices. That has raised fears of a prolonged cost-of-living crunch and possible recession.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-21 · <a href="https://www.france24.com/en/video/20260521-taiwan-president-says-happy-to-take-up-trump-s-offer-of-call" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Taiwan President Lai Ching-te said he would be &quot;happy&quot; to talk with US leader Donald Trump. The conversation would break over four decades of diplomatic protocol and drew ire from China.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-21 · <a href="https://www.bbc.com/news/articles/c1k2lmmjvzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ukraine faced the largest sustained Russian aerial assault — 1,500 drones, 56 missiles; 24 civilians were killed. Officials say air defences intercepted 94% of long-range drones and 73% of missiles.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-20 · <a href="https://www.bbc.com/news/articles/cwy2g197dp8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The WHO reported 600 suspected Ebola cases and 139 suspected deaths and warned a vaccine for the Bundibugyo species could take up to nine months.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-21 16:39 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
