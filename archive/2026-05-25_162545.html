@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news highlights a push to make software more capable and more connected—through AI development tools, on-device model efficiency, browser access to hardware, and ambitious launch systems—while the attack surface expands in parallel. The key tension is speed and openness versus trust and control, as widely reused components and token-based access can turn small compromises into broad account or ecosystem exposure. For readers, the practical lens is operational risk: teams adopting new tooling or integrations should weigh productivity gains against supply-chain hygiene, credential protections, and rollout safeguards.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-05-22 · <a href="https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub said it was breached after a developer installed a poisoned VSCode extension from hacker group TeamPCP. TeamPCP has mounted near-weekly supply-chain attacks, corrupting hundreds of open-source tools.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Science) · 2026-05-22 · <a href="https://arstechnica.com/space/2026/05/ground-system-issue-scrubs-first-launch-of-spacexs-starship-v3-rocket" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A ground-system problem with the launch tower scrubbed SpaceX’s first Starship V3 flight after the countdown paused 40 seconds before liftoff and five holds. Engineers could attempt another launch as soon as Friday evening.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-22 · <a href="https://www.theregister.com/cyber-crime/2026/05/22/fbi-warns-of-kali365-as-device-code-phishing-soars/5245024" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The FBI warned that a phishing-as-a-service kit called Kali365 is stealing Microsoft OAuth tokens at scale. Stolen tokens can bypass multi-factor authentication and grant access to privileged Microsoft 365 accounts.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">OpenAI News · 2026-05-22 · <a href="https://openai.com/index/gartner-2026-agentic-coding-leader" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI was named a Leader in Gartner&#x27;s 2026 Magic Quadrant for Enterprise AI Coding Agents. Codex is used by over 4 million people weekly and by Cisco, Datadog, Dell and NVIDIA.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-05-22 · <a href="https://arxiv.org/abs/2605.20295" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers proposed Quant.npu, an integer-only fully static quantization framework that enables low-bit activation-weight quantization for mobile NPU inference without runtime quantization parameter recomputation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-05-22 · <a href="https://arxiv.org/abs/2605.20296" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new paper proposes &quot;Spectral Unforgetting&quot; (DG-Hard), a checkpoint-only SVD-based repair that recovers capabilities damaged by fine-tuning without retraining.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Mozilla Hacks · 2026-05-21 · <a href="https://hacks.mozilla.org/2026/05/web-serial-support-in-firefox" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Firefox 151 for Desktop adds Web Serial API support, enabling web apps to communicate directly with microcontrollers, development boards, 3D printers, power meters and other serial-connected hardware without native software.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, everyday systems—health coverage, housing stability, transportation access, and utility capacity—are under strain as agencies and communities adjust rules and plan for growth. The common tension is between efficiency and cost on one side and fairness, transparency, and resource limits on the other, with disputes playing out in courts, elections, and public forums. For residents, the practical lens is how these shifts change eligibility, rents and bargaining power, travel and recreation access, and local impacts from large new developments.</div>
+  
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-21 · <a href="https://www.mtpr.org/montana-news/2026-05-21/lawsuit-challenges-montanas-medicaid-enrollment-changes" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two Montanans sued over the state&#x27;s post-pandemic Medicaid redeterminations, saying the process was designed to remove many people. State and third-party analyses found many unenrolled still qualified.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-21 · <a href="https://www.mtpr.org/montana-news/2026-05-21/why-the-montana-gop-is-trying-to-unseat-longtime-republican-lawmakers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Republican Party is trying to unseat incumbent state lawmakers it says have strayed from the party line, including longtime Rep. Llew Jones of Conrad.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-21 · <a href="https://montanafreepress.org/2026/05/21/missoula-panel-highlights-data-center-concerns" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Over 100 people gathered at University of Montana for a panel about data centers proposed in the state, including one near Missoula. Environmental panelists outlined effects on state and local resources.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-22 · <a href="https://flatheadbeacon.com/2026/05/22/can-glacier-national-park-crack-its-congestion-crisis-by-scaling-up-its-shuttle-system" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Glacier National Park administrators shelved a post‑pandemic vehicle‑reservation pilot and are pursuing a long‑range plan to expand parking and scale up the Going‑to‑the‑Sun Road shuttle network. Stakeholders fear lack of guaranteed funding.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-22 · <a href="https://montanafreepress.org/2026/05/22/third-area-mobile-home-park-launches-tenants-union" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A third area mobile home park has launched a tenants union.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how power is being exercised and checked across branches: lawmakers are struggling to align on enforcement priorities when funding is tied to claims of political retaliation, while the executive faces scrutiny over large contracting decisions. At the same time, independent institutions are under pressure to balance political demands against economic conditions. Federal prosecutions and major fraud sentencing underscore a parallel push to demonstrate accountability, with real consequences for public spending and public safety.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-21 · <a href="https://www.nytimes.com/2026/05/21/us/politics/trump-fund-congress-limits.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Todd Blanche, the acting attorney general, went to Capitol Hill to allay Senate Republicans&#x27; concerns about a fund to pay people alleging government mistreatment, but the visit did not go well.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-21 · <a href="https://www.pbs.org/newshour/politics/gop-immigration-enforcement-bill-stalls-amid-backlash-to-1-8-billion-anti-weaponization-fund" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senate Republicans abruptly left Washington without voting on a roughly $70 billion immigration enforcement funding bill. They were deadlocked over blocking a $1.776 billion settlement for Trump allies alleging political prosecution.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-22 · <a href="https://www.nytimes.com/2026/05/22/us/politics/kevin-warsh-federal-reserve-swearing-in.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kevin M. Warsh took charge as chair of the Federal Reserve. The economic backdrop he inherits does not call for the interest rate cuts President Trump wants.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-21 · <a href="https://www.propublica.org/article/trump-border-wall-contracts-tommy-fisher" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration is facing scrutiny over how it awarded billion-dollar border wall contracts. Contractors received funding from We Build the Wall, which included Steve Bannon; some leaders were later imprisoned.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-05-22 · <a href="https://www.justice.gov/opa/pr/12-members-violent-crown-hill-enterprise-indianapolis-indicted-federal-rico-charges" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A federal grand jury returned a 28‑count indictment Wednesday charging 12 alleged members of the Crown Hill Enterprise with racketeering, including murder, kidnapping, assault, arson, drug trafficking, and illegal firearms crimes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-21 · <a href="https://www.pbs.org/newshour/nation/woman-at-center-of-sprawling-minnesota-fraud-case-gets-nearly-42-year-prison-sentence" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A judge sentenced the former leader of a Minnesota nonprofit to nearly 42 years for a $250 million fraud. The case helped spark a crackdown by the Trump administration.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs thread is governments and international bodies juggling acute security threats and humanitarian breakdowns at the same time, with limited capacity to respond everywhere at once. The tension is between urgent crisis management—whether conflict, border defense, or outbreak control—and the longer-term strain this puts on public health, legal legitimacy, and political cohesion. For readers, the practical lens is how these pressures reshape resource allocation and risk exposure for civilians, from access to medicine and safety to the stability of borders and governance.</div>
+  
+<div class="item">
+  <div class="meta">© Martial Trezzini, Keystone via AP · 2026-05-22 · <a href="https://www.france24.com/en/africa/20260522-who-warns-ebola-outbreak-risk-now-very-high-dr-congo" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>WHO raised the risk of the Bundibugyo Ebola strain spreading in DR Congo to &quot;very high.&quot; No approved vaccine or treatment exists, and officials are racing to prevent regional spread.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-22 · <a href="https://www.france24.com/en/video/20260522-ukraine-boosts-border-security-with-belarus-over-attack-fears" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ukraine said it is ramping up security in regions bordering Belarus. Kyiv warned Russia may use Belarus to stage a new northern offensive, including toward the capital.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-22 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167572" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>UN agencies warned that blockages of life-saving medicines are worsening dire conditions in Gaza, where killing continues amid rodent infestations and spread of infectious disease.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-22 · <a href="https://www.bbc.com/news/articles/cvgze8n5dxko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Alberta will hold a referendum on 19 October asking whether it should remain a province of Canada or begin the legal process to hold a binding referendum on separation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-22 · <a href="https://www.bbc.com/news/articles/c232z4yk437o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US is pausing a $14bn arms sale to Taiwan, acting Navy secretary Hung Cao told a Senate hearing. He said it&#x27;s to ensure munitions for the Iran war, code-named &quot;Epic Fury&quot;.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-05-22 · <a href="https://www.bbc.com/news/articles/cwy2x7wxjego?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The government will review sentences given to three teenage boys convicted of raping two girls. The attorney general has 28 days to decide whether to seek a Court of Appeal hearing.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage is centering on how faith communities respond when public health, environmental harm, and violence disrupt daily life, from conflict-driven breakdowns in basic services to disease outbreaks and attacks on worship. A key tension is balancing pastoral presence and public gatherings with safety, prevention, and accountability in settings where institutions are strained. For readers, the practical lens is how church leaders and local parishes adapt operations and messaging when risks shift quickly and trust in safeguards is contested.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-05-22 · <a href="https://www.vaticannews.va/en/world/news/2026-05/gaza-humanitarian-emergency-scabies-chickenpox-rodents.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gaza’s humanitarian emergency is deepening, with sharp increases in skin diseases and rodent-linked illnesses amid destroyed water, sanitation and health infrastructure.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-05-22 · <a href="https://www.ncronline.org/news/why-ai-company-anthropic-helping-launch-pope-leo-xivs-encyclical" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Christopher Olah of Anthropic will join Pope Leo XIV April 25 for the encyclical Magnifica Humanitas. Observers called the pairing unexpected given the Vatican&#x27;s critique of AI and Anthropic&#x27;s ethical stance.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-05-22 · <a href="https://www.ewtnnews.com/vatican/pope-to-visit-italy-s-land-of-fires-victims-of-mafia-s-toxic-waste-dumping" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Pope will visit Italy&#x27;s &quot;Land of Fires,&quot; hit by Mafia toxic waste dumping. Acerra and nearby territory have higher-than-average cancer rates linked to dumping, burning, and burying of toxic waste.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-05-21 · <a href="https://www.ncronline.org/news/ebola-epidemic-spreads-uganda-postpones-martyrs-day-celebrations" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Uganda postponed its annual Martyrs Day celebrations after an Ebola outbreak in the region, and Catholic bishops urged people to remain calm.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-05-21 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=69492" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Unknown attackers fired on a German parish in Hanau during Sunday Mass on May 17, striking one person with glass splinters and causing about €5,000 in damage.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-22 16:25 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
