@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech thread is about trust and accountability as AI becomes more agent-like and as the web’s security baseline evolves. Research highlights how automated systems can fail in hard-to-detect ways, while security work is pushing stronger authentication and clearer threat assumptions to limit abuse. At the same time, debates over who captures value from user data and how criminals exploit automation sharpen the tradeoff between convenience, openness, and control for platforms, regulators, and everyday users.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-26 · <a href="https://arxiv.org/abs/2605.24229" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Details are unclear.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-26 · <a href="https://arxiv.org/abs/2605.24197" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>arXiv:2605.24197v1 studies agentic misalignment in automated multi-agent workflows and proposes Agentic Evidence Attribution (AEA). They analyze Bayesian posterior collapse and show AEA variants—self-reflection and weak-to-strong generalization—improve agent posteriors.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-26 · <a href="https://www.theregister.com/off-prem/2026/05/26/big-tech-extracts-retirement-scale-wealth-from-uk-internet-users-research-shows/5246048" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Web3 Foundation white paper estimates the average UK internet user generates $1,604 annually in commercial value from their data, totaling $189,405 over a 60-year digital lifetime.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-26 · <a href="https://www.theregister.com/ai-ml/2026/05/26/rogue-states-are-putting-ai-agents-to-work-on-sanctions-evasion/5246210" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>RUSI reported rogue states are using AI to automate fake identities, shell companies and cryptocurrency laundering to evade sanctions. It warned this could scale proliferation financing to overwhelm current detection and enforcement.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">W3C News · 2026-05-26 · <a href="https://www.w3.org/news/2026/updated-candidate-recommendation-web-authentication-an-api-for-accessing-public-key-credentials-level-3" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>W3C updated the Candidate Recommendation for Web Authentication Level 3. It defines an API enabling web apps to create and use strong, attested, scoped, public-key credentials to strongly authenticate users.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">W3C News · 2026-05-26 · <a href="https://www.w3.org/news/2026/group-note-draft-threat-model-for-the-web" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>W3C released a Group Note draft describing the Threat Model for the Web, including the Web Security Model and possibly listing goals applied in reviews of new or changed specifications.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-05-26 · <a href="https://css-tricks.com/technical-writing-in-the-ai-age" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An article titled &quot;Technical Writing in the AI Age&quot; shares the author&#x27;s thoughts and frustrations about producing technical content in the age of AI.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, policymakers and local leaders are weighing cost, effectiveness, and unintended consequences as they try to manage risk and balance budgets. Proposals range from land-management tools aimed at reducing fire danger to election-rule changes that could be expensive without delivering clear benefits, while schools face near-term cut decisions after revenue setbacks. At the same time, mixed economic signals shape what households and governments can absorb, and public-safety incidents keep pressure on local services.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-25 · <a href="https://montanafreepress.org/2026/05/25/grazing-away-wildfire-risk-congress-considers-cattle-for-wildfire-suppression" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>This spring, Congress and federal agencies proposed using livestock grazing to reduce wildfire fuel. Research says effectiveness would vary by landscape and climate.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-26 · <a href="https://flatheadbeacon.com/2026/05/26/local-school-districts-grapple-with-levy-fallout" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Flathead schools&#x27; levy requests were rejected, and districts are beginning to plan cuts to avoid projected deficits ahead of the Aug. 25 budget deadline. Officials warned deeper cuts may follow.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-05-26 · <a href="https://flatheadbeacon.com/2026/05/26/i-194-could-cost-montana-millions-without-fixing-campaign-finance" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>I-194, the Montana Plan, is a proposed ballot initiative to limit corporate, nonprofit, LLC and trade association involvement in Montana elections. The measure could cost Montana millions without fixing campaign finance.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-05-26 · <a href="https://missoulacurrent.com/montana-unemployment-dips" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana&#x27;s unemployment rate fell to 3.5% in April, below the 4.3% national rate. Payroll jobs rose by 800, with the largest gains in construction and healthcare.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-05-26 · <a href="https://www.kpax.com/news/western-montana-news/montana-morning-headlines-tuesday-may-26-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Western Montana&#x27;s top stories for Tuesday included a 22-year-old arrested after a fatal Bozeman bar shooting, a former USAID worker reflecting on comrades lost in Afghanistan, and Corvallis&#x27; 106th Memorial Day parade.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across federal and state arenas, governance is being shaped by sharper internal party contests, tighter legal boundaries on officials’ speech, and renewed scrutiny of integrity in public institutions. At the same time, high-stakes policy areas—reproductive care access and immigration adjudication—show how rules can constrain frontline decisions with immediate consequences for individuals. International coordination on strategic supply chains adds a security-and-economy layer, while candidate health transparency remains a live issue for voters weighing leadership risk.</div>
+  
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-26 · <a href="https://www.npr.org/2026/05/26/nx-s1-5833854/texas-republican-primary-senate-cornyn-paxton" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Texas GOP voters voted in a high-dollar primary in which Attorney General Ken Paxton challenged Sen. John Cornyn. The $100 million contest could shape the GOP and control of the U.S. Senate.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-26 · <a href="https://www.nytimes.com/2026/05/26/us/politics/supreme-court-immigration-judges.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court reversed a ruling in a lawsuit by immigration judges who had challenged work-related restrictions on their public speaking as violating their free-speech rights.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-26 · <a href="https://www.propublica.org/article/arkansas-abortion-ban-miscarriage-care" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Emily Waldorf suffered a life-threatening miscarriage at 17 weeks and rushed to Washington Regional Hospital in Fayetteville, Arkansas. Under Arkansas’s abortion ban, calls to the governor’s office did not secure help.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-26 · <a href="https://www.propublica.org/article/puerto-rico-trump-drugs-for-votes-doj-inspector-general-investigation" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Puerto Rico’s representative and four other House members asked the DOJ Office of the Inspector General to probe why a federal prison drugs-for-votes investigation was abandoned after the 2024 elections.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-05-26 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/05/quad-critical-minerals-initiative-framework-among-the-united-states-japan-australia-and-india" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United States, Japan, Australia, and India released a Quad Critical Minerals Initiative Framework at the Quad Foreign Ministers’ Meeting in New Delhi.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-25 · <a href="https://www.npr.org/2026/05/25/nx-s1-5833855/trump-medical-checkup" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump will get a routine annual exam at Walter Reed seven months after his last visit. The timing has raised concerns about his health given his age and swollen ankles.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s developments point to rising strain on international crisis management as major powers escalate military pressure across multiple fronts while global institutions warn their core rules and credibility are being tested. The tension is between deterrence and de‑escalation: strikes and threats may aim to shape negotiations, but they also raise risks for civilians, diplomats, and regional spillover. At the same time, cross‑border health precautions and domestic political power struggles show how security shocks can quickly broaden into travel, governance, and economic decisions.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-26 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167585" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN Security Council met for a high-level debate as Secretary-General António Guterres warned its founding principles face &quot;profound strain&quot;. They aim to restore confidence in the Security Council&#x27;s crisis-response ability.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-26 · <a href="https://www.bbc.com/news/articles/c1e22n55zn4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Russia threatened more &quot;systematic strikes&quot; on Kyiv targeting decision-making centres, command posts and drone manufacturing facilities, and told foreign nationals and diplomats to leave the city.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-26 · <a href="https://www.bbc.com/news/articles/cx211rgngp0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli strikes in Mashghara, Bekaa Valley, killed 11 people, including two children. Israel said it hit more than 100 Hezbollah sites in one of the heaviest bombardments since a mid‑April ceasefire.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-26 · <a href="https://www.france24.com/en/iran-looking-to-buy-time-to-rebuild-its-military-amid-talks-to-end-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Overnight US strikes hit Iranian missile sites and mine-laying boats, prompting Iran to accuse Washington of breaching the ceasefire and warn it was ready to retaliate.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-26 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167587" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN aviation agency urged governments and airlines to follow guidelines put in place after the COVID-19 pandemic as an Ebola outbreak spreads in the DRC and cases appear in neighbouring Uganda.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-05-26 · <a href="https://www.france24.com/en/senegal-s-ex-pm-elected-national-assembly-speaker-despite-sacking-from-president" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ousted PM Ousmane Sonko was elected speaker of Senegal&#x27;s National Assembly in a vote boycotted by the opposition. The result risks a clash with President Faye over reforms, including taming runaway debt.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-26 17:26 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
