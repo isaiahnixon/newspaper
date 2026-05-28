@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news points to a widening gap between how fast AI- and cloud-based systems are being deployed and how hard they are to secure, govern, and keep reliable over time. Software supply-chain flaws, shifting vulnerability records, and tighter patch deadlines show security is becoming more time-critical and operationally demanding, especially for internet-facing and high-value systems. At the same time, performance and authentication upgrades are accelerating adoption, while disputes over acceptable use highlight growing compliance and accountability pressures for providers and customers.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-05-26 · <a href="https://arstechnica.com/information-technology/2026/05/millions-of-ai-agents-imperiled-by-critical-vulnerability-in-open-source-package" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A critical &quot;BadHost&quot; vulnerability was found in Starlette, an ASGI framework with 325 million weekly downloads. A researcher warned it can let attackers breach AI servers and steal data and third-party credentials.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-05-26 · <a href="https://arstechnica.com/tech-policy/2026/05/musk-says-us-military-suicide-drones-used-starlink-in-violation-of-spacex-rules" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Elon Musk said U.S. military &quot;kamikaze&quot; drones used commercial Starlink in violation of SpaceX&#x27;s terms and blamed the contractor that built the drones.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-27 · <a href="https://www.theregister.com/security/2026/05/27/cert-in-professes-12-hour-patching-for-ai-assisted-attacks/5247009" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>India&#x27;s CERT-In told defenders to patch, mitigate, or remove known-exploited internet-facing or &quot;crown-jewel&quot; vulnerabilities within 12 hours where feasible. The guidance was issued as part of a new guide addressing AI-assisted cyberattacks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-05-27 · <a href="https://www.theregister.com/databases/2026/05/27/aws-whips-out-graviton-powered-redshift-instances-claims-7x-speed-for-data-warehouse/5246148" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>AWS launched Graviton-powered Redshift RG instances. AWS says they boost query speed up to 7× and are up to 2.2× faster than RA3 at 30% lower cost per vCPU.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-05-26 · <a href="https://kubernetes.io/blog/2026/05/26/reconciling-unfixed-kubernetes-cves" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kubernetes will correct CVE records that incorrectly listed fixed versions for several older, unfixed issues on June 1, 2026. Scanners may then flag these vulnerabilities where they were previously undetected.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">W3C News · 2026-05-26 · <a href="https://www.w3.org/news/2026/updated-candidate-recommendation-web-authentication-an-api-for-accessing-public-key-credentials-level-3" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>W3C issued an updated Candidate Recommendation for &quot;Web Authentication: Public Key Credentials Level 3.&quot; It defines an API letting web apps create and use attested public-key credentials to strongly authenticate users.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-05-27 · <a href="https://arxiv.org/abs/2605.26302" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced AgingBench, a longitudinal benchmark that measures how deployed AI agents&#x27; reliability degrades and diagnoses compression, interference, revision, and maintenance aging.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Montana’s headlines point to a state juggling fiscal pressure, aging public assets, and an increasingly expensive political environment. Policy choices are sharpening tradeoffs between balancing budgets and maintaining access to essential services, while infrastructure needs compete for limited dollars as costs rise. At the same time, campaign activity and civic institutions are shaping how residents understand their options and identity ahead of key decisions that affect health coverage, transportation reliability, and representation.</div>
+  
+<div class="item">
+  <div class="meta">Missoula Current · 2026-05-27 · <a href="https://missoulacurrent.com/mediaid-work-rules" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana plans to enforce President Trump’s Medicaid work mandate. Clinicians and patient advocates say it will push people off Medicaid and, with budget shortfalls, make care harder to access.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-27 · <a href="https://www.mtpr.org/montana-news/2026-05-27/report-rising-costs-leave-montanas-aging-roads-and-bridges-in-need-of-repair" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>TRIPP found 31% of Montana&#x27;s major roads are poor or mediocre and about 40% of bridges are over 50 years old. It warned rising construction costs and insufficient funding could hinder repairs.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-26 · <a href="https://montanafreepress.org/2026/05/26/bodnar-signature-threshold-independent-senate-campaign" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Seth Bodnar said he gathered more than double the 13,327 signatures required to qualify as an independent U.S. Senate candidate for the November ballot.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-05-26 · <a href="https://montanafreepress.org/2026/05/26/the-sheehy-supporting-pac-trying-to-define-montanas-democratic-senate-candidates" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A PAC that supported Tim Sheehy has spent $700,000 this cycle to define Democratic U.S. Senate candidates Reilly Neill and Alani Bankhead.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-05-27 · <a href="https://www.mtpr.org/montana-news/2026-05-27/montana-historical-society-honored-for-work-on-new-state-heritage-center" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Historical Society won American Alliance of Museums&#x27; Museum Impact Award for the $100-million Montana Heritage Center in Helena. The alliance cited the center&#x27;s partnership with Montana Tribal Nations on exhibits.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across branches of government, today’s developments show executive authority and election rules becoming central battlegrounds, with courts increasingly asked to referee both administrative controls and voting-map disputes. The tension is between tighter federal and state power—over personnel, speech, enforcement tactics, and district lines—and demands for accountability and equal representation. Readers can view this as shaping who has influence in elections and how immigration policy is carried out, affecting voters, federal workers, and families at the border.</div>
+  
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-05-27 · <a href="https://www.npr.org/2026/05/27/nx-s1-5836202/trump-cabinet-meeting" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump will meet with his Cabinet as talks to end the war with Iran remain in flux. The emerging deal has drawn fierce criticism and defers key issues.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-05-26 · <a href="https://www.pbs.org/newshour/politics/supreme-court-sides-with-trump-in-dispute-over-immigration-judges-speech-restrictions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court sided with Trump in a dispute over immigration judges&#x27; speech restrictions. It overturned a lower-court ruling on whether the federal employee complaint system still works after firings.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-27 · <a href="https://www.nytimes.com/2026/05/26/us/politics/texas-republican-senate-cornyn-paxton.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ken Paxton, the Texas attorney general, ousted Senator John Cornyn. The victory sets up the general-election clash Democrats had hoped for.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-05-27 · <a href="https://www.nytimes.com/2026/05/27/us/politics/supreme-court-alabama-voting-maps.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Alabama Republican leaders asked the Supreme Court to allow a congressional map that a lower court found discriminated against Black voters.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-05-27 · <a href="https://www.propublica.org/article/lawmakers-demand-reforms-tear-gas-children" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Three U.S. senators called for an overhaul of federal agents’ use of tear gas and pepper spray, citing a ProPublica investigation that found at least 79 children were harmed.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-05-27 · <a href="https://thehill.com/homenews/house/5896480-clyburn-redistricting-anger-voters" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Rep. Jim Clyburn said South Carolina’s record-breaking early voter turnout was driven by residents’ anger over Republicans’ redistricting measure.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs developments point to intensifying security pressures across multiple regions, from prolonged high-casualty warfare to widening cross-border strikes and continued weapons testing. Governments are responding by tightening defence cooperation and hardening against hybrid threats, but escalation risks and civilian harm remain central uncertainties. At the same time, conflict is compounding public-health emergencies, showing how instability can overwhelm containment and humanitarian capacity. Readers can view these as signals shaping defence planning, aid priorities, and travel and supply-chain risk.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-27 · <a href="https://www.bbc.com/news/articles/c4g44gprnnvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GCHQ said almost 500,000 Russian soldiers have been killed since Russia launched its full-scale invasion of Ukraine in 2022. The figure was given by GCHQ director Anne Keast-Butler in her inaugural speech.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-05-27 · <a href="https://www.bbc.com/news/articles/cjwppj1yn7go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An Israeli strike in Gaza City killed Mohammed Odeh, the new head of Hamas&#x27;s military wing, and his wife and two children. It occurred days after his predecessor&#x27;s death.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Kawnat Haju, AFP · 2026-05-27 · <a href="https://www.france24.com/en/middle-east/20260527-israeli-strikes-kill-31-southern-lebanon-netanyahu-expands-ground-campaign" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli strikes in southern Lebanon killed 31 people and wounded 40, including at least four children and three women. Israel said it was intensifying operations despite a truce with Hezbollah.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© KCNA via KNS via AP · 2026-05-27 · <a href="https://www.france24.com/en/asia-pacific/20260527-north-korea-tests-new-lightweight-multi-purpose-missile-launch-system" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>North Korea said it tested a new lightweight multi-purpose missile launch system and a multiple tactical cruise missile weapon system under Kim Jong Un&#x27;s supervision.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-05-27 · <a href="https://news.un.org/feed/view/en/story/2026/05/1167592" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The WHO warned a fast-spreading Ebola outbreak in eastern DR Congo is outpacing containment amid armed violence, displacement and hunger. WHO called it a &quot;catastrophic collision of disease and conflict.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-05-27 · <a href="https://www.bbc.com/news/articles/c4g9y82ed4xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UK and Poland signed a defence and security treaty after Keir Starmer met Donald Tusk. It aims to support defence jobs, counter cyber attacks, improve border security and tackle organised crime.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent developments show Catholic leaders pressing harder on moral accountability in conflict and historic injustice while also confronting internal discipline and external legal scrutiny. The tension is between universal ethical teaching—especially on war, human rights, and emerging technologies—and the Church’s ability to enforce unity and credibility when challenged by breakaway actions, violence against local communities, and disputes over fundraising oversight. For readers, the practical lens is how these pressures shape trust in leadership and influence decisions by donors, policymakers, and Catholics in vulnerable regions.</div>
+  
+<div class="item">
+  <div class="meta">USCCB - News Releases (EN) · 2026-05-26 · <a href="https://www.usccb.org/news/2026/encyclical-what-pope-leo-thinks-about-just-war-theory-historic-church-apology-slavery" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV, in his first encyclical &quot;Magnifica Humanitas&quot;, questioned whether the Church&#x27;s centuries-old just war theory applies to modern warfare and sought pardon for the Church&#x27;s role in slavery.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-05-26 · <a href="https://www.ewtnnews.com/vatican/society-of-st-pius-x-names-priests-to-be-consecrated-bishops-july-1" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Society of St. Pius X named four priests to be consecrated as bishops July 1 without papal permission. The Vatican warned those &quot;schismatic&quot; consecrations would incur excommunication.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-05-26 · <a href="https://www.ewtnnews.com/world/us/supreme-court-declines-to-intervene-in-federal-lawsuit-over-peter-s-pence-papal-collection" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court declined to intervene in a federal lawsuit over the Peter’s Pence papal collection. The suit will continue in federal court after the Court refused the U.S. bishops&#x27; religious-liberty objection.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-05-26 · <a href="https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-castel-gandolfo-gaza-aid-respect-for-human-rights.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo renewed his appeal for humanitarian aid to Gaza and urged respect for everyone&#x27;s human rights. He warned against using artificial intelligence in warfare and noted talks with Anthropic.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-05-26 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=69551" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Five were killed and several abducted in new attacks on Catholic communities in Kaduna, Nigeria. The Archdiocese condemned the attacks and urged authorities to intensify protection.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-05-27 17:10 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
