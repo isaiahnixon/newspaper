@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Across today’s tech items, AI “agents” are moving from demos into everyday tools, pushing both infrastructure and developer platforms to adapt. The trend pairs rapid adoption and workflow integration with rising demands for compute density and new system designs that treat models as first-class components. A key tension is capability versus control: richer agent autonomy and exposed reasoning traces can improve usefulness but also expand operational and information-handling risks. This matters most for teams choosing how to deploy, govern, and scale agent-driven software in production environments.</div>
+  
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-02 · <a href="https://www.theregister.com/ai-and-ml/2026/06/02/intel-and-pals-cram-36864-cpu-cores-into-a-100kw-rack-while-chasing-the-agentic-ai-dragon/5249917" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At Computex, Intel unveiled rack-scale blueprints packing up to 36,864 CPU cores into a 100kW rack. Intel says the designs support CPU-based agent harnesses like OpenClaw, which still run on CPUs.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">OpenAI News · 2026-06-02 · <a href="https://openai.com/index/codex-for-knowledge-work" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI released a report showing Codex has over five million weekly active users. Knowledge workers now represent about 20% of users and are growing more than three times as fast.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-02 · <a href="https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub introduced the Copilot app, an agent-native desktop experience, at Microsoft Build 2026. They unveiled new tools, updates and surfaces to let agents work within familiar workflows.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-02 · <a href="https://arxiv.org/abs/2606.00288" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>arXiv paper maps computer-architecture ideas to the model-native stack and proposes ICAM, a six-layer framework. ICAM uses a dual-plane view to reconcile whether an LLM is more like CPU or operating system.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-02 · <a href="https://arxiv.org/abs/2606.00642" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced Reasoning Exposure Prompting (REP) to elicit internal reasoning traces from language models. REP increases similarity of exposed and conditioned traces while preserving reasoning signals.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-06-02 · <a href="https://developers.cloudflare.com/changelog/post/2026-06-02-agents-sdk-v0140" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare released Agents SDK v0.14.0, adding Agent Skills, chat messengers (starting with Telegram), declarative scheduled tasks, and durable reasoning steps in Workflows.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-06-01 · <a href="https://kubernetes.io/blog/2026/06/01/dashboard-to-headlamp" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Kubernetes Dashboard project has been archived. Headlamp builds on its foundation, adding multi-cluster visibility, application-centric views, plugin extensibility, and both in-cluster and desktop deployment options.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, public attention is split between accountability, governance, and community identity. Regulators are signaling a tougher stance on safety and compliance after a deadly incident, while voters weigh choices that will shape local and statewide direction. At the same time, shifts in wildlife status and child-welfare policy show how science and federal-state partnerships can change protections and services, affecting families, land users, and local institutions.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-02 · <a href="https://montanafreepress.org/2026/06/02/state-regulators-propose-hefty-fines-for-mr-bail-and-its-manager-following-investigation-fatal-shooting-in-missoula" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana State Auditor’s office proposed fining Mr. Bail and its Billings manager more than $200,000 each for multiple violations, including those tied to a March fatal shooting in Missoula.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-01 · <a href="https://flatheadbeacon.com/2026/06/01/2026-primary-election-a-northwest-montana-voters-guide-to-local-and-statewide-races" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Voters in Flathead, Lake, Lincoln and Glacier counties are casting ballots in the June 2 primary to decide more than a dozen competitive local and statewide races.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-06-02 · <a href="https://www.mtpr.org/montana-news/2026-05-29/genetic-linkage-between-grizzly-populations-could-usher-in-weaker-protections" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Fresh grizzly genes entered the Yellowstone population this spring. That genetic linkage could lead to weaker endangered-species protections.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-06-02 · <a href="https://missoulacurrent.com/montana-trumps-home" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana officials signed a joint proclamation on June 1, 2026, joining the &quot;A Home for Every Child&quot; initiative.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-01 · <a href="https://flatheadbeacon.com/2026/06/01/high-school-state-championships-bigfork-baseball-wins-first-a-b-title-whitefish-tennis-sweeps-team-titles" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Bigfork beat undefeated Dillon 7–2 to win the inaugural A/B state baseball title, and Whitefish&#x27;s boys and girls tennis teams swept Class A titles. It was Whitefish&#x27;s first time sweeping both titles.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how executive power is being exercised across staffing, spending, regulation, and litigation, alongside an election cycle that is raising the stakes for accountability. Several moves show a push for speed and flexibility—using acting appointments, voluntary compliance frameworks, and court-backed project momentum—while also triggering questions about expertise, fairness, and safeguards. Voters, regulated industries, and national-security supply chains are most directly affected, as near-term decisions shape both oversight capacity and policy durability.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-02 · <a href="https://www.nytimes.com/2026/06/02/us/politics/bill-pulte-acting-director-national-intelligence.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump named Bill Pulte acting director of national intelligence. He will oversee U.S. intelligence agencies despite having no known intelligence background.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-02 · <a href="https://www.nytimes.com/2026/06/01/us/politics/trump-drop-weaponization-fund.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump backed off a plan for a $1.8 billion fund. Critics said it was a scheme to reward his political allies with public benefits.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-06-02 · <a href="https://www.justice.gov/opa/pr/justice-department-secures-motion-allow-continued-construction-idaho-gold-mine-critical" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A U.S. court denied a preliminary injunction, allowing construction of the Stibnite Gold Project. It will provide a domestic antimony source for munitions, batteries and sensors, reducing reliance on China.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-06-02 · <a href="https://www.npr.org/2026/06/02/nx-s1-5844347/ai-safety-trump-executive-order" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump signed an executive order asking AI companies to voluntarily submit their most powerful models for government testing up to 30 days before public release.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-06-02 · <a href="https://www.npr.org/2026/06/02/g-s1-124482/primary-day-california-iowa" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Six states hold primaries Tuesday, including California and Iowa. Both states feature competitive governor primaries and Democrats see a path to control of Congress.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-02 · <a href="https://thehill.com/blogs/in-the-know/5905050-graham-platner-controversies-abc-view" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Multiple hosts on ABC&#x27;s &quot;The View&quot; criticized Maine Democratic Senate candidate Graham Platner after reports that he sent sexually explicit messages to women after he married his wife.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs thread is about how cross-border risks are outpacing the systems meant to manage them—whether from climate-driven hazards, armed attacks, displacement, or infectious disease. The tension is between rapid, coordinated prevention and response versus fragmented capacity, funding shortfalls, and policies that can push problems into less visible channels. For readers, the practical lens is resilience: which governments, aid networks, and critical infrastructures can absorb shocks, and where gaps will most affect civilians and regional stability.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-06-02 · <a href="https://news.un.org/feed/view/en/story/2026/06/1167620" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>WMO confirmed El Niño&#x27;s onset. It will bring above-average temperatures nearly everywhere, fuel more extreme weather, and the UN urged countries to bolster early-warning systems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-02 · <a href="https://www.bbc.com/news/articles/c5y8nq8ljqwo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Russian missile and drone attack killed at least 22 people across Ukraine overnight, including two children. It was one of Moscow&#x27;s largest assaults in recent months.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-06-02 · <a href="https://news.un.org/feed/view/en/story/2026/06/1167623" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN refugee agency urged the international community not to abandon 1.2 million Rohingya refugees in Bangladesh as aid cuts threaten vital support. They are approaching nine years since the mass displacement.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-06-02 · <a href="https://reliefweb.int/report/democratic-republic-congo/ebola-response-must-cross-borders-faster-virus-iom-warns" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>IOM urged stronger cross-border coordination to contain the Bundibugyo Ebola outbreak, warning closures can drive movement underground. WHO reports 321 confirmed cases and 48 deaths in DRC, and nine cases in Uganda.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Jacquelyn Martin, AP · 2026-06-02 · <a href="https://www.france24.com/en/americas/20260602-trump-signs-order-allowing-ai-companies-to-give-government-access-to-models-before-release" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump signed an order letting AI companies voluntarily submit top models for government cybersecurity testing before release. The order was prompted by Anthropic&#x27;s withheld Mythos, which could expose system vulnerabilities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-02 · <a href="https://www.bbc.com/news/articles/c0k203kzp10o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Anthropic filed paperwork to pursue a US initial public offering this year, allowing public trading of its shares. Its private valuation recently exceeded $965bn, close to $1tn.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-02 18:06 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
