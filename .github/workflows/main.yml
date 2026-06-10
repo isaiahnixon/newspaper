@@ -2,8 +2,9 @@ name: Daily Paper
 
 on:
   schedule:
-    # Runs weekdays at 07:00 MT
-    - cron: "0 14 * * 1-5"
+    # Actual time seems to be about 2.5 hours after UTC of the configured time.
+    # Setting this to 1200 UTC to try and target 0830 MDT.
+    - cron: "0 12 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
