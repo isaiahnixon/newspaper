@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech items point to AI moving from demos into high-stakes, always-on use—translation, developer automation, and clinical decision support—while exposing gaps between headline performance and real-world reliability. The tension is speed and convenience versus safety, auditability, and the cost of adding safeguards. In parallel, security work is becoming more continuous and rules-driven as new vulnerabilities and ransomware impacts keep surfacing. Readers should view these as signals to prioritize stress testing, workflow controls, and rapid patching where data or patient outcomes are on the line.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-09 · <a href="https://arxiv.org/abs/2606.07929" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced AI-MASLD and stress-tested seven clinical LLMs on 240 cases, revealing divergent failure modes and hidden functional collapse. The authors conclude narrative stress auditing is a necessary complement to accuracy-based evaluation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-09 · <a href="https://arxiv.org/abs/2606.08296" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv paper argues that existing arguments don&#x27;t show the catastrophic shutdown problem is hard and that concern about it has led to technical fixes that impose a high performance cost.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">DeepMind Blog · 2026-06-09 · <a href="https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google released Gemini 3.5 Live Translate, an audio model that provides near real-time speech-to-speech translation in over 70 languages for Google AI Studio, Google Translate and Google Meet.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-06-09 · <a href="https://developers.cloudflare.com/changelog/post/2026-06-09-waf-release" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare WAF release (2026-06-09) adds detections for a critical Drupal PostgreSQL SQL injection (CVE-2026-9082), Mirasvit Cache Warmer deserialization (CVE-2026-45247), Axios prototype pollution (CVE-2026-40175), and a generic rule blocking obfuscated SQLi bypasses.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-09 · <a href="https://www.theregister.com/cyber-crime/2026/06/09/qilin-nhs-breach-tally-grows-as-essex-trust-confirms-stolen-records/5252663" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Mid and South Essex NHS trust confirmed about 2,380 patient records were stolen in the Synnovis ransomware attack. Some compromised data cannot be linked to individuals, so the final number is unknown.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-06-09 · <a href="https://developers.cloudflare.com/changelog/post/scheduled-waf-release" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On 2026-06-15 Cloudflare&#x27;s WAF will add two new log-mode detections: Ghost CMS - SQLi (CVE-2026-26980, rule 439c4ef64b32447989bdf412b4c29bc6) and SQLi - Obfuscated Boolean - URI (rule 6c64b68ef5ed45e7a622cdaab56f403f).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-09 · <a href="https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub published a blog post on using custom agents in GitHub Copilot CLI. They let Copilot CLI understand your stack and team workflows, turning one-off terminal prompts into repeatable, reviewable processes.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Several Montana stories point to tighter gatekeeping around public systems—health coverage, environmental approvals, border enforcement, and even access to high-demand public lands—where paperwork, exceptions, and compliance rules can determine outcomes. The tension is between administrative control and public access, with higher risk of people or communities being shut out when processes get more complex. At the same time, the loss of a long-running local paper underscores how shrinking local reporting capacity can make these shifts harder for residents to track and navigate.</div>
+  
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-06-09 · <a href="https://www.mtpr.org/montana-news/2026-06-09/new-medicaid-eligibility-rules-add-more-obstacles-for-work-exemptions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Federal officials released final Medicaid work rules that omit a list of medical exemptions and require documentation. Policy watchers say this could make it harder for Montanans to stay on Medicaid.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-08 · <a href="https://flatheadbeacon.com/2026/06/08/groups-say-flathead-logging-project-sidesteps-endangered-species-imperatives" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Local conservation groups on June 5 sued the Flathead National Forest for authorizing a timber sale in grizzly bear and bull trout habitat under an emergency Endangered Species Act exception.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-08 · <a href="https://montanafreepress.org/2026/06/08/the-anaconda-leader-shuts-down-after-run-of-55-years" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Anaconda Leader, a twice-weekly newspaper in southwest Montana, closed after 55 years. Its demise follows a nationwide trend of local outlets struggling to stay in business.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-06-09 · <a href="https://missoulacurrent.com/scientists-smuggling-virus" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Two scientists from NIH’s Rocky Mountain Laboratory in Hamilton were charged with smuggling monkeypox samples into the United States and lying to U.S. Customs and Border Patrol.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-08 · <a href="https://flatheadbeacon.com/2026/06/08/tips-for-getting-into-glacier-national-park-in-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>For the first time in five years, visitors can access all of Glacier National Park’s entrances without a vehicle reservation.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s governance story centers on how executive power is being tested across law enforcement oversight, regulatory enforcement, national security authorities, and immigration rules. Courts, Congress, and federal investigators are acting as checks, while partisan conflict and leadership appointments shape how aggressively laws are applied and how much discretion agencies retain. For readers, the practical lens is institutional reliability: these fights affect permitting and policing standards, corporate compliance expectations, surveillance limits, visa costs for employers, and the direction of major-city leadership.</div>
+  
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-06-09 · <a href="https://www.justice.gov/opa/pr/justice-department-opens-investigation-philadelphia-police-departments-allegedly" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Justice Department opened an investigation into whether the Philadelphia Police Department used a vague &quot;good cause&quot; standard to cancel permits to carry legal firearms.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-06-08 · <a href="https://www.propublica.org/article/trump-jim-justice-doj-southern-coal-investigation-west-virginia" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump administration officials killed a federal criminal investigation into the coal empire owned by GOP Sen. Jim Justice. It targeted alleged Clean Water Act violations by Southern Coal run by his son.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-08 · <a href="https://www.pbs.org/newshour/politics/watch-live-senate-meets-after-deal-to-renew-expiring-surveillance-program-falters" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senate met after a deal to renew a surveillance program faltered. Republicans warned the White House the authority is likely to lapse this week amid bipartisan backlash over President Trump&#x27;s intelligence nominee.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-06-09 · <a href="https://www.npr.org/2026/06/09/nx-s1-5850426/trump-formally-nominates-todd-blanche-to-serve-as-attorney-general" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump formally nominated Todd Blanche to serve as Attorney General. The move sets up a potential confirmation fight in Congress.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-08 · <a href="https://www.nytimes.com/2026/06/08/us/politics/judge-visa-skilled-workers-fee-trump.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A judge threw out the Trump administration’s September policy requiring companies to pay $100,000 fees for H‑1B visa petitions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-09 · <a href="https://thehill.com/homenews/campaign/5915716-los-angeles-mayoral-race-raman-bass" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Nithya Raman, Los Angeles councilmember, knocked out Spencer Pratt and will face Mayor Karen Bass in the city&#x27;s mayoral race later this year. It&#x27;s expected to feature intraparty Democratic tension.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage highlights how conflict diplomacy, regional security operations, and cross-border health measures are increasingly intertwined with questions of legitimacy and trust. Efforts to open channels for talks and to protect civilians sit alongside escalating strikes and fragile security environments that can quickly widen humanitarian risks. At the same time, outbreak responses and evacuations show how public health actions can trigger local backlash, while scrutiny of international justice institutions affects confidence in accountability.</div>
+  
+<div class="item">
+  <div class="meta">© France Médias Monde Graphic Studio · 2026-06-09 · <a href="https://www.france24.com/en/europe/20260609-why-zelensky-asked-russian-oligarch-roman-abramovich-to-test-putin-appetite-for-talks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Zelensky confirmed he asked Roman Abramovich to pass an offer of direct talks to Vladimir Putin. Abramovich, a Kremlin-aligned former Chelsea owner, has acted as a go-between since the invasion.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-06-09 · <a href="https://news.un.org/feed/view/en/story/2026/06/1167680" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Security Council met to discuss Central Africa, including efforts to combat the outlawed Lord&#x27;s Resistance Army. Ambassadors were briefed on UNOCA&#x27;s strategy for civilian protection, humanitarian access and cross-border cooperation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Luis Tato, AFP · 2026-06-09 · <a href="https://www.france24.com/en/africa/20260609-at-least-one-person-killed-protesting-us-ebola-quarantine-centre-in-kenya" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At least one person was killed protesting an Ebola quarantine centre in Nanyuki, Kenya. It would host Americans evacuated from an outbreak in the DRC; Kenya has never recorded Ebola.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-06-09 · <a href="https://news.un.org/feed/view/en/story/2026/06/1167679" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The World Health Organization said a massive push for early testing and contact tracing is helping to contain Ebola in eastern Democratic Republic of the Congo.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-09 · <a href="https://www.bbc.com/news/articles/c77yx53015no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The International Criminal Court suspended chief prosecutor Karim Khan with immediate effect while an investigation into sexual misconduct allegations continues.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-09 · <a href="https://www.bbc.com/news/articles/c36y16nkr5no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli air strikes hit the Lebanese city of Tyre, killing eight people and prompting an evacuation order that for the first time included its Christian quarter.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-09 16:31 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
