@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news shows AI moving from novelty to infrastructure, with rising pressure to prove reliability, traceability, and legal accountability. The tension is between rapid deployment in search, security, and scientific work and the need to limit errors, clarify what systems can truly infer, and meet transparency expectations. At the same time, scaling AI is colliding with practical constraints like electricity supply. Readers can view this as a shift toward AI that must be auditable and resource-aware, affecting product design, compliance planning, and capacity decisions.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-06-10 · <a href="https://arstechnica.com/tech-policy/2026/06/nobody-needs-ai-to-search-the-internet-court-says-in-ruling-against-google" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A German court ruled Google liable for false statements in its AI Overviews after they linked two publishers to scams. The decision could affect other AI search engines and chatbots.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">OpenAI News · 2026-06-11 · <a href="https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI announced support for the EU Code of Practice on Transparency of AI-Generated Content. It said the Code helps implement the EU AI Act and advance provenance standards for AI-generated content.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-11 · <a href="https://github.blog/security/making-secret-scanning-more-trustworthy-reducing-false-positives-at-scale" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub&#x27;s blog described improving secret-scanning verification with context-aware LLM reasoning to reduce false positives at scale. That reduced noise makes alerts more trustworthy and actionable.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-10 · <a href="https://www.theregister.com/on-prem/2026/06/10/datacenter-growth-may-run-into-a-power-wall-by-2030/5253635" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gartner warns datacenter electricity consumption is rising due to AI, projected to reach 565 TWh in 2026, and grid operators may be unable to meet demand by 2030.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-11 · <a href="https://arxiv.org/abs/2606.11769" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper develops a framework to grade data-driven systems&#x27; capability to infer. It maps which levels satisfy the EU AI Act&#x27;s inference criterion and flags areas needing regulatory clarity.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-06-11 · <a href="https://arxiv.org/abs/2606.11627" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers found that on-policy distillation can cause a distilled student model&#x27;s performance to worsen when the original privileged context is reintroduced.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">OpenAI News · 2026-06-11 · <a href="https://openai.com/index/using-codex-to-simulate-black-holes" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Astrophysicist Chi-kwan Chan uses Codex to build and refine computer simulations of black holes. Those simulations help study extreme physics and test Einstein’s general relativity.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local stories point to institutions under strain as they try to balance safety, capacity, and modernization. Decisions about oversight and program design show how quickly trust can erode when accountability or clinical judgment is questioned, while wildfire planning underscores how limited data can complicate readiness. At the same time, civic participation and small-scale clean energy use suggest communities are testing new ways to engage and operate, even as tradeoffs remain.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-10 · <a href="https://montanafreepress.org/2026/06/10/tim-sheehy-bridger-aerospace-forest-service-inspection" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A U.S. senator pushed to cut firefighting aircraft inspections the same month his former company failed one.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-10 · <a href="https://montanafreepress.org/2026/06/10/a-montana-hospital-tried-to-build-a-cutting-edge-heart-program-it-drove-doctors-away" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Three former Benefis doctors said the health system’s patient-selection approach for its TAVR program and administrators&#x27; indifference led them to leave the hospital.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-06-10 · <a href="https://www.mtpr.org/montana-news/2026-06-10/montana-wildfire-forecast-comes-with-a-lot-of-unknowns-and-little-snowpack" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An official wildfire outlook says eastern Montana faces above‑normal fire potential through July, while much of the state so far is expected to have a normal season.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-10 · <a href="https://flatheadbeacon.com/2026/06/10/more-montanans-cast-ballots-in-this-election-than-any-other-midterm-primary" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana’s June primary drew over 300,000 voters, the highest raw vote total for any midterm-year primary in state history. Turnout as a share of registered voters fell from its 2018 peak.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-10 · <a href="https://flatheadbeacon.com/2026/06/10/a-moment-of-impact-whitefish-nonprofit-turns-to-clean-energy-to-power-festival" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Westland Impact Festival in downtown Whitefish powered 26 films, 15 panel discussions, 40 speakers and four concerts across four venues using solar‑charged portable batteries.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how oversight and transparency collide with security and political leverage. A looming deadline for a major surveillance authority, leadership churn in the intelligence apparatus, and disputes over campaign-finance compliance all show institutions struggling to set enforceable rules while trust is contested. At the same time, executive pressure on healthcare pricing highlights a push to make markets more legible, raising questions about compliance capacity and enforcement. Voters, donors, patients, and national-security stakeholders are all affected as these choices shape privacy, accountability, and costs.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-11 · <a href="https://www.nytimes.com/2026/06/11/us/politics/house-spy-program-bill.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The House rejected a bill to extend FISA Section 702 surveillance authority. The measure fell well short of support, further raising chances it will lapse on Saturday.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-10 · <a href="https://www.nytimes.com/2026/06/10/world/middleeast/trump-oil-iran-strait-hormuz.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A U.S. military official said the president’s announcement about a &quot;secret mission&quot; to ferry oil past Iran referred to a previously reported effort to shepherd commercial vessels through the Strait of Hormuz.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-06-11 · <a href="https://www.npr.org/2026/06/11/nx-s1-5851895/bill-pulti-director-of-national-intelligence-fisa-702" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump named Bill Pulte acting director of national intelligence. His appointment has scrambled congressional negotiations to renew the FISA 702 surveillance authority.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-11 · <a href="https://thehill.com/homenews/campaign/data-nerds/5919843-live-discussion-maine-platner-collins-senate-map" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Graham Platner won the Democratic primary in the Maine Senate race. The result comes as the Senate map shifts toward Democrats, boosting their hopes of retaking the upper chamber.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-10 · <a href="https://thehill.com/homenews/house/5918791-actblue-ceo-regina-wallace-jones-testimony" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>ActBlue CEO Regina Wallace-Jones invoked the Fifth and refused House Administration Committee questions about alleged foreign donations to Democratic federal candidates. She had said in an op-ed she would refuse.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-10 · <a href="https://www.pbs.org/newshour/health/trump-administration-warns-hundreds-of-hospitals-to-increase-price-transparency-or-face-fines" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration warned more than 500 hospitals that they must increase price transparency or face fines. Officials argued that failing to disclose prices keeps healthcare costs higher than they should be.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage points to rising strain on regional stability as active conflicts persist, ceasefires fray, and civilian protections erode, with displacement and detention emerging as recurring consequences. The tension is between military escalation and the capacity of diplomatic or legal safeguards to limit spillover and harm to noncombatants. For readers, the practical lens is how these dynamics reshape movement across borders—who is forced to flee, who is blocked from travel, and what that means for humanitarian access and security planning.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-11 · <a href="https://www.bbc.com/news/articles/c4gyp9v0e93o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US and Iran exchanged strikes across the Middle East for a second day, with US strikes in Iran and Iranian attacks in Bahrain, Kuwait and Jordan. They strained the April ceasefire.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-11 · <a href="https://www.france24.com/en/video/20260611-war-in-ukraine-passes-1-569-days-now-longer-than-wwi" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The war in Ukraine has reached 1,569 days, now lasting longer than World War I.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-11 · <a href="https://www.france24.com/en/video/20260611-m23-fighters-detaining-abusing-thousands-in-drc-hrw-report-documents" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Human Rights Watch reported that the Rwanda-backed M23 has forcibly recruited and detained thousands in inhumane conditions in eastern Democratic Republic of Congo.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-06-11 · <a href="https://reliefweb.int/report/lebanon/forced-evacuation-orders-and-airstrikes-southern-lebanon-leave-desperate-families-nowhere-go" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Recurring Israeli airstrikes and evacuation orders for the city of Tyre have forced about 165,000 residents to flee, leaving families little warning, few options and no time to gather belongings.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-06-11 · <a href="https://reliefweb.int/report/world/western-balkans-migration-routes-dynamics-report-april-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>IOM surveyed 687 migrants in the Western Balkans from 1 to 30 April 2026 and published a report on their profiles, experiences, routes and intended destinations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-11 · <a href="https://www.bbc.com/sport/football/articles/c2kyx0l0499o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Somali referee Omar Artan, denied entry to the United States for the World Cup, has been appointed to referee the UEFA Super Cup between Paris St-Germain and Aston Villa.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-11 16:16 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
