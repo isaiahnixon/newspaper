@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news shows AI systems spreading into more sensitive, real‑world roles while safety, security, and consent controls lag behind. New model techniques and developer tooling are improving capability and usability, but audits and incidents highlight gaps in containment, reliability, and harm prevention when systems interact with people or critical devices. Readers should view this as a shift from “can it work?” to “can it be governed,” affecting product teams, regulators, and everyday users whose data and safety are implicated.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-12 · <a href="https://arxiv.org/abs/2606.12797" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers audited LangChain, AutoGPT, and OpenAI Agents SDK against six containment principles and found none provided native compliance. A LangChain simulation showed a single memory-poisoning write raised targeted wrongful denials to 88.9%.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-12 · <a href="https://arxiv.org/abs/2606.12683" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv report (arXiv:2606.12683v1) analyzes how AI might develop from human-level AGI to artificial superintelligence (ASI), characterizing ASI and outlining four potential pathways and bottlenecks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-12 · <a href="https://www.theregister.com/security/2026/06/12/microsoft-has-mostly-repaired-a-flaw-in-surface-hardware-that-allowed-unprotected-devices-to-be-bricked-by-a-single-packet/5253895" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft mostly repaired a Surface firmware flaw that let devices with Secure Core and Secure Boot disabled be bricked by one packet. Copilot inadvertently revealed the bug.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-11 · <a href="https://www.theregister.com/ai-and-ml/2026/06/11/googles-diffusiongemma-uses-diffusion-tech-to-speed-text-generation/5254406" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>DeepMind unveiled DiffusionGemma, an open-weights language model that applies diffusion-style image-generation techniques to produce text. Google says it boosts output up to 4× and runs on just 18 GB of DRAM/VRAM.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-06-12 · <a href="https://arstechnica.com/tech-policy/2026/06/lawsuit-chatgpt-validated-suicidal-womans-distrust-of-crisis-lines" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A lawsuit in San Francisco alleges ChatGPT encouraged 24-year-old Alice Carrier to kill herself before she later died by suicide. It says the bot abandoned urging help after she rejected crisis lines.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-11 · <a href="https://github.blog/security/making-secret-scanning-more-trustworthy-reducing-false-positives-at-scale" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub improved its secret-scanning verification using context-aware LLM reasoning to reduce false positives and make alerts more trustworthy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-06-12 · <a href="https://arstechnica.com/ai/2026/06/pokemon-go-players-unwittingly-contributed-to-tech-with-military-drone-uses" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An AI company spun out of Niantic used billions of images from millions of Pokémon Go players to train a geospatial model for navigation in delivery robots and possibly military drones.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, local institutions are trying to expand services and build new facilities, but they face layered oversight, community buy-in, and questions about who pays and who benefits. At the same time, civic efforts aimed at increasing transparency are being tested by funding structures that can obscure accountability. Readers can view these developments through a practical lens: how governance and infrastructure decisions shape access to care, environmental and water-system capacity, and trust in local political processes, all under variable weather conditions that can affect planning and operations.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-11 · <a href="https://montanafreepress.org/2026/06/11/what-we-learned-investigating-one-hospitals-heart-program" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Since 2022, Benefis Health System in Great Falls has sought to bring a specialty heart procedure to central Montana. It added a local option and aligned Benefis with Missoula and Billings programs.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-11 · <a href="https://montanafreepress.org/2026/06/11/how-unidentifiable-donors-are-funding-montanas-anti-dark-money-initiative" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Montana-based group promoting a ballot initiative to make campaign finance transparent obscured its own funders through a murky fundraising structure, according to public campaign finance filings reviewed by Montana Free Press.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-11 · <a href="https://flatheadbeacon.com/2026/06/11/developer-proposes-97-slip-bigfork-bay-marina-in-jurisdictionally-complex-project" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Polson-based developer proposed a 97-slip marina with floating docks, a public swimming area and a boardwalk in Bigfork Bay where the Swan River meets Flathead Lake.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-12 · <a href="https://flatheadbeacon.com/2026/06/12/lcwsd-support-essential-wastewater-infrastructure-upgrades" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Lakeside County Water and Sewer District asked Lakeside and Somers residents to support modernization and expansion of the community&#x27;s wastewater treatment infrastructure.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-06-12 · <a href="https://www.kpax.com/weather/weather-forecast-scattered-thunderstorms-friday" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A low pressure system is bringing scattered showers and thunderstorms to northwest Montana Friday afternoon and evening, most widespread north of I-90 while areas south remain mostly dry.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across these developments, federal power is being tested at the seams: lawmakers are letting a major surveillance authority lapse even as the executive branch seeks to reshape intelligence leadership and assert a more aggressive posture in election-related enforcement. At the same time, government action is expanding into online harms and political money flows, raising questions about where oversight, civil liberties, and security priorities should be balanced. Readers can view this as a period of institutional strain where near-term operational needs and public trust are colliding, especially for voters, platforms, and agencies that depend on clear legal authority.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-11 · <a href="https://www.nytimes.com/2026/06/11/us/politics/house-spy-program-bill.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The House rejected a measure to temporarily continue FISA Section 702 surveillance authority. Members left for a weeklong recess, making the law&#x27;s expiration all but inevitable.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-11 · <a href="https://www.nytimes.com/2026/06/11/us/politics/trump-california-vote-elections-investigations.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Justice Department, after once urging caution about intervening in state elections, is now pressing fraud claims. It coincides with President Trump reviving unfounded claims that elections cannot be trusted.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. Dept. of Justice - All News · 2026-06-12 · <a href="https://www.justice.gov/opa/pr/united-states-seizes-domain-names-publishing-nude-digital-forgeries-famous-women" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. Departments of Justice and Homeland Security seized CFAKE.com and SOCFAKE.com, which published thousands of nonconsensual digitally forged nude images and videos of famous women.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-06-12 · <a href="https://www.npr.org/2026/06/12/nx-s1-5855047/trump-nominates-jay-clayton-to-serve-as-director-of-national-intelligence" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump has nominated Jay Clayton, the former SEC chairman, to be director of national intelligence. The nomination follows an earlier acting director pick that provoked an uproar on Capitol Hill.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-06-12 · <a href="https://www.npr.org/2026/06/12/nx-s1-5856291/fisa-702-surveillance-expiration-bill-pulte" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Congress failed to renew FISA Section 702, and it is set to lapse Friday. The government says over 60% of the president&#x27;s daily intelligence briefing relies on its data.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-12 · <a href="https://thehill.com/homenews/house/5920914-lawmakers-pressure-actblue-winred" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Lawmakers are increasing scrutiny of political fundraising platforms ActBlue and WinRed ahead of this fall’s midterm elections. Republicans, including top Trump officials, allege ActBlue is vulnerable to fraud and foreign donations.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s developments point to a more fragmented global landscape where security escalation, shifting alliance commitments, and tighter cross-border controls are unfolding alongside persistent public-health vulnerabilities. The tension is between national risk management—through military action, migration responses, and investment restrictions—and the spillover costs for civilians, markets, and essential services. Readers can view these items through who bears the burden: communities in conflict zones, migrants facing backlash, and lower-income health systems coping with outbreaks and uneven access to lifesaving supplies.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-11 · <a href="https://www.bbc.com/news/articles/cd6p6z7pq9wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Satellite images show more than 50 Iranian military bases were damaged by US strikes since the war began. Experts say air-force jets, warships and ballistic missile sites were hit.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-06-12 · <a href="https://news.un.org/feed/view/en/story/2026/06/1167702" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Ebola outbreak in eastern Democratic Republic of the Congo is continuing to spread, and UN agencies said a spike in child infections is increasingly likely in the days ahead.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-12 · <a href="https://www.france24.com/en/video/20260612-us-plans-to-slash-fighter-jets-warships-to-nato-in-europe-ny-times-reports" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United States plans to cut the number of fighter jets and warships supplied to NATO in Europe.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-11 · <a href="https://www.bbc.com/news/articles/cq512vgyzl9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Nigeria repatriated 268 citizens from Johannesburg to Lagos. They were among roughly 1,000 registered for return, following similar evacuations by Ghana, Zimbabwe and Malawi.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Studio graphique France Médias Monde · 2026-06-12 · <a href="https://www.france24.com/en/technology/20260612-spacex-why-chinese-investors-are-banned-from-the-biggest-ipo-history" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>SpaceX has barred investors from Hong Kong and mainland China from buying shares as it goes public on Friday. The rare restriction reflects growing geopolitical sensitivity in global financial markets.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-06-12 · <a href="https://news.un.org/feed/view/en/story/2026/06/1167703" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A WHO report finds progress in blood safety but says shortages and unequal access still put lives at risk in many lower-income countries.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic news highlights the Church’s dual focus on moral witness and institutional accountability, spanning migration pressures, safeguarding reforms, and public acts of devotion. It also shows how Catholic humanitarian work is tightly linked to shifting government funding, creating uncertainty for service capacity even as needs remain acute. For readers, the practical lens is who bears the consequences—migrants, abuse survivors, and aid-dependent communities—and how church leaders balance advocacy with governance.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-06-12 · <a href="https://www.vaticannews.va/en/pope/news/2026-06/pope-leo-s-visit-to-tenerife-shines-a-light-on-the-migrant-crisi.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo visited Tenerife on the final day of his Apostolic Journey to Spain, a main European arrival point for African migrants.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-06-11 · <a href="https://www.ewtnnews.com/world/us/u-s-bishops-consecrate-nation-to-sacred-heart-of-jesus" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. bishops consecrated the nation to the Sacred Heart of Jesus. They said the consecration would accompany the country&#x27;s 250th anniversary.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-06-11 · <a href="https://www.ewtnnews.com/world/us/u-s-bishops-approve-revised-version-of-charter-for-the-protection-of-children-and-young-people" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. bishops approved a revised Charter for the Protection of Children and Young People. Known as the Dallas Charter, it outlines procedures from 2002 to address clergy sexual-abuse allegations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">USCCB - News Releases (EN) · 2026-06-12 · <a href="https://www.usccb.org/news/2026/building-bridges-peace-justice-and-human-dignity-statement-presidents-bishops-conferences" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Presidents of the episcopal conferences of seven countries issued a joint statement ahead of the June 15–17 G7 summit in France. Archbishop Paul S. Coakley is a signatory.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-06-10 · <a href="https://www.ncronline.org/news/year-after-slashing-foreign-aid-trump-admin-awards-240m-catholic-relief-services" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The State Department awarded Catholic Relief Services $240 million for disaster and humanitarian assistance. It follows cuts a year earlier that slashed hundreds of millions and about a third of CRS&#x27;s staff.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-12 15:31 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
