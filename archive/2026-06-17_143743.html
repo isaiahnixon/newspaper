@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech developments point to AI moving from novelty to infrastructure, with more effort going into measuring real-world impact, improving evaluation reliability, and expanding multilingual data foundations. At the same time, the security boundary around AI assistants is proving fragile, pushing organizations to treat model access to sensitive content as a core risk. In parallel, hardware and standards work—spanning new chip ecosystems, resilient space systems, and post-quantum signatures—shows a broader shift toward long-lived, replaceable, and cryptographically durable platforms that affect procurement and deployment choices.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-16 · <a href="https://arxiv.org/abs/2606.15708" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The ninth edition of the AI Index report was published. It adds standalone chapters on AI in science and medicine and new measures of testing, economic value, and labor-market effects.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-06-16 · <a href="https://arstechnica.com/security/2026/06/critical-copilot-vulnerability-allowed-hackers-to-seal-2fa-code-from-users" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft patched a max-critical M365 Copilot flaw whose exploit retrieved users&#x27; 2FA codes from emails accessible to Copilot. Researchers said it shows LLMs can&#x27;t separate user instructions from third-party content.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-15 · <a href="https://www.theregister.com/offbeat/2026/06/15/darpa-seeks-swappable-satellites-to-help-with-future-star-wars/5255839" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>DARPA issued an RFI for a Rapid Reconstitution of Space Capabilities program to develop swappable satellites to quickly replace damaged orbital systems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-16 · <a href="https://www.theregister.com/systems/2026/06/16/qualcomm-said-to-be-circling-ai-chip-biz-tenstorrent-in-10b-risc-v-power-play/5256084" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Qualcomm is reportedly in talks to buy AI chip firm Tenstorrent for about $8–10 billion. The move would signal a major commitment to the RISC‑V instruction set and boost its ecosystem.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">W3C News · 2026-06-16 · <a href="https://www.w3.org/news/2026/first-public-working-draft-quantum-resistant-cryptosuites-v1-0" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>W3C published the First Public Working Draft of &quot;Quantum-Resistant Cryptosuites v1.0.&quot; It describes Data Integrity Cryptosuites for generating digital signatures with post-quantum algorithms.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-15 · <a href="https://github.blog/ai-and-ml/llms/accelerating-researchers-and-developers-building-multilingual-ai-with-a-new-open-dataset" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub published a repository-level dataset under CC0-1.0 that helps researchers and developers discover multilingual developer content across READMEs, issues, and pull requests.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-16 · <a href="https://arxiv.org/abs/2606.15474" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper proposes a method to attribute LLM evaluation score drift to the system or to the judge. They proved anytime-validity and reported 60/60 silent-bump detections and 110/120 correct strict-prompt attributions.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local coverage reflects how public safety, environmental oversight, and community identity are being tested at once. A fatal roadway incident and a quickly contained wildfire underscore everyday risks that hinge on response capacity and prevention. At the same time, disputes over industrial waste permitting and sharper campaign rhetoric show rising pressure on regulators and candidates to justify decisions and accountability. Residents, local officials, and voters are the most directly affected as they weigh safety, development, and civic trust.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-15 · <a href="https://flatheadbeacon.com/2026/06/15/pedestrian-struck-and-killed-by-vehicle-in-kalispell" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A 28-year-old Helena man was struck and killed early Saturday at about 2:53 a.m. when an 18-year-old Eureka driver&#x27;s westbound pickup hit him on U.S. Highway 2 in Kalispell.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-15 · <a href="https://montanafreepress.org/2026/06/15/what-we-know-about-the-fire-on-mt-helena" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Firefighters contained a fire on the north face of Mt. Helena Monday afternoon; it had burned about a quarter-acre by 4:30 p.m.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-16 · <a href="https://montanafreepress.org/2026/06/16/groups-challenge-epa-decision-on-montana-renewables-wastewater-site" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Regional and national environmental groups, along with Pondera County officials, have challenged an EPA decision approving an underground wastewater disposal permit for the Montana Renewables biorefinery in Great Falls.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-06-16 · <a href="https://missoulacurrent.com/bankhead-bodnar-race" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Alani Bankhead, Democratic Senate nominee, attacked independent candidate and former University of Montana president Seth Bodnar, calling for him to resign and accusing him of deflecting responsibility for a 2024 gender-discrimination lawsuit.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-16 · <a href="https://flatheadbeacon.com/2026/06/16/more-than-just-a-hotel-name" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Flathead Beacon column says preserving Grouse Mountain Lodge matters to Whitefish. The lodge has been a landmark for nearly 40 years, hosting family traditions, holiday brunches and milestone events.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story links foreign-policy bargaining with intensifying domestic political conflict, as national security decisions intersect with election positioning and legal scrutiny of prominent officials. A key tension is whether executive actions—on diplomacy, enforcement priorities, and regulatory protections—are viewed as pragmatic governance or as moves that advantage allies and pressure rivals. For readers, the practical lens is how these choices shape trust in institutions and set the terrain for upcoming primaries and midterm strategy.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-16 · <a href="https://www.nytimes.com/2026/06/15/world/middleeast/us-iran-framework-ceasefire-deal.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. and Iran signed a framework deal that includes a 60-day cease-fire and calls for negotiations on a final peace agreement and Iran’s nuclear program.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-06-16 · <a href="https://www.propublica.org/article/trump-epa-methane-jeffery-hildebrand-hilcorp-oil-regulations" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump plans to protect methane-leaking stripper wells. Billionaire donor Jeffery Hildebrand, who attended a White House event with Trump, would benefit.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-15 · <a href="https://www.pbs.org/newshour/politics/california-gov-gavin-newsom-says-trumps-justice-department-is-investigating-him-and-his-wife" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>California Gov. Gavin Newsom said Monday that the Justice Department is investigating him and his wife. He accused the Trump administration of politically targeting him while he weighs a presidential run.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-16 · <a href="https://thehill.com/homenews/campaign/5922416-trump-kemp-collins-dooley-georgia-senate" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Georgia voters went to the polls to choose a GOP Senate nominee, with President Trump endorsing Rep. Mike Collins and Gov. Brian Kemp backing Derek Dooley.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-16 · <a href="https://thehill.com/homenews/campaign/5925175-democrats-search-next-obama" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Democrats gathered in Chicago to open the Obama Presidential Center. They are also confronting who the next Barack Obama will be, a question that remains unresolved.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-15 · <a href="https://www.pbs.org/newshour/show/amy-walter-and-jasmine-wright-on-the-iran-wars-lasting-impact-on-midterm-politics" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Amy Walter and Jasmine Wright joined William Brangham to discuss President Trump&#x27;s Iran deal, Vance&#x27;s promotion of it, the war&#x27;s potential midterm effects and Gov. Gavin Newsom saying he&#x27;s under investigation.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage highlights how conflict management is increasingly driven by high-level bargaining and coordinated pressure, even as those moves create uneven security and political consequences for regional partners. At the same time, non-combat shocks—from military accidents to natural disasters—underscore how quickly risks can spill into civilian harm and strain response capacity. A parallel humanitarian thread shows basic health needs being overwhelmed, sharpening the tradeoff between diplomatic focus and resourcing immediate relief for affected communities.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-16 · <a href="https://www.france24.com/en/video/20260616-who-are-the-winners-and-losers-of-the-us-iran-deal" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United States and Iran could sign an agreement in Geneva this Friday to end the Middle East conflict after three and a half months (108 days) of war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-16 · <a href="https://www.france24.com/en/video/20260616-now-is-the-moment-g7-powers-push-russia-to-end-ukraine-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>G7 leaders agreed to intensify pressure on Russia to end the war in Ukraine, with US President Donald Trump saying Moscow should &quot;make a deal&quot;.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-16 · <a href="https://www.bbc.com/news/articles/cj4gnqw8j52o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Donald Trump&#x27;s ceasefire agreement with Iran has left Israeli prime minister Benjamin Netanyahu trapped in a political and security dilemma. It smashed the three cornerstones of his political career, critics said.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-16 · <a href="https://www.bbc.com/news/articles/cqx10yql319o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Eight people, including two Boeing employees, were killed when a US Air Force B-52 bomber crashed immediately after take-off from Edwards Air Force Base in California during a routine test mission.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-06-16 · <a href="https://reliefweb.int/report/indonesia/flash-update-no-1-m67-earthquake-palu-central-sulawesi-16-june-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A magnitude 6.7 earthquake occurred 42 km southeast of Palu, Central Sulawesi, at 10:27 UTC+7 on 16 June 2026, with a revised depth of 16 km. BMKG reported no tsunami potential.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-06-16 · <a href="https://reliefweb.int/report/somalia/malnutrition-admissions-are-overwhelming-baidoa-hospital-somalia" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Malnutrition wards supported by MSF in Baidoa are seeing a record surge of children and pregnant and lactating women arriving in critical condition. MSF is calling for an immediate scale‑up.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-16 15:57 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
