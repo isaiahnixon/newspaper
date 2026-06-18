@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech story is AI moving from lab demos into high‑stakes operations—public services, healthcare, legal work, and accessibility—while exposing new constraints around reliability, safety, and cost. The tension is between faster, more capable systems and the need for auditing, guardrails, and resilient infrastructure when failures can have real‑world consequences. For readers, the practical lens is decision risk: whether you’re adopting AI tools, running critical systems, or building software workflows, the focus shifts to trust, governance, and operational robustness alongside performance.</div>
+  
+<div class="item">
+  <div class="meta">DeepMind Blog · 2026-06-16 · <a href="https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UK government partnered with Google DeepMind to build an AI-powered prototype intended to speed housing planning decisions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-06-16 · <a href="https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Leaked audited financial statements show OpenAI&#x27;s revenue rose from $3.7 billion in 2024 to $13.07 billion in 2025. R&amp;D and other expenses outpaced revenues, producing multibillion-dollar losses.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-17 · <a href="https://arxiv.org/abs/2606.17405" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers present an adaptive clinical-decision-support AI combining treatment-effect estimation, patient digital twin, reinforcement learning and a rule-based safety monitor. It outperformed baselines in effectiveness and stability on simulated and TCGA ovarian-cancer data.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-17 · <a href="https://arxiv.org/abs/2606.18021" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>LegalHalluLens is an auditing framework profiling typed hallucinations and a Risk Direction Index for legal AI. Its debate pipeline cut fabricated detections 45% and matched commercial APIs with a 4B-parameter model.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-16 · <a href="https://www.theregister.com/science/2026/06/16/ai-and-brain-computer-interface-allow-speechless-als-patient-to-work-a-full-time-job/5256492" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>UC Davis researchers used a machine-learning brain–computer interface to translate an ALS patient&#x27;s brain activity into sentences with 92% accuracy, enabling the previously speechless patient to work a full-time job.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-17 · <a href="https://www.theregister.com/cyber-crime/2026/06/17/cyberattack-sees-crops-kept-in-the-ground/5256321" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A cyberattack on Mackay Sugar forced farmers to leave sugar cane unharvested during peak crushing season. The company performed limited manual crushing of pre-harvested cane while restoring systems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-16 · <a href="https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The GitHub Blog published a post explaining what git worktrees are, how to use them, and why you might. The post notes worktrees existed since 2015 but only recently gained popularity.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, local and state decisions are increasingly centered on how to allocate public resources and manage land in ways that balance growth, conservation, and public services. The tension is between expanding capacity—housing, treatment facilities, and revenue tools—and the constraints of environmental review, protected landscapes, and financial accuracy. For residents and local leaders, the practical lens is how these choices shape taxes and budgets, where development can occur, and what safeguards govern both public spending and land use.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-17 · <a href="https://flatheadbeacon.com/2026/06/17/whitefish-city-council-discusses-future-of-resort-tax-community-housing-funds" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Whitefish councilors discussed changing the resort-tax-funded housing grant process and possibly increasing the resort tax. They expect more than $20 million from resort-tax collections for community housing by 2045.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-16 · <a href="https://flatheadbeacon.com/2026/06/16/agency-releases-environmental-assessment-for-granite-moccasin-logging-project" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Flathead National Forest released an environmental assessment for the Granite Moccasin logging project. It would treat roadless areas, recommended wilderness and a Wild and Scenic stretch of the Middle Fork Flathead River.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-16 · <a href="https://montanafreepress.org/2026/06/16/how-the-montana-lottery-misreported-millions-of-dollars" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Legislative Audit Division report found the Montana Lottery miscalculated its finances by $18.5 million over several years. It said this reflected overstatements and understatements, not missing money.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-06-17 · <a href="https://www.mtpr.org/montana-news/2026-06-17/conservation-easement-protects-wildlife-corridor-in-the-garnet-mountains" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An 800-acre conservation easement in Montana&#x27;s Garnet Mountains protects habitat from future development. It anchors a wildlife corridor linking the Northern Continental Divide, Selway-Bitterroot and Greater Yellowstone ecosystems.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-06-17 · <a href="https://www.kpax.com/news/montana-board-of-investments-closes-deal-on-laurel-land-for-proposed-forensic-mental-health-facility" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The state has closed on its purchase of 114 acres in west Laurel proposed for a forensic mental health facility.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s governance story centers on how executive power is being exercised and contested across domestic policy, national security, and administrative appointments, with Congress and local representation often limited in their leverage. The tension is between speed and control: policy and security decisions can move quickly, but oversight, accountability, and democratic checks can lag or be bypassed. The practical lens is who bears the consequences—families relying on benefits, service members and civilians affected by military risk, and communities with constrained representation or bargaining power.</div>
+  
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-06-17 · <a href="https://www.propublica.org/article/snap-benefits-children-food-stamps" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>More than 770,000 children are no longer receiving SNAP benefits after Trump&#x27;s changes to the federal food program. Republican backers had said the changes would not affect vulnerable people, including children.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-16 · <a href="https://www.nytimes.com/2026/06/16/us/politics/republicans-iran-war-powers-senate.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senate Republicans again blocked a war-powers resolution directing President Trump to halt the war in Iran and seek congressional authorization, despite four GOP senators crossing party lines to support it.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-17 · <a href="https://www.nytimes.com/2026/06/17/us/politics/senate-intelligence-nomination-voter-restrictions.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump named Jay Clayton, the U.S. attorney in Manhattan, after a bipartisan backlash to his earlier choice of Bill Pulte. It all but assures Mr. Pulte will keep the job temporarily.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-06-17 · <a href="https://www.propublica.org/article/trump-state-department-africa-uganda-aid-medical-data-privacy" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Uganda accepted a U.S. health deal granting the U.S. access to data on millions of citizens. Rejecting it could cost over $1 billion in health aid.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Fox News - Politics · 2026-06-17 · <a href="https://www.foxnews.com/politics/deadly-b-52-crash-puts-focus-engines-controllability-investigators-hunt-answers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A B-52 Stratofortress crashed after takeoff from Edwards Air Force Base during a radar modernization test mission, killing all eight people aboard.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-17 · <a href="https://thehill.com/homenews/campaign/5920221-white-dc-delegate-primary-win" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Robert White is projected to win the Democratic primary for Washington, D.C.’s nonvoting delegate to Congress. Eleanor Holmes Norton retired after 18 terms, prompting a competitive race.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs thread shows governments leaning harder on coercive tools—sanctions, naval posture, and conditional integration—while also using high-level diplomacy to manage fraying alliances. The tension is between projecting resolve and avoiding escalation or loss of leverage when counterparts test boundaries. Readers can view this as a shift toward security-first decision-making that affects energy flows, regional stability, and the terms smaller partners face when seeking closer ties.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-17 · <a href="https://www.france24.com/en/us-signals-to-return-of-sanctions-on-russia-as-g7-unites-around-ukraine" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On June 16, G7 leaders agreed to intensify pressure on Russia over the war in Ukraine and the US indicated it could re-impose waived sanctions. Zelensky attended hoping US focus would shift.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-17 · <a href="https://www.bbc.com/news/articles/cpq37yxexd9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Three Iranian tankers carrying crude oil crossed the US blockade line in the Gulf of Oman, ship-tracking data shows. Analysts said it signals Iran&#x27;s confidence the blockade is over despite US insistence.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-17 · <a href="https://www.france24.com/en/what-is-france-hoping-for-by-inviting-trump-to-have-dinner-in-versailles" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>After the G7 in Evian, Macron invited Trump to dinner at Versailles as an honoured guest. Macron proposed it to celebrate the US&#x27;s 250th anniversary and to patch up relations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-06-16 · <a href="https://www.bbc.com/news/articles/c4gy2rx2k71o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gabriel Leroy, a former Southend councillor, pleaded guilty to offences under the Criminal Law and Computer Misuse Acts. Three other Labour activists will face trial in February 2029.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-17 · <a href="https://www.bbc.com/news/articles/cqx10xlje1lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The FBI thwarted a plot to attack a UFC event at the White House and arrested five men accused of planning sniper attacks and explosive-laden drone strikes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Press releases - European Parliament · 2026-06-17 · <a href="https://www.europarl.europa.eu/news/en/press-room/20260611IPR45217" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>MEPs adopted a resolution saying EU accession progress for Georgia and Türkiye requires reforms amid democratic backsliding. It was adopted by 436 votes in favour, 145 against and 47 abstentions.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent developments highlight the Vatican balancing internal cohesion with institutional accountability while also using its moral voice on international security. Leaders are signaling firmer lines on unauthorized actions that could widen divisions, even as they refine governance structures meant to protect minors and support victims without losing independence. For Catholics and church officials, the practical lens is how authority is exercised—through discipline, reform, and diplomacy—when credibility and unity are both at stake.</div>
+  
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-06-16 · <a href="https://www.ewtnnews.com/vatican/pope-warns-sspx-bishop-ordinations-risk-deepening-schism" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV warned that the Society of St. Pius X plans to consecrate four priests as bishops on July 1 without papal permission, risking a deeper schism.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-06-17 · <a href="https://www.vaticannews.va/en/pope/news/2026-06/pope-leo-xiv-appeal-usa-ira-mou-ukraine-victims.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV welcomed a US–Iran agreement due to be signed Friday. He said he hoped it would strengthen mutual trust, security and stability in the Middle East.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-06-16 · <a href="https://www.vaticannews.va/en/church/news/2026-06/rome-safeguarding-dialogues-tutela-minorum-ending-clergy-abuse.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Pontifical Commission for the Protection of Minors and Ending Clergy Abuse held the first in‑person Rome Safeguarding Dialogues on 15–16 June. It aimed to strengthen safeguarding, support victims, and promote accountability.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-06-15 · <a href="https://www.ncronline.org/vatican/pope-leo-xiv-approves-new-statutes-child-protection-commission" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV approved new statutes for the Pontifical Commission for the Protection of Minors. They aim to balance integration with the Roman Curia while preserving the commission’s independence.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-06-17 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=69776" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cardinal Camillo Ruini died on June 16 at age 95. He had been vicar general of Rome and president of the Italian Episcopal Conference.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-17 14:37 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
