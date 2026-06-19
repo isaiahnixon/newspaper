@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news shows AI spreading into higher-stakes work while exposing gaps in security, evaluation, and infrastructure. On one side, new clinical and productivity systems aim to make decisions and workflows more adaptive; on the other, evidence of regime-dependent model failures and large-scale credential exposure highlights reliability and attack-surface risks. Readers should view this as a shift from “can it work” to “can it be trusted and scaled,” affecting healthcare choices, enterprise security posture, and capacity planning for AI hardware supply chains.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-06-17 · <a href="https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers uncovered a massive Fortinet firewall breach exposing plaintext credentials for nearly 74,000 devices across 21,000+ IP addresses in 194 countries, affecting organizations including Oracle, Chevron, Lenovo, FedEx, NATO contractor and Fortinet.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Google AI Blog · 2026-06-17 · <a href="https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Research in Nature shows AMIE matched primary care physicians in complex disease management.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-18 · <a href="https://arxiv.org/abs/2606.17405" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers presented an online adaptive clinical decision-support AI integrating treatment-effect estimation, a patient digital twin, reinforcement learning, continuous learning from historical records, and a rule-based safety monitor.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-06-18 · <a href="https://arxiv.org/abs/2606.18367" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Authors applied regime-stratified evaluation to three time-series foundation models on two traffic speed benchmarks. Transition MAE rose to 11 mph (vs 3 mph overall) and 90% interval coverage dropped to 55%.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-17 · <a href="https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub Copilot improves context handling and model routing to make more of each session go toward useful work. The update is intended to make users&#x27; credits go further.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-18 · <a href="https://www.theregister.com/cyber-crime/2026/06/18/cyber-offenses-now-account-for-around-a-third-of-all-crime-across-asia-and-south-pacific/5257716" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cybercrime now accounts for more than 30% of all offenses across the Asia and South Pacific region, Interpol says. Interpol reports scams and AI-assisted, increasingly targeted phishing dominate those crimes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-17 · <a href="https://www.theregister.com/networks/2026/06/17/nvidia-backed-optics-vendor-to-boost-wafer-output-by-4x-to-meet-ai-interconnect-demand/5257909" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Nvidia-backed photonics vendor Coherent said it will increase indium phosphide wafer production at its Sherman, Texas, fab fourfold to meet anticipated AI optical-interconnect demand.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across these items, Montana is grappling with how to balance growth and investment with public accountability and economic strain. Debates over permitting timelines, election rules, and labor agreements point to rising pressure for clearer processes and more meaningful participation as big projects and political spending expand. At the same time, agriculture’s cost-price squeeze is pushing producers and rural businesses to look for new revenue models, shaping decisions for voters, workers, and land-based communities.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-17 · <a href="https://montanafreepress.org/2026/06/17/environmental-groups-public-input-helena-mine-proposal" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Environmental groups pushed the U.S. Forest Service for more public input on the Blue Copper Project exploring minerals on nearly 11,000 acres west of Helena. They say the timeline limits public input.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-18 · <a href="https://montanafreepress.org/2026/06/17/agreement-between-data-center-developer-and-union-federation-thin-on-details" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Quantica Infrastructure and a regional trades council signed a memorandum of understanding on the Big Sky Campus. It creates a cooperative framework for union-backed workforce development, apprenticeships and project stability.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-17 · <a href="https://flatheadbeacon.com/2026/06/17/the-montana-plan-appears-set-to-qualify-for-novembers-ballot" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Plan submitted nearly 50,000 signatures and expects to qualify for November’s ballot, exceeding the 30,121 required. It has been heralded as a novel way to curb dark money in elections.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-18 · <a href="https://flatheadbeacon.com/2026/06/18/montana-grain-farmers-face-economic-downturn-amid-historic-inflation-and-low-commodity-prices" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana grain farmers face an economic downturn as production expenses rose 40% since 2018 while commodity crop prices fell.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-06-18 · <a href="https://www.kpax.com/news/montana-ag-network/montana-ag-network-ranch-revives-historic-sheep-wagons-into-camping-experience" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Sweet Grass County ranch restored four vintage sheep wagons into a camping experience. It lets visitors experience Montana’s agricultural past and helps preserve fading Western heritage.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across federal and state politics, today’s developments show a governing agenda being pursued through high-stakes bargaining and procedural leverage, while also exposing fractures within the president’s own party. The tension is between speed and control—moving major decisions through tight timelines or confirmation tactics versus demands for clearer concessions, stable rules, and legislative buy-in. Voters and communities affected by election law and district boundaries, along with lawmakers weighing foreign-policy tradeoffs, are likely to feel the consequences most directly as political support shifts.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-17 · <a href="https://www.nytimes.com/2026/06/17/world/middleeast/us-iran-deal-trump-hormuz-nuclear.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration shared terms of an Iran deal that include oil export waivers. It leaves Iran’s nuclear program and other complex issues to be decided within a 60-day window.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-18 · <a href="https://www.nytimes.com/2026/06/17/us/politics/trump-iran-deal-republicans-criticism.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump reached a deal with Iran that opened new rifts within the Republican Party. Some Republicans were skeptical the agreement secured adequate concessions from Iranian officials.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-06-18 · <a href="https://www.npr.org/2026/06/18/nx-s1-5861710/trump-delays-intel-chiefs-confirmation-in-an-attempt-to-advance-voting-bill" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump delayed the confirmation of the director of national intelligence to try to advance a voting bill.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-17 · <a href="https://thehill.com/homenews/state-watch/5928694-georgia-republicans-pause-redistricting-plans" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Georgia Republican lawmakers said they will not consider mid-decade redistricting during a special session called by Gov. Brian Kemp.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-18 · <a href="https://thehill.com/newsletters/on-the-ballot/5928542-on-the-ballot-black-house-lawmakers-representation" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Black lawmakers are projected to lose more than a dozen congressional seats in 2027 after reaching an all-time high last cycle. An April Supreme Court ruling weakening the Voting Rights Act contributed.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-18 · <a href="https://www.pbs.org/newshour/politics/trumps-economic-approval-rating-hits-new-low-poll-finds" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A poll finds Trump&#x27;s economic approval has hit a new low. Some voting groups he won, including over half of white voters without a college degree, disapprove of his economic approach.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs mix reflects how conflict management, institutional credibility, and economic stability are increasingly intertwined. Diplomatic efforts to lock in ceasefires and verification mechanisms sit alongside continued escalation risks in other wars, underscoring uneven progress and persistent security uncertainty. At the same time, scrutiny of humanitarian conduct and calls for fairer representation highlight pressure on international systems to deliver protection and legitimacy. Readers can view these developments through who bears the costs—civilians, displaced people, and households facing energy-driven price volatility that constrains policy choices.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-06-18 · <a href="https://news.un.org/feed/view/en/story/2026/06/1167748" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The head of the UN atomic energy agency welcomed signing of an initial Iran–US memorandum aimed at ending the war. He offered to meet both parties to help verify Iran’s nuclear programme.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-18 · <a href="https://www.bbc.com/news/articles/cvgmqzr6p9mo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US and Iran signed a 14-point Memorandum of Understanding extending a ceasefire, pledging Iran will never have a nuclear weapon and proposing a $300bn reconstruction fund.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-18 · <a href="https://www.bbc.com/news/articles/c98291g5rr1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Almost 200 Ukrainian drones struck areas southeast of Moscow, setting a refinery and a shopping centre on fire, wounding 17 in Moscow region and killing one at an oil depot in Rostov.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-18 · <a href="https://www.france24.com/en/sudanese-refugees-abused-and-exploited-by-msf-staff-in-chad-says-report" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Dozens of Doctors Without Borders staff have been accused of sexually abusing Sudanese refugees in Chad, and 18 employees were dismissed after investigations found &quot;serious misconduct.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-18 · <a href="https://www.france24.com/en/at-g7-summit-kenya-calls-for-better-recognition-of-africa-by-international-institutions" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kenya&#x27;s President William Ruto attended the G7 summit and urged that international institutions give Africa greater recognition.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-06-18 · <a href="https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Bank of England held interest rates at 3.75%. Policymakers said uncertainty from high, volatile energy prices linked to the Middle East conflict prevented further cuts.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-18 14:05 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
