@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Across major platforms, the focus is shifting from simply adding AI and developer features to tightening governance, identity, and cost control as usage scales. Companies are building more centralized admin views and friction-reducing deployment paths, while also adding verification and contribution throttles to manage abuse, noise, and operational load. In parallel, research is pushing runtime policy and self-review approaches to make agent behavior more auditable and conflict-aware. For enterprises and maintainers, the practical lens is how these controls change who can ship, what gets trusted, and how spending and risk are contained.</div>
+  
+<div class="item">
+  <div class="meta">OpenAI News · 2026-06-18 · <a href="https://openai.com/index/chatgpt-enterprise-spend-controls" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI introduced credit usage analytics and updated spend controls for ChatGPT Enterprise. They give global admins unified credit visibility and tracking of adoption patterns to manage costs and allocate team access.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Gadgets) · 2026-06-18 · <a href="https://arstechnica.com/gadgets/2026/06/google-shares-updated-timeline-for-rolling-out-android-developer-verification" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google confirmed its developer verification system for Android will begin rolling out in select countries later this year and named participating app stores plus timelines for features like the “advanced flow.”</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-06-19 · <a href="https://developers.cloudflare.com/changelog/post/2026-06-19-temporary-accounts-for-agents" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare now lets AI agents deploy Workers to temporary preview accounts via Wrangler&#x27;s --temporary flag without requiring a user to sign up or complete OAuth.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-19 · <a href="https://arxiv.org/abs/2606.19464" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An arXiv paper proposes AgenticRei, a deontic policy system for governing agentic LLM-based AI. It addresses governance gaps—obligation lifecycle, dispensations, and conflict-resolution—beyond XACML, Rego, and Cedar.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-19 · <a href="https://arxiv.org/abs/2606.19527" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers propose adding an LLM &quot;conscience&quot; review and a Direct Preference Optimization alignment loss, demonstrating an online Emergent Alignment method for code-hacking that requires no external judge.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-18 · <a href="https://github.blog/open-source/maintainers/how-pull-request-limits-are-cutting-down-the-noise" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub explained how pull request limits can help manage contribution volume in repositories. The post also outlines what’s next on the feature roadmap.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-06-19 · <a href="https://developers.cloudflare.com/changelog/post/2026-06-19-unified-routes-page" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare combined Mesh, Tunnel, WAN and Magic Transit routes into one Routes page in the dashboard. It adds an interactive map showing ECMP and node-based filtering.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Several Montana stories point to rising pressure on public institutions to be more accountable, whether in how they handle misconduct complaints, discrimination claims, or alleged wrongdoing by officials. At the same time, communities are pushing for more direct control over large industrial development, weighing potential economic activity against local costs like resource use and utility impacts. For readers, the key lens is who gets a meaningful voice—students and employees seeking protections, and residents deciding how much authority should shift from agencies and boards to voters.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-18 · <a href="https://flatheadbeacon.com/2026/06/18/kalispell-public-schools-retaliated-against-father-and-son-in-wrestling-lawsuit-jury-finds" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Missoula jury found Kalispell Public Schools retaliated against a father and son who reported sexual assault in Glacier High School’s wrestling program. Their lawyer said they hope it sparks whistleblower safeguards.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-18 · <a href="https://flatheadbeacon.com/2026/06/18/longtime-probation-officer-accused-of-orchestrating-drug-deal-in-reverse-sting-operation-pleads-not-guilty" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kyle Curtis Hinzman, a former longtime Montana Probation and Parole officer accused of orchestrating a 2024 unauthorized reverse-sting drug deal, pleaded not guilty to felony solicitation to distribute dangerous drugs.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-19 · <a href="https://montanafreepress.org/2026/06/19/whats-known-and-unknown-about-ums-2024-sex-discrimination-settlement" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The University of Montana settled a 2024 sex-discrimination lawsuit brought by 18 female plaintiffs for $350,000. Alani Bankhead cited the settlement in her first major campaign announcement to appeal to Democratic women.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-18 · <a href="https://montanafreepress.org/2026/06/18/how-some-montanans-are-taking-data-center-regulation-into-their-own-hands" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Grassroots petitions in Butte-Silver Bow and Yellowstone counties aimed at curbing data center growth in Montana could appear on November ballots. Organizers cited worries about water use and electric rates.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-06-19 · <a href="https://www.kpax.com/news/broadview-resident-proposes-putting-data-center-approval-to-voters" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Broadview woman proposed that approval of data centers be decided by a public vote. If adopted, Quantica&#x27;s proposed 5,000-acre data center near Broadview could face a two-thirds vote.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across branches of government, today’s developments show heightened scrutiny of executive power in security and elections, alongside shifting legal boundaries around individual rights. Foreign-policy moves and defense spending are being weighed against transparency and fiscal accountability, while courts and lawmakers are redefining how federal authority can be used domestically. For voters, candidates, and agencies, the practical question is where the limits on enforcement, deployment, and prosecution will land before the next election cycle.</div>
+  
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-06-18 · <a href="https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. lifted its blockade on ships entering and exiting Iranian ports. The move begins a 60-day ceasefire negotiation in which Iran will allow free commercial transit through the Strait of Hormuz.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-19 · <a href="https://www.nytimes.com/2026/06/19/us/politics/military-budget-congress-iran-trump-hegseth.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Trump&#x27;s push for the largest military budget in history is facing bipartisan doubt as the administration refuses to disclose the Iran war&#x27;s cost.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-18 · <a href="https://www.nytimes.com/2026/06/18/us/politics/supreme-court-drugs-guns.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court narrowed a federal law banning drug users from owning firearms. It sided with a Texas gun owner charged after admitting marijuana use.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-18 · <a href="https://thehill.com/homenews/campaign/5930544-slotkin-introduces-election-protection-bill" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sen. Elissa Slotkin introduced the Protect Our Polls Act to block President Trump from deploying soldiers and federal law enforcement agents to polling sites ahead of the midterm elections.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-06-18 · <a href="https://thehill.com/homenews/campaign/5931147-house-races-shift-democrats" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The nonpartisan Cook Political Report on Thursday shifted seven House races toward Democrats. It said Democrats remain in a strong position despite the GOP appearing to benefit from a nationwide redistricting battle.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-18 · <a href="https://www.pbs.org/newshour/politics/arizona-prosecutors-dismissing-fake-elector-case-but-vow-to-seek-new-indictment" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Arizona prosecutors on Thursday dismissed the state&#x27;s fake elector case. It was the third such dismissal, and the Democratic attorney general vowed to seek a new grand jury indictment.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Across several regions, conflict is widening in both geography and targets, with cross‑border spillovers showing up as displacement, border insecurity, and strikes on critical infrastructure. The tension is between military escalation and efforts to stabilize through diplomacy and public‑health containment, with each track vulnerable to setbacks from renewed violence. For readers, the practical lens is how these dynamics affect civilian safety, migration pressures, and the reliability of transport, energy, and border systems that shape aid access and regional trade.</div>
+  
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-06-19 · <a href="https://reliefweb.int/report/iran-islamic-republic/middle-east-emergency-three-month-impact-report-march-may-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A military escalation in the Middle East beginning 28 February 2026 produced sustained hostilities, growing displacement and escalating humanitarian needs. It has triggered refugee returns to Afghanistan and Syria under adverse conditions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-19 · <a href="https://www.france24.com/en/israel-steps-up-attacks-in-lebanon-amid-fallout-with-us-over-iran-deal" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israel&#x27;s military said on June 19 it struck targets across southern Lebanon overnight as Hezbollah reported intense fighting. The clashes threaten a nascent Iran-US agreement to end their war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-06-19 · <a href="https://reliefweb.int/report/democratic-republic-congo/iom-conducts-over-1-million-health-screenings-scales-ebola-response" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The International Organization for Migration has conducted more than one million health screenings at borders and along cross‑border routes across Ebola‑affected and at‑risk countries.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-19 · <a href="https://www.bbc.com/news/articles/cdx7krkdqeno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Thirty-five people were killed when gunmen attacked Diori Hamani, Niger&#x27;s largest airport in Niamey. Al-Qaeda affiliate JNIM claimed responsibility; it was the airport&#x27;s second attack in under five months.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-18 · <a href="https://www.bbc.com/news/articles/c98291g5rr1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A refinery burned and black oil specks fell on Moscow after nearly 200 Ukrainian drones struck southeast of the capital. It was the largest Ukrainian attack since the full-scale war began.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-19 · <a href="https://www.france24.com/en/video/20260619-ivory-coast-burkina-faso-a-border-under-tension" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>On the Côte d’Ivoire–Burkina Faso border, tensions are rising from Burkinabe militia incursions and a jihadist threat, and a France 24 team obtained rare access alongside the Ivorian army.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic news points to a church balancing legacy and renewal while operating amid geopolitical volatility. Leadership transitions and high-profile pastoral outreach sit alongside pressure to standardize accountability practices across countries, testing how universal norms meet local realities. At the same time, signs of increased adult engagement suggest demand for deeper formation, shaping priorities for dioceses, safeguarding bodies, and public-facing diplomacy.</div>
+  
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-06-17 · <a href="https://www.ewtnnews.com/vatican/cardinal-ruini-dies-at-age-95" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cardinal Ruini, John Paul II’s chief strategist in Italy, died at 95. He led the Italian Church’s &quot;cultural project&quot; and fought over life, family and secularism to re‑anchor Catholic witness.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-06-19 · <a href="https://www.vaticannews.va/en/world/news/2026-06/18-killed-in-israeli-attack-on-lebanon.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli airstrikes in southern Lebanon killed at least 18 people, and four Israeli soldiers died. The strikes came despite a U.S.–Iran deal to halt hostilities and cast doubt on the truce.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-06-18 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=69788" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At the suggestion of Pope Leo, Ending Clergy Abuse representatives held their first structured dialogue with the Pontifical Commission for the Protection of Minors.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-06-18 · <a href="https://www.ewtnnews.com/vatican/pope-leo-xiv-expected-to-visit-5-peruvian-cities-in-november-president-says" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV is expected to visit five Peruvian cities in November, the president said. It followed a nearly two-hour private meeting at the Vatican on June 18.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-06-19 · <a href="https://www.vaticannews.va/en/church/news/2026-06/ocia-study-united-states-interest-catholic-faith.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A U.S. study of 2,127 OCIA participants in 20 dioceses found growing interest in Catholicism, especially among young adults seeking truth, meaning and spiritual depth. Dioceses reported record adult faith-formation participation.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-19 14:10 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
