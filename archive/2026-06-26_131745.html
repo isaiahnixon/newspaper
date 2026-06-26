@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news points to AI moving from demos to infrastructure: custom silicon, tighter orchestration of specialized hardware, and agent-style software are all aimed at running larger workloads more efficiently and embedding them into everyday operations. At the same time, regulators and researchers are sharpening scrutiny of concentrated cloud power and the longer-term human impacts of persistent AI interactions. For readers, the key lens is where performance and productivity gains are constrained by governance, safety evaluation, and who controls the underlying platforms.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-06-24 · <a href="https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI and Broadcom announced Jalapeño, a chip for LLM inference in data centers. Broadcom says it was designed from scratch with OpenAI&#x27;s roadmap and early tests show better performance per watt.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-06-25 · <a href="https://arstechnica.com/gadgets/2026/06/ibm-claims-worlds-first-sub-1-nanometer-chip-technology" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>IBM announced a &quot;nanostack&quot; chip architecture it calls the world&#x27;s first sub-1 nanometer technology.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-06-24 · <a href="https://www.microsoft.com/en-us/research/blog/talos-scaling-rare-disease-diagnosis-with-automated-iterative-genomic-reanalysis" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Talos, an open-source system, recovered 90% of in-scope diagnoses while surfacing 1.3 candidate variants per patient. It was built to cut human review time in genomic medicine.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Kubernetes Blog · 2026-06-24 · <a href="https://kubernetes.io/blog/2026/06/24/wg-device-management-spotlight-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Kubernetes Blog spotlighted the Device Management Working Group and reported its Dynamic Resource Allocation project recently graduated to GA.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">OpenAI News · 2026-06-25 · <a href="https://openai.com/index/how-agents-are-transforming-work" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI research finds AI agents enable longer, more complex tasks and boost productivity across roles. Codex use rose from under 10% to primary tool across all departments, including Legal and Recruiting.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-06-25 · <a href="https://www.theregister.com/legal/2026/06/25/european-commission-lines-up-amazon-and-microsoft-for-cloud-gatekeeper-status/5262127" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The European Commission has lined up Amazon and Microsoft for cloud gatekeeper status. Its preliminary position calls for their designation under the Digital Markets Act.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-06-25 · <a href="https://arxiv.org/abs/2606.25396" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced TSJ, a longitudinal simulation to evaluate developmental risks from prolonged AI-companion interactions. Short tests underestimated risk; stable estimates required ~140 turns, and early childhood plus emerging adulthood were most vulnerable.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local coverage points to a broader push for stronger public stewardship—of money, water, forests, and community capacity—while exposing how gaps in oversight and uneven resources can undermine trust and outcomes. A recurring tension is between setting enforceable standards and keeping flexibility for local conditions and economic activity. For residents, these developments shape how reliably public programs are managed, how environmental protections are applied, and which rural areas can realistically access help and services.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-24 · <a href="https://montanafreepress.org/2026/06/24/state-accountant-lotterys-former-financial-services-director-stopped-doing-his-job" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A state accountant told the Legislative Audit Committee that Montana Lottery&#x27;s faulty bookkeeping—including $18.5 million in miscalculated records—resulted from former financial services director &quot;stopping doing his job&quot; before his March 2025 death.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-06-24 · <a href="https://montanafreepress.org/2026/06/24/deq-works-toward-impairment-designation-for-big-hole-river" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>DEQ said the Big Hole River is poised to receive an impairment designation. It will test new water-quality rules after a bill barred numeric nitrogen and phosphorus standards.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-24 · <a href="https://flatheadbeacon.com/2026/06/24/teenager-who-died-at-bigfork-party-identified" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Eighteen-year-old Xander Snake, who was found unresponsive at a July 13 party on Jewel Basin Road near Bigfork, died during transport to the hospital.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-24 · <a href="https://flatheadbeacon.com/2026/06/24/report-spotlights-nexus-of-conservation-and-forest-management-on-wild-and-scenic-flathead-river" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>American Rivers released a report saying protection of the Wild and Scenic Flathead River does not preclude timber management on its three forks. The report aims to destigmatize Wild and Scenic designations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-06-24 · <a href="https://www.mtpr.org/montana-news/2026-06-24/rural-summit-meets-to-brainstorm-solutions-to-montanas-small-town-trials" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers, officials and rural advocates met at MSU&#x27;s Rural Summit in Townsend to discuss challenges facing Montana&#x27;s non-metropolitan counties. They reported three of four rural counties can&#x27;t compete for public funding.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Across these developments, U.S. governance is being shaped by the push and pull between executive power and the checks imposed by Congress and the courts, especially on war-making and election administration. Budget requests tied to overseas conflict and domestic emergencies highlight how quickly priorities can shift and how much hinges on legislative approval. At the same time, rulings and oversight findings show legal constraints on federal and local enforcement practices, while climate-policy debates underscore how contested evidence and influence can steer public choices.</div>
+  
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-24 · <a href="https://www.pbs.org/newshour/politics/white-house-seeks-87-6b-from-congress-for-iran-war-costs-u-s-farmers-and-ebola-response" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The White House formally requested $87.6 billion from Congress, mostly to replenish the Pentagon after the U.S. war against Iran and to fund aid for U.S. farmers and an Ebola response.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-24 · <a href="https://www.pbs.org/newshour/politics/federal-judge-bars-trump-from-implementing-proof-of-citizenship-requirement-to-vote" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A federal judge barred Trump from implementing a proof-of-citizenship voting requirement. She converted last year&#x27;s preliminary injunction that had temporarily blocked many of Trump&#x27;s election overhaul efforts into a permanent ban.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-25 · <a href="https://www.nytimes.com/2026/06/24/us/politics/trump-senate-iran.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Senate Republicans rejected a resolution directing the president to end the war against Iran. The late-night vote was aimed at mollifying the president a day after a bipartisan rebuke.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-24 · <a href="https://www.nytimes.com/2026/06/24/us/politics/trump-voter-rolls-data-ruling.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A three-judge appeals panel in Michigan rejected Trump’s effort to obtain states’ voting data. It was the most significant rebuke yet to the Justice Department’s voter-roll probe.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-06-25 · <a href="https://www.propublica.org/article/maricopa-county-arizona-sheriff-deputy-misconduct-reforms-undermined" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A court monitor found a &quot;disturbing pattern&quot; of violations at the Maricopa County Sheriff&#x27;s Office. They said this undermined compliance with court-ordered reforms addressing racial profiling.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-06-25 · <a href="https://projects.propublica.org/why-carbon-capture-cant-solve-climate-change" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>ProPublica and Drilled published an investigation finding carbon capture and storage cannot conceivably solve climate change. It found oil companies funded university research promoting the technology and boosters overstated its potential.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs coverage shows how governments and international bodies are being pulled between urgent crisis response and longer-term stability: natural disasters and extreme weather are straining public services, while conflict-related disruptions are complicating humanitarian and commercial movement. At the same time, diplomacy and domestic politics are testing trust—whether through verification demands in sensitive security talks or fears of escalation around protests and parliamentary confrontation. For readers, the practical lens is resilience: how quickly institutions can protect civilians, keep trade moving, and maintain accountability under pressure.</div>
+  
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-06-25 · <a href="https://news.un.org/feed/view/en/story/2026/06/1167805" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>UN teams scrambled to support the international response after a devastating double earthquake in Venezuela that flattened buildings and likely left people trapped in Caracas and beyond.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-24 · <a href="https://www.bbc.co.uk/news/articles/cpd395zv81vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>IAEA chief said inspectors will visit Iranian sites under a preliminary US–Iran agreement. Iran&#x27;s deputy foreign minister said access to damaged sites and material would be allowed only in a final deal.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-06-25 · <a href="https://www.bbc.co.uk/news/articles/cwy0pdq89zno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Europe&#x27;s heatwave is moving east as forecasters warn of extreme conditions and France raises its health alert to the highest level. France says it will boost hospital staffing to protect the vulnerable.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-25 · <a href="https://www.france24.com/en/video/20260625-evacuation-of-sailors-stuck-in-gulf-likely-to-take-weeks" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The International Maritime Organisation has begun a scheme to evacuate about 11,000 commercial sailors stuck in the Gulf. Mines and recent bottlenecks mean the operation will take weeks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-06-25 · <a href="https://www.france24.com/en/video/20260625-kenya-marks-protest-anniversary-amid-fears-of-more-violence" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kenya marked two years since protests against the 2024 Finance Bill turned violent. Civil society groups plan new demonstrations and many fear a violent government response.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-06-24 · <a href="https://www.bbc.co.uk/news/articles/cx2jn1k4le8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Kemi Badenoch refused to apologise for her language after a fiery Prime Minister&#x27;s Questions in which she repeatedly attacked government ministers and Labour MPs.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-06-25 13:20 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
