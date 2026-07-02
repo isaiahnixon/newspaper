@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech items point to AI systems becoming more agent-like and more widely deployed, while the surrounding controls and economics struggle to keep pace. A key tension is capability and speed versus reliability, safety, and rights management—prompting more emphasis on governance, benchmarking, and compliance tooling, plus new ways for publishers to limit unwanted automated access. At the same time, AI infrastructure demand is reshaping hardware costs, affecting buyers at the low end and influencing procurement and product planning decisions.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-07-01 · <a href="https://arxiv.org/abs/2606.30970" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers presented AgentBound, a runtime governance framework that checks autonomous agents&#x27; proposed actions with three authorities. It issues cryptographic receipts linking each action to its delegation, policies, and contracts for replay verification.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-07-01 · <a href="https://arxiv.org/abs/2606.31179" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers released HealthAgentBench, a benchmark of 54 agentic healthcare tasks across seven categories simulating end-to-end clinical workflows. Frontier agents perform poorly overall; Codex GPT-5.5 achieves only about 42% task success.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-06-30 · <a href="https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft Research published a post introducing SkillOpt, which treats agent skills as trainable parameters. It makes agent behavior more reliable without changing model weights.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-06-30 · <a href="https://github.blog/enterprise-software/governance-and-compliance/how-github-maintains-compliance-for-open-source-dependencies" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub’s Open Source Program Office described using GitHub’s new license compliance product to manage open source dependencies at scale.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-07-01 · <a href="https://developers.cloudflare.com/changelog/post/2026-07-01-ai-traffic-options" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare now lets all customers, including Free users, manage AI crawlers as Search, Agent, or Training. It lets sites keep readers-and-revenue traffic while blocking crawlers that only take content.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-06-30 · <a href="https://arstechnica.com/ai/2026/06/googles-new-nano-banana-2-lite-image-model-is-its-fastest-and-cheapest-yet" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google released Nano Banana 2 Lite, a Gemini 3.1 Flash Lite Image model that creates images across its ecosystem in seconds. Elo scores show outputs nearly as highly rated as non‑Lite models.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-07-01 · <a href="https://www.theregister.com/personal-tech/2026/07/01/dram-it-cheap-pcs-being-priced-out-of-existence-as-memory-cost-bites/5265010" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>AI server demand for DRAM is raising memory costs and pricing cheap PCs out of the market. US sales of sub-$500 machines are down nearly a fifth.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, major public systems are being asked to do more with uneven capacity: health coverage rules are tightening before staffing and data tools are in place, and school testing is being reworked after problems with timing, clarity, and access. At the same time, communities are leaning on outside dollars and private partners to fill gaps, from storm recovery to support for public lands. The practical lens is who bears the friction—low-income residents, students and families, and tribal and rural communities—when implementation lags behind policy goals.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-07-01 · <a href="https://montanafreepress.org/2026/07/01/montana-medicaid-work-requirements-loom-questions-remain" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>As Montana’s July 1 launch of Medicaid work requirements approaches, state health officials said they have not hired dozens of application-review staff, lack access to claims data, and recently identified qualifying diagnoses.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-06-30 · <a href="https://www.mtpr.org/montana-news/2026-06-30/feds-approve-disaster-funding-for-montana-tribes-after-december-storms" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Federal disaster aid was approved for Fort Peck&#x27;s Assiniboine and Sioux and the Crow tribe after December 2025 storms. Funds cover cleanup, temporary housing, repairs and loans for uninsured losses.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-06-30 · <a href="https://www.mtpr.org/montana-news/2026-06-30/new-education-task-force-to-study-improvements-to-statewide-exam" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Board adopted MAST as Montana’s federal accountability test. It required the Office of Public Instruction to form a task force to address delayed results, unclear scores and low access.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-30 · <a href="https://flatheadbeacon.com/2026/06/30/bankhead-supporting-pac-backs-out-of-montana-citing-lack-of-viable-path-for-a-democrat-to-win" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Progressive Vet PAC withdrew support for Democrat Alani Bankhead’s Montana Senate bid, saying polls and fundraising show no viable path. It will shift support to a Democratic candidate in Kansas.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-06-30 · <a href="https://flatheadbeacon.com/2026/06/30/for-new-glacier-conservancy-director-giving-back-is-the-only-way-forward" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Tagen Vine became the new director of the Glacier Conservancy, the park’s longtime fundraising partner. His community contributions in the Flathead Valley match the Conservancy’s legacy of supporting Glacier National Park.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">These developments show the judiciary playing an outsized role in settling major policy and election-rule disputes, while also drawing scrutiny for using faster, less-explained procedures that can shift power toward the executive. At the same time, changes to campaign coordination rules and party organizing point to a political system leaning more heavily on party infrastructure and nationalized messaging. For readers, the key lens is how court process and election mechanics together shape whose rights are protected and how candidates and parties compete.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-30 · <a href="https://www.nytimes.com/2026/06/30/us/politics/supreme-court-birthright-citizenship.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court blocked President Trump&#x27;s executive order banning birthright citizenship for children of undocumented immigrants and some temporary foreign visitors.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-06-30 · <a href="https://www.pbs.org/newshour/politics/supreme-court-strikes-limits-on-party-spending-in-federal-elections-backing-gop-appeal" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court struck down a more-than-50-year-old federal law, erasing limits on how much political parties can spend in coordination with candidates for Congress and the presidency.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-06-30 · <a href="https://www.nytimes.com/2026/06/30/us/politics/supreme-court-transgender-athletes.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Supreme Court allowed states to bar transgender athletes from girls’ sports. It has implications for 25 other states with similar restrictions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-07-01 · <a href="https://www.propublica.org/article/supreme-court-shadow-docket-rulings-milestone" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>For the first time, the Supreme Court decided more cases by its &quot;shadow docket&quot;—fast, often unexplained orders—than in cases argued in open court. That shift has empowered President Donald Trump.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-07-01 · <a href="https://www.npr.org/2026/07/01/nx-s1-5876122/colorado-primary-election-melat-kiros-democratic-socialist" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Melat Kiros, a political newcomer, defeated 15-term incumbent Diana DeGette in the Democratic primary for Colorado&#x27;s 1st Congressional District. She is poised to become the first Gen Z woman elected to Congress.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-07-01 · <a href="https://thehill.com/homenews/campaign/5948776-trump-announces-republican-midterm-convention" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump announced a Republican &quot;midterm convention&quot; in Dallas later this year. He said it would be the first time the Republican Party has held a midterm convention.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs signals show humanitarian pressures rising from overlapping shocks: infectious disease spread, mass displacement, and sudden-onset disasters, alongside allegations of grave abuses in conflict settings. At the same time, record ocean warmth underscores how environmental extremes can compound health and emergency needs. A separate legal ruling highlights how domestic policy choices can quickly reshape rights and protections, affecting migrants, families, and aid planning.</div>
+  
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-07-01 · <a href="https://reliefweb.int/report/world/multi-country-outbreak-cholera-epidemiological-update-38-30-june-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>In May 2026, 29,610 new cholera and acute watery diarrhoea cases and 271 deaths were reported from 16 countries across four WHO regions.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-07-01 · <a href="https://reliefweb.int/report/sudan/sudan-emergency-population-movements-sudan-29-june-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN High Commissioner for Refugees published an update on population movements from Sudan to neighboring countries on 29 June 2026.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-07-01 · <a href="https://news.un.org/feed/view/en/story/2026/07/1167850" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Rescuers in La Guaira, Venezuela, pulled a toddler alive from rubble six days after a double earthquake. Relief agencies say needs are &quot;skyrocketing&quot;.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-07-01 · <a href="https://www.france24.com/en/world-s-oceans-break-june-heat-record-says-eu-monitor" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>World&#x27;s oceans hit a record average surface temperature of 21°C in June, Copernicus says. A potentially powerful El Niño could boost ocean and atmospheric heat further in 2026 and into next year.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-01 · <a href="https://www.bbc.co.uk/news/articles/cgmepnx1wzzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US Supreme Court ruled babies born in the US are citizens under the 14th Amendment, rejecting Trump&#x27;s bid to end birthright citizenship. Civil rights groups welcomed the decision.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-01 · <a href="https://www.bbc.co.uk/news/articles/cz9lqvx0z1vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Amnesty reported that Sudan&#x27;s Rapid Support Forces committed crimes against humanity in el-Fasher, including murder, forcible transfer, imprisonment, torture, rape, sexual slavery and other sexual violence during last year&#x27;s siege and takeover.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent developments highlight a church balancing internal cohesion, accountability, and governance reform while facing urgent humanitarian needs. Tensions are evident between groups acting independently of central authority and a leadership model that is tightening direct control over oversight and key appointments. At the same time, large legal settlements underscore the continuing costs of past failures and the pressure to deliver credible safeguards. For readers, the practical lens is how these moves affect trust, transparency, and the church’s capacity to respond to crises.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-07-01 · <a href="https://www.vaticannews.va/en/church/news/2026-07/lefebvrists-consecrate-four-new-bishops-without-a-papal-mandate.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Priestly Fraternity of Saint Pius X consecrated four bishops in Ecône, Switzerland, without a papal mandate. They said the consecrations were necessary for their survival and declared imposed penalties void.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-06-30 · <a href="https://www.ewtnnews.com/world/americas/aid-official-the-world-fell-apart-as-coastal-venezuela-awaits-assistance" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Quakes devastated coastal Venezuela, killing at least 1,700 people and leaving thousands missing or homeless and children without families, World Vision manager Claudia Gonzales said.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-06-30 · <a href="https://www.ncronline.org/news/san-francisco-archdiocese-agrees-pay-395-million-settle-child-sex-abuse-lawsuits" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The San Francisco Catholic Archdiocese agreed to pay $395 million to settle more than 500 lawsuits alleging child sexual abuse by church officials.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-06-30 · <a href="https://www.ewtnnews.com/vatican/vatican-financial-watchdog-loses-autonomy" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Authority for Financial Information and Supervision is now structured as an office, with its leadership appointed directly by the pope for five-year terms.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-06-30 · <a href="https://www.vaticannews.va/en/pope/news/2026-06/pope-makes-appointments-dicastery-for-integral-human-development.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo appointed Sister Alessandra Smerilli Prefect, Cardinal Fabio Baggio Pro‑Prefect, and Monsignor Jozef Barlaš Secretary of the Dicastery for Integral Human Development, effective 1 September 2026. Baggio oversees Laudato si&#x27; centre.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-07-01 13:44 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
