@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news shows agentic AI moving from demos into real workflows, while security, privacy, and misuse risks are becoming more concrete and harder to ignore. New capabilities like long-term memory and automated setup/documentation can speed delivery and reduce manual steps, but they also expand the attack surface and raise the stakes of failures and abuse. Readers should view this as a tradeoff between productivity gains and the need for stronger safeguards, especially for teams deploying agents and platforms handling sensitive content.</div>
+  
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-07-09 · <a href="https://arxiv.org/abs/2607.06608" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A paper presents key challenges and future research directions for security and privacy in agentic AI, based on a horizon-scanning exercise with thirty international experts from academia, industry, and government.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-07-09 · <a href="https://arxiv.org/abs/2607.06595" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduce GhostWriter, a memory-poisoning attack that exploits long-term memory in tool-using personal LLM agents. It achieves near-universal injection rates of approximately 98% and high average activation rates.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-07-08 · <a href="https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An amended lawsuit says a girl&#x27;s stepfather used Grok to create about 7,000 sexually explicit images from a photo of his 11-year-old stepdaughter and later took his own life.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-07-08 · <a href="https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google paid $250,000 for a Linux KVM vulnerability that lets guest virtual machines escape and gain root access to the host. It went unnoticed for 16 years and affects AMD and Intel.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-07-08 · <a href="https://github.blog/ai-and-ml/github-copilot/how-github-copilot-enables-zero-dns-configuration-for-github-pages" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub Blog posted that Copilot can set up a GitHub Pages site from an empty repository to a custom domain with HTTPS in about 14 minutes without editing DNS records.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-07-08 · <a href="https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Aspire team automated converting merged product changes into subject-matter-expert–reviewed documentation pull requests using GitHub Agentic Workflows. This closes the gap between releases and documentation.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-07-08 · <a href="https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Microsoft Research announced Flint, an open-source visualization language that lets AI agents create expressive charts from compact, human-editable specifications.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Across Montana, public finances and political organizing are facing new constraints at the same time that key risks are shifting. Potential cost transfers in safety‑net programs and uncertainty in local tax collections point to tighter budgeting choices that could affect low‑income households and city services. Meanwhile, internal party disputes and changing campaign investment signal a more volatile political landscape, while near‑term weather conditions are temporarily easing one major seasonal threat.</div>
+  
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-07-08 · <a href="https://www.mtpr.org/montana-news/2026-07-08/snap-changes-could-cost-the-state-millions-and-leave-thousands-without-food-aid" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana may have to shoulder more of the Supplemental Nutrition Assistance Program&#x27;s costs by late 2027.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-07-08 · <a href="https://montanafreepress.org/2026/07/08/district-court-judge-blocks-new-state-gop-bylaws" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A judge issued a restraining order blocking Montana GOP bylaws meant to oust nonconformists. County precinct committees and officers requested it while suing the state party.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-07-08 · <a href="https://montanafreepress.org/2026/07/08/3-things-to-know-about-great-falls-budget-challenges" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Great Falls officials revealed a $183 million draft budget proposal for the city’s 2027 finances. City officials said new 2025 tax laws create unknowns in property-tax revenue.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-07-08 · <a href="https://www.mtpr.org/montana-news/2026-07-08/junes-cool-wet-weather-dampened-wildfire-potential-in-montana-meteorologists-say" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>June&#x27;s cool, wet weather dampened wildfire potential in Montana, meteorologists say. Dan Borsum said southwest Montana&#x27;s outlook fell from &quot;above-normal&quot; to &quot;normal,&quot; and northwest and north-central fell from &quot;normal&quot; to &quot;below normal.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-07-08 · <a href="https://missoulacurrent.com/financial-backer-montana" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Progressive Vet PAC, which spent over $2.5 million supporting Alani Bankhead in the Montana Senate primary, announced it is pulling out of the state, saying the seat is unwinnable for Democrats.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s developments show U.S. governance being tested simultaneously by external conflict, domestic political volatility, and institutional strain. Federal power is being asserted more aggressively in both national security and election administration, raising tradeoffs between speed, deterrence, and legal safeguards. At the same time, leadership turnover and repeated public-sector cyber failures highlight capacity and continuity risks. Voters, state officials, service recipients, and military decision-makers are most directly affected.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-07-09 · <a href="https://www.nytimes.com/2026/07/08/us/politics/us-iran-strikes.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. began a second day of strikes against Iran. President Trump said a cease-fire was over and warned the United States would probably hit Iran &quot;hard.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-07-09 · <a href="https://www.nytimes.com/2026/07/08/us/politics/graham-platner-maine-senate.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Mr. Platner suspended his Senate campaign in Maine after a woman accused him of rape. His withdrawal creates deep uncertainty in a race both parties view as crucial to their Senate hopes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-07-08 · <a href="https://www.pbs.org/newshour/show/doj-threatens-to-arrest-state-election-officials-if-noncitizens-vote" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The DOJ threatened to arrest over a dozen state election officials if a noncitizen votes. The letter gave five days to detail compliance with noncitizen-voting laws.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-07-09 · <a href="https://www.propublica.org/article/puerto-rico-crim-data-breach" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Puerto Rico’s property-tax agency exposed about 1 million Social Security numbers. It was the latest of several cyber lapses in the past three years that disrupted government services.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-07-08 · <a href="https://www.propublica.org/article/eric-widmar-retiring-joint-chiefs-legal-adviser" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Brig. Gen. Eric Widmar, senior legal counsel to the Joint Chiefs chair, is retiring nearly a year early. His exit follows an 18-month exodus of top military leaders and lawyers.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">U.S. State Dept. Press Releases · 2026-07-08 · <a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/07/update-on-the-trump-administrations-continued-delivery-of-life-saving-u-s-assistance-to-venezuela" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Less than two weeks after the June 24 earthquakes, the Trump Administration is coordinating a whole-of-government humanitarian response to Venezuela that is reinforced by a new humanitarian air bridge.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs picture mixes escalating state-to-state confrontation with persistent internal insecurity and public-health strain, while governments also push for greater strategic autonomy in critical systems. The tension is between rapid crisis response—military, humanitarian, and rights-focused—and the limits of capacity, supply chains, and governance that shape what can be delivered and where. For readers, the practical lens is exposure: civilians in conflict and outbreak zones face immediate risk, while policymakers and businesses weigh resilience choices in defense procurement and payment infrastructure.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-09 · <a href="https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US and Iran exchanged strikes, with the US saying it hit 90 Iranian targets and Iran reporting 14 deaths while saying it struck US assets in Kuwait, Bahrain and Qatar.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-08 · <a href="https://www.bbc.co.uk/news/articles/ce8klree690o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Donald Trump offered Ukraine a licence to produce Patriot interceptor missiles. They have lengthy production times and limited U.S. stockpiles — about 600 missiles produced yearly and over half used recently.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Dirole Lotsima Dieudonné, AP · 2026-07-09 · <a href="https://www.france24.com/en/africa/20260709-dr-congo-ebola-outbreak-death-toll-climbs-600" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Confirmed deaths in the Ebola outbreak in the Democratic Republic of Congo rose to 600, the UN health agency said Thursday. WHO figures show a case fatality rate of 34 percent.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-07-09 · <a href="https://www.france24.com/en/militia-like-movements-appear-in-chad-amid-surge-in-intercommunal-violence" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Militia-like movements have appeared in Chad amid a sharp rise in intercommunal violence that authorities say included five incidents last month and over 300 deaths in two years.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Press releases - European Parliament · 2026-07-09 · <a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46319" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Parliament adopted three resolutions on the human rights situations in Sudan, Nigeria and Pakistan. MEPs urged the EU to step up humanitarian aid to Sudan and directly fund local frontline organisations.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Press releases - European Parliament · 2026-07-09 · <a href="https://www.europarl.europa.eu/news/en/press-room/20260708IPR46377" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>MEPs backed talks with the Council to create a digital euro by 416 to 169, with 22 abstentions. It would offer citizens a secure way to reduce reliance on non-EU providers.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-07-09 13:53 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
