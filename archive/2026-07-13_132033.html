@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news points to AI moving from demos into infrastructure, with progress coming from both better models and the less-visible work of making them reliable, efficient, and governable at scale. The tension is that wider deployment raises new constraints—compute and serving costs, data stewardship, and legal and safety compliance—that can slow or reshape adoption. Readers should view these items as signals about where AI is becoming operational: in critical forecasting, large service organizations, and platform governance, affecting product leaders, operators, and regulators.</div>
+  
+<div class="item">
+  <div class="meta">Microsoft Research Blog · 2026-07-09 · <a href="https://www.microsoft.com/en-us/research/blog/aurora-1-5-extending-open-foundation-models-for-weather-and-earth-system-applications" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Aurora 1.5 adds 22 variables, hourly temporal resolution, and probabilistic ensemble forecasting to the open Aurora Earth-system foundation model. This makes it more useful for real-world weather, climate, and energy applications.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-07-09 · <a href="https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>OpenAI faces possible sanctions after news organizations accused it of hiding and deleting ChatGPT logs in a New York Times-led copyright lawsuit.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">OpenAI News · 2026-07-10 · <a href="https://openai.com/index/deutsche-telekom" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Deutsche Telekom is becoming an AI-native telco, transforming customer service, workflows and network operations using OpenAI tools. It reports a 546% increase in AI tool usage since early 2026.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-07-09 · <a href="https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub assigned a validated owner to every active repository, archived the rest, completing this in under 45 days. They then used ownership as the foundation for subsequent work.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-07-10 · <a href="https://www.theregister.com/personal-tech/2026/07/10/eu-puts-addictive-design-of-facebook-instagram-under-the-dsa-microscope/5269975" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The EU is investigating Facebook and Instagram under the Digital Services Act, saying Meta failed to properly assess or mitigate risks from infinite scroll, autoplay and other &quot;addictive&quot; design features.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-07-10 · <a href="https://arxiv.org/abs/2607.08057" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv survey (arXiv:2607.08057v1) organizes system-aware KV cache optimizations for LLM serving into execution/scheduling, placement/migration, and representation/retention. It analyzes cross-behavior co-design affinity and behavior-objective links to highlight future opportunities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-07-10 · <a href="https://arxiv.org/abs/2607.07740" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced Jet-Long, a tuning-free zero-shot method pairing a local RoPE-faithful window with a dynamically rescaled long-range window for long-context extension.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local developments point to governments and landowners reshaping long-term obligations around land, representation, and public services. The common tension is between expanding flexibility—through governance changes, facility siting choices, and political mapmaking—and maintaining protections for communities, access, and environmental accountability. Readers can view these as decisions that will shift who bears costs and who gains influence, affecting nearby residents, tribal voters, incarcerated women, and public land users.</div>
+  
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-07-09 · <a href="https://montanafreepress.org/2026/07/09/epa-inks-clean-up-agreement-with-columbia-falls-aluminum-plant" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The U.S. EPA and Columbia Falls Aluminum Company agreed on a cleanup plan requiring the plant&#x27;s owner to pay $57.6 million to mitigate pollution from decades of aluminum smelting.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-07-09 · <a href="https://montanafreepress.org/2026/07/09/can-republicans-undistrict-montanas-native-vote" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Republicans started talking about eliminating legislative districts drawn to benefit Native American voters after the U.S. Supreme Court overturned race-based minority-representation districts.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-07-10 · <a href="https://www.kpax.com/news/montana-pauses-new-womens-prison-eyes-expansion-at-existing-sites" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana paused plans for a new women&#x27;s prison and will expand capacity at existing facilities. The Billings prison is full, with 66 women awaiting transfer from county jails.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-07-10 · <a href="https://flatheadbeacon.com/2026/07/10/stakeholders-complete-conservation-easement-on-thompson-river-timberland" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Stakeholders completed the initial phase of a conservation-easement closing July 7 on 34,610 acres of Green Diamond timberland in northwest Montana. It secures public access and removes development rights on those acres.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-07-09 · <a href="https://flatheadbeacon.com/2026/07/09/columbia-falls-to-seek-voter-approval-on-form-of-government-adjustment-this-november" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Columbia Falls city councilors unanimously finalized a recommendation to ask voters this November whether the city should switch from general-governing powers to self-governing powers.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on how quickly institutional stability can shift through executive actions, court rulings, and fast-moving political turnover. Key tensions include independence versus control in election administration, legal certainty versus abrupt status changes for long‑term residents, and the limits of government obligations when public benefits lag real-world costs. Readers can view these developments through who bears immediate risk—voters, immigrants, and low-income households—and what that means for near-term administrative capacity and policy continuity.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-07-10 · <a href="https://www.nytimes.com/2026/07/10/us/politics/trump-fires-election-assistance-commission-members.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration fired members of the Election Assistance Commission. Those firings and a resignation render the commission useless.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-07-09 · <a href="https://www.pbs.org/newshour/politics/whats-next-for-immigrants-with-tps-status-after-supreme-court-ruling" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The legal status of nearly 1.3 million immigrants with TPS is uncertain after the U.S. Supreme Court&#x27;s 6–3 ruling. TPS lets people from eligible countries legally live and work in the U.S.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">PBS NewsHour - Politics · 2026-07-09 · <a href="https://www.pbs.org/newshour/world/u-s-and-iran-exchange-intensifying-fire-across-the-mideast-threatening-the-interim-deal-to-end-war" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>U.S. and Iran exchanged intensifying fire across the Middle East, with sirens sounding in Bahrain and missiles targeting Kuwait and Qatar. Those strikes threatened the interim deal to end the war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-07-09 · <a href="https://www.nytimes.com/2026/07/09/us/politics/platner-maine-democrats-replacement-candidate.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Graham Platner exited, creating a scramble for a new Democratic Senate candidate in Maine. The party will hold a nominating convention before July 27; candidates are lining up.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ProPublica - Main Feed · 2026-07-09 · <a href="https://www.propublica.org/article/new-york-shelter-assistance-lawsuit" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Legal Aid Society and Empire Justice Center sued New York, saying the state&#x27;s decades-old shelter allowance is far below state rents and violates the constitution&#x27;s duty to provide aid to the needy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-07-10 · <a href="https://thehill.com/newsletters/whole-hog-politics/5961630-platler-senate-candidacy-mainemaine" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Graham Platner announced the suspension — but as of this writing had not formally withdrawn — of his Senate campaign.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Today’s global affairs picture shows how conflict dynamics are tightening the squeeze on civilians: violence is rising in multiple theaters while access to protection, health services, and humanitarian delivery is being constrained by funding cuts and security risks. At the same time, military actions are expanding into new domains and targets, raising uncertainty about escalation and spillover beyond immediate front lines. For readers, the practical lens is who loses basic safety and care first—women and girls, besieged communities, and civilians in active war zones—and how policy choices on aid and deterrence shape those outcomes.</div>
+  
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-07-10 · <a href="https://reliefweb.int/report/world/least-one-million-women-and-girls-lose-access-critical-support-aid-cuts-dismantle-womens-organizations-working-humanitarian-crises" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>At least one million women and girls have lost access to critical support since January 2025 as aid cuts dismantle women&#x27;s organizations providing services in humanitarian crises, UN Women reports.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">ReliefWeb - Updates · 2026-07-10 · <a href="https://reliefweb.int/report/ukraine/ukraine-humanitarian-situation-snapshot-march-may-2026" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>March–May 2026 saw at least 730 civilians killed and 4,427 injured in Ukraine, with May recording the highest monthly civilian casualties since April 2022.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">UN News - Global perspective Human stories · 2026-07-10 · <a href="https://news.un.org/feed/view/en/story/2026/07/1167913" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new cholera outbreak in Sudan has killed more than 100 people. Daily drone attacks in besieged El-Obeid are hampering aid access and heightening risks for vulnerable communities.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-07-10 · <a href="https://www.france24.com/en/iran-ramps-up-regional-pressure-after-renewed-us-strikes" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>After fresh US strikes during Ayatollah Ali Khamenei&#x27;s funeral ceremonies, Iran ramped up pressure by targeting US allies and threatening American bases across the region. Backchannel talks likely continue amid midterm timing.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-09 · <a href="https://www.bbc.co.uk/news/articles/c70yd1g67z5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Ukraine struck and set fire to at least 36 Russian-linked ships near Crimea with naval drones, including a filmed attack on a tanker.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-07-10 · <a href="https://www.france24.com/en/tv-shows/world-cup-debrief/20260710-world-cup-2026-les-bleus-masterclass-sends-france-to-semi-finals" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>France beat Morocco 2-0 at the World Cup; Mbappé scored in the 60th minute and Dembélé six minutes later. France reached the semi-finals for a third consecutive tournament.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage links moral leadership with on-the-ground vulnerability: the Church is weighing how to defend human dignity in fast-changing arenas like artificial intelligence and civic life while also responding to violence, legal persecution, and disaster. The tension is between universal principles and the uneven realities where rights and safety are fragile. For readers, the practical lens is how faith-based institutions shape public ethics and deliver protection and aid when state systems fall short.</div>
+  
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-07-08 · <a href="https://www.ewtnnews.com/vatican/pope-leo-xiv-we-must-confront-ai-misuse-to-promote-human-dignity" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV sent a July 8 letter to the UN urging confrontation of AI misuse to promote human dignity at the AI for Good Global Summit in Geneva.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-07-09 · <a href="https://www.vaticannews.va/en/church/news/2026-07/venezuela-earthquakes-humanitarian-caritas.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Around 14,700 tonnes of humanitarian aid reached Venezuela after earthquakes on 24 June. It includes medical supplies, 8,000 relief kits and 5,000 food packages and has reached up to 40,000 people.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CatholicCulture - Catholic World News · 2026-07-09 · <a href="https://www.catholicculture.org/news/headlines/index.cfm?storyid=70006" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A 60-year-old Pakistani Catholic died in prison on July 1 nearly a year after being accused of blasphemy. Lahore Archbishop Khalid Rehmat called the allegation false and praised his steadfast faith.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-07-08 · <a href="https://www.ncronline.org/news/catholic-priest-killed-central-african-republic-remembered-messenger-peace" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A Catholic priest working for peace and reconciliation in the Central African Republic was shot and killed near his residence in Zemio on June 29. Church sources suspect the killing was intentional.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-07-08 · <a href="https://www.ncronline.org/opinion/guest-voices/liberty-medal-remarks-pope-leo-teaches-us-how-read-constitution" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV received the Liberty Medal and spoke to the National Constitution Center by video on July 3. He urged making the Declaration&#x27;s ideals a living guide for unity.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-07-10 13:14 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
