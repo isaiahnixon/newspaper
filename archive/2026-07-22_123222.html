@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Today’s tech news points to a widening push to make digital systems both safer and more accountable, from funding the shared software foundations many products rely on to tightening platform and security controls. At the same time, attackers are adapting—through extortion economics and new ways to manipulate AI workflows—while defenders respond with updated detection, research into reducing harmful model behavior, and policy limits on certain responses. For readers, the key lens is operational risk: how organizations balance openness, usability, and compliance against rising security and liability pressures.</div>
+  
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-07-20 · <a href="https://github.blog/open-source/maintainers/100-million-for-open-source-a-milestone-built-by-the-community" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The GitHub Blog celebrated $100 million contributed by the community to people who build and sustain open source.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Cloudflare Changelog (All) · 2026-07-21 · <a href="https://developers.cloudflare.com/changelog/post/scheduled-waf-release" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Cloudflare scheduled WAF changes for 2026-07-27 to log detections including SSRF - Cloud - Beta (improved detection) and Command Injection - Obfuscation (new detection).</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-07-20 · <a href="https://arstechnica.com/tech-policy/2026/07/aliexpress-fined-625m-for-failing-to-remove-unsafe-toys-dangerous-cosmetics" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The European Commission fined AliExpress over $625 million for failing to curb illegal, unsafe, or counterfeit products on its platform. It is the largest fine under the EU&#x27;s Digital Services Act so far.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (Security) · 2026-07-20 · <a href="https://arstechnica.com/security/2026/07/pay-up-or-not-ransomware-surge-has-victims-facing-tough-choices" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Nearly half of companies hit by ransomware pay ransoms, while median demands are rising. Some jurisdictions, including the UK, are moving to ban payments by public-sector and critical-infrastructure bodies.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.AI · 2026-07-21 · <a href="https://arxiv.org/abs/2607.16199" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced PlanFlip, four planning-phase prompt-injection attacks that corrupt downstream sub-tasks in multi-agent LLM systems. GPT-5 had the highest attack success rate (ASR 0.68), indicating stronger models can be more vulnerable.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-07-21 · <a href="https://arxiv.org/abs/2607.16227" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new arXiv survey (arXiv:2607.16227v1) examines methods, challenges, and emerging threats in LLM unlearning for cyber defense.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">CSS-Tricks · 2026-07-21 · <a href="https://css-tricks.com/almanac/properties/w/writing-mode" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>writing-mode sets whether text lines are laid out horizontally or vertically and the direction blocks and lines progress. It’s useful for languages such as Chinese and Japanese.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local developments point to how quickly shifting conditions—policy rollouts, environmental measurement, and market shocks—can outpace public understanding and day-to-day planning. The tension is between tighter rules and resource limits on one side, and the need for clear, timely information for residents, drivers, and outdoor-dependent communities on the other. Readers can view these updates through a practical lens of risk management: paperwork compliance, travel safety, household fuel budgets, and how early ecological signals may affect recreation and wildlife decisions.</div>
+  
+<div class="item">
+  <div class="meta">Montana Public Radio · 2026-07-20 · <a href="https://www.mtpr.org/montana-news/2026-07-20/conflicting-deadlines-create-confusion-as-new-medicaid-rules-take-effect" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana&#x27;s new Medicaid rules require beneficiaries to show they are working or qualify for exemptions. Many beneficiaries say the state hasn&#x27;t been clear about when to submit required paperwork.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-07-20 · <a href="https://flatheadbeacon.com/2026/07/20/montanas-new-wolf-estimation-tool-indicates-population-decline" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new report says Montana has fewer wolves than previously estimated. FWP recommends a lower harvest quota after the estimate fell to 725 from 1,094.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-07-21 · <a href="https://www.kpax.com/news/montana-highway-patrol-seeks-information-related-to-fatal-i-90-crash" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Montana Highway Patrol is seeking information about a fatal crash Monday between 8:40 and 9 p.m. on I-90 near Livingston; a possibly involved pickup did not remain at the scene.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-07-20 · <a href="https://montanafreepress.org/2026/07/20/yellowstone-salmonfly-hatch-fisheries" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers are studying salmonflies and other aquatic insects in the Greater Yellowstone Ecosystem. They are investigating whether insect health serves as an early warning of broader ecosystem changes.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Missoula Current · 2026-07-20 · <a href="https://missoulacurrent.com/gas-prices-montana-3" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Gas prices rose across Montana over the past week, climbing as much as $0.22 in some counties. Energy watchdogs linked the rise to Iran-related instability that pushed crude near $80 a barrel.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s U.S. governance story centers on a sharper use of federal power alongside intensifying electoral competition. Policy tools are being deployed in ways that can quickly reshape cross-border economic ties, while separate disclosures raise questions about transparency and the boundaries of government information-gathering. At the same time, closely fought races in a pivotal state and an expanding battlefield for control of Congress underscore how much near-term governing capacity will hinge on November’s outcomes.</div>
+  
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-07-21 · <a href="https://www.npr.org/2026/07/21/nx-s1-5901905/trump-imposes-tariffs-canadian-goods" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Donald Trump on Monday imposed 50% tariffs on most Canadian goods.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-07-21 · <a href="https://www.npr.org/2026/07/21/nx-s1-5901065/midterms-primaries-arizona-elections" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Arizona held primaries determining Democratic nominees for competitive U.S. House seats and the Republican nominee to challenge the state&#x27;s Democratic governor. The results could affect which party controls the U.S. House.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-07-21 · <a href="https://www.nytimes.com/2026/07/20/us/politics/troops-injured-jordan-iran-war.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Pentagon withheld dozens of U.S. military injuries in the Iran war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-07-20 · <a href="https://www.nytimes.com/2026/07/20/business/media/new-york-times-subpoenas-phone-records.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Trump administration sought phone records of New York Times journalists and their relatives to identify confidential sources for reporting on the president’s new Air Force One.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-07-20 · <a href="https://thehill.com/homenews/campaign/5978152-house-republicans-nrcc-florida-ohio-missouri" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The National Republican Congressional Committee added seven districts to its list of targets on Monday. The move supports the GOP’s bid to hang on to its House majority in November.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-07-21 · <a href="https://thehill.com/homenews/campaign/5979241-arizona-primary-elections-what-to-watch" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Arizona is holding an earlier-than-usual July primary Tuesday that includes consequential races for governor, key statewide election offices and congressional seats.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Several items point to a widening security-and-economy squeeze: fighting is intensifying across multiple fronts while key shipping lanes face higher disruption risk, raising the stakes for energy prices and supply chains. At the same time, governments are leaning on domestic cost-of-living measures and social spending to cushion households, highlighting the tradeoff between fiscal room and resilience. Readers can view this as a period where external conflict is increasingly shaping everyday economic policy choices.</div>
+  
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-07-21 · <a href="https://www.france24.com/en/middle-east-war-stuck-in-cycle-of-enhanced-risk-as-us-and-iran-exchange-strikes" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US and Iran exchanged strikes, with the US bombing Iran for a tenth consecutive night after American soldiers were killed in Jordan and Iraq.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-21 · <a href="https://www.bbc.co.uk/news/articles/cx25wg2x26do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The US launched fresh strikes on Iran to &quot;further degrade&quot; its capabilities to attack ships in the Strait of Hormuz. They were the tenth consecutive night of attacks.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">© Ukrainian Emergency Service via AP · 2026-07-21 · <a href="https://www.france24.com/en/europe/20260721-russia-ukraine-war-first-half-of-2026-sees-sharp-rise-in-civilian-casualties" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN said the first six months of 2026 saw a steep rise in civilians killed or wounded in the Russia–Ukraine war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-20 · <a href="https://www.bbc.co.uk/news/articles/cm2gmddx1ldo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Yemen&#x27;s Iran-backed Houthis announced an immediate maritime embargo on Saudi Arabia, saying they would close the Bab al-Mandab to Saudi vessels in retaliation for a Saudi blockade.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-07-20 · <a href="https://www.bbc.co.uk/news/articles/c80nln7zgp7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Andy Burnham has become UK prime minister, replacing Sir Keir Starmer. He pledged to end rough sleeping and promised an extra £340m over five years from the housing department budget.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-07-21 · <a href="https://www.bbc.co.uk/news/articles/cjwxll8jyz8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The government cut VAT on household electricity bills from 5% to zero, effective 1 October. It will save households about £45 a year and be funded by cancelling the digital ID programme.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-07-21 12:26 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">64</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
