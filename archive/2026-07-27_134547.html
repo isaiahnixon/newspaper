@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; script-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  />
+  <title>Tacitus' Log — An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d1b16;
+      --muted: #5a544a;
+      --paper: #f8f3e8;
+      --rule: #c9c2b8;
+    }
+    body {
+      margin: 2.5rem auto;
+      max-width: 1040px;
+      padding: 0 1.5rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tagline {
+      margin: 0.35rem auto 0;
+      max-width: 52rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .paper-meta {
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      color: #7a7266;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      main {
+        column-count: 1;
+      }
+    }
+    /* Keep topics intact inside the two-column layout for easier scanning. */
+    section {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.3rem;
+      margin-top: 0rem;
+    }
+    p {
+      margin: 0.6rem 0;
+    }
+    .item {
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .macro-summary {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      margin: 0 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tacitus' Log</h1>
+    <p class="tagline">
+      An AI-generated daily log of what changed and why it matters—plain, reasonably sourced, and unsensational.
+    </p>
+    <div class="paper-meta">Independent digest · Updated weekdays</div>
+  </header>
+  <main>
+    
+<section id="tech-news">
+  <h2>Tech News</h2>
+  <div class="macro-summary">Tech news is converging on a tighter squeeze between rapid AI expansion and the guardrails needed to keep it safe, compliant, and trustworthy. Regulators are escalating enforcement while companies pour capital into compute and compete on ever-larger infrastructure claims, raising questions about near-term financial strain versus long-term platform advantage. At the same time, research and tooling are highlighting reliability gaps and security timing risks, shaping how developers, operators, and critical-infrastructure defenders should evaluate AI systems and software supply chains.</div>
+  
+<div class="item">
+  <div class="meta">Ars Technica (Tech Policy) · 2026-07-23 · <a href="https://arstechnica.com/tech-policy/2026/07/google-hit-with-1-billion-in-fines-as-eu-braces-for-trump-battle" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google was fined more than $1 billion under the EU&#x27;s Digital Markets Act for two violations. The European Commission gave Google 60 days to comply or face daily fines.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-07-24 · <a href="https://arxiv.org/abs/2607.20558" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers introduced StabilityBench, an operator that turns single-turn benchmarks into multi-turn interactions by injecting realistic user simulations. Testing four benchmarks on nine LLMs found consistent performance instability under these injections.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">arXiv cs.LG · 2026-07-24 · <a href="https://arxiv.org/abs/2607.20492" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Researchers found that requiring answers in structured formats causes language models to fabricate responses to unanswerable questions. GPT-5.5 refused 98% in free text but fabricated sentiment 40/40 when JSON was required.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">GitHub Blog · 2026-07-23 · <a href="https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>GitHub&#x27;s Dependabot now waits three days before creating version update pull requests. The delay gives maintainers and security researchers time to address findings in a release before it reaches projects&#x27; code.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-07-23 · <a href="https://www.theregister.com/systems/2026/07/23/amd-attacks-the-rack-with-helios-systems-that-rival-nvidias/5277246" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>AMD unveiled Helios, its first rack-scale AI compute platform that is, spec-for-spec, larger and faster than Nvidia&#x27;s Vera Rubin. Those advantages are claimed only on paper.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Register (Headlines) · 2026-07-23 · <a href="https://www.theregister.com/security/2026/07/23/iran-linked-crews-are-probing-more-flavors-of-us-industrial-kit/5277003" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Iran-linked crews are probing more flavors of US industrial kit. CISA widened its alert beyond Rockwell controllers as intruders targeted internet-facing devices across critical infrastructure.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Ars Technica (AI) · 2026-07-23 · <a href="https://arstechnica.com/google/2026/07/google-just-had-its-first-negative-cash-flow-quarter-ever-due-to-massive-ai-spending" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Google posted $119.8 billion revenue in Q2 2026 but had its first negative cash flow quarter from heavy AI capex. Cloud revenue rose 23.8% to $24.8 billion, showing strong AI demand.</div>
+</div>
+
+</section>
+
+
+<section id="local-news">
+  <h2>Local News</h2>
+  <div class="macro-summary">Today’s local items point to how Montana is balancing public safety, legal process, labor needs, and wildlife and land management under changing conditions. The tension is between access and use—of trails, rivers, and hunting opportunities—and the limits set by risk, uncertainty in population estimates, and procedural safeguards in courts. For residents, visitors, employers, and outdoor users, the practical lens is how agencies and judges translate new information into rules, access decisions, and accountability.</div>
+  
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-07-24 · <a href="https://flatheadbeacon.com/2026/07/24/report-details-fatal-glacier-park-grizzly-bear-attack" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>An interagency review concluded that Anthony Pollio, a 33-year-old solo hiker from Florida, was killed May 3 after surprising an adult male grizzly while descending Mount Brown Lookout trail after dark.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Flathead Beacon · 2026-07-23 · <a href="https://flatheadbeacon.com/2026/07/23/ellsworth-guilty-verdict-thrown-out" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A judge threw out the guilty verdict in the official misconduct case against former Senate President Jason Ellsworth after jurors were inadvertently given sealed exhibits about communications with potential witness Bryce Eggleston.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-07-23 · <a href="https://montanafreepress.org/2026/07/23/where-is-montanas-highest-demand-for-temporary-foreign-workers" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Madison and Gallatin counties made up 41% of Montana’s 4,470 temporary foreign-worker certifications in FY2025. Statewide certifications fell 3.3% year over year, driven by fewer H-2B nonagricultural certifications.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Montana Free Press · 2026-07-23 · <a href="https://montanafreepress.org/2026/07/23/montana-wolf-population-shrinking-now-fish-wildlife-and-parks-wants-to-limit-the-wolf-hunt" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A new population model estimates Montana&#x27;s wolf population is 34 percent lower than previous counts. Officials are proposing a lower harvest this fall.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">KPAX News · 2026-07-24 · <a href="https://www.kpax.com/news/siskin-island-fishing-access-site-ribbon-cutting-opens-82-acres-on-the-yellowstone-river-to-the-public" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Montana Fish, Wildlife and Parks and the Trust for Public Land held a ribbon-cutting to open Siskin Island, an 82-acre Yellowstone River site, to the public starting in August.</div>
+</div>
+
+</section>
+
+
+<section id="u-s--governance">
+  <h2>U.S. Governance</h2>
+  <div class="macro-summary">Today’s governance story shows sharper friction among branches and institutions over who sets policy and how far executive power can reach, spanning war-making authority, diplomacy conditions, and trade enforcement. Courts and the Justice Department are also testing boundaries around press protections and election rules, with near-term consequences for accountability and representation. For readers, the practical lens is how these checks, legal calls, and party dynamics shape what actions proceed quickly versus face procedural or judicial constraints.</div>
+  
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-07-23 · <a href="https://www.nytimes.com/2026/07/23/us/politics/house-iran-war-powers-vote-trump.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The House rebuked President Trump on Iran in a War Powers vote, with a few Republicans joining Democrats to back a measure urging the president to seek authorization for the war.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NYT - Politics · 2026-07-23 · <a href="https://www.nytimes.com/2026/07/23/us/politics/saudi-nuclear-deal-israel.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>President Trump has demanded that Saudi Arabia join the Abraham Accords as part of a nuclear deal. That condition could create a roadblock to the administration’s agreement announced this week.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-07-23 · <a href="https://www.npr.org/2026/07/23/nx-s1-5905732/nyt-subpoenas-trump-air-force-one-plane-qatar-security" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Justice Department withdrew subpoenas demanding grand jury testimony and phone records from New York Times journalists. David McCraw said it was &quot;a great day for the First Amendment.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">NPR - Politics · 2026-07-23 · <a href="https://www.npr.org/2026/07/23/g-s1-135388/trump-tariffs-trade-country" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The United States will impose 10%–12.5% tariffs on imports from 60 countries. Those countries make up 99% of U.S. imports and the move targets weak enforcement of forced-labor bans.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-07-24 · <a href="https://thehill.com/homenews/campaign/5987641-memphis-district-split-federal-judges" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A federal three-judge panel allowed Tennessee to use a new congressional map that divides a majority-Black district in Memphis. It declined to issue an injunction, allowing the map for Tennessee&#x27;s August primary.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">The Hill - Campaign · 2026-07-24 · <a href="https://thehill.com/homenews/campaign/5987002-democrats-debate-mamdani-influence" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Zohran Mamdani is shaking politics far away from New York City. Progressives praise him, moderates worry about his party influence, and some conservatives, including President Trump, have called him a communist.</div>
+</div>
+
+</section>
+
+
+<section id="global-affairs">
+  <h2>Global Affairs</h2>
+  <div class="macro-summary">Rising conflict risk in the Middle East is colliding with fragile civilian conditions, showing how quickly security shocks can spill into humanitarian strain and global energy costs. At the same time, climate-driven emergencies in North Africa are stretching local response capacity and adding another layer of cross-border disruption. For readers, the key lens is exposure: households and businesses face price and supply volatility, while aid agencies and governments must balance access, funding, and security constraints.</div>
+  
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-24 · <a href="https://www.bbc.co.uk/news/articles/c05ql5llj4do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>US and Iran exchanged strikes in the Gulf, with Iran launching drone attacks on US military facilities across the Middle East while explosions and casualties were reported inside Iran.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-07-24 · <a href="https://www.france24.com/en/gaza-faces-ongoing-food-crisis-despite-ceasefire" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>A UN report says two-thirds of Gaza&#x27;s population still face crisis-level food insecurity, nine months into the Israel–Hamas ceasefire. It warns gains could reverse without sustained humanitarian access, funding and stability.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - World · 2026-07-23 · <a href="https://www.bbc.co.uk/news/articles/cx2djnzrqk2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Brent crude rose over 6%, sending oil to $100 a barrel for the first time since May amid escalating Middle East conflict. The conflict risks raising inflation in countries including the UK.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">France 24 (EN) · 2026-07-24 · <a href="https://www.france24.com/en/wildfires-hound-tunisia-algeria-and-morocco" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Deadly wildfires have raged across Algeria, Morocco and Tunisia for over a week. They have burned vast areas, forced evacuations and hampered firefighting by heat, dryness and strong winds.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-07-24 · <a href="https://www.bbc.co.uk/news/articles/cz97ngjpg3lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Andy Burnham&#x27;s new administration spent its first week seeking a good first impression by issuing early-morning policy announcements—on business rates, bus fares and electricity VAT—and convening a National Economic Council in Manchester.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">BBC - UK Politics · 2026-07-23 · <a href="https://www.bbc.co.uk/news/articles/cwyrjnwe8xlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Sir Grant Shapps has been rejected as a Conservative Party parliamentary candidate.</div>
+</div>
+
+</section>
+
+
+<section id="catholic-news--past-2-days">
+  <h2>Catholic News (Past 2 Days)</h2>
+  <div class="macro-summary">Recent Catholic coverage highlights the Church operating amid overlapping humanitarian crises, internal discipline disputes, and sensitive diplomacy. A key tension is between protecting civilians and addressing global deprivation on one hand, and maintaining unity and accountability within Church structures on the other. Readers can view these developments through who bears the immediate costs—people in conflict zones and those facing hunger, alongside local communities navigating contested authority and leaders managing cross-border relationships.</div>
+  
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-07-23 · <a href="https://www.vaticannews.va/en/world/news/2026-07/gaza-israeli-attacks-civilians-deaths-destruction-humanitarian.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Israeli military attacks in recent days killed and injured dozens of Palestinians in Gaza, Gaza health authorities said. The U.N. said many recent fatalities occurred well outside the military’s &quot;yellow line.&quot;</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Vatican News (EN) · 2026-07-23 · <a href="https://www.vaticannews.va/en/world/news/2026-07/fao-report-645-million-people-faced-hunger-in-2025.html" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The UN reported 645 million people (7.8% of the global population) faced hunger in 2025. FAO said this represents a decline across continents, with 14 million fewer than in 2024.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">National Catholic Reporter (NCR) - Master Feed · 2026-07-24 · <a href="https://www.ncronline.org/news/sspx-excommunication-hasnt-stopped-boston-church-defying-vatican" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Despite the Vatican declaring SSPX priests schismatic and warning the faithful to stop attending Masses, parishioners at St. Catherine of Siena in Weston continued to attend Latin Masses led by SSPX clergy.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-07-22 · <a href="https://www.ewtnnews.com/vatican/vatican-denies-marko-rupnik-has-been-acquitted" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>The Vatican denied that Marko Rupnik had been acquitted. It said the canonical trial remains open and judges are still reviewing evidence in the case of the accused former Jesuit.</div>
+</div>
+
+
+<div class="item">
+  <div class="meta">Catholic News Agency (CNA) - News · 2026-07-22 · <a href="https://www.ewtnnews.com/vatican/pope-leo-xiv-names-another-chinese-bishop-under-vatican-beijing-agreement" target="_blank" rel="noopener noreferrer">Source</a></div>
+  <div>Pope Leo XIV ordained Bishop Joseph Chang Yanfeng on July 22 to lead the Diocese of Chifeng in Inner Mongolia. The appointment continues episcopal appointments made under the Vatican-Beijing provisional accord.</div>
+</div>
+
+</section>
+
+  </main>
+  <footer>
+    <div>Generated 2026-07-24 12:26 UTC. Sources checked: <a href="https://github.com/isaiahnixon/newspaper/blob/main/daily_paper.yaml" target="_blank" rel="noopener noreferrer">73</a>. </div>
+    <div><a href="index.html" target="_blank" rel="noopener noreferrer">Archive</a></div>
+    <div>Built by <a href="https://github.com/isaiahnixon/newspaper" target="_blank" rel="noopener noreferrer">Isaiah Nixon</a>.</div>
+    <div>© 2026 Tacitus' Log.</div>
+  </footer>
+</body>
+</html>
